@@ -6,6 +6,26 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.16.0</title>
+            <pubDate>Fri, 17 Jul 2026 12:24:28 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.16.0
+
+Version technique : plus rapide, plus sobre, plus transparente.
+
+- **Fin des demandes Trousseau répétées** : la signature porte désormais une identité stable. Au premier lancement de cette version, macOS demandera une dernière fois « Toujours autoriser » pour vos jetons, puis plus jamais lors des mises à jour suivantes.
+- **Synchronisation plus rapide** : les messages Gmail sont téléchargés par lots de 5 en parallèle.
+- **Journal de synchronisation** (Réglages > Données) : chaque relève, tâche créée, message écarté et erreur, daté et consultable.
+- **Maîtrise de la croissance** : identifiants traités datés et purgés automatiquement, 10 sauvegardes conservées au maximum, widgets rechargés seulement quand leur contenu change.
+- **Connexion OAuth durcie** contre les requêtes parasites du navigateur.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.16.0/Assistant-Mail-0.16.0.dmg" length="3789903" type="application/octet-stream" sparkle:edSignature="UiYfHF793st+iDJe6+7Mgg0Bj1jb6+019cfTZq8h2JXtIQ+TzMKmOQje4VMAW+CjVWnoHNNsvAiyt0nrM9qUBw=="/>
+        </item>
+        <item>
             <title>0.15.1</title>
             <pubDate>Fri, 17 Jul 2026 12:08:54 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -48,20 +68,6 @@ Cette version ajoute l'assistance au traitement des e-mails, entièrement locale
 - 38 vérifications du cœur, migration automatique et non destructive des données existantes.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.15.0/Assistant-Mail-0.15.0.dmg" length="3730066" type="application/octet-stream" sparkle:edSignature="rTmhoF/kufWEkLBoiEgFwhE3gdKkmxowkLvzWEV1eR6vUzRXHmitj9bED4iuAHy3p3+RcYGFwBMDpjLHzU6eAA=="/>
-        </item>
-        <item>
-            <title>0.14.0</title>
-            <pubDate>Fri, 17 Jul 2026 10:43:27 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>30</sparkle:version>
-            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.14.0
-
-Mise à jour d’Assistant Mail 0.14.0.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.14.0/Assistant-Mail-0.14.0.dmg" length="3575094" type="application/octet-stream" sparkle:edSignature="bzWQ9Jt888fsb3BxufDsCvwxRimeNksuHEN+mUJOIdhM+Ohfab1VBEzNWXHRdrY8aLaRMMSvpZ9w1+QFxUiABw=="/>
         </item>
     </channel>
 </rss>
