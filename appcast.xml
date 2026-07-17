@@ -6,6 +6,23 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.15.1</title>
+            <pubDate>Fri, 17 Jul 2026 12:08:54 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.15.1
+
+Correctif du digest du matin :
+
+- choisir une heure encore à venir programme désormais le digest pour **aujourd'hui** (une heure passée le programme pour demain, avec message de confirmation) ;
+- nouveau bouton **« Envoyer un aperçu maintenant »** dans Réglages > Automatisation pour tester la notification immédiatement, sans toucher à l'envoi quotidien.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.15.1/Assistant-Mail-0.15.1.dmg" length="3735707" type="application/octet-stream" sparkle:edSignature="uEINnH7TkIo+eIbr/ELXWbFRqBXfoHqifmA0DOVIUvpb3MHLOXHXHiAJP8SVNcJrU1KihKz24z8hx4hB/lmwDA=="/>
+        </item>
+        <item>
             <title>0.15.0</title>
             <pubDate>Fri, 17 Jul 2026 11:48:21 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -45,24 +62,6 @@ Cette version ajoute l'assistance au traitement des e-mails, entièrement locale
 Mise à jour d’Assistant Mail 0.14.0.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.14.0/Assistant-Mail-0.14.0.dmg" length="3575094" type="application/octet-stream" sparkle:edSignature="bzWQ9Jt888fsb3BxufDsCvwxRimeNksuHEN+mUJOIdhM+Ohfab1VBEzNWXHRdrY8aLaRMMSvpZ9w1+QFxUiABw=="/>
-        </item>
-        <item>
-            <title>0.13.1</title>
-            <pubDate>Fri, 17 Jul 2026 08:17:16 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>28</sparkle:version>
-            <sparkle:shortVersionString>0.13.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.13.1
-
-Correctif du bouton **Rechercher les mises à jour…** dans Réglages.
-
-La vue Réglages affichée dans la fenêtre principale reçoit désormais correctement le contrôleur Sparkle. Le clic ne provoque plus le plantage SwiftUI `EnvironmentObject.error()` observé en version 0.13.0.
-
-Cette version ajoute également un contrôle de régression afin d’empêcher le retour de cette erreur d’injection.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.13.1/Assistant-Mail-0.13.1.dmg" length="3302042" type="application/octet-stream" sparkle:edSignature="tQTCpvLFmUBcMBfzYdAuIpkbwzKG9FhP+J82Az9kMuXHpwLsM8SM2zHgbxRt0UMNZ5aO7QAauf6n5QrfcEpfAg=="/>
         </item>
     </channel>
 </rss>
