@@ -6,6 +6,24 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.16.2</title>
+            <pubDate>Fri, 17 Jul 2026 16:35:48 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>35</sparkle:version>
+            <sparkle:shortVersionString>0.16.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.16.2
+
+Fin des demandes de mot de passe à chaque synchronisation.
+
+- Les jetons et le secret client sont désormais **adoptés** par l'application à leur première lecture : ils appartiennent à son identité stable, et macOS n'exige plus aucune autorisation ensuite — ni à la prochaine synchronisation, ni après les mises à jour futures.
+- Au premier lancement de cette version, une **dernière** demande peut apparaître pour chaque élément : cliquez « Autoriser » (ou « Toujours autoriser »), c'est la dernière fois.
+- Le secret client Google est mis en cache en mémoire : il n'est plus relu en boucle par la synchronisation et l'interface.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.16.2/Assistant-Mail-0.16.2.dmg" length="3792795" type="application/octet-stream" sparkle:edSignature="3vlSJBzRSHQ4zL9O35eJ79RdpAvN0XG0zE53cQE8NKswUPXmAdEIPzPOKrOp8TOQdW2jWPeEm1kiyV4e/ViTBw=="/>
+        </item>
+        <item>
             <title>0.16.1</title>
             <pubDate>Fri, 17 Jul 2026 15:49:51 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -46,23 +64,6 @@ Version technique : plus rapide, plus sobre, plus transparente.
 - **Connexion OAuth durcie** contre les requêtes parasites du navigateur.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.16.0/Assistant-Mail-0.16.0.dmg" length="3789903" type="application/octet-stream" sparkle:edSignature="UiYfHF793st+iDJe6+7Mgg0Bj1jb6+019cfTZq8h2JXtIQ+TzMKmOQje4VMAW+CjVWnoHNNsvAiyt0nrM9qUBw=="/>
-        </item>
-        <item>
-            <title>0.15.1</title>
-            <pubDate>Fri, 17 Jul 2026 12:08:54 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>32</sparkle:version>
-            <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.15.1
-
-Correctif du digest du matin :
-
-- choisir une heure encore à venir programme désormais le digest pour **aujourd'hui** (une heure passée le programme pour demain, avec message de confirmation) ;
-- nouveau bouton **« Envoyer un aperçu maintenant »** dans Réglages > Automatisation pour tester la notification immédiatement, sans toucher à l'envoi quotidien.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.15.1/Assistant-Mail-0.15.1.dmg" length="3735707" type="application/octet-stream" sparkle:edSignature="uEINnH7TkIo+eIbr/ELXWbFRqBXfoHqifmA0DOVIUvpb3MHLOXHXHiAJP8SVNcJrU1KihKz24z8hx4hB/lmwDA=="/>
         </item>
     </channel>
 </rss>
