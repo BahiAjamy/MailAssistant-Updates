@@ -6,6 +6,23 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.17.1</title>
+            <pubDate>Fri, 17 Jul 2026 17:26:17 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>37</sparkle:version>
+            <sparkle:shortVersionString>0.17.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.17.1
+
+Première version signée avec le certificat stable « Assistant Mail Signing ».
+
+- À la première ouverture de cette version, macOS demandera une **dernière** fois l'autorisation d'accès à vos jetons (cliquez « Autoriser » ou « Toujours autoriser »).
+- Ensuite, plus aucune demande de mot de passe : ni à l'ouverture, ni à la synchronisation, ni après les mises à jour futures — toutes les versions partagent désormais la même identité de signature.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.17.1/Assistant-Mail-0.17.1.dmg" length="3887995" type="application/octet-stream" sparkle:edSignature="Kd7BlV5iDyC9UdNe799fM1aB4RMaIb4gU8i1fBJ7qgzbQKut32G6N1b2yL3er2fLpCOFYqYDsqnpaTgXhSh5AQ=="/>
+        </item>
+        <item>
             <title>0.17.0</title>
             <pubDate>Fri, 17 Jul 2026 16:53:45 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -41,28 +58,6 @@ Fin des demandes de mot de passe à chaque synchronisation.
 - Le secret client Google est mis en cache en mémoire : il n'est plus relu en boucle par la synchronisation et l'interface.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.16.2/Assistant-Mail-0.16.2.dmg" length="3792795" type="application/octet-stream" sparkle:edSignature="3vlSJBzRSHQ4zL9O35eJ79RdpAvN0XG0zE53cQE8NKswUPXmAdEIPzPOKrOp8TOQdW2jWPeEm1kiyV4e/ViTBw=="/>
-        </item>
-        <item>
-            <title>0.16.1</title>
-            <pubDate>Fri, 17 Jul 2026 15:49:51 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>34</sparkle:version>
-            <sparkle:shortVersionString>0.16.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.16.1
-
-Cette version corrige l’alerte occasionnelle « Enregistrement local impossible » qui pouvait apparaître lorsque plusieurs sauvegardes de `state.json` se chevauchaient.
-
-- sérialisation des écritures et de la copie de récupération ;
-- regroupement des demandes reçues pendant une sauvegarde ;
-- sauvegarde finale sécurisée à la fermeture ;
-- disparition automatique de l’alerte après une sauvegarde réussie ;
-- aucune modification des fonctionnalités des phases 3 et 4.
-
-La correction a été validée par 40 contrôles du cœur, un test de 32 sauvegardes concurrentes et un build complet de l’application et du widget.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.16.1/Assistant-Mail-0.16.1.dmg" length="3791821" type="application/octet-stream" sparkle:edSignature="6Q7bc46iXZkV0YUiHqIDN3wJB+Jc3OacQAa44tZsyAF75RvtnfCcADnjaI8iWruwhfUdXRE9kiecBTCYWmnZBA=="/>
         </item>
     </channel>
 </rss>
