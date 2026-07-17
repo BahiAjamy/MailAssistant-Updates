@@ -1,9 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Assistant Mail</title>
         <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases</link>
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
+        <item>
+            <title>0.13.0</title>
+            <pubDate>Fri, 17 Jul 2026 07:53:47 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.13.0
+
+Cette version livre les phases 1 et 2 du plan d’amélioration et introduit les mises à jour automatiques avec Sparkle.
+
+## Confiance et sécurité
+
+- confirmation avant la déconnexion d’un compte ;
+- annulation après les principales actions et restauration des tâches ignorées ;
+- barre de menus non destructive ;
+- transparence du filtre professionnel et règles blanche/noire éditables ;
+- santé des comptes et reconnexion OAuth ;
+- cohérence entre la mise en veille et Apple Rappels.
+
+## Interface et navigation
+
+- comptes visibles et filtrants dans la barre latérale ;
+- compteurs de la Vue du jour réellement filtrants ;
+- lecture enrichie des e-mails, pièces jointes et conversations ;
+- justification « Pourquoi ? » sur les e-mails ;
+- raccourcis globaux et recherche insensible aux accents.
+
+## Mise à jour automatique
+
+Sparkle 2.9.4 est désormais intégré. Cette première version doit être installée manuellement depuis le DMG ; les versions suivantes pourront être proposées automatiquement dans l’application.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.13.0/Assistant-Mail-0.13.0.dmg" length="3303109" type="application/octet-stream" sparkle:edSignature="3MKEI4Nfpl7+5LXYRCmELKGrmEpQPsXJE2m1BYdu4gYxQaM8QXHXaTynSH2+PWQS70PwzoZUcLxk/1XIcXAzAw=="/>
+        </item>
     </channel>
 </rss>
