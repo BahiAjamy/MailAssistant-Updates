@@ -6,6 +6,25 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.18.1</title>
+            <pubDate>Fri, 17 Jul 2026 18:02:57 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>39</sparkle:version>
+            <sparkle:shortVersionString>0.18.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.1
+
+Retouches visuelles de l'onglet Flux :
+
+- les panneaux « Écartés par motif » et « Fiabilité du tri » ont désormais la même hauteur ;
+- les libellés d'heures de la carte de chaleur ne se replient plus sur deux lignes.
+
+Cette mise à jour est aussi le test du certificat stable : elle doit s'installer **sans aucune demande de mot de passe**.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.1/Assistant-Mail-0.18.1.dmg" length="3915897" type="application/octet-stream" sparkle:edSignature="27tgzvYjxmicSfl2ir+chcz2+W5+1Kfb+vQJ0m/wCVMCavbeP7HgQMQ67nHlC9LTrT+CQQ/ERX5FTx8WxlUQDg=="/>
+        </item>
+        <item>
             <title>0.18.0</title>
             <pubDate>Fri, 17 Jul 2026 17:43:01 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -40,25 +59,6 @@ Première version signée avec le certificat stable « Assistant Mail Signing »
 - Ensuite, plus aucune demande de mot de passe : ni à l'ouverture, ni à la synchronisation, ni après les mises à jour futures — toutes les versions partagent désormais la même identité de signature.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.17.1/Assistant-Mail-0.17.1.dmg" length="3887995" type="application/octet-stream" sparkle:edSignature="Kd7BlV5iDyC9UdNe799fM1aB4RMaIb4gU8i1fBJ7qgzbQKut32G6N1b2yL3er2fLpCOFYqYDsqnpaTgXhSh5AQ=="/>
-        </item>
-        <item>
-            <title>0.17.0</title>
-            <pubDate>Fri, 17 Jul 2026 16:53:45 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>36</sparkle:version>
-            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.17.0
-
-Deux nouveaux onglets dans Analyse.
-
-- **Projets** : la santé de chaque mission en une ligne — tâches ouvertes, en retard, terminées sur 30 jours avec taux, âge de la plus ancienne tâche ouverte, prochaine échéance et tendance sur 8 semaines. Un clic sur une ligne filtre toute l'application. La ligne « Sans projet » sert d'indicateur d'hygiène de classement.
-- **Flux** : le trajet de vos e-mails sur 30 jours — messages relevés, conservés, actions détectées, validées ; les écartés par motif avec accès direct à la liste récupérable ; la fiabilité du tri (confiance moyenne, validation automatique, classements par règles ou par IA, corrections manuelles) ; et la répartition par nature des messages conservés.
-
-Aucune donnée nouvelle n'est collectée : tout est calculé localement depuis vos données existantes.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.17.0/Assistant-Mail-0.17.0.dmg" length="3889140" type="application/octet-stream" sparkle:edSignature="54YUBDazhmjZUl7Tbzyn+J1bZB5uAFKWnfZKE2h3MHcyv/iC3Jlwl8PvuluzLOR9wBpX95RLpl2r74W6Tb0xDA=="/>
         </item>
     </channel>
 </rss>
