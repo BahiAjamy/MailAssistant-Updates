@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.14.0</title>
+            <pubDate>Fri, 17 Jul 2026 10:43:27 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>30</sparkle:version>
+            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.14.0
+
+Mise à jour d’Assistant Mail 0.14.0.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.14.0/Assistant-Mail-0.14.0.dmg" length="3575094" type="application/octet-stream" sparkle:edSignature="bzWQ9Jt888fsb3BxufDsCvwxRimeNksuHEN+mUJOIdhM+Ohfab1VBEzNWXHRdrY8aLaRMMSvpZ9w1+QFxUiABw=="/>
+        </item>
+        <item>
             <title>0.13.1</title>
             <pubDate>Fri, 17 Jul 2026 08:17:16 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
