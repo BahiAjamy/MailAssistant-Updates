@@ -6,6 +6,31 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.18.4</title>
+            <pubDate>Mon, 20 Jul 2026 16:21:52 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>42</sparkle:version>
+            <sparkle:shortVersionString>0.18.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.4
+
+## Vue du jour repensée
+
+- **Priorités** et **Nouveaux e-mails** s’alignent automatiquement sur le panneau qui contient le plus d’éléments.
+- Une nouvelle synthèse de la semaine en cours (lundi–dimanche) regroupe les tâches et les e-mails par projet.
+- Les mini-paragraphes sont générés localement avec Apple Intelligence à partir des données réelles de l’application ; une synthèse déterministe reste disponible lorsque le modèle local ne l’est pas.
+- Les filtres actifs de compte et de projet s’appliquent aussi à cette synthèse.
+
+## Connexions plus fluides
+
+- Les jetons OAuth sont migrés vers un coffre local réservé à votre utilisateur afin d’éviter les demandes répétées d’autorisation du Trousseau après les mises à jour.
+
+Cette version inclut aussi tous les correctifs de la 0.18.3.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.4/Assistant-Mail-0.18.4.dmg" length="4078416" type="application/octet-stream" sparkle:edSignature="9ezrCPBYB+rW4n6gjut7PD2N49rdXd113FN6HgBLzlFS7TEEe7F2Gr2ylO/rntcxjX+FjSOSzxx5kaKbg7SSCw=="/>
+        </item>
+        <item>
             <title>0.18.3</title>
             <pubDate>Mon, 20 Jul 2026 14:31:37 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -32,25 +57,6 @@ Correctif définitif de l’affichage à la sélection d’un e-mail : le sépar
 Correctif d’affichage : à l’ouverture d’un e-mail, la colonne de la liste ne se fait plus écraser (titre « E-mails » empilé lettre à lettre, en-tête tassé). Les destinataires, badges et boutons du détail passent proprement à la ligne quand le panneau est étroit.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.2/Assistant-Mail-0.18.2.dmg" length="3916810" type="application/octet-stream" sparkle:edSignature="wfgA2t8GG+C+axikROwISZl3kWiOcnRIl4r97jT024t7p9Y84vOLp+ifrHJzk3C2GDyxQBlaE6ShcP272vxqAw=="/>
-        </item>
-        <item>
-            <title>0.18.1</title>
-            <pubDate>Fri, 17 Jul 2026 18:02:57 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>39</sparkle:version>
-            <sparkle:shortVersionString>0.18.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.1
-
-Retouches visuelles de l'onglet Flux :
-
-- les panneaux « Écartés par motif » et « Fiabilité du tri » ont désormais la même hauteur ;
-- les libellés d'heures de la carte de chaleur ne se replient plus sur deux lignes.
-
-Cette mise à jour est aussi le test du certificat stable : elle doit s'installer **sans aucune demande de mot de passe**.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.1/Assistant-Mail-0.18.1.dmg" length="3915897" type="application/octet-stream" sparkle:edSignature="27tgzvYjxmicSfl2ir+chcz2+W5+1Kfb+vQJ0m/wCVMCavbeP7HgQMQ67nHlC9LTrT+CQQ/ERX5FTx8WxlUQDg=="/>
         </item>
     </channel>
 </rss>
