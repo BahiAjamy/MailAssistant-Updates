@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.18.3</title>
+            <pubDate>Mon, 20 Jul 2026 14:31:37 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>41</sparkle:version>
+            <sparkle:shortVersionString>0.18.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.3
+
+Correctif définitif de l’affichage à la sélection d’un e-mail : le séparateur entre la liste et le message ne bouge plus quand on change d’e-mail — la liste ne se fait plus écraser ni recouvrir par la barre latérale. Le défilement revient en haut à chaque nouveau message.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.3/Assistant-Mail-0.18.3.dmg" length="3918928" type="application/octet-stream" sparkle:edSignature="HCDsi2/H+YDie3RcDBAxAXl0pQCVh1hE360QmMoBwhAZ8yq4T0PL/ZPKhHaSt2FfoKTkCh6B6lc1BVYx3Xd8Bw=="/>
+        </item>
+        <item>
             <title>0.18.2</title>
             <pubDate>Mon, 20 Jul 2026 14:18:24 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -37,25 +51,6 @@ Retouches visuelles de l'onglet Flux :
 Cette mise à jour est aussi le test du certificat stable : elle doit s'installer **sans aucune demande de mot de passe**.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.1/Assistant-Mail-0.18.1.dmg" length="3915897" type="application/octet-stream" sparkle:edSignature="27tgzvYjxmicSfl2ir+chcz2+W5+1Kfb+vQJ0m/wCVMCavbeP7HgQMQ67nHlC9LTrT+CQQ/ERX5FTx8WxlUQDg=="/>
-        </item>
-        <item>
-            <title>0.18.0</title>
-            <pubDate>Fri, 17 Jul 2026 17:43:01 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>38</sparkle:version>
-            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.0
-
-Deux compléments à l'onglet Analyse > Flux.
-
-- **Carte de chaleur des réceptions** : une grille jour × heure montre quand arrive votre courrier sur les 30 derniers jours (détail au survol). Idéale pour choisir l'heure de votre digest du matin — elle est d'ailleurs rappelée sous la grille.
-- **Temps de réponse mesuré** : quand une réponse arrive dans une conversation suivie « en attente », le délai est enregistré et affiché — badge « Réponse en 2 j » sur la tâche, délai dans la notification, et moyenne dans « Fiabilité du tri ».
-
-Première mise à jour depuis la version signée : elle doit s'installer sans aucune demande de mot de passe.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.0/Assistant-Mail-0.18.0.dmg" length="3912568" type="application/octet-stream" sparkle:edSignature="utTj/c63HVjfIpOu8m2Q+DH4OoUci5NSncCyRIQjA1v/ZWSQ2+gwnocfK4Ifcy05yl1iynznNcHo5tRBmNPgBg=="/>
         </item>
     </channel>
 </rss>
