@@ -6,6 +6,27 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.18.5</title>
+            <pubDate>Mon, 20 Jul 2026 16:43:08 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>43</sparkle:version>
+            <sparkle:shortVersionString>0.18.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.5
+
+## Brief hebdomadaire corrigé
+
+- Le brief reprend la présentation compacte validée : **Projet**, **Tâches de la semaine** et **E-mails reçus** sont désormais alignés dans trois colonnes.
+- Chaque projet occupe une seule ligne dense au lieu de deux grandes cartes verticales.
+- Les synthèses sont limitées à deux lignes pour faciliter la comparaison entre projets et réduire fortement le défilement.
+- Les cellules restent cliquables pour ouvrir directement les tâches ou les e-mails du projet.
+
+Ce correctif remplace le rendu empilé apparu dans la version 0.18.4.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.5/Assistant-Mail-0.18.5.dmg" length="4059968" type="application/octet-stream" sparkle:edSignature="QJBvKAxMVdxh5M0VeXrasBKFe+FN3AcGT1np4TDDw3yyyTESBoeAjrc+/anva/lhuW6bRMG+LuP4KWZ44pTdCQ=="/>
+        </item>
+        <item>
             <title>0.18.4</title>
             <pubDate>Mon, 20 Jul 2026 16:21:52 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -43,20 +64,6 @@ Cette version inclut aussi tous les correctifs de la 0.18.3.
 Correctif définitif de l’affichage à la sélection d’un e-mail : le séparateur entre la liste et le message ne bouge plus quand on change d’e-mail — la liste ne se fait plus écraser ni recouvrir par la barre latérale. Le défilement revient en haut à chaque nouveau message.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.3/Assistant-Mail-0.18.3.dmg" length="3918928" type="application/octet-stream" sparkle:edSignature="HCDsi2/H+YDie3RcDBAxAXl0pQCVh1hE360QmMoBwhAZ8yq4T0PL/ZPKhHaSt2FfoKTkCh6B6lc1BVYx3Xd8Bw=="/>
-        </item>
-        <item>
-            <title>0.18.2</title>
-            <pubDate>Mon, 20 Jul 2026 14:18:24 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>40</sparkle:version>
-            <sparkle:shortVersionString>0.18.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.2
-
-Correctif d’affichage : à l’ouverture d’un e-mail, la colonne de la liste ne se fait plus écraser (titre « E-mails » empilé lettre à lettre, en-tête tassé). Les destinataires, badges et boutons du détail passent proprement à la ligne quand le panneau est étroit.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.2/Assistant-Mail-0.18.2.dmg" length="3916810" type="application/octet-stream" sparkle:edSignature="wfgA2t8GG+C+axikROwISZl3kWiOcnRIl4r97jT024t7p9Y84vOLp+ifrHJzk3C2GDyxQBlaE6ShcP272vxqAw=="/>
         </item>
     </channel>
 </rss>
