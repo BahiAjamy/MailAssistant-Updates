@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.18.2</title>
+            <pubDate>Mon, 20 Jul 2026 14:18:24 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>0.18.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.2
+
+Correctif d’affichage : à l’ouverture d’un e-mail, la colonne de la liste ne se fait plus écraser (titre « E-mails » empilé lettre à lettre, en-tête tassé). Les destinataires, badges et boutons du détail passent proprement à la ligne quand le panneau est étroit.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.2/Assistant-Mail-0.18.2.dmg" length="3916810" type="application/octet-stream" sparkle:edSignature="wfgA2t8GG+C+axikROwISZl3kWiOcnRIl4r97jT024t7p9Y84vOLp+ifrHJzk3C2GDyxQBlaE6ShcP272vxqAw=="/>
+        </item>
+        <item>
             <title>0.18.1</title>
             <pubDate>Fri, 17 Jul 2026 18:02:57 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -42,23 +56,6 @@ Deux compléments à l'onglet Analyse > Flux.
 Première mise à jour depuis la version signée : elle doit s'installer sans aucune demande de mot de passe.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.0/Assistant-Mail-0.18.0.dmg" length="3912568" type="application/octet-stream" sparkle:edSignature="utTj/c63HVjfIpOu8m2Q+DH4OoUci5NSncCyRIQjA1v/ZWSQ2+gwnocfK4Ifcy05yl1iynznNcHo5tRBmNPgBg=="/>
-        </item>
-        <item>
-            <title>0.17.1</title>
-            <pubDate>Fri, 17 Jul 2026 17:26:17 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>37</sparkle:version>
-            <sparkle:shortVersionString>0.17.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.17.1
-
-Première version signée avec le certificat stable « Assistant Mail Signing ».
-
-- À la première ouverture de cette version, macOS demandera une **dernière** fois l'autorisation d'accès à vos jetons (cliquez « Autoriser » ou « Toujours autoriser »).
-- Ensuite, plus aucune demande de mot de passe : ni à l'ouverture, ni à la synchronisation, ni après les mises à jour futures — toutes les versions partagent désormais la même identité de signature.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.17.1/Assistant-Mail-0.17.1.dmg" length="3887995" type="application/octet-stream" sparkle:edSignature="Kd7BlV5iDyC9UdNe799fM1aB4RMaIb4gU8i1fBJ7qgzbQKut32G6N1b2yL3er2fLpCOFYqYDsqnpaTgXhSh5AQ=="/>
         </item>
     </channel>
 </rss>
