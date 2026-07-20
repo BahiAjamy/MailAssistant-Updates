@@ -6,6 +6,26 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.19.0</title>
+            <pubDate>Mon, 20 Jul 2026 19:04:21 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.19.0
+
+Cette version ajoute une revue quotidienne guidée dans la Vue du jour.
+
+- Proposition automatique de trois résultats selon les retards, échéances et priorités.
+- Sélection, remplacement et suivi de la progression du plan du jour.
+- Actions rapides pour terminer, reporter, mettre en attente ou ignorer une tâche.
+- Séparation des engagements en attente des actions directement exécutables.
+- Conservation locale et rétrocompatible des plans quotidiens.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.19.0/Assistant-Mail-0.19.0.dmg" length="4202115" type="application/octet-stream" sparkle:edSignature="DPSaqkTlR4It65PNNKQUWmPBmac8VVnVHCsLn8m9e5SJuKVEpbx2BVZ32y7h9BL9Ox1i+ZYjdQrgCZkHDJonDA=="/>
+        </item>
+        <item>
             <title>0.18.5</title>
             <pubDate>Mon, 20 Jul 2026 16:43:08 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -50,20 +70,6 @@ Ce correctif remplace le rendu empilé apparu dans la version 0.18.4.
 Cette version inclut aussi tous les correctifs de la 0.18.3.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.4/Assistant-Mail-0.18.4.dmg" length="4078416" type="application/octet-stream" sparkle:edSignature="9ezrCPBYB+rW4n6gjut7PD2N49rdXd113FN6HgBLzlFS7TEEe7F2Gr2ylO/rntcxjX+FjSOSzxx5kaKbg7SSCw=="/>
-        </item>
-        <item>
-            <title>0.18.3</title>
-            <pubDate>Mon, 20 Jul 2026 14:31:37 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>41</sparkle:version>
-            <sparkle:shortVersionString>0.18.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.3
-
-Correctif définitif de l’affichage à la sélection d’un e-mail : le séparateur entre la liste et le message ne bouge plus quand on change d’e-mail — la liste ne se fait plus écraser ni recouvrir par la barre latérale. Le défilement revient en haut à chaque nouveau message.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.3/Assistant-Mail-0.18.3.dmg" length="3918928" type="application/octet-stream" sparkle:edSignature="HCDsi2/H+YDie3RcDBAxAXl0pQCVh1hE360QmMoBwhAZ8yq4T0PL/ZPKhHaSt2FfoKTkCh6B6lc1BVYx3Xd8Bw=="/>
         </item>
     </channel>
 </rss>
