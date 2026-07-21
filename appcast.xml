@@ -6,6 +6,28 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.20.2</title>
+            <pubDate>Tue, 21 Jul 2026 13:22:21 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>48</sparkle:version>
+            <sparkle:shortVersionString>0.20.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.20.2
+
+## Champ Objectif utilisable
+
+Le champ Objectif de l'éditeur de projet prend une bordure : sans elle, son
+texte d'invite se lisait comme un intitulé de section plutôt que comme une zone
+de saisie.
+
+Le curseur se place désormais dans le bon champ selon le point d'entrée :
+« Définir l'objectif » ouvre l'éditeur directement sur l'objectif, tandis que
+« Modifier » et « Nouveau projet » gardent le curseur sur le nom.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.2/Assistant-Mail-0.20.2.dmg" length="4300648" type="application/octet-stream" sparkle:edSignature="n8O6Wm8R4r9zqQkEdyCBjU3knZsoy5UGAHbr3VxT6G6dcVNtKDqwXxP5Zyw1jZQMB7b0gGN0J7jQm/b1pSaWDQ=="/>
+        </item>
+        <item>
             <title>0.20.1</title>
             <pubDate>Tue, 21 Jul 2026 13:15:16 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -60,35 +82,6 @@ Les projets existants sont conservés tels quels : objectif vide, statut « en
 cours » et prochaine action déduite.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.0/Assistant-Mail-0.20.0.dmg" length="4292646" type="application/octet-stream" sparkle:edSignature="YhY7W5cV8WAzD46sIKHWrEVuEmuo3MFzZqEwHv4bwmd7dTHZzl8Hmx/LdhX2hZcr+K4mDFt58Ye5ZL0wSHENBg=="/>
-        </item>
-        <item>
-            <title>0.19.1</title>
-            <pubDate>Tue, 21 Jul 2026 12:39:53 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>45</sparkle:version>
-            <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.19.1
-
-## Brief hebdomadaire
-
-- Le brief ne se régénère plus à chaque ouverture de la Vue du jour. Sa synthèse
-  est conservée et n'est reconstruite qu'après une relève de courrier ayant
-  réellement apporté du nouveau, au changement de semaine, ou via le bouton de
-  rafraîchissement.
-- Cocher une tâche ne relance plus Apple Intelligence.
-
-## Mes résultats du jour
-
-- Anneau de progression animé à la place du compteur textuel.
-- L'icône et le cadre de la carte suivent l'avancement, jusqu'au bandeau de fin
-  de journée lorsque tous les résultats sont atteints.
-- Le bouton « Réviser » redevient une action secondaire une fois le plan posé.
-- Les lignes reprennent les pastilles de projet et les badges d'échéance
-  utilisés dans le reste de l'application.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.19.1/Assistant-Mail-0.19.1.dmg" length="4215762" type="application/octet-stream" sparkle:edSignature="hQoBCpxzFujQcwVzfCayvYUqe0/5ZZyCIyLUowdGotbndLTBzy3ORAgi0JUqza1bmuxXtw3R66AFyIHzcS89AA=="/>
         </item>
     </channel>
 </rss>
