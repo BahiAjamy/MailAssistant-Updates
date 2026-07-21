@@ -6,6 +6,35 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.19.1</title>
+            <pubDate>Tue, 21 Jul 2026 12:39:53 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>45</sparkle:version>
+            <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.19.1
+
+## Brief hebdomadaire
+
+- Le brief ne se régénère plus à chaque ouverture de la Vue du jour. Sa synthèse
+  est conservée et n'est reconstruite qu'après une relève de courrier ayant
+  réellement apporté du nouveau, au changement de semaine, ou via le bouton de
+  rafraîchissement.
+- Cocher une tâche ne relance plus Apple Intelligence.
+
+## Mes résultats du jour
+
+- Anneau de progression animé à la place du compteur textuel.
+- L'icône et le cadre de la carte suivent l'avancement, jusqu'au bandeau de fin
+  de journée lorsque tous les résultats sont atteints.
+- Le bouton « Réviser » redevient une action secondaire une fois le plan posé.
+- Les lignes reprennent les pastilles de projet et les badges d'échéance
+  utilisés dans le reste de l'application.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.19.1/Assistant-Mail-0.19.1.dmg" length="4215762" type="application/octet-stream" sparkle:edSignature="hQoBCpxzFujQcwVzfCayvYUqe0/5ZZyCIyLUowdGotbndLTBzy3ORAgi0JUqza1bmuxXtw3R66AFyIHzcS89AA=="/>
+        </item>
+        <item>
             <title>0.19.0</title>
             <pubDate>Mon, 20 Jul 2026 19:04:21 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -45,31 +74,6 @@ Cette version ajoute une revue quotidienne guidée dans la Vue du jour.
 Ce correctif remplace le rendu empilé apparu dans la version 0.18.4.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.5/Assistant-Mail-0.18.5.dmg" length="4059968" type="application/octet-stream" sparkle:edSignature="QJBvKAxMVdxh5M0VeXrasBKFe+FN3AcGT1np4TDDw3yyyTESBoeAjrc+/anva/lhuW6bRMG+LuP4KWZ44pTdCQ=="/>
-        </item>
-        <item>
-            <title>0.18.4</title>
-            <pubDate>Mon, 20 Jul 2026 16:21:52 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>42</sparkle:version>
-            <sparkle:shortVersionString>0.18.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.4
-
-## Vue du jour repensée
-
-- **Priorités** et **Nouveaux e-mails** s’alignent automatiquement sur le panneau qui contient le plus d’éléments.
-- Une nouvelle synthèse de la semaine en cours (lundi–dimanche) regroupe les tâches et les e-mails par projet.
-- Les mini-paragraphes sont générés localement avec Apple Intelligence à partir des données réelles de l’application ; une synthèse déterministe reste disponible lorsque le modèle local ne l’est pas.
-- Les filtres actifs de compte et de projet s’appliquent aussi à cette synthèse.
-
-## Connexions plus fluides
-
-- Les jetons OAuth sont migrés vers un coffre local réservé à votre utilisateur afin d’éviter les demandes répétées d’autorisation du Trousseau après les mises à jour.
-
-Cette version inclut aussi tous les correctifs de la 0.18.3.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.4/Assistant-Mail-0.18.4.dmg" length="4078416" type="application/octet-stream" sparkle:edSignature="9ezrCPBYB+rW4n6gjut7PD2N49rdXd113FN6HgBLzlFS7TEEe7F2Gr2ylO/rntcxjX+FjSOSzxx5kaKbg7SSCw=="/>
         </item>
     </channel>
 </rss>
