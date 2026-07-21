@@ -6,6 +6,27 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.25.4</title>
+            <pubDate>Tue, 21 Jul 2026 19:54:11 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>59</sparkle:version>
+            <sparkle:shortVersionString>0.25.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.25.4
+
+Cette mise à jour stabilise la page **Analyse**.
+
+- Retrait temporaire de l’onglet **Capacité**, responsable de fenêtres entièrement blanches sur certaines configurations.
+- Conservation des vues **Calendrier**, **Statistiques**, **Projets**, **Flux** et **Décisions**.
+- Ajout d’une protection de régression pour empêcher le retour accidentel du panneau instable.
+- Validation du build signé sur une copie isolée des données réelles.
+
+Le module Capacité pourra être réintroduit ultérieurement après une reconstruction et une validation complète de sa fenêtre.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.4/Assistant-Mail-0.25.4.dmg" length="4550000" type="application/octet-stream" sparkle:edSignature="9sefXzyfP6YpiM0Js4ife+rzHtDMHELYwVxngepXIGaVe1JEFAIBc3+qU1F2EJj7EChJ/WCdoeNIAzzH+7zJAQ=="/>
+        </item>
+        <item>
             <title>0.25.3</title>
             <pubDate>Tue, 21 Jul 2026 19:25:43 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -48,24 +69,6 @@ Le calendrier, les statistiques, les projets, le flux et les décisions restent
 accessibles sans modification des données existantes.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.2/Assistant-Mail-0.25.2.dmg" length="4588193" type="application/octet-stream" sparkle:edSignature="5hQKBsaybhsKtnc2pEhHvTV6kc+dRqYPd0fXNsZko1Zn7xRo2WiItS0AwcWvlS9hiLaO08SXkKeELgPLSZwBDQ=="/>
-        </item>
-        <item>
-            <title>0.25.1</title>
-            <pubDate>Tue, 21 Jul 2026 15:09:38 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>56</sparkle:version>
-            <sparkle:shortVersionString>0.25.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.25.1
-
-## Correctif : l'onglet Analyse s'affichait vide
-
-Le panneau de capacité introduit par la 0.25.0 pouvait vider toute la fenêtre à
-l'ouverture d'Analyse. Ses barres sont désormais dessinées sur une base fixe, et
-la lecture de l'agenda n'a plus lieu pendant l'affichage.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.1/Assistant-Mail-0.25.1.dmg" length="4586794" type="application/octet-stream" sparkle:edSignature="3Y6+UAsoQg7f1vTogRMfJ6jov/kk27hAnp8RSVpeqL5xiLAYJxGkAXA7O8SE+dzx1XC2d/sGHXTq3bZF7zI6CA=="/>
         </item>
     </channel>
 </rss>
