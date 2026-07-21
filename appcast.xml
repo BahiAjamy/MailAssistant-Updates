@@ -6,6 +6,29 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.25.3</title>
+            <pubDate>Tue, 21 Jul 2026 19:25:43 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>58</sparkle:version>
+            <sparkle:shortVersionString>0.25.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.25.3
+
+## Correctif de l’onglet Capacité
+
+L’onglet **Capacité** s’affiche maintenant correctement dans Analyse.
+
+Le panneau ne modifie plus son état pendant son insertion dans l’interface,
+les sept jours utilisent une grille à largeur stable et le contenu est ancré
+directement dans l’espace disponible. Le défaut qui pouvait vider toute la
+fenêtre après un clic sur Capacité est ainsi supprimé.
+
+Un bouton permet également de recalculer la capacité à la demande.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.3/Assistant-Mail-0.25.3.dmg" length="4588499" type="application/octet-stream" sparkle:edSignature="L3ngc5cRaFpmqFKVIwbAeEOjDk5r/IBOONv7jk+KECF7/6kfIlgZyqu/ZFVv4cHOrKtoBzJJyatB/FIq1rSuCQ=="/>
+        </item>
+        <item>
             <title>0.25.2</title>
             <pubDate>Tue, 21 Jul 2026 18:40:27 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -43,46 +66,6 @@ l'ouverture d'Analyse. Ses barres sont désormais dessinées sur une base fixe, 
 la lecture de l'agenda n'a plus lieu pendant l'affichage.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.1/Assistant-Mail-0.25.1.dmg" length="4586794" type="application/octet-stream" sparkle:edSignature="3Y6+UAsoQg7f1vTogRMfJ6jov/kk27hAnp8RSVpeqL5xiLAYJxGkAXA7O8SE+dzx1XC2d/sGHXTq3bZF7zI6CA=="/>
-        </item>
-        <item>
-            <title>0.25.0</title>
-            <pubDate>Tue, 21 Jul 2026 15:02:33 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>55</sparkle:version>
-            <sparkle:shortVersionString>0.25.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.25.0
-
-## ⌘K — chercher partout
-
-Un champ unique atteint vos tâches, vos e-mails, vos projets, et exécute les
-commandes courantes : synchroniser, créer une tâche, préparer sa journée,
-ouvrir n'importe quel onglet. Flèches pour naviguer, ↵ pour ouvrir.
-
-Plus besoin de savoir où vit une chose pour la retrouver.
-
-## Journal des décisions
-
-Un nouvel onglet dans Analyse conserve ce que vous avez tranché : terminé,
-écarté, reporté, restauré, planifié, mis en attente, relancé. Regroupé par
-journée, avec un résumé de la semaine.
-
-Il ne mesure pas votre activité : il rend visibles vos constantes — ce que vous
-écartez sans cesse, ce que vous reportez indéfiniment.
-
-## Capacité de la semaine
-
-En tête de l'onglet Calendrier, sept jours confrontés à votre agenda : le temps
-pris par les réunions, le besoin estimé de vos échéances, et ce qu'il reste. La
-première journée qui ne tient pas est signalée avant que vous n'y ajoutiez du
-travail.
-
-L'estimation repose sur 30 minutes par tâche : c'est une hypothèse, pas une
-mesure, et l'application le dit. Seules les heures de début et de fin de vos
-événements sont lues — jamais leur titre ni leurs participants.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.0/Assistant-Mail-0.25.0.dmg" length="4583288" type="application/octet-stream" sparkle:edSignature="rGm/LAOe1QtORJD3ZUiHyyleA5uqT72wYr1dYj4CuYMeEPuw6kRXamxZQiEiGmuYzS9slbF3A1vfnh3WGurtBw=="/>
         </item>
     </channel>
 </rss>
