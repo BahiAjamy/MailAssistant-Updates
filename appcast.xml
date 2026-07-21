@@ -6,6 +6,39 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.23.0</title>
+            <pubDate>Tue, 21 Jul 2026 14:04:39 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>51</sparkle:version>
+            <sparkle:shortVersionString>0.23.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.23.0
+
+## Ce que vous avez promis ne se perd plus
+
+Les messages professionnels que vous envoyez sont désormais lus par l'assistant.
+Lorsque vous vous engagez à faire quelque chose — envoyer un document, relire,
+rappeler, préparer —, la promesse remonte dans « À valider ».
+
+Rien ne devient une tâche sans votre accord : une formule de politesse ressemble
+beaucoup à un engagement, et l'assistant préfère vous demander. Les intentions
+vagues, les remerciements et les accusés de réception sont écartés d'office, tout
+comme les demandes que vous adressez aux autres.
+
+## Ce qui est conservé, et ce qui ne l'est pas
+
+Seuls les envois professionnels sont conservés. Le tri se fait sur les
+destinataires — un message vers une adresse personnelle n'est retenu que s'il
+parle visiblement de travail, et jamais dans le cas contraire. Votre
+correspondance privée n'entre pas dans les données de l'application.
+
+Tout reste sur votre Mac, dans un fichier protégé, et l'analyse est faite
+localement par Apple Intelligence.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.0/Assistant-Mail-0.23.0.dmg" length="4389707" type="application/octet-stream" sparkle:edSignature="80wWvYgiQo+FHE3DldOMT6RNIn080MSt5HlNGq6lwl6t2sX5oiHSaHurWpATgwhLVJZLbKlnlOLPFXcp0VYiAA=="/>
+        </item>
+        <item>
             <title>0.22.0</title>
             <pubDate>Tue, 21 Jul 2026 13:56:01 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -65,28 +98,6 @@ la tâche reste ouverte, il le signale et propose d'en suivre la réponse — la
 décision vous revient.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.21.0/Assistant-Mail-0.21.0.dmg" length="4341528" type="application/octet-stream" sparkle:edSignature="bLRpn+RjEQnO5DPaXvl9pwDPGGqN3X0xN9OoSeMPbUgk2Qcnd+teQYLJNsLxpygJuJsksUE7QlS6yDgXLK6gBQ=="/>
-        </item>
-        <item>
-            <title>0.20.2</title>
-            <pubDate>Tue, 21 Jul 2026 13:22:21 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>48</sparkle:version>
-            <sparkle:shortVersionString>0.20.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.20.2
-
-## Champ Objectif utilisable
-
-Le champ Objectif de l'éditeur de projet prend une bordure : sans elle, son
-texte d'invite se lisait comme un intitulé de section plutôt que comme une zone
-de saisie.
-
-Le curseur se place désormais dans le bon champ selon le point d'entrée :
-« Définir l'objectif » ouvre l'éditeur directement sur l'objectif, tandis que
-« Modifier » et « Nouveau projet » gardent le curseur sur le nom.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.2/Assistant-Mail-0.20.2.dmg" length="4300648" type="application/octet-stream" sparkle:edSignature="n8O6Wm8R4r9zqQkEdyCBjU3knZsoy5UGAHbr3VxT6G6dcVNtKDqwXxP5Zyw1jZQMB7b0gGN0J7jQm/b1pSaWDQ=="/>
         </item>
     </channel>
 </rss>
