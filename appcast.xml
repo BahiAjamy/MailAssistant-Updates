@@ -6,6 +6,36 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.21.0</title>
+            <pubDate>Tue, 21 Jul 2026 13:41:36 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>49</sparkle:version>
+            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.21.0
+
+## Radar des engagements
+
+Un onglet « En attente » regroupe tout ce que vous attendez de quelqu'un
+d'autre, classé dans l'ordre où l'on veut le traiter : relances dues d'abord,
+puis de l'attente la plus ancienne à la plus récente.
+
+- Un bandeau annonce les relances à envoyer.
+- « J'ai relancé » réarme le délai avant la relance suivante sans effacer
+  l'ancienneté réelle de l'engagement.
+- « Ouvrir l'e-mail pour relancer » va droit à la conversation.
+
+## Suivi proposé, jamais imposé
+
+L'assistant ne lit que votre boîte de réception : il ne peut pas constater
+qu'un message est parti. Lorsqu'une réponse a été rédigée pour un e-mail dont
+la tâche reste ouverte, il le signale et propose d'en suivre la réponse — la
+décision vous revient.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.21.0/Assistant-Mail-0.21.0.dmg" length="4341528" type="application/octet-stream" sparkle:edSignature="bLRpn+RjEQnO5DPaXvl9pwDPGGqN3X0xN9OoSeMPbUgk2Qcnd+teQYLJNsLxpygJuJsksUE7QlS6yDgXLK6gBQ=="/>
+        </item>
+        <item>
             <title>0.20.2</title>
             <pubDate>Tue, 21 Jul 2026 13:22:21 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -51,37 +81,6 @@ directement l'éditeur. Le champ restait auparavant caché derrière le menu pui
 la section Pilotage.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.1/Assistant-Mail-0.20.1.dmg" length="4291631" type="application/octet-stream" sparkle:edSignature="x3AmCnJIBLBROP1x2bbCm068baX5PlsFC0K4PUkYVa8uet6x9HL17JOTX4M2p0jT8EW1QRjMIbNDxw9eD00ZDQ=="/>
-        </item>
-        <item>
-            <title>0.20.0</title>
-            <pubDate>Tue, 21 Jul 2026 13:03:01 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>46</sparkle:version>
-            <sparkle:shortVersionString>0.20.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.20.0
-
-## Pilotage des projets
-
-Un projet ne se contente plus de nommer une mission : il dit où elle en est.
-
-- **Objectif** — le résultat attendu, en une phrase, affiché en tête du projet.
-  Il reste distinct de la description, qui sert au classement automatique.
-- **Statut déclaré** — en cours, à risque, en pause ou terminé. Modifiable
-  depuis l'éditeur ou directement depuis le menu de la carte.
-- **Prochaine action** — la seule tâche à engager ensuite. Épinglez-la
-  vous-même, ou laissez l'assistant proposer la plus urgente du projet.
-
-La carte de chaque projet signale désormais ce qui déborde et ce qui attend une
-réponse. Une tâche en retard mais en attente d'un tiers n'est plus comptée comme
-un retard à traiter. Un projet en pause ou terminé cesse de réclamer une action,
-et une action épinglée devenue caduque est signalée plutôt qu'effacée.
-
-Les projets existants sont conservés tels quels : objectif vide, statut « en
-cours » et prochaine action déduite.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.0/Assistant-Mail-0.20.0.dmg" length="4292646" type="application/octet-stream" sparkle:edSignature="YhY7W5cV8WAzD46sIKHWrEVuEmuo3MFzZqEwHv4bwmd7dTHZzl8Hmx/LdhX2hZcr+K4mDFt58Ye5ZL0wSHENBg=="/>
         </item>
     </channel>
 </rss>
