@@ -6,6 +6,37 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.22.0</title>
+            <pubDate>Tue, 21 Jul 2026 13:56:01 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>50</sparkle:version>
+            <sparkle:shortVersionString>0.22.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.22.0
+
+## L'assistant sait maintenant que vous avez répondu
+
+La boîte d'envoi est relevée à chaque synchronisation. Lorsqu'un message est
+parti dans une conversation et qu'aucune réponse n'est arrivée depuis,
+l'assistant vous propose de suivre l'attente — une conversation à la fois, ou
+toutes d'un coup.
+
+Une réponse reçue après votre envoi retire la conversation des propositions :
+elle n'attend plus rien. Rien n'est jamais marqué en attente sans votre accord.
+
+## Ce qui est lu, et ce qui ne l'est pas
+
+Seules des métadonnées sont relevées : le fil de discussion, la date d'envoi et
+les destinataires. **Aucun objet, aucun corps de message envoyé n'est demandé
+aux serveurs ni enregistré sur votre Mac.**
+
+Aucune reconnexion n'est nécessaire : les autorisations déjà accordées
+couvraient l'ensemble de la boîte aux lettres.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.22.0/Assistant-Mail-0.22.0.dmg" length="4369993" type="application/octet-stream" sparkle:edSignature="bx3W9lsvuvVlfJG06XhEb9JCxBPnNmG3XiA8iUxrHdpYZ28vjvOPn36WqiMPkZ3eQK0rjNAyOlXnZBbi1kaaBg=="/>
+        </item>
+        <item>
             <title>0.21.0</title>
             <pubDate>Tue, 21 Jul 2026 13:41:36 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -56,31 +87,6 @@ Le curseur se place désormais dans le bon champ selon le point d'entrée :
 « Modifier » et « Nouveau projet » gardent le curseur sur le nom.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.2/Assistant-Mail-0.20.2.dmg" length="4300648" type="application/octet-stream" sparkle:edSignature="n8O6Wm8R4r9zqQkEdyCBjU3knZsoy5UGAHbr3VxT6G6dcVNtKDqwXxP5Zyw1jZQMB7b0gGN0J7jQm/b1pSaWDQ=="/>
-        </item>
-        <item>
-            <title>0.20.1</title>
-            <pubDate>Tue, 21 Jul 2026 13:15:16 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>47</sparkle:version>
-            <sparkle:shortVersionString>0.20.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.20.1
-
-## Liste des projets allégée
-
-La barre de prochaine action ne s'affiche plus sur un projet qui n'a aucune
-tâche ouverte : il n'y a rien à y décider. Elle reste présente lorsque des
-tâches sont ouvertes mais qu'aucune n'est exécutable — cette information-là
-mérite d'être vue.
-
-## Objectif accessible en un clic
-
-Les projets sans objectif affichent un bouton « Définir l'objectif » qui ouvre
-directement l'éditeur. Le champ restait auparavant caché derrière le menu puis
-la section Pilotage.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.1/Assistant-Mail-0.20.1.dmg" length="4291631" type="application/octet-stream" sparkle:edSignature="x3AmCnJIBLBROP1x2bbCm068baX5PlsFC0K4PUkYVa8uet6x9HL17JOTX4M2p0jT8EW1QRjMIbNDxw9eD00ZDQ=="/>
         </item>
     </channel>
 </rss>
