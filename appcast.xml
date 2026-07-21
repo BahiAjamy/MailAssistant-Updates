@@ -6,6 +6,36 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.23.2</title>
+            <pubDate>Tue, 21 Jul 2026 14:19:52 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>53</sparkle:version>
+            <sparkle:shortVersionString>0.23.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.23.2
+
+Contient aussi les titres d'engagement de la 0.23.1.
+
+## Une file de validation qui reste raisonnable
+
+La recherche d'engagements remontait jusqu'à deux mois en arrière et proposait
+des promesses depuis longtemps tenues. Elle ne porte désormais que sur vos
+envois des quatorze derniers jours ; les messages plus anciens ne seront plus
+jamais reproposés.
+
+Les engagements déjà créés à partir d'envois trop anciens sont écartés au
+démarrage. Vous les retrouverez dans « Terminées › Ignorées », et vous pouvez en
+restaurer n'importe lequel : rien n'a été supprimé.
+
+## Des titres qu'on peut distinguer
+
+Le titre nomme la chose promise avec les mots de votre message, et le
+destinataire quand c'est utile : « Envoyer le contrat mis à jour à Bigué ».
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.2/Assistant-Mail-0.23.2.dmg" length="4397716" type="application/octet-stream" sparkle:edSignature="3wqHyRQwvHXbydPFuPnfPrM3ySIOpZFZiy1H0a8gtDi698KenuXKDPYFtjgiWtnZ0FSXTUNvW8wo4hd/zEkLBQ=="/>
+        </item>
+        <item>
             <title>0.23.1</title>
             <pubDate>Tue, 21 Jul 2026 14:12:47 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -61,37 +91,6 @@ Tout reste sur votre Mac, dans un fichier protégé, et l'analyse est faite
 localement par Apple Intelligence.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.0/Assistant-Mail-0.23.0.dmg" length="4389707" type="application/octet-stream" sparkle:edSignature="80wWvYgiQo+FHE3DldOMT6RNIn080MSt5HlNGq6lwl6t2sX5oiHSaHurWpATgwhLVJZLbKlnlOLPFXcp0VYiAA=="/>
-        </item>
-        <item>
-            <title>0.22.0</title>
-            <pubDate>Tue, 21 Jul 2026 13:56:01 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>50</sparkle:version>
-            <sparkle:shortVersionString>0.22.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.22.0
-
-## L'assistant sait maintenant que vous avez répondu
-
-La boîte d'envoi est relevée à chaque synchronisation. Lorsqu'un message est
-parti dans une conversation et qu'aucune réponse n'est arrivée depuis,
-l'assistant vous propose de suivre l'attente — une conversation à la fois, ou
-toutes d'un coup.
-
-Une réponse reçue après votre envoi retire la conversation des propositions :
-elle n'attend plus rien. Rien n'est jamais marqué en attente sans votre accord.
-
-## Ce qui est lu, et ce qui ne l'est pas
-
-Seules des métadonnées sont relevées : le fil de discussion, la date d'envoi et
-les destinataires. **Aucun objet, aucun corps de message envoyé n'est demandé
-aux serveurs ni enregistré sur votre Mac.**
-
-Aucune reconnexion n'est nécessaire : les autorisations déjà accordées
-couvraient l'ensemble de la boîte aux lettres.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.22.0/Assistant-Mail-0.22.0.dmg" length="4369993" type="application/octet-stream" sparkle:edSignature="bx3W9lsvuvVlfJG06XhEb9JCxBPnNmG3XiA8iUxrHdpYZ28vjvOPn36WqiMPkZ3eQK0rjNAyOlXnZBbi1kaaBg=="/>
         </item>
     </channel>
 </rss>
