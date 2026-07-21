@@ -6,6 +6,36 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.24.0</title>
+            <pubDate>Tue, 21 Jul 2026 14:28:09 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>54</sparkle:version>
+            <sparkle:shortVersionString>0.24.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.24.0
+
+## Beaucoup moins de fausses promesses
+
+Un message qui porte déjà sa pièce jointe **livre** au lieu de promettre.
+« Veuillez trouver ci-joint le document » ne créera plus de tâche, pas plus que
+les tournures au passé (« je vous ai envoyé », « c'est fait »), les accusés de
+réception ou les formules de disponibilité.
+
+Un engagement doit maintenant nommer une chose précise et une action à venir.
+Dans le doute, l'assistant s'abstient : une promesse manquée dérange moins
+qu'une tâche inventée.
+
+S'ajoutent trois garde-fous : les détections peu sûres sont écartées, une
+formulation vague sans date l'est aussi, et une même conversation ne produit
+plus qu'un seul engagement même si vous y avez écrit plusieurs fois.
+
+Chaque détection écartée est notée dans le journal avec son motif, si vous
+souhaitez comprendre ce qui a été filtré.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.24.0/Assistant-Mail-0.24.0.dmg" length="4404934" type="application/octet-stream" sparkle:edSignature="9GmKbkepHYWdt0No6+N8suu8ZkqNGOCir6wbVcoLQSX6zd4hUQpj0HjzdmexX+27IZSNB9cFrLoyG8BHVPZzAw=="/>
+        </item>
+        <item>
             <title>0.23.2</title>
             <pubDate>Tue, 21 Jul 2026 14:19:52 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -58,39 +88,6 @@ Les engagements détectés par la version précédente sont retitrés au démarr
 vous n'avez rien à refaire.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.1/Assistant-Mail-0.23.1.dmg" length="4395394" type="application/octet-stream" sparkle:edSignature="UsVwtG05ycCP5CtpbyPJvZwbcFmMXHPp9P4pqNoOUXhjn4KWBsRDYFyv62zY1BlDyuIOLge7EAsknetUC19yAQ=="/>
-        </item>
-        <item>
-            <title>0.23.0</title>
-            <pubDate>Tue, 21 Jul 2026 14:04:39 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>51</sparkle:version>
-            <sparkle:shortVersionString>0.23.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.23.0
-
-## Ce que vous avez promis ne se perd plus
-
-Les messages professionnels que vous envoyez sont désormais lus par l'assistant.
-Lorsque vous vous engagez à faire quelque chose — envoyer un document, relire,
-rappeler, préparer —, la promesse remonte dans « À valider ».
-
-Rien ne devient une tâche sans votre accord : une formule de politesse ressemble
-beaucoup à un engagement, et l'assistant préfère vous demander. Les intentions
-vagues, les remerciements et les accusés de réception sont écartés d'office, tout
-comme les demandes que vous adressez aux autres.
-
-## Ce qui est conservé, et ce qui ne l'est pas
-
-Seuls les envois professionnels sont conservés. Le tri se fait sur les
-destinataires — un message vers une adresse personnelle n'est retenu que s'il
-parle visiblement de travail, et jamais dans le cas contraire. Votre
-correspondance privée n'entre pas dans les données de l'application.
-
-Tout reste sur votre Mac, dans un fichier protégé, et l'analyse est faite
-localement par Apple Intelligence.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.0/Assistant-Mail-0.23.0.dmg" length="4389707" type="application/octet-stream" sparkle:edSignature="80wWvYgiQo+FHE3DldOMT6RNIn080MSt5HlNGq6lwl6t2sX5oiHSaHurWpATgwhLVJZLbKlnlOLPFXcp0VYiAA=="/>
         </item>
     </channel>
 </rss>
