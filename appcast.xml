@@ -6,6 +6,37 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.20.0</title>
+            <pubDate>Tue, 21 Jul 2026 13:03:01 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>46</sparkle:version>
+            <sparkle:shortVersionString>0.20.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.20.0
+
+## Pilotage des projets
+
+Un projet ne se contente plus de nommer une mission : il dit où elle en est.
+
+- **Objectif** — le résultat attendu, en une phrase, affiché en tête du projet.
+  Il reste distinct de la description, qui sert au classement automatique.
+- **Statut déclaré** — en cours, à risque, en pause ou terminé. Modifiable
+  depuis l'éditeur ou directement depuis le menu de la carte.
+- **Prochaine action** — la seule tâche à engager ensuite. Épinglez-la
+  vous-même, ou laissez l'assistant proposer la plus urgente du projet.
+
+La carte de chaque projet signale désormais ce qui déborde et ce qui attend une
+réponse. Une tâche en retard mais en attente d'un tiers n'est plus comptée comme
+un retard à traiter. Un projet en pause ou terminé cesse de réclamer une action,
+et une action épinglée devenue caduque est signalée plutôt qu'effacée.
+
+Les projets existants sont conservés tels quels : objectif vide, statut « en
+cours » et prochaine action déduite.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.20.0/Assistant-Mail-0.20.0.dmg" length="4292646" type="application/octet-stream" sparkle:edSignature="YhY7W5cV8WAzD46sIKHWrEVuEmuo3MFzZqEwHv4bwmd7dTHZzl8Hmx/LdhX2hZcr+K4mDFt58Ye5ZL0wSHENBg=="/>
+        </item>
+        <item>
             <title>0.19.1</title>
             <pubDate>Tue, 21 Jul 2026 12:39:53 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -53,27 +84,6 @@ Cette version ajoute une revue quotidienne guidée dans la Vue du jour.
 - Conservation locale et rétrocompatible des plans quotidiens.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.19.0/Assistant-Mail-0.19.0.dmg" length="4202115" type="application/octet-stream" sparkle:edSignature="DPSaqkTlR4It65PNNKQUWmPBmac8VVnVHCsLn8m9e5SJuKVEpbx2BVZ32y7h9BL9Ox1i+ZYjdQrgCZkHDJonDA=="/>
-        </item>
-        <item>
-            <title>0.18.5</title>
-            <pubDate>Mon, 20 Jul 2026 16:43:08 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>43</sparkle:version>
-            <sparkle:shortVersionString>0.18.5</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.18.5
-
-## Brief hebdomadaire corrigé
-
-- Le brief reprend la présentation compacte validée : **Projet**, **Tâches de la semaine** et **E-mails reçus** sont désormais alignés dans trois colonnes.
-- Chaque projet occupe une seule ligne dense au lieu de deux grandes cartes verticales.
-- Les synthèses sont limitées à deux lignes pour faciliter la comparaison entre projets et réduire fortement le défilement.
-- Les cellules restent cliquables pour ouvrir directement les tâches ou les e-mails du projet.
-
-Ce correctif remplace le rendu empilé apparu dans la version 0.18.4.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.18.5/Assistant-Mail-0.18.5.dmg" length="4059968" type="application/octet-stream" sparkle:edSignature="QJBvKAxMVdxh5M0VeXrasBKFe+FN3AcGT1np4TDDw3yyyTESBoeAjrc+/anva/lhuW6bRMG+LuP4KWZ44pTdCQ=="/>
         </item>
     </channel>
 </rss>
