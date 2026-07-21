@@ -6,6 +6,24 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.25.1</title>
+            <pubDate>Tue, 21 Jul 2026 15:09:38 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>56</sparkle:version>
+            <sparkle:shortVersionString>0.25.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.25.1
+
+## Correctif : l'onglet Analyse s'affichait vide
+
+Le panneau de capacité introduit par la 0.25.0 pouvait vider toute la fenêtre à
+l'ouverture d'Analyse. Ses barres sont désormais dessinées sur une base fixe, et
+la lecture de l'agenda n'a plus lieu pendant l'affichage.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.25.1/Assistant-Mail-0.25.1.dmg" length="4586794" type="application/octet-stream" sparkle:edSignature="3Y6+UAsoQg7f1vTogRMfJ6jov/kk27hAnp8RSVpeqL5xiLAYJxGkAXA7O8SE+dzx1XC2d/sGHXTq3bZF7zI6CA=="/>
+        </item>
+        <item>
             <title>0.25.0</title>
             <pubDate>Tue, 21 Jul 2026 15:02:33 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -74,36 +92,6 @@ Chaque détection écartée est notée dans le journal avec son motif, si vous
 souhaitez comprendre ce qui a été filtré.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.24.0/Assistant-Mail-0.24.0.dmg" length="4404934" type="application/octet-stream" sparkle:edSignature="9GmKbkepHYWdt0No6+N8suu8ZkqNGOCir6wbVcoLQSX6zd4hUQpj0HjzdmexX+27IZSNB9cFrLoyG8BHVPZzAw=="/>
-        </item>
-        <item>
-            <title>0.23.2</title>
-            <pubDate>Tue, 21 Jul 2026 14:19:52 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>53</sparkle:version>
-            <sparkle:shortVersionString>0.23.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.23.2
-
-Contient aussi les titres d'engagement de la 0.23.1.
-
-## Une file de validation qui reste raisonnable
-
-La recherche d'engagements remontait jusqu'à deux mois en arrière et proposait
-des promesses depuis longtemps tenues. Elle ne porte désormais que sur vos
-envois des quatorze derniers jours ; les messages plus anciens ne seront plus
-jamais reproposés.
-
-Les engagements déjà créés à partir d'envois trop anciens sont écartés au
-démarrage. Vous les retrouverez dans « Terminées › Ignorées », et vous pouvez en
-restaurer n'importe lequel : rien n'a été supprimé.
-
-## Des titres qu'on peut distinguer
-
-Le titre nomme la chose promise avec les mots de votre message, et le
-destinataire quand c'est utile : « Envoyer le contrat mis à jour à Bigué ».
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.2/Assistant-Mail-0.23.2.dmg" length="4397716" type="application/octet-stream" sparkle:edSignature="3wqHyRQwvHXbydPFuPnfPrM3ySIOpZFZiy1H0a8gtDi698KenuXKDPYFtjgiWtnZ0FSXTUNvW8wo4hd/zEkLBQ=="/>
         </item>
     </channel>
 </rss>
