@@ -6,6 +6,30 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.23.1</title>
+            <pubDate>Tue, 21 Jul 2026 14:12:47 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>52</sparkle:version>
+            <sparkle:shortVersionString>0.23.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.23.1
+
+## Des engagements qu'on peut distinguer
+
+Les promesses repérées dans vos envois s'intitulaient presque toutes « Envoyer
+un document » — une liste impossible à valider.
+
+Le titre nomme désormais la chose promise avec les mots de votre message, et le
+destinataire quand c'est utile : « Envoyer le contrat mis à jour à Bigué ».
+Lorsqu'une formulation reste trop vague, l'objet du message vient la compléter.
+
+Les engagements détectés par la version précédente sont retitrés au démarrage :
+vous n'avez rien à refaire.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.23.1/Assistant-Mail-0.23.1.dmg" length="4395394" type="application/octet-stream" sparkle:edSignature="UsVwtG05ycCP5CtpbyPJvZwbcFmMXHPp9P4pqNoOUXhjn4KWBsRDYFyv62zY1BlDyuIOLge7EAsknetUC19yAQ=="/>
+        </item>
+        <item>
             <title>0.23.0</title>
             <pubDate>Tue, 21 Jul 2026 14:04:39 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -68,36 +92,6 @@ Aucune reconnexion n'est nécessaire : les autorisations déjà accordées
 couvraient l'ensemble de la boîte aux lettres.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.22.0/Assistant-Mail-0.22.0.dmg" length="4369993" type="application/octet-stream" sparkle:edSignature="bx3W9lsvuvVlfJG06XhEb9JCxBPnNmG3XiA8iUxrHdpYZ28vjvOPn36WqiMPkZ3eQK0rjNAyOlXnZBbi1kaaBg=="/>
-        </item>
-        <item>
-            <title>0.21.0</title>
-            <pubDate>Tue, 21 Jul 2026 13:41:36 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>49</sparkle:version>
-            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.21.0
-
-## Radar des engagements
-
-Un onglet « En attente » regroupe tout ce que vous attendez de quelqu'un
-d'autre, classé dans l'ordre où l'on veut le traiter : relances dues d'abord,
-puis de l'attente la plus ancienne à la plus récente.
-
-- Un bandeau annonce les relances à envoyer.
-- « J'ai relancé » réarme le délai avant la relance suivante sans effacer
-  l'ancienneté réelle de l'engagement.
-- « Ouvrir l'e-mail pour relancer » va droit à la conversation.
-
-## Suivi proposé, jamais imposé
-
-L'assistant ne lit que votre boîte de réception : il ne peut pas constater
-qu'un message est parti. Lorsqu'une réponse a été rédigée pour un e-mail dont
-la tâche reste ouverte, il le signale et propose d'en suivre la réponse — la
-décision vous revient.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.21.0/Assistant-Mail-0.21.0.dmg" length="4341528" type="application/octet-stream" sparkle:edSignature="bLRpn+RjEQnO5DPaXvl9pwDPGGqN3X0xN9OoSeMPbUgk2Qcnd+teQYLJNsLxpygJuJsksUE7QlS6yDgXLK6gBQ=="/>
         </item>
     </channel>
 </rss>
