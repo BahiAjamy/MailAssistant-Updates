@@ -6,6 +6,28 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.28.1</title>
+            <pubDate>Wed, 22 Jul 2026 09:03:02 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>65</sparkle:version>
+            <sparkle:shortVersionString>0.28.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.1
+
+Cette mise à jour fiabilise les cinq widgets macOS.
+
+- état de synchronisation fidèle aux erreurs et aux dernières réussites de chaque compte ;
+- protection des instantanés partagés contre les écritures concurrentes et obsolètes ;
+- actualisation ciblée des widgets concernés ;
+- configuration plus robuste du widget Projet ;
+- améliorations de confidentialité, de couleurs et d’accessibilité.
+
+Le contrat partagé application–widgets et les 60 contrôles du cœur ont été validés avant publication.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.1/Assistant-Mail-0.28.1.dmg" length="4701956" type="application/octet-stream" sparkle:edSignature="Fn82ybKRFehMOhMXYUWYETe/bo8LsPwhb5/PWbWVrTVPmajM7kcM/hDwzw3SxfxxBeFDbDDhlLUoz8CunKiZCA=="/>
+        </item>
+        <item>
             <title>0.28.0</title>
             <pubDate>Wed, 22 Jul 2026 07:58:12 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -39,23 +61,6 @@ Suite de la correction d'affichage de l'onglet Tâches.
 - Dans le détail d'une tâche, l'échéance, la priorité, les étiquettes et les boutons se replient proprement quand le panneau est étroit, au lieu de forcer la mise en page.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.27.2/Assistant-Mail-0.27.2.dmg" length="4605790" type="application/octet-stream" sparkle:edSignature="JQDENunZEKyfSKQOmT3cuRZgukW1Jgkf2keCyFqWM9/ly3eZUHILrfi3txrDD7p9MDMGYTIzp7KMN3sPa2fdBQ=="/>
-        </item>
-        <item>
-            <title>0.27.1</title>
-            <pubDate>Wed, 22 Jul 2026 07:31:56 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>62</sparkle:version>
-            <sparkle:shortVersionString>0.27.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.27.1
-
-Correction d'affichage dans l'onglet Tâches.
-
-- **Sélectionner une tâche ne déforme plus la liste.** Le titre « Tâches », les onglets et l'en-tête de section restaient tronqués et passaient sous la barre latérale dès qu'une tâche était ouverte. La colonne conserve désormais sa largeur.
-- Le panneau de détail revient en haut quand vous changez de tâche.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.27.1/Assistant-Mail-0.27.1.dmg" length="4603961" type="application/octet-stream" sparkle:edSignature="mePMNytdT4V6sTz60OAGerw5UwQPnU9r8xsd0jWciXtipHsnCDkINUrkVbKo6NQROuHMuDmB4k2MCFbd/pjrBw=="/>
         </item>
     </channel>
 </rss>
