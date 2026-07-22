@@ -6,6 +6,25 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.29.2</title>
+            <pubDate>Wed, 22 Jul 2026 12:17:30 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>70</sparkle:version>
+            <sparkle:shortVersionString>0.29.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.29.2
+
+Correction du message « Enregistrement local impossible » à l'ouverture.
+
+- **Vos comptes ne sont plus signalés en panne** quand seul l'enregistrement local échoue. Le jeton d'accès rafraîchi reste valable et la synchronisation se poursuit normalement.
+- L'enregistrement **réessaie** avant d'abandonner, ce qui absorbe les refus passagers du disque.
+- Une option de protection de fichier inutile sur ce Mac a été retirée : elle n'apportait aucune confidentialité mais pouvait faire échouer l'écriture.
+- Les messages distinguent désormais clairement un problème de stockage d'un problème de compte.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.2/Assistant-Mail-0.29.2.dmg" length="4745068" type="application/octet-stream" sparkle:edSignature="UB6PHdXDseKM628HDUZEoN+p7GfhAiQgJnkB6Na3x8NJM/kGNBbWrZi0iml8txzqUgPc0ueR78AZU7xk5KjXCw=="/>
+        </item>
+        <item>
             <title>0.29.1</title>
             <pubDate>Wed, 22 Jul 2026 10:41:39 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -44,21 +63,6 @@ L'interface répond enfin au curseur.
 - Le tout respecte le réglage **« Réduire les animations »** de macOS : si vous l'activez, les états changent sans transition.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.0/Assistant-Mail-0.29.0.dmg" length="4726359" type="application/octet-stream" sparkle:edSignature="EKZ6tPKtKOMoua4cNeDlNlJTGzHQe8ySVP7bmOwXAUBHJMPqwqf6eIL+Ij3pa3kKA3zbHuPXBvhqV0yTKq1RCQ=="/>
-        </item>
-        <item>
-            <title>0.28.3</title>
-            <pubDate>Wed, 22 Jul 2026 10:21:29 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>67</sparkle:version>
-            <sparkle:shortVersionString>0.28.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.3
-
-- **« À répondre » plus juste** : les reçus, factures et avis envoyés depuis des adresses qui n'acceptent aucune réponse ne comptent plus comme des conversations en attente. Ils restent consultables dans E-mails.
-- **Filtre professionnel corrigé** : les adresses du type `no_reply@` (avec tiret bas) échappaient au filtre des expéditeurs automatiques. Elles sont désormais reconnues, dans toute l'application.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.3/Assistant-Mail-0.28.3.dmg" length="4710483" type="application/octet-stream" sparkle:edSignature="lQrdPacV4RNYauMavv/s2sIT1IUYt2H533kcgo1WvKxWUsoVWGrYAQbAvtTMIHvvItkyDpg8fBfA3nXuTHpaDQ=="/>
         </item>
     </channel>
 </rss>
