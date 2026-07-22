@@ -6,6 +6,24 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.29.0</title>
+            <pubDate>Wed, 22 Jul 2026 10:34:11 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>68</sparkle:version>
+            <sparkle:shortVersionString>0.29.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.29.0
+
+L'interface répond enfin au curseur.
+
+- **Survol** : les lignes de listes — tâches, e-mails, conversations à répondre — se teintent au passage du curseur. Les cartes de la Vue du jour et les lignes d'Analyse se soulèvent légèrement. On voit désormais ce qui est cliquable avant de cliquer.
+- **Compteurs animés** : les nombres roulent au lieu de sauter — badges de la barre latérale, métriques du jour, indicateurs d'Analyse, jauge du plan. Cocher une tâche se voit immédiatement.
+- Le tout respecte le réglage **« Réduire les animations »** de macOS : si vous l'activez, les états changent sans transition.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.0/Assistant-Mail-0.29.0.dmg" length="4726359" type="application/octet-stream" sparkle:edSignature="EKZ6tPKtKOMoua4cNeDlNlJTGzHQe8ySVP7bmOwXAUBHJMPqwqf6eIL+Ij3pa3kKA3zbHuPXBvhqV0yTKq1RCQ=="/>
+        </item>
+        <item>
             <title>0.28.3</title>
             <pubDate>Wed, 22 Jul 2026 10:21:29 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -33,28 +51,6 @@
 - **Fond uniforme** : deux bandes verticales restaient blanches — entre la barre latérale et le contenu, et le long du bord droit. La teinte de la page s'applique désormais à la fenêtre entière, en thème clair comme en thème sombre.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.2/Assistant-Mail-0.28.2.dmg" length="4710613" type="application/octet-stream" sparkle:edSignature="ayB6Gi7TWvaf28AyZRtpR/q4rFyPp9SfPwyX7LOLvjpzYhFUJ5rYf1CbJ6PnidV7R1N+7sV4hj6yfj3nobq8DA=="/>
-        </item>
-        <item>
-            <title>0.28.1</title>
-            <pubDate>Wed, 22 Jul 2026 09:03:02 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>65</sparkle:version>
-            <sparkle:shortVersionString>0.28.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.1
-
-Cette mise à jour fiabilise les cinq widgets macOS.
-
-- état de synchronisation fidèle aux erreurs et aux dernières réussites de chaque compte ;
-- protection des instantanés partagés contre les écritures concurrentes et obsolètes ;
-- actualisation ciblée des widgets concernés ;
-- configuration plus robuste du widget Projet ;
-- améliorations de confidentialité, de couleurs et d’accessibilité.
-
-Le contrat partagé application–widgets et les 60 contrôles du cœur ont été validés avant publication.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.1/Assistant-Mail-0.28.1.dmg" length="4701956" type="application/octet-stream" sparkle:edSignature="Fn82ybKRFehMOhMXYUWYETe/bo8LsPwhb5/PWbWVrTVPmajM7kcM/hDwzw3SxfxxBeFDbDDhlLUoz8CunKiZCA=="/>
         </item>
     </channel>
 </rss>
