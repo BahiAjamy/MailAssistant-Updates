@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.28.2</title>
+            <pubDate>Wed, 22 Jul 2026 10:07:26 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>66</sparkle:version>
+            <sparkle:shortVersionString>0.28.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.2
+
+- **Fond uniforme** : deux bandes verticales restaient blanches — entre la barre latérale et le contenu, et le long du bord droit. La teinte de la page s'applique désormais à la fenêtre entière, en thème clair comme en thème sombre.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.2/Assistant-Mail-0.28.2.dmg" length="4710613" type="application/octet-stream" sparkle:edSignature="ayB6Gi7TWvaf28AyZRtpR/q4rFyPp9SfPwyX7LOLvjpzYhFUJ5rYf1CbJ6PnidV7R1N+7sV4hj6yfj3nobq8DA=="/>
+        </item>
+        <item>
             <title>0.28.1</title>
             <pubDate>Wed, 22 Jul 2026 09:03:02 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -44,23 +58,6 @@ Le dossier Envoyés devient utile : deux nouveautés qui reposent uniquement sur
 - Le tri écarte ce qui n'attend pas de réponse : réponses d'absence automatiques, envois en masse, notifications et invitations d'agenda. Les conversations où vous êtes en simple copie, et les silences de plus de 30 jours, sont également ignorés.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.0/Assistant-Mail-0.28.0.dmg" length="4663831" type="application/octet-stream" sparkle:edSignature="7R2FP/9QeTrv42oEUbzunyeygYGQY60qsnkKG66aJY5VxLlI24hm7IlWHmuR/i1jmV96CmSn/dWikuqFRvOnAg=="/>
-        </item>
-        <item>
-            <title>0.27.2</title>
-            <pubDate>Wed, 22 Jul 2026 07:40:45 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>63</sparkle:version>
-            <sparkle:shortVersionString>0.27.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.27.2
-
-Suite de la correction d'affichage de l'onglet Tâches.
-
-- **La colonne des tâches garde enfin sa largeur** quand vous ouvrez une tâche : le titre « Tâches » ne se brise plus en deux lignes et l'onglet « Terminées » n'est plus tronqué.
-- Dans le détail d'une tâche, l'échéance, la priorité, les étiquettes et les boutons se replient proprement quand le panneau est étroit, au lieu de forcer la mise en page.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.27.2/Assistant-Mail-0.27.2.dmg" length="4605790" type="application/octet-stream" sparkle:edSignature="JQDENunZEKyfSKQOmT3cuRZgukW1Jgkf2keCyFqWM9/ly3eZUHILrfi3txrDD7p9MDMGYTIzp7KMN3sPa2fdBQ=="/>
         </item>
     </channel>
 </rss>
