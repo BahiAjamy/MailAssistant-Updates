@@ -6,6 +6,37 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.33.0</title>
+            <pubDate>Wed, 22 Jul 2026 19:05:34 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>74</sparkle:version>
+            <sparkle:shortVersionString>0.33.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.33.0
+
+## Relancer sans écrire soi-même
+
+Sur une tâche en attente de réponse, le menu **En attente** propose désormais **Rédiger la relance…**. Apple Intelligence produit un message court qui rappelle l'objet de l'attente et demande où en est le sujet — sans jamais reprocher le silence.
+
+- L'**ancienneté** de l'attente et le **nombre de relances déjà envoyées** sont pris en compte : la première reste légère, les suivantes plus directes sur l'échéance.
+- Les brouillons sont désormais **signés de votre nom**, déduit de vos messages déjà envoyés. Ils étaient jusqu'ici parfois signés du nom d'un correspondant.
+- Sur une conversation à plusieurs voix, la relance s'adresse au **bon interlocuteur**.
+- Quand le modèle se trompe de rôle et s'excuse d'un retard qui n'est pas le vôtre, l'application vous le **signale** avant que vous ne copiiez le texte.
+
+Comme toujours, rien n'est envoyé par l'application : vous relisez, vous copiez, vous envoyez depuis Gmail ou Outlook.
+
+## Une application plus économe
+
+- Le **temps restant estimé** s'affiche pendant la synchronisation, calculé sur la relève en cours.
+- Les sauvegardes locales ne recopient plus l'intégralité de vos données avant chaque écriture : deux fois moins d'accès disque.
+- Les contrôles automatiques (Apple Rappels, suivi des réponses) suivent maintenant leur vraie cadence au lieu de se répéter chaque minute — moins de travail en arrière-plan tout au long de la journée.
+
+Ces trois points viennent d'un travail de mesure : plusieurs optimisations envisagées se sont révélées inutiles ou nuisibles à la qualité du tri, et n'ont donc pas été faites.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.33.0/Assistant-Mail-0.33.0.dmg" length="4815874" type="application/octet-stream" sparkle:edSignature="PV4S6hJlZYrLDk06OI/KZB1mA1flbJ7A6X3yN5y8s2c0fZtYFF6DWqsL+zm13LwymQmcJfT7FZ122cfmoHVrBw=="/>
+        </item>
+        <item>
             <title>0.31.0</title>
             <pubDate>Wed, 22 Jul 2026 12:57:31 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -57,28 +88,6 @@ Correction du message « Enregistrement local impossible » à l'ouverture.
 - Les messages distinguent désormais clairement un problème de stockage d'un problème de compte.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.2/Assistant-Mail-0.29.2.dmg" length="4745068" type="application/octet-stream" sparkle:edSignature="UB6PHdXDseKM628HDUZEoN+p7GfhAiQgJnkB6Na3x8NJM/kGNBbWrZi0iml8txzqUgPc0ueR78AZU7xk5KjXCw=="/>
-        </item>
-        <item>
-            <title>0.29.1</title>
-            <pubDate>Wed, 22 Jul 2026 10:41:39 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>69</sparkle:version>
-            <sparkle:shortVersionString>0.29.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.29.1
-
-Les moments qui comptent se voient enfin.
-
-- **Terminer une tâche** : le rond se transforme en coche avec un rebond, dans la liste comme dans la Vue du jour.
-- **Synchronisation** : la flèche tourne vraiment pendant la relève du courrier.
-- **Plan du jour bouclé** : une petite célébration, une seule fois.
-- **Listes vivantes** : une tâche terminée quitte la liste en douceur au lieu de disparaître d'un coup.
-- **Analyse** : changer de sous-onglet passe par un fondu court.
-
-Rien ne s'agite en boucle : l'application reste calme quand vous ne faites rien.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.1/Assistant-Mail-0.29.1.dmg" length="4744868" type="application/octet-stream" sparkle:edSignature="cegZDveJZEruL+EsohBtj+K27Jt+3PkH8RiSVuFnl3XXJteX7eiAdwwz1pdcjpRku1dFYBV/4gr6RMeJbPwjDA=="/>
         </item>
     </channel>
 </rss>
