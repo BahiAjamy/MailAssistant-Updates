@@ -6,6 +6,21 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.28.3</title>
+            <pubDate>Wed, 22 Jul 2026 10:21:29 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>67</sparkle:version>
+            <sparkle:shortVersionString>0.28.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.3
+
+- **« À répondre » plus juste** : les reçus, factures et avis envoyés depuis des adresses qui n'acceptent aucune réponse ne comptent plus comme des conversations en attente. Ils restent consultables dans E-mails.
+- **Filtre professionnel corrigé** : les adresses du type `no_reply@` (avec tiret bas) échappaient au filtre des expéditeurs automatiques. Elles sont désormais reconnues, dans toute l'application.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.3/Assistant-Mail-0.28.3.dmg" length="4710483" type="application/octet-stream" sparkle:edSignature="lQrdPacV4RNYauMavv/s2sIT1IUYt2H533kcgo1WvKxWUsoVWGrYAQbAvtTMIHvvItkyDpg8fBfA3nXuTHpaDQ=="/>
+        </item>
+        <item>
             <title>0.28.2</title>
             <pubDate>Wed, 22 Jul 2026 10:07:26 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -40,24 +55,6 @@ Cette mise à jour fiabilise les cinq widgets macOS.
 Le contrat partagé application–widgets et les 60 contrôles du cœur ont été validés avant publication.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.1/Assistant-Mail-0.28.1.dmg" length="4701956" type="application/octet-stream" sparkle:edSignature="Fn82ybKRFehMOhMXYUWYETe/bo8LsPwhb5/PWbWVrTVPmajM7kcM/hDwzw3SxfxxBeFDbDDhlLUoz8CunKiZCA=="/>
-        </item>
-        <item>
-            <title>0.28.0</title>
-            <pubDate>Wed, 22 Jul 2026 07:58:12 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>64</sparkle:version>
-            <sparkle:shortVersionString>0.28.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.0
-
-Le dossier Envoyés devient utile : deux nouveautés qui reposent uniquement sur des faits — quand vous avez écrit, et dans quel fil.
-
-- **Nouvel onglet « À répondre »** : les conversations où c'est vous qu'on attend. Un message reçu auquel vous n'avez jamais répondu n'échappe plus à l'assistant, même s'il n'a jamais produit de tâche. C'est le miroir de l'onglet « En attente ». Un clic ouvre la conversation.
-- **Promesses tenues** : quand un engagement est suivi d'un envoi dans la même conversation, l'assistant le signale dans « À faire » et vous propose de le clore. Jusqu'ici, les engagements s'accumulaient sans que rien ne détecte qu'ils étaient honorés.
-- Le tri écarte ce qui n'attend pas de réponse : réponses d'absence automatiques, envois en masse, notifications et invitations d'agenda. Les conversations où vous êtes en simple copie, et les silences de plus de 30 jours, sont également ignorés.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.0/Assistant-Mail-0.28.0.dmg" length="4663831" type="application/octet-stream" sparkle:edSignature="7R2FP/9QeTrv42oEUbzunyeygYGQY60qsnkKG66aJY5VxLlI24hm7IlWHmuR/i1jmV96CmSn/dWikuqFRvOnAg=="/>
         </item>
     </channel>
 </rss>
