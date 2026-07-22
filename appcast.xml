@@ -6,6 +6,28 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.29.1</title>
+            <pubDate>Wed, 22 Jul 2026 10:41:39 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>69</sparkle:version>
+            <sparkle:shortVersionString>0.29.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.29.1
+
+Les moments qui comptent se voient enfin.
+
+- **Terminer une tâche** : le rond se transforme en coche avec un rebond, dans la liste comme dans la Vue du jour.
+- **Synchronisation** : la flèche tourne vraiment pendant la relève du courrier.
+- **Plan du jour bouclé** : une petite célébration, une seule fois.
+- **Listes vivantes** : une tâche terminée quitte la liste en douceur au lieu de disparaître d'un coup.
+- **Analyse** : changer de sous-onglet passe par un fondu court.
+
+Rien ne s'agite en boucle : l'application reste calme quand vous ne faites rien.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.1/Assistant-Mail-0.29.1.dmg" length="4744868" type="application/octet-stream" sparkle:edSignature="cegZDveJZEruL+EsohBtj+K27Jt+3PkH8RiSVuFnl3XXJteX7eiAdwwz1pdcjpRku1dFYBV/4gr6RMeJbPwjDA=="/>
+        </item>
+        <item>
             <title>0.29.0</title>
             <pubDate>Wed, 22 Jul 2026 10:34:11 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -37,20 +59,6 @@ L'interface répond enfin au curseur.
 - **Filtre professionnel corrigé** : les adresses du type `no_reply@` (avec tiret bas) échappaient au filtre des expéditeurs automatiques. Elles sont désormais reconnues, dans toute l'application.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.3/Assistant-Mail-0.28.3.dmg" length="4710483" type="application/octet-stream" sparkle:edSignature="lQrdPacV4RNYauMavv/s2sIT1IUYt2H533kcgo1WvKxWUsoVWGrYAQbAvtTMIHvvItkyDpg8fBfA3nXuTHpaDQ=="/>
-        </item>
-        <item>
-            <title>0.28.2</title>
-            <pubDate>Wed, 22 Jul 2026 10:07:26 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>66</sparkle:version>
-            <sparkle:shortVersionString>0.28.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.28.2
-
-- **Fond uniforme** : deux bandes verticales restaient blanches — entre la barre latérale et le contenu, et le long du bord droit. La teinte de la page s'applique désormais à la fenêtre entière, en thème clair comme en thème sombre.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.28.2/Assistant-Mail-0.28.2.dmg" length="4710613" type="application/octet-stream" sparkle:edSignature="ayB6Gi7TWvaf28AyZRtpR/q4rFyPp9SfPwyX7LOLvjpzYhFUJ5rYf1CbJ6PnidV7R1N+7sV4hj6yfj3nobq8DA=="/>
         </item>
     </channel>
 </rss>
