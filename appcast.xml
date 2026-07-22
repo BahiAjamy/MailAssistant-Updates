@@ -6,6 +6,23 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.27.2</title>
+            <pubDate>Wed, 22 Jul 2026 07:40:45 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>63</sparkle:version>
+            <sparkle:shortVersionString>0.27.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.27.2
+
+Suite de la correction d'affichage de l'onglet Tâches.
+
+- **La colonne des tâches garde enfin sa largeur** quand vous ouvrez une tâche : le titre « Tâches » ne se brise plus en deux lignes et l'onglet « Terminées » n'est plus tronqué.
+- Dans le détail d'une tâche, l'échéance, la priorité, les étiquettes et les boutons se replient proprement quand le panneau est étroit, au lieu de forcer la mise en page.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.27.2/Assistant-Mail-0.27.2.dmg" length="4605790" type="application/octet-stream" sparkle:edSignature="JQDENunZEKyfSKQOmT3cuRZgukW1Jgkf2keCyFqWM9/ly3eZUHILrfi3txrDD7p9MDMGYTIzp7KMN3sPa2fdBQ=="/>
+        </item>
+        <item>
             <title>0.27.1</title>
             <pubDate>Wed, 22 Jul 2026 07:31:56 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -41,28 +58,6 @@ Nouvelle identité visuelle, et un accès direct aux mises à jour.
 - **Bouton « Mise à jour »** ajouté dans la barre latérale, à côté de « Projets » : la recherche de mises à jour est désormais accessible en un clic.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.27.0/Assistant-Mail-0.27.0.dmg" length="4596590" type="application/octet-stream" sparkle:edSignature="+7hVvotX62DfPbROp9u8PWepD96CkXy4lashxec5rAnBkeXnRkn0op8PzOd4wvCBy7P2oi53jCni6m46z9pMDg=="/>
-        </item>
-        <item>
-            <title>0.26.0</title>
-            <pubDate>Wed, 22 Jul 2026 05:56:26 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>60</sparkle:version>
-            <sparkle:shortVersionString>0.26.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.26.0
-
-Améliorations d'interface et de lisibilité issues d'un diagnostic global.
-
-- **Brief hebdomadaire fiable** : les suggestions ignorées ne sont plus comptées dans les totaux par projet — le brief reflète le travail retenu, plus le bruit écarté.
-- **Français soigné** : accord correct des libellés comptés partout (fini les « 1 tâche(s) »).
-- **Listes plus lisibles** : lignes de tâches allégées (date de création en infobulle et dans le détail), heure au lieu de la date répétée dans les e-mails groupés par jour, objet « (Sans objet) » explicite.
-- **Détail d'une tâche** : barre d'action réorganisée — Terminer, Veille et Suivi restent en évidence, les autres actions passent dans un menu « … » ; plus de boutons tronqués.
-- **Vue du jour** épurée : le rappel des suggestions à valider ne fait plus doublon avec le compteur du haut.
-- **Projets & Comptes** : pastille « 0 tâche » plus discrète ; personnalisation couleur/icône repliée pour une page de comptes plus calme.
-- **Réglages** : raccourci ⌘K ajouté à la liste ; l'onglet d'Analyse consulté est mémorisé.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.26.0/Assistant-Mail-0.26.0.dmg" length="4573070" type="application/octet-stream" sparkle:edSignature="4Y8Uf45omXwsAvzz4OSsrSy7cj1sFEAUN7wkCQJcB07wH7ADqi34HONpixQMFh6GRMLDyZoeymFOMmuzkaDlAw=="/>
         </item>
     </channel>
 </rss>
