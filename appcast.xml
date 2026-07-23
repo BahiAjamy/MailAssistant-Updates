@@ -6,6 +6,48 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.40.0</title>
+            <pubDate>Thu, 23 Jul 2026 14:17:05 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>81</sparkle:version>
+            <sparkle:shortVersionString>0.40.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.40.0
+
+## Répondre depuis l'application
+
+Le brouillon ne s'arrête plus au copier-coller : il peut maintenant **partir directement** depuis vos comptes Gmail.
+
+- La réponse s'attache au **bon fil de conversation**, y compris chez votre destinataire.
+- Elle est adressée à **l'expéditeur seul** : un « répondre à tous » involontaire ne se rattrape pas.
+- Objets et signatures accentués sont correctement encodés — pas de « Ã© » à l'arrivée.
+
+### Une action volontairement difficile à déclencher
+
+C'est la première action de l'application qui **ne peut pas être annulée**. Elle est donc protégée :
+
+- **Envoyer…** n'est jamais l'action par défaut, et **⌘⏎ ne l'active pas** — ce raccourci reste sur *Copier et ouvrir*, qui n'engage à rien ;
+- une confirmation affiche l'expéditeur, le destinataire, l'objet et le texte **exact** qui partent ;
+- chaque envoi est tracé dans le journal de synchronisation et dans le journal des décisions.
+
+*Copier et ouvrir* reste disponible si vous préférez garder le geste final dans Gmail.
+
+## Une étape à faire une fois
+
+**Reconnectez vos deux comptes** dans *Comptes* : les autorisations actuelles ne couvrent que la lecture. Sans cette reconnexion, le bouton *Envoyer…* refusera l'envoi.
+
+La nouvelle autorisation demandée, `gmail.send`, permet **uniquement d'envoyer** : elle n'ouvre aucun accès supplémentaire à votre boîte.
+
+Un conseil pour le premier essai : répondez-vous à vous-même, pour vérifier le rattachement au fil et les accents avant d'écrire à quelqu'un d'autre.
+
+## À savoir
+
+Les e-mails relevés avant cette version ne portent pas l'identifiant technique nécessaire au rattachement au fil chez le destinataire. Une réponse à l'un d'eux partira quand même, et l'application vous le signalera.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.40.0/Assistant-Mail-0.40.0.dmg" length="5003309" type="application/octet-stream" sparkle:edSignature="szwDZuVYFoyJzihH0/9O1wvRudzxaJqtNXZclRk7xJGcUkvDQx0qdSAmsrjb/27FbVaAuh27FcO9wSzFKmvLBg=="/>
+        </item>
+        <item>
             <title>0.39.0</title>
             <pubDate>Thu, 23 Jul 2026 12:26:07 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -32,37 +74,6 @@ Mise à jour d’Assistant Mail 0.39.0.
 Mise à jour d’Assistant Mail 0.38.0.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.38.0/Assistant-Mail-0.38.0.dmg" length="4929847" type="application/octet-stream" sparkle:edSignature="JmSlqDQ09X2/GmYtwxTZUFWFUkdIJ+8dRub+pQTPf8nx66sGnTgLjGHQuk+RgaPs4g3KLJem5sLuIPTMWqmGAw=="/>
-        </item>
-        <item>
-            <title>0.33.0</title>
-            <pubDate>Wed, 22 Jul 2026 19:05:34 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>74</sparkle:version>
-            <sparkle:shortVersionString>0.33.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.33.0
-
-## Relancer sans écrire soi-même
-
-Sur une tâche en attente de réponse, le menu **En attente** propose désormais **Rédiger la relance…**. Apple Intelligence produit un message court qui rappelle l'objet de l'attente et demande où en est le sujet — sans jamais reprocher le silence.
-
-- L'**ancienneté** de l'attente et le **nombre de relances déjà envoyées** sont pris en compte : la première reste légère, les suivantes plus directes sur l'échéance.
-- Les brouillons sont désormais **signés de votre nom**, déduit de vos messages déjà envoyés. Ils étaient jusqu'ici parfois signés du nom d'un correspondant.
-- Sur une conversation à plusieurs voix, la relance s'adresse au **bon interlocuteur**.
-- Quand le modèle se trompe de rôle et s'excuse d'un retard qui n'est pas le vôtre, l'application vous le **signale** avant que vous ne copiiez le texte.
-
-Comme toujours, rien n'est envoyé par l'application : vous relisez, vous copiez, vous envoyez depuis Gmail ou Outlook.
-
-## Une application plus économe
-
-- Le **temps restant estimé** s'affiche pendant la synchronisation, calculé sur la relève en cours.
-- Les sauvegardes locales ne recopient plus l'intégralité de vos données avant chaque écriture : deux fois moins d'accès disque.
-- Les contrôles automatiques (Apple Rappels, suivi des réponses) suivent maintenant leur vraie cadence au lieu de se répéter chaque minute — moins de travail en arrière-plan tout au long de la journée.
-
-Ces trois points viennent d'un travail de mesure : plusieurs optimisations envisagées se sont révélées inutiles ou nuisibles à la qualité du tri, et n'ont donc pas été faites.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.33.0/Assistant-Mail-0.33.0.dmg" length="4815874" type="application/octet-stream" sparkle:edSignature="PV4S6hJlZYrLDk06OI/KZB1mA1flbJ7A6X3yN5y8s2c0fZtYFF6DWqsL+zm13LwymQmcJfT7FZ122cfmoHVrBw=="/>
         </item>
     </channel>
 </rss>
