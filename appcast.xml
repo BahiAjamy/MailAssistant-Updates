@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.39.0</title>
+            <pubDate>Thu, 23 Jul 2026 12:26:07 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>80</sparkle:version>
+            <sparkle:shortVersionString>0.39.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.39.0
+
+Mise à jour d’Assistant Mail 0.39.0.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.39.0/Assistant-Mail-0.39.0.dmg" length="4977957" type="application/octet-stream" sparkle:edSignature="AJZK+aEcuMf7au12LF3vQhLZxx93/k5PNMb6fdpb1TC9jS/mdkojMaCBInRrNT1EJayMjRZe5JDLrKOS5M+NCQ=="/>
+        </item>
+        <item>
             <title>0.38.0</title>
             <pubDate>Thu, 23 Jul 2026 11:43:33 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -49,40 +63,6 @@ Comme toujours, rien n'est envoyé par l'application : vous relisez, vous copiez
 Ces trois points viennent d'un travail de mesure : plusieurs optimisations envisagées se sont révélées inutiles ou nuisibles à la qualité du tri, et n'ont donc pas été faites.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.33.0/Assistant-Mail-0.33.0.dmg" length="4815874" type="application/octet-stream" sparkle:edSignature="PV4S6hJlZYrLDk06OI/KZB1mA1flbJ7A6X3yN5y8s2c0fZtYFF6DWqsL+zm13LwymQmcJfT7FZ122cfmoHVrBw=="/>
-        </item>
-        <item>
-            <title>0.31.0</title>
-            <pubDate>Wed, 22 Jul 2026 12:57:31 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>72</sparkle:version>
-            <sparkle:shortVersionString>0.31.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.31.0
-
-## Les notifications deviennent utiles
-
-Jusqu'ici, une notification ne servait qu'à prévenir : cliquer dessus ne faisait qu'activer la fenêtre, là où vous l'aviez laissée. Et tant qu'Assistant Mail était au premier plan, macOS les masquait toutes — y compris le digest du matin.
-
-- **Un clic ouvre ce dont il est question** : la tâche, l'e-mail ou l'écran concerné.
-- **Des boutons agissent directement** : Terminer ou Reporter à demain sur une action, Valider ou Ignorer sur une suggestion, Relance envoyée ou Ouvrir l'e-mail sur un suivi sans réponse, Préparer ma journée sur le digest du matin.
-- Les gestes qui se suffisent à eux-mêmes s'exécutent **sans vous ramener dans l'application** : clore une tâche depuis une notification ne doit pas interrompre ce que vous faisiez.
-- Les notifications s'affichent désormais aussi quand l'application est ouverte.
-
-Tout passe par les mêmes chemins que l'interface : l'annulation en un clic et la synchronisation avec Apple Rappels restent acquises.
-
-## Finition visuelle
-
-L'identité « papier et encre » n'avait jamais atteint les Tâches et les E-mails, les deux écrans les plus utilisés.
-
-- Le message et la tâche que vous venez lire sont **posés sur une feuille** au lieu d'être imprimés à même le fond crème.
-- Les pastilles, filets et contours suivent enfin la même encre : ils tiraient au gris froid sur le crème, et disparaissaient dans les zones en retrait.
-- Les en-têtes des sept écrans, les panneaux de la Vue du jour et de l'Analyse, et les états vides suivent une seule et même grammaire — les espacements variaient d'un onglet à l'autre.
-- Les bandeaux Annuler et Statut ne laissent plus transparaître la liste derrière eux.
-
-Aucun changement de comportement : ni vos données, ni vos réglages, ni la disposition des colonnes.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.31.0/Assistant-Mail-0.31.0.dmg" length="4763459" type="application/octet-stream" sparkle:edSignature="BHGzan4mF6oKErOkWDadrQULlaTRQz7w1dN+TaPMznOGduAM+LukhX/EBk1nicDmDo+yb+i/Kkw6Qr3DoS6eBA=="/>
         </item>
     </channel>
 </rss>
