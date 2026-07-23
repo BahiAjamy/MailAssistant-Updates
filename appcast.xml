@@ -6,6 +6,20 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.38.0</title>
+            <pubDate>Thu, 23 Jul 2026 11:43:33 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>79</sparkle:version>
+            <sparkle:shortVersionString>0.38.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.38.0
+
+Mise à jour d’Assistant Mail 0.38.0.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.38.0/Assistant-Mail-0.38.0.dmg" length="4929847" type="application/octet-stream" sparkle:edSignature="JmSlqDQ09X2/GmYtwxTZUFWFUkdIJ+8dRub+pQTPf8nx66sGnTgLjGHQuk+RgaPs4g3KLJem5sLuIPTMWqmGAw=="/>
+        </item>
+        <item>
             <title>0.33.0</title>
             <pubDate>Wed, 22 Jul 2026 19:05:34 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -69,25 +83,6 @@ L'identité « papier et encre » n'avait jamais atteint les Tâches et les E-ma
 Aucun changement de comportement : ni vos données, ni vos réglages, ni la disposition des colonnes.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.31.0/Assistant-Mail-0.31.0.dmg" length="4763459" type="application/octet-stream" sparkle:edSignature="BHGzan4mF6oKErOkWDadrQULlaTRQz7w1dN+TaPMznOGduAM+LukhX/EBk1nicDmDo+yb+i/Kkw6Qr3DoS6eBA=="/>
-        </item>
-        <item>
-            <title>0.29.2</title>
-            <pubDate>Wed, 22 Jul 2026 12:17:30 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>70</sparkle:version>
-            <sparkle:shortVersionString>0.29.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.29.2
-
-Correction du message « Enregistrement local impossible » à l'ouverture.
-
-- **Vos comptes ne sont plus signalés en panne** quand seul l'enregistrement local échoue. Le jeton d'accès rafraîchi reste valable et la synchronisation se poursuit normalement.
-- L'enregistrement **réessaie** avant d'abandonner, ce qui absorbe les refus passagers du disque.
-- Une option de protection de fichier inutile sur ce Mac a été retirée : elle n'apportait aucune confidentialité mais pouvait faire échouer l'écriture.
-- Les messages distinguent désormais clairement un problème de stockage d'un problème de compte.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.29.2/Assistant-Mail-0.29.2.dmg" length="4745068" type="application/octet-stream" sparkle:edSignature="UB6PHdXDseKM628HDUZEoN+p7GfhAiQgJnkB6Na3x8NJM/kGNBbWrZi0iml8txzqUgPc0ueR78AZU7xk5KjXCw=="/>
         </item>
     </channel>
 </rss>
