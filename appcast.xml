@@ -6,6 +6,38 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.41.0</title>
+            <pubDate>Sun, 26 Jul 2026 20:08:38 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>82</sparkle:version>
+            <sparkle:shortVersionString>0.41.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.41.0
+
+## Vos réponses apparaissent enfin dans les conversations
+
+Ce que vous avez écrit prend sa place dans le fil, marqué **« Vous »**, aux côtés des messages reçus. Sur vos données, quarante et un fils affichaient jusqu'ici une conversation amputée de vos réponses — dont dix se terminaient sur un message reçu alors que la dernière parole était la vôtre.
+
+Vingt-deux conversations gagnent au passage une section Conversation qui n'existait pas : un message reçu suivi de votre seule réponse se présentait comme un message isolé, resté sans suite.
+
+## Les conversations que vous ouvrez existent aussi
+
+Un fil que vous avez ouvert, et dont aucune réponse n'est encore revenue, a désormais sa ligne dans la liste — marquée d'une flèche de réponse et libellée « À <destinataire> ». Ces conversations n'existaient nulle part dans l'application.
+
+## Une réponse envoyée entre dans son fil immédiatement
+
+Plus besoin d'attendre la synchronisation suivante pour la voir : le fil cessait d'affirmer « vous n'avez jamais répondu » seulement à la relève d'après, c'est-à-dire longtemps après l'instant où vous veniez de répondre.
+
+Le brouillon de réponse reçoit lui aussi vos propres messages dans son contexte : il repartait jusqu'ici comme si vous n'aviez jamais écrit.
+
+## Ménage dans les envois conservés
+
+Déconnecter un compte purgeait ses e-mails mais laissait ses envois derrière lui. Reconnecter la même adresse lui donnant un nouvel identifiant, la moitié du magasin était devenue des doublons inertes. Ils sont purgés à la première ouverture, une fenêtre de rétention de soixante jours s'applique désormais, et une réponse courte dans un fil déjà conservé n'est plus écartée par le filtre professionnel.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.41.0/Assistant-Mail-0.41.0.dmg" length="5078263" type="application/octet-stream" sparkle:edSignature="VQ5V1X07rJxUsp9JSKFepe2fMzvFaef9syA7LAlm9c4KKnEyP4PL+6QyTvxsFUTYbJ0WKwCHjbclgAFAyQcsBg=="/>
+        </item>
+        <item>
             <title>0.40.0</title>
             <pubDate>Thu, 23 Jul 2026 14:17:05 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -60,20 +92,6 @@ Les e-mails relevés avant cette version ne portent pas l'identifiant technique 
 Mise à jour d’Assistant Mail 0.39.0.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.39.0/Assistant-Mail-0.39.0.dmg" length="4977957" type="application/octet-stream" sparkle:edSignature="AJZK+aEcuMf7au12LF3vQhLZxx93/k5PNMb6fdpb1TC9jS/mdkojMaCBInRrNT1EJayMjRZe5JDLrKOS5M+NCQ=="/>
-        </item>
-        <item>
-            <title>0.38.0</title>
-            <pubDate>Thu, 23 Jul 2026 11:43:33 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>79</sparkle:version>
-            <sparkle:shortVersionString>0.38.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.38.0
-
-Mise à jour d’Assistant Mail 0.38.0.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.38.0/Assistant-Mail-0.38.0.dmg" length="4929847" type="application/octet-stream" sparkle:edSignature="JmSlqDQ09X2/GmYtwxTZUFWFUkdIJ+8dRub+pQTPf8nx66sGnTgLjGHQuk+RgaPs4g3KLJem5sLuIPTMWqmGAw=="/>
         </item>
     </channel>
 </rss>
