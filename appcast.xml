@@ -6,6 +6,61 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.42.0</title>
+            <pubDate>Mon, 27 Jul 2026 11:10:15 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>83</sparkle:version>
+            <sparkle:shortVersionString>0.42.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Lisibilité
+
+Le rouge d'une échéance dépassée, l'orange d'une priorité haute, le vert d'une
+confiance : ces couleurs disaient l'essentiel et étaient parmi les textes les
+moins lisibles de l'application. Mesuré sur le papier crème, l'orange sur sa
+pastille tenait 1,87:1 et le vert 2,08:1, là où la norme d'accessibilité demande
+4,5:1.
+
+Le langage visuel ne change pas — le fond des pastilles et les symboles gardent
+leur teinte vive. Seul le texte est ramené au seuil, juste ce qu'il faut : un
+orange reste un orange. La correction couvre aussi les vingt-quatre couleurs de
+projet, en clair comme en sombre, et un contrôle automatique la vérifie
+désormais à chaque build.
+
+## Ce que vous verrez
+
+- **Le texte a grandi.** Aperçus, dates, explications et contenus de tableau
+  passent de 10 à 11 pt. L'échelle s'était effondrée sur une seule taille.
+- **L'aperçu des e-mails est enfin lisible** : il occupe toute la largeur au lieu
+  d'être écrasé à quatre mots par les marqueurs qui lui disputaient la ligne.
+- **Le brief hebdomadaire tient sur un écran** au lieu de trois.
+- **Les messages de statut passent en bas de fenêtre**, où ils ne masquent plus
+  les boutons de l'écran.
+- **Un accueil au premier lancement**, qui mène à la configuration au lieu de la
+  nommer.
+- **Les erreurs proposent le geste qui les résout** : une autorisation expirée
+  offre « Voir les comptes » plutôt qu'un code réseau.
+- **Les contrôles de saisie s'affichent sous le champ concerné**, et un bouton
+  grisé dit ce qui manque.
+- **L'avertissement avant envoi devient visible.** Le parcours ne change pas :
+  confirmation obligatoire, jamais l'action par défaut, jamais ⌘⏎.
+- **L'Analyse parle français** : « Taux de résolution » remplace « Cohorte 30 j »,
+  et chaque en-tête porte sa définition.
+- **Le calendrier lève ses ambiguïtés** : « Lu Ma Me Je Ve Sa Di » au lieu de
+  « L M M J V S D », et la légende explique enfin les dates rouges et bleues.
+- **Comptes et Projets n'existent plus à trois endroits différents.**
+- **L'annulation laisse 12 secondes** au lieu de 6, et 20 après une action en
+  masse.
+- **VoiceOver** : trois fois plus d'éléments correctement annoncés.
+
+## Sous le capot
+
+La batterie d'instantanés sait maintenant rendre en mode sombre : l'apparence
+sombre était décrite dans le code mais n'avait jamais été regardée.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.42.0/Assistant-Mail-0.42.0.dmg" length="5166563" type="application/octet-stream" sparkle:edSignature="Xu4/NyFwJVfB9SesLo/bmYCGIdHjuQIDVM8lvi/3qEe35w3WyIArRTHLAoXSuz4zVAdLpEul6yK1tp5OJbRoCg=="/>
+        </item>
+        <item>
             <title>0.41.0</title>
             <pubDate>Sun, 26 Jul 2026 20:08:38 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -78,20 +133,6 @@ Un conseil pour le premier essai : répondez-vous à vous-même, pour vérifier 
 Les e-mails relevés avant cette version ne portent pas l'identifiant technique nécessaire au rattachement au fil chez le destinataire. Une réponse à l'un d'eux partira quand même, et l'application vous le signalera.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.40.0/Assistant-Mail-0.40.0.dmg" length="5003309" type="application/octet-stream" sparkle:edSignature="szwDZuVYFoyJzihH0/9O1wvRudzxaJqtNXZclRk7xJGcUkvDQx0qdSAmsrjb/27FbVaAuh27FcO9wSzFKmvLBg=="/>
-        </item>
-        <item>
-            <title>0.39.0</title>
-            <pubDate>Thu, 23 Jul 2026 12:26:07 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>80</sparkle:version>
-            <sparkle:shortVersionString>0.39.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.39.0
-
-Mise à jour d’Assistant Mail 0.39.0.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.39.0/Assistant-Mail-0.39.0.dmg" length="4977957" type="application/octet-stream" sparkle:edSignature="AJZK+aEcuMf7au12LF3vQhLZxx93/k5PNMb6fdpb1TC9jS/mdkojMaCBInRrNT1EJayMjRZe5JDLrKOS5M+NCQ=="/>
         </item>
     </channel>
 </rss>
