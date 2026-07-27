@@ -6,6 +6,48 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.45.0</title>
+            <pubDate>Mon, 27 Jul 2026 16:31:14 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>86</sparkle:version>
+            <sparkle:shortVersionString>0.45.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Un « Bien reçu, merci ! » ferme une conversation
+
+Le suivi réclamait une relance sur des fils que l'interlocuteur venait poliment
+de clore. « Bien reçu, merci ! », « Merci Ibrahima », « Thanks », « D'accord.
+Merci » : sur les données réelles, neuf des cinquante conversations en attente
+étaient de cette nature — assez pour qu'on cesse de lire la liste.
+
+Les accusés de réception n'y figurent plus. **Cinquante conversations
+deviennent quarante et une.**
+
+La détection est volontairement timide, parce que les deux erreurs ne se valent
+pas : rater un accusé de réception coûte une ligne de trop, tandis que prendre
+une demande pour un remerciement fait *disparaître* une dette réelle — et une
+ligne absente ne se remarque jamais. Une question, un marqueur de demande
+(« peux-tu », « merci de », « veuillez »), un texte un peu long : chacun suffit
+à conserver la conversation dans la liste.
+
+## Faire le ménage soi-même
+
+Ce que la détection ne saura jamais deviner, un geste s'en charge.
+
+**Clic droit sur une conversation → « Aucune réponse attendue ».** Et la liste
+accepte maintenant la **sélection multiple** : ⌘-clic, ⇧-clic, puis un seul
+clic droit retire tout le lot.
+
+Rien n'est enterré. La clé est le dernier message reçu, pas la conversation :
+**un nouveau message dans le fil ramène la dette**. Le pied de section indique
+combien ont été écartées et permet de tout restaurer d'un clic.
+
+Conséquence de la sélection : dans le suivi, le simple clic sélectionne et le
+double clic ouvre la conversation — comme partout ailleurs sur macOS.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.45.0/Assistant-Mail-0.45.0.dmg" length="5263611" type="application/octet-stream" sparkle:edSignature="q7haSFHWCq1tg7G7Zx62wZf7KGKNDeskubhc8O+uaKJeTCSdJhbVvY7UyneljywtaegTp/QVvB1H8cV/pnrGDw=="/>
+        </item>
+        <item>
             <title>0.44.0</title>
             <pubDate>Mon, 27 Jul 2026 16:12:08 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -139,61 +181,6 @@ plus large que la lecture seule. Ce n'est pas tranché : tant que ça ne l'est
 pas, faire disparaître un message de votre boîte passe encore par Gmail.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.43.0/Assistant-Mail-0.43.0.dmg" length="5142524" type="application/octet-stream" sparkle:edSignature="nitFZCBmItW29CcmWgmk2EELRpT+Ro6mwyKVtwZUrIR6/+AY38J0Ba30UYwnIz0BVOQnRp8YXfWmU14O84bUDQ=="/>
-        </item>
-        <item>
-            <title>0.42.0</title>
-            <pubDate>Mon, 27 Jul 2026 11:10:15 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>83</sparkle:version>
-            <sparkle:shortVersionString>0.42.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Lisibilité
-
-Le rouge d'une échéance dépassée, l'orange d'une priorité haute, le vert d'une
-confiance : ces couleurs disaient l'essentiel et étaient parmi les textes les
-moins lisibles de l'application. Mesuré sur le papier crème, l'orange sur sa
-pastille tenait 1,87:1 et le vert 2,08:1, là où la norme d'accessibilité demande
-4,5:1.
-
-Le langage visuel ne change pas — le fond des pastilles et les symboles gardent
-leur teinte vive. Seul le texte est ramené au seuil, juste ce qu'il faut : un
-orange reste un orange. La correction couvre aussi les vingt-quatre couleurs de
-projet, en clair comme en sombre, et un contrôle automatique la vérifie
-désormais à chaque build.
-
-## Ce que vous verrez
-
-- **Le texte a grandi.** Aperçus, dates, explications et contenus de tableau
-  passent de 10 à 11 pt. L'échelle s'était effondrée sur une seule taille.
-- **L'aperçu des e-mails est enfin lisible** : il occupe toute la largeur au lieu
-  d'être écrasé à quatre mots par les marqueurs qui lui disputaient la ligne.
-- **Le brief hebdomadaire tient sur un écran** au lieu de trois.
-- **Les messages de statut passent en bas de fenêtre**, où ils ne masquent plus
-  les boutons de l'écran.
-- **Un accueil au premier lancement**, qui mène à la configuration au lieu de la
-  nommer.
-- **Les erreurs proposent le geste qui les résout** : une autorisation expirée
-  offre « Voir les comptes » plutôt qu'un code réseau.
-- **Les contrôles de saisie s'affichent sous le champ concerné**, et un bouton
-  grisé dit ce qui manque.
-- **L'avertissement avant envoi devient visible.** Le parcours ne change pas :
-  confirmation obligatoire, jamais l'action par défaut, jamais ⌘⏎.
-- **L'Analyse parle français** : « Taux de résolution » remplace « Cohorte 30 j »,
-  et chaque en-tête porte sa définition.
-- **Le calendrier lève ses ambiguïtés** : « Lu Ma Me Je Ve Sa Di » au lieu de
-  « L M M J V S D », et la légende explique enfin les dates rouges et bleues.
-- **Comptes et Projets n'existent plus à trois endroits différents.**
-- **L'annulation laisse 12 secondes** au lieu de 6, et 20 après une action en
-  masse.
-- **VoiceOver** : trois fois plus d'éléments correctement annoncés.
-
-## Sous le capot
-
-La batterie d'instantanés sait maintenant rendre en mode sombre : l'apparence
-sombre était décrite dans le code mais n'avait jamais été regardée.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.42.0/Assistant-Mail-0.42.0.dmg" length="5166563" type="application/octet-stream" sparkle:edSignature="Xu4/NyFwJVfB9SesLo/bmYCGIdHjuQIDVM8lvi/3qEe35w3WyIArRTHLAoXSuz4zVAdLpEul6yK1tp5OJbRoCg=="/>
         </item>
     </channel>
 </rss>
