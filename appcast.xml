@@ -6,6 +6,76 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.44.0</title>
+            <pubDate>Mon, 27 Jul 2026 16:12:08 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>85</sparkle:version>
+            <sparkle:shortVersionString>0.44.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Ce qu'on vous doit, ce que vous devez
+
+L'application comptait quatre tuiles en Vue du jour, et toutes mesuraient
+l'application elle-même : retards, échéances du jour, suggestions à valider,
+e-mails non lus. Aucune ne décrivait une personne qui attend.
+
+**« On vous attend »** prend la place des e-mails non lus. Ce compteur reflétait
+l'état de lecture chez Gmail — où votre courrier est déjà lu quand la relève
+passe — et valait donc zéro en permanence. La dette de réponse, elle, se
+constate dans votre dossier Envoyés : ce sont les conversations dont le dernier
+mot revient à quelqu'un d'autre et auxquelles vous n'avez jamais répondu.
+
+Le panneau des nouveaux e-mails devient celui des **conversations en attente**,
+la plus ancienne d'abord. Il montrait ce qui venait d'arriver ; l'information
+coûteuse n'est pas le message de ce matin, c'est celui du 12 auquel personne n'a
+répondu. Au-delà de sept jours, l'ancienneté passe en orange.
+
+## Un seul écran de suivi
+
+« En attente » et « À répondre » étaient deux onglets pour un seul concept vu
+des deux côtés. Ils fusionnent en **Suivi**, à deux sections : *On vous attend*,
+puis *Vous attendez*. La dette vient en premier — elle est un fait constaté, là
+où une attente est une intention que vous avez déclarée.
+
+## Les fiches Personnes
+
+Le tableau des interlocuteurs devient cliquable. La fiche rassemble ce qui était
+éparpillé sur quatre écrans : échanges, part reçue en simple copie,
+conversations où la personne attend votre réponse, tâches nées de ses messages,
+projets communs.
+
+Et les délais **dans les deux sens** : « vous lui répondez en » à côté de « elle
+vous répond en ». C'est le seul endroit qui dise qui fait attendre l'autre, et
+il fallait qu'il le dise symétriquement. Sous trois mesures, rien n'est affiché :
+à deux échanges, une médiane est un accident.
+
+Un classement **« Qui vous attend le plus longtemps »** rejoint les
+Statistiques. L'ancienneté retenue est celle de la conversation la plus
+ancienne, jamais la somme — trois attentes de quinze jours ne font pas
+quarante-cinq jours de retard.
+
+## Un indicateur qui mesurait la mauvaise chose
+
+Dans les Statistiques, « délai médian de traitement » disparaît. Il mesurait
+l'écart entre la création d'une tâche et le clic qui la coche pendant la revue :
+six minutes en médiane sur des données réelles, trois quarts sous 1,2 h. Ce
+n'est pas une durée de travail, c'est la vitesse de la souris.
+
+Il cède la place au **quantile à 75 % de vos délais de réponse** — trois
+réponses sur quatre partent en moins de ce délai. Celui-là décrit un engagement
+tenu envers quelqu'un.
+
+## Correction
+
+Un robot de facturation figurait parmi les personnes qui attendent votre
+réponse : l'analyse l'avait classé « action requise », à juste titre — un
+paiement échoué demande une action. Mais pas une *réponse*. Requérir une action
+et attendre une réponse sont deux choses distinctes, et la liste les
+confondait ; les expéditeurs transactionnels en sont désormais écartés.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.44.0/Assistant-Mail-0.44.0.dmg" length="5250403" type="application/octet-stream" sparkle:edSignature="kkNe50uakG0tbZqgtNh6LLO+CWx7DUqtLNYwbt0mQMggSDZMGBnK3t9Etn9qeoowhe5xQh8gosF8L1o0gFMXCQ=="/>
+        </item>
+        <item>
             <title>0.43.0</title>
             <pubDate>Mon, 27 Jul 2026 15:39:15 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -124,38 +194,6 @@ La batterie d'instantanés sait maintenant rendre en mode sombre : l'apparence
 sombre était décrite dans le code mais n'avait jamais été regardée.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.42.0/Assistant-Mail-0.42.0.dmg" length="5166563" type="application/octet-stream" sparkle:edSignature="Xu4/NyFwJVfB9SesLo/bmYCGIdHjuQIDVM8lvi/3qEe35w3WyIArRTHLAoXSuz4zVAdLpEul6yK1tp5OJbRoCg=="/>
-        </item>
-        <item>
-            <title>0.41.0</title>
-            <pubDate>Sun, 26 Jul 2026 20:08:38 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>82</sparkle:version>
-            <sparkle:shortVersionString>0.41.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.41.0
-
-## Vos réponses apparaissent enfin dans les conversations
-
-Ce que vous avez écrit prend sa place dans le fil, marqué **« Vous »**, aux côtés des messages reçus. Sur vos données, quarante et un fils affichaient jusqu'ici une conversation amputée de vos réponses — dont dix se terminaient sur un message reçu alors que la dernière parole était la vôtre.
-
-Vingt-deux conversations gagnent au passage une section Conversation qui n'existait pas : un message reçu suivi de votre seule réponse se présentait comme un message isolé, resté sans suite.
-
-## Les conversations que vous ouvrez existent aussi
-
-Un fil que vous avez ouvert, et dont aucune réponse n'est encore revenue, a désormais sa ligne dans la liste — marquée d'une flèche de réponse et libellée « À <destinataire> ». Ces conversations n'existaient nulle part dans l'application.
-
-## Une réponse envoyée entre dans son fil immédiatement
-
-Plus besoin d'attendre la synchronisation suivante pour la voir : le fil cessait d'affirmer « vous n'avez jamais répondu » seulement à la relève d'après, c'est-à-dire longtemps après l'instant où vous veniez de répondre.
-
-Le brouillon de réponse reçoit lui aussi vos propres messages dans son contexte : il repartait jusqu'ici comme si vous n'aviez jamais écrit.
-
-## Ménage dans les envois conservés
-
-Déconnecter un compte purgeait ses e-mails mais laissait ses envois derrière lui. Reconnecter la même adresse lui donnant un nouvel identifiant, la moitié du magasin était devenue des doublons inertes. Ils sont purgés à la première ouverture, une fenêtre de rétention de soixante jours s'applique désormais, et une réponse courte dans un fil déjà conservé n'est plus écartée par le filtre professionnel.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.41.0/Assistant-Mail-0.41.0.dmg" length="5078263" type="application/octet-stream" sparkle:edSignature="VQ5V1X07rJxUsp9JSKFepe2fMzvFaef9syA7LAlm9c4KKnEyP4PL+6QyTvxsFUTYbJ0WKwCHjbclgAFAyQcsBg=="/>
         </item>
     </channel>
 </rss>
