@@ -6,6 +6,62 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.46.0</title>
+            <pubDate>Mon, 27 Jul 2026 17:01:02 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>87</sparkle:version>
+            <sparkle:shortVersionString>0.46.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Répondre sans quitter le suivi
+
+Le carnet disait qui attend ; il n'aidait pas à répondre. Traiter une
+conversation demandait un double clic vers l'onglet E-mails, puis « Préparer
+une réponse » — trois écrans pour un geste.
+
+Un bouton apparaît maintenant au survol de la ligne, et **« Répondre… »** ouvre
+le menu contextuel, dans le suivi comme dans la Vue du jour. Le brouillon
+s'ouvre sur place, avec le contexte de la conversation, le ton et le périmètre
+des destinataires.
+
+La boucle se referme d'elle-même : l'envoi inscrit la réponse dans le fil sans
+attendre la synchronisation, et la conversation quitte la dette dans la foulée.
+
+## Votre dette monte-t-elle ?
+
+« 29 en attente » ne se juge pas : c'est une bonne nouvelle si l'on venait de
+quarante, une mauvaise si l'on venait de vingt. La tuile **On vous attend**
+porte désormais sa trajectoire sur quinze jours et sa variation.
+
+Une seule des quatre tuiles en reçoit une, et c'est délibéré. L'application
+enregistre des *flux* — messages reçus, tâches terminées — mais n'a jamais
+enregistré l'*état* d'un jour passé. « En retard », « Aujourd'hui » et « À
+valider » demanderaient de rejouer les mises en veille, les abandons et les
+purges : la courbe serait jolie et fausse. La dette de réponse, elle, se
+recalcule exactement.
+
+## L'assistant apprend de vos refus
+
+Écarter une suggestion ne servait à rien : la même proposition revenait au
+message suivant.
+
+Après **trois suggestions écartées venant du même expéditeur**, l'assistant
+propose de ne plus en créer. La règle arrête les tâches, **jamais le
+courrier** : les messages restent relevés, analysés et lisibles — seule la
+création de tâche s'arrête.
+
+Rien n'est appliqué d'office, et les règles acquises sont listées dans
+**Réglages › IA** avec un bouton pour les retirer.
+
+## Aussi
+
+Le retrait de conversations du suivi accepte la **sélection multiple** :
+⌘-clic, ⇧-clic, puis un seul clic droit. Dans le suivi, le simple clic
+sélectionne et le double clic ouvre la conversation.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.46.0/Assistant-Mail-0.46.0.dmg" length="5323384" type="application/octet-stream" sparkle:edSignature="XJ2zECEK2r8ixJcJmiMOoyfy1v5x/3oLDoap0krtK5S6Kcjm7TjfSFEKnY3BfhgaJXFCsrnundBQUrG/9XdCBg=="/>
+        </item>
+        <item>
             <title>0.45.0</title>
             <pubDate>Mon, 27 Jul 2026 16:31:14 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -116,71 +172,6 @@ et attendre une réponse sont deux choses distinctes, et la liste les
 confondait ; les expéditeurs transactionnels en sont désormais écartés.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.44.0/Assistant-Mail-0.44.0.dmg" length="5250403" type="application/octet-stream" sparkle:edSignature="kkNe50uakG0tbZqgtNh6LLO+CWx7DUqtLNYwbt0mQMggSDZMGBnK3t9Etn9qeoowhe5xQh8gosF8L1o0gFMXCQ=="/>
-        </item>
-        <item>
-            <title>0.43.0</title>
-            <pubDate>Mon, 27 Jul 2026 15:39:15 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>84</sparkle:version>
-            <sparkle:shortVersionString>0.43.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## À savoir avant de mettre à jour
-
-**La détection d'engagements s'éteint**, y compris si elle tournait chez vous.
-
-Ce détecteur lisait votre dossier Envoyés pour y repérer les promesses que vous
-aviez faites. Mesuré sur des données réelles : 67 propositions, 63 écartées,
-4 menées à terme. Six pour cent de rétention — quand l'analyse du courrier reçu
-en obtient soixante-sept. Une file de validation dont on jette dix-neuf éléments
-sur vingt cesse d'être lue, et elle emporte dans son discrédit les suggestions
-justes qui s'y trouvent.
-
-Rien n'est supprimé. **Réglages › IA** le rallume, et affiche à côté ce qu'il a
-réellement produit chez vous sur trente jours : proposées, retenues, refusées.
-Un réglage d'IA se décide sur des chiffres ou ne se décide pas.
-
-La relève de vos envois, elle, continue sans changement : c'est elle qui porte
-la dette de réponse, vos délais de réponse, les conversations complètes et les
-promesses constatées tenues.
-
-## Les pièces jointes se téléchargent
-
-L'application signalait le fichier et vous renvoyait dans Gmail pour l'obtenir —
-sur plus de la moitié des messages conservés. Un clic l'enregistre désormais
-dans **Téléchargements** et le montre dans le Finder.
-
-Cela vaut aussi pour tout le courrier déjà relevé : aucune réanalyse n'est
-nécessaire. Et aucune autorisation supplémentaire n'est demandée à Gmail — la
-lecture seule y suffisait déjà.
-
-## Répondre à tous
-
-La rédaction propose maintenant **À l'expéditeur** ou **À tous**. Les personnes
-en copie s'affichent pendant que vous écrivez, pas seulement au moment de
-confirmer : on choisit son ton selon l'audience.
-
-Le défaut reste l'expéditeur seul. Élargir est un geste explicite, jamais un
-héritage du message d'origine — un « répondre à tous » involontaire est déjà
-chez huit personnes quand on s'en aperçoit. Vos propres adresses, l'expéditeur
-déjà destinataire et les doublons sont retirés de la copie automatiquement.
-
-## Gmail seul
-
-Le support Outlook est retiré : deux clients réseau, un service de connexion
-Microsoft, un identifiant d'application et la moitié des écrans Comptes et
-Réglages.
-
-En échange, l'envoi cesse d'être conditionnel. Le bouton **Envoyer** ne va plus
-et ne vient plus selon le compte ouvert.
-
-## Ce qui reste à faire
-
-Archiver et marquer lu depuis l'application demandent une autorisation Gmail
-plus large que la lecture seule. Ce n'est pas tranché : tant que ça ne l'est
-pas, faire disparaître un message de votre boîte passe encore par Gmail.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.43.0/Assistant-Mail-0.43.0.dmg" length="5142524" type="application/octet-stream" sparkle:edSignature="nitFZCBmItW29CcmWgmk2EELRpT+Ro6mwyKVtwZUrIR6/+AY38J0Ba30UYwnIz0BVOQnRp8YXfWmU14O84bUDQ=="/>
         </item>
     </channel>
 </rss>
