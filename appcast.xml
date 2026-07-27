@@ -6,6 +6,71 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.43.0</title>
+            <pubDate>Mon, 27 Jul 2026 15:39:15 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>84</sparkle:version>
+            <sparkle:shortVersionString>0.43.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## À savoir avant de mettre à jour
+
+**La détection d'engagements s'éteint**, y compris si elle tournait chez vous.
+
+Ce détecteur lisait votre dossier Envoyés pour y repérer les promesses que vous
+aviez faites. Mesuré sur des données réelles : 67 propositions, 63 écartées,
+4 menées à terme. Six pour cent de rétention — quand l'analyse du courrier reçu
+en obtient soixante-sept. Une file de validation dont on jette dix-neuf éléments
+sur vingt cesse d'être lue, et elle emporte dans son discrédit les suggestions
+justes qui s'y trouvent.
+
+Rien n'est supprimé. **Réglages › IA** le rallume, et affiche à côté ce qu'il a
+réellement produit chez vous sur trente jours : proposées, retenues, refusées.
+Un réglage d'IA se décide sur des chiffres ou ne se décide pas.
+
+La relève de vos envois, elle, continue sans changement : c'est elle qui porte
+la dette de réponse, vos délais de réponse, les conversations complètes et les
+promesses constatées tenues.
+
+## Les pièces jointes se téléchargent
+
+L'application signalait le fichier et vous renvoyait dans Gmail pour l'obtenir —
+sur plus de la moitié des messages conservés. Un clic l'enregistre désormais
+dans **Téléchargements** et le montre dans le Finder.
+
+Cela vaut aussi pour tout le courrier déjà relevé : aucune réanalyse n'est
+nécessaire. Et aucune autorisation supplémentaire n'est demandée à Gmail — la
+lecture seule y suffisait déjà.
+
+## Répondre à tous
+
+La rédaction propose maintenant **À l'expéditeur** ou **À tous**. Les personnes
+en copie s'affichent pendant que vous écrivez, pas seulement au moment de
+confirmer : on choisit son ton selon l'audience.
+
+Le défaut reste l'expéditeur seul. Élargir est un geste explicite, jamais un
+héritage du message d'origine — un « répondre à tous » involontaire est déjà
+chez huit personnes quand on s'en aperçoit. Vos propres adresses, l'expéditeur
+déjà destinataire et les doublons sont retirés de la copie automatiquement.
+
+## Gmail seul
+
+Le support Outlook est retiré : deux clients réseau, un service de connexion
+Microsoft, un identifiant d'application et la moitié des écrans Comptes et
+Réglages.
+
+En échange, l'envoi cesse d'être conditionnel. Le bouton **Envoyer** ne va plus
+et ne vient plus selon le compte ouvert.
+
+## Ce qui reste à faire
+
+Archiver et marquer lu depuis l'application demandent une autorisation Gmail
+plus large que la lecture seule. Ce n'est pas tranché : tant que ça ne l'est
+pas, faire disparaître un message de votre boîte passe encore par Gmail.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.43.0/Assistant-Mail-0.43.0.dmg" length="5142524" type="application/octet-stream" sparkle:edSignature="nitFZCBmItW29CcmWgmk2EELRpT+Ro6mwyKVtwZUrIR6/+AY38J0Ba30UYwnIz0BVOQnRp8YXfWmU14O84bUDQ=="/>
+        </item>
+        <item>
             <title>0.42.0</title>
             <pubDate>Mon, 27 Jul 2026 11:10:15 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -91,48 +156,6 @@ Le brouillon de réponse reçoit lui aussi vos propres messages dans son context
 Déconnecter un compte purgeait ses e-mails mais laissait ses envois derrière lui. Reconnecter la même adresse lui donnant un nouvel identifiant, la moitié du magasin était devenue des doublons inertes. Ils sont purgés à la première ouverture, une fenêtre de rétention de soixante jours s'applique désormais, et une réponse courte dans un fil déjà conservé n'est plus écartée par le filtre professionnel.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.41.0/Assistant-Mail-0.41.0.dmg" length="5078263" type="application/octet-stream" sparkle:edSignature="VQ5V1X07rJxUsp9JSKFepe2fMzvFaef9syA7LAlm9c4KKnEyP4PL+6QyTvxsFUTYbJ0WKwCHjbclgAFAyQcsBg=="/>
-        </item>
-        <item>
-            <title>0.40.0</title>
-            <pubDate>Thu, 23 Jul 2026 14:17:05 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>81</sparkle:version>
-            <sparkle:shortVersionString>0.40.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Assistant Mail 0.40.0
-
-## Répondre depuis l'application
-
-Le brouillon ne s'arrête plus au copier-coller : il peut maintenant **partir directement** depuis vos comptes Gmail.
-
-- La réponse s'attache au **bon fil de conversation**, y compris chez votre destinataire.
-- Elle est adressée à **l'expéditeur seul** : un « répondre à tous » involontaire ne se rattrape pas.
-- Objets et signatures accentués sont correctement encodés — pas de « Ã© » à l'arrivée.
-
-### Une action volontairement difficile à déclencher
-
-C'est la première action de l'application qui **ne peut pas être annulée**. Elle est donc protégée :
-
-- **Envoyer…** n'est jamais l'action par défaut, et **⌘⏎ ne l'active pas** — ce raccourci reste sur *Copier et ouvrir*, qui n'engage à rien ;
-- une confirmation affiche l'expéditeur, le destinataire, l'objet et le texte **exact** qui partent ;
-- chaque envoi est tracé dans le journal de synchronisation et dans le journal des décisions.
-
-*Copier et ouvrir* reste disponible si vous préférez garder le geste final dans Gmail.
-
-## Une étape à faire une fois
-
-**Reconnectez vos deux comptes** dans *Comptes* : les autorisations actuelles ne couvrent que la lecture. Sans cette reconnexion, le bouton *Envoyer…* refusera l'envoi.
-
-La nouvelle autorisation demandée, `gmail.send`, permet **uniquement d'envoyer** : elle n'ouvre aucun accès supplémentaire à votre boîte.
-
-Un conseil pour le premier essai : répondez-vous à vous-même, pour vérifier le rattachement au fil et les accents avant d'écrire à quelqu'un d'autre.
-
-## À savoir
-
-Les e-mails relevés avant cette version ne portent pas l'identifiant technique nécessaire au rattachement au fil chez le destinataire. Une réponse à l'un d'eux partira quand même, et l'application vous le signalera.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.40.0/Assistant-Mail-0.40.0.dmg" length="5003309" type="application/octet-stream" sparkle:edSignature="szwDZuVYFoyJzihH0/9O1wvRudzxaJqtNXZclRk7xJGcUkvDQx0qdSAmsrjb/27FbVaAuh27FcO9wSzFKmvLBg=="/>
         </item>
     </channel>
 </rss>
