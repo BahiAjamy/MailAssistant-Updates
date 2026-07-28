@@ -6,6 +6,51 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.48.0</title>
+            <pubDate>Tue, 28 Jul 2026 11:23:58 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>93</sparkle:version>
+            <sparkle:shortVersionString>0.48.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Un envoi ne se déclare pas avant d'avoir eu lieu
+
+La version précédente corrigeait des messages qui affirmaient plus qu'ils ne
+savaient. Un second passage a montré que deux d'entre eux mentaient encore.
+
+- **Le digest du matin consommait sa journée avant de savoir s'il était
+  parti.** Il marquait le jour comme traité, l'enregistrait et notait « envoyé »
+  dans le journal — puis appelait seulement le service de notification. Un refus
+  d'autorisation supprimait donc toute nouvelle tentative jusqu'au lendemain, en
+  laissant une trace de succès. La journée n'est plus consommée qu'après
+  livraison confirmée, et un échec programme une reprise : une tentative par
+  jour pour un refus, qui ne se règle pas tout seul ; 15 minutes puis 30, 1 h,
+  2 h et 4 h pour une panne, qui peut passer. Cet état survit à un redémarrage.
+
+- **« Réessayer » lançait une synchronisation du courrier** après un échec de
+  notification — une opération sans aucun rapport. Le digest a désormais sa
+  propre reprise.
+
+- **Une durée d'événement inventée était présentée comme extraite.** Lorsque le
+  message donnait une heure de début mais pas de fin, une heure était ajoutée
+  d'office. La provenance se déclare maintenant champ par champ.
+
+- **Les erreurs pouvaient rester derrière une fenêtre.** Quinze feuilles
+  pouvaient produire un message d'erreur affiché dans la fenêtre principale,
+  donc masqué. Elles portent leur propre alerte.
+
+- **Il y avait deux endroits pour les réglages** — la fenêtre ⌘, et une entrée
+  de la barre latérale. Il n'en reste qu'un.
+
+- **VoiceOver ne pouvait pas atteindre les lignes du classement des dettes.**
+  Elles ouvrent chacune une fiche ; elles étaient fusionnées en un seul élément.
+
+- **Le filtre de projet vide la sélection à la source**, et non plus seulement
+  dans l'écran qui l'observe.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.48.0/Assistant-Mail-0.48.0.dmg" length="5417491" type="application/octet-stream" sparkle:edSignature="Y4IhYJtiljDZMKbtQTHWfUNUicWFJy/U8tsEfrDzWdUEqyLClPCoaz+WvX3vCDQ6Eu1ROFq0wMfkQfsRxFcIDA=="/>
+        </item>
+        <item>
             <title>0.47.0</title>
             <pubDate>Tue, 28 Jul 2026 10:17:47 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -99,48 +144,6 @@ Le retrait de conversations du suivi accepte la **sélection multiple** :
 sélectionne et le double clic ouvre la conversation.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.46.0/Assistant-Mail-0.46.0.dmg" length="5323384" type="application/octet-stream" sparkle:edSignature="XJ2zECEK2r8ixJcJmiMOoyfy1v5x/3oLDoap0krtK5S6Kcjm7TjfSFEKnY3BfhgaJXFCsrnundBQUrG/9XdCBg=="/>
-        </item>
-        <item>
-            <title>0.45.0</title>
-            <pubDate>Mon, 27 Jul 2026 16:31:14 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>86</sparkle:version>
-            <sparkle:shortVersionString>0.45.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Un « Bien reçu, merci ! » ferme une conversation
-
-Le suivi réclamait une relance sur des fils que l'interlocuteur venait poliment
-de clore. « Bien reçu, merci ! », « Merci Ibrahima », « Thanks », « D'accord.
-Merci » : sur les données réelles, neuf des cinquante conversations en attente
-étaient de cette nature — assez pour qu'on cesse de lire la liste.
-
-Les accusés de réception n'y figurent plus. **Cinquante conversations
-deviennent quarante et une.**
-
-La détection est volontairement timide, parce que les deux erreurs ne se valent
-pas : rater un accusé de réception coûte une ligne de trop, tandis que prendre
-une demande pour un remerciement fait *disparaître* une dette réelle — et une
-ligne absente ne se remarque jamais. Une question, un marqueur de demande
-(« peux-tu », « merci de », « veuillez »), un texte un peu long : chacun suffit
-à conserver la conversation dans la liste.
-
-## Faire le ménage soi-même
-
-Ce que la détection ne saura jamais deviner, un geste s'en charge.
-
-**Clic droit sur une conversation → « Aucune réponse attendue ».** Et la liste
-accepte maintenant la **sélection multiple** : ⌘-clic, ⇧-clic, puis un seul
-clic droit retire tout le lot.
-
-Rien n'est enterré. La clé est le dernier message reçu, pas la conversation :
-**un nouveau message dans le fil ramène la dette**. Le pied de section indique
-combien ont été écartées et permet de tout restaurer d'un clic.
-
-Conséquence de la sélection : dans le suivi, le simple clic sélectionne et le
-double clic ouvre la conversation — comme partout ailleurs sur macOS.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.45.0/Assistant-Mail-0.45.0.dmg" length="5263611" type="application/octet-stream" sparkle:edSignature="q7haSFHWCq1tg7G7Zx62wZf7KGKNDeskubhc8O+uaKJeTCSdJhbVvY7UyneljywtaegTp/QVvB1H8cV/pnrGDw=="/>
         </item>
     </channel>
 </rss>
