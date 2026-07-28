@@ -6,6 +6,41 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.49.0</title>
+            <pubDate>Tue, 28 Jul 2026 11:59:04 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>94</sparkle:version>
+            <sparkle:shortVersionString>0.49.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## La colonne liste cesse de s'écraser
+
+Dans **Tâches** et dans **E-mails**, sélectionner un élément réduisait la
+colonne de gauche à sa largeur minimale. La barre d'onglets se coupait alors au
+milieu de « Terminées », et l'en-tête des e-mails perdait son filtre et son
+compteur de messages écartés.
+
+- **La colonne garde sa largeur.** Le panneau de détail alternait deux vues de
+  nature différente selon qu'un élément était sélectionné ou non ; pour macOS
+  cela revient à recréer le panneau, et le séparateur se replaçait de lui-même
+  en donnant tout à la droite. Une seule vue occupe désormais la place.
+
+- **Les onglets ne se coupent plus, quelle que soit la largeur.** Les cinq
+  onglets avec leurs compteurs réclament 515 points — davantage que la colonne
+  n'en offrait. Ils s'adaptent maintenant en trois temps : libellés avec
+  compteurs, puis libellés seuls, puis un menu déroulant. Rien n'est jamais
+  tronqué, y compris si vous tirez le séparateur au plus étroit.
+
+- **La colonne peut s'élargir un peu plus** (580 points au lieu de 540), pour
+  que les compteurs restent visibles quand la fenêtre le permet.
+
+- **L'en-tête des e-mails suit la même règle** : quand la place manque, les
+  libellés cèdent la place aux symboles, et le filtre comme « N écartés »
+  restent accessibles au lieu de disparaître.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.49.0/Assistant-Mail-0.49.0.dmg" length="5434033" type="application/octet-stream" sparkle:edSignature="B/GfBnee1vCGm8ve4tWfM+ym3cTVWCkqc5AkT8UDiHtGq+26VGOGZZD1GL0jFnfUYhG2IagDRvn1EgqvVl8EBQ=="/>
+        </item>
+        <item>
             <title>0.48.0</title>
             <pubDate>Tue, 28 Jul 2026 11:23:58 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -88,62 +123,6 @@ affirmait quelque chose que rien ne garantissait.
   contrôles automatiques ferment désormais la porte.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.47.0/Assistant-Mail-0.47.0.dmg" length="5339828" type="application/octet-stream" sparkle:edSignature="6rdnb1b9Of4+Va5U5gnHBc3hCsP/s6g1KaXRdojjYaSIh9y+aqHOsRZVuvY4yRNKfxuRpp1O1nYg0vE20P57AA=="/>
-        </item>
-        <item>
-            <title>0.46.0</title>
-            <pubDate>Mon, 27 Jul 2026 17:01:02 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>87</sparkle:version>
-            <sparkle:shortVersionString>0.46.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Répondre sans quitter le suivi
-
-Le carnet disait qui attend ; il n'aidait pas à répondre. Traiter une
-conversation demandait un double clic vers l'onglet E-mails, puis « Préparer
-une réponse » — trois écrans pour un geste.
-
-Un bouton apparaît maintenant au survol de la ligne, et **« Répondre… »** ouvre
-le menu contextuel, dans le suivi comme dans la Vue du jour. Le brouillon
-s'ouvre sur place, avec le contexte de la conversation, le ton et le périmètre
-des destinataires.
-
-La boucle se referme d'elle-même : l'envoi inscrit la réponse dans le fil sans
-attendre la synchronisation, et la conversation quitte la dette dans la foulée.
-
-## Votre dette monte-t-elle ?
-
-« 29 en attente » ne se juge pas : c'est une bonne nouvelle si l'on venait de
-quarante, une mauvaise si l'on venait de vingt. La tuile **On vous attend**
-porte désormais sa trajectoire sur quinze jours et sa variation.
-
-Une seule des quatre tuiles en reçoit une, et c'est délibéré. L'application
-enregistre des *flux* — messages reçus, tâches terminées — mais n'a jamais
-enregistré l'*état* d'un jour passé. « En retard », « Aujourd'hui » et « À
-valider » demanderaient de rejouer les mises en veille, les abandons et les
-purges : la courbe serait jolie et fausse. La dette de réponse, elle, se
-recalcule exactement.
-
-## L'assistant apprend de vos refus
-
-Écarter une suggestion ne servait à rien : la même proposition revenait au
-message suivant.
-
-Après **trois suggestions écartées venant du même expéditeur**, l'assistant
-propose de ne plus en créer. La règle arrête les tâches, **jamais le
-courrier** : les messages restent relevés, analysés et lisibles — seule la
-création de tâche s'arrête.
-
-Rien n'est appliqué d'office, et les règles acquises sont listées dans
-**Réglages › IA** avec un bouton pour les retirer.
-
-## Aussi
-
-Le retrait de conversations du suivi accepte la **sélection multiple** :
-⌘-clic, ⇧-clic, puis un seul clic droit. Dans le suivi, le simple clic
-sélectionne et le double clic ouvre la conversation.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.46.0/Assistant-Mail-0.46.0.dmg" length="5323384" type="application/octet-stream" sparkle:edSignature="XJ2zECEK2r8ixJcJmiMOoyfy1v5x/3oLDoap0krtK5S6Kcjm7TjfSFEKnY3BfhgaJXFCsrnundBQUrG/9XdCBg=="/>
         </item>
     </channel>
 </rss>
