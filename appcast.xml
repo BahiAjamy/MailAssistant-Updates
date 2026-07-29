@@ -6,6 +6,60 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.53.0</title>
+            <pubDate>Wed, 29 Jul 2026 16:46:36 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>99</sparkle:version>
+            <sparkle:shortVersionString>0.53.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## L'enveloppe ouvre enfin l'e-mail dans l'application
+
+Depuis un document, l'icône enveloppe partait presque toujours dans le
+navigateur. Elle ne savait retrouver qu'un message **reçu** : tous vos envois —
+et ils sont nombreux — sortaient de l'application alors que l'onglet E-mails
+les affiche.
+
+Mesuré sur vos données : **432 des 434 fichiers** ouvrent désormais leur
+conversation dans l'application (254 reçus, 175 envoyés, 3 retrouvés par leur
+fil). Les deux derniers sont des messages réellement purgés : ils vont dans
+Gmail, faute de mieux.
+
+Les filtres de la barre latérale ne peuvent plus faire échouer le geste : ils
+sont levés au passage, sinon la conversation visée pouvait être hors périmètre
+et la sélection s'effaçait toute seule.
+
+## Les signatures ne sont plus des documents
+
+Les logos de signature étaient indexés comme des fichiers. Sur votre courrier,
+**cinq motifs occupaient 309 des 743 lignes** — 151 exemplaires d'une même
+image de 42 Ko, 137 d'une autre de 131 Ko.
+
+Ils sont écartés de deux façons :
+
+- **Les nouveaux messages** déclarent eux-mêmes leurs images incorporées, par
+  leur en-tête MIME. C'est le message qui le dit, pas une heuristique de nom ou
+  de taille — « image001.png » de 21 Ko peut très bien être un scan.
+- **Le courrier déjà relevé** ne porte pas cette information : une même image
+  répétée à l'identique dans cinq messages différents est reconnue comme une
+  signature. La règle ne touche que les images, et seulement sous 300 Ko : un
+  document de travail peut légitimement circuler dix fois, et le perdre coûterait
+  bien plus cher qu'une ligne de trop.
+
+**L'index passe de 743 à 434 lignes**, dont 37 images au lieu de 346. Les
+pièces jointes des e-mails suivent la même règle : la signature de votre
+correspondant n'y compte plus comme une pièce jointe.
+
+## Sur le poids, pour lever un doute
+
+Les « 295,7 Mo » affichés en bas de la bibliothèque sont la taille des fichiers
+**chez Gmail**, pas sur votre Mac. L'index n'est qu'un carnet d'adresses de
+fichiers : il pèse **0,46 Mo** pour 743 lignes. Rien n'est copié sur ce Mac tant
+que vous n'ouvrez pas un aperçu ou ne demandez pas un téléchargement.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.53.0/Assistant-Mail-0.53.0.dmg" length="5703998" type="application/octet-stream" sparkle:edSignature="Cnyh9foDQASx0iEQUXOOWIqatEct6557xcAMx4jDZPrAFtd0+moezpalvYWN5WotyA25yq0b/3sCUBlO/2y+AQ=="/>
+        </item>
+        <item>
             <title>0.52.0</title>
             <pubDate>Wed, 29 Jul 2026 16:05:25 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -85,52 +139,6 @@ la réintroduction de cette ligne.
 Aucune donnée n'était en jeu : rien n'est écrit pendant un aperçu.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.51.1/Assistant-Mail-0.51.1.dmg" length="5671456" type="application/octet-stream" sparkle:edSignature="LRBqgQIjVIm1+GGciUVQBbWGqJpJ+dwbM9suGLqZX3fJWmejaHiJJ3XtC8bm2Kzh/9eEGKrYW/84ajJF8YPRBg=="/>
-        </item>
-        <item>
-            <title>0.51.0</title>
-            <pubDate>Wed, 29 Jul 2026 15:30:01 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>96</sparkle:version>
-            <sparkle:shortVersionString>0.51.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## La bibliothèque se lit en deux colonnes
-
-L'aperçu s'ouvrait en feuille par-dessus la liste : il fallait l'ouvrir, puis
-la refermer, pour passer au fichier suivant. Or on parcourt une liste
-précisément **pour** trouver le bon document — chaque essai coûtait deux
-gestes.
-
-La liste occupe désormais la colonne de gauche, le fichier se lit à droite.
-
-- **Un simple clic suffit**, et les flèches du clavier parcourent la
-  bibliothèque en l'affichant au fur et à mesure. Aucune récupération n'en
-  bloque une autre : on descend la liste plus vite que le réseau ne répond, et
-  c'est le résultat périmé qui est écarté, jamais la sélection en cours.
-- **Les versions antérieures sont de vraies lignes.** Déplier « 3 versions »
-  ajoute des lignes sélectionnables : un exemplaire ancien se lit du même geste
-  que le courant, au clavier comme à la souris.
-- **Les commandes suivent le fichier affiché** — Enregistrer, Ouvrir, Le
-  message — au bas du panneau plutôt que dans une feuille.
-- **Un échec de récupération le dit.** Le panneau affichait « Sélectionnez un
-  fichier » alors que le nom du fichier était écrit juste au-dessus ; il
-  distingue maintenant la panne réseau de l'absence de sélection, et propose de
-  réessayer.
-
-## Sous le capot
-
-L'écran rejoint la famille des vues scindées, avec la contrainte qui va avec :
-un panneau de détail mal construit écrase la colonne de gauche sous sa largeur
-minimale — c'est arrivé trois fois (E-mails, Tâches, puis les deux). Les cinq
-règles issues de ces corrections s'appliquent désormais aussi à la
-bibliothèque, et cinq contrôles automatiques les vérifient à chaque
-construction.
-
-Trois de ces contrôles étaient plus faibles qu'ils n'en avaient l'air et ont
-été resserrés au passage : deux se satisfaisaient d'un commentaire qui citait
-la règle, et un troisième se taisait dans le cas précis qu'il devait attraper.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.51.0/Assistant-Mail-0.51.0.dmg" length="5671446" type="application/octet-stream" sparkle:edSignature="ahScQMmz7wSS76CkCm6tcEAqgLcloAe6wyK7Lpzd3zMbw//0DuvskaWRiEKkVJep1lQxKoxwihvWrRnKcJeGCw=="/>
         </item>
     </channel>
 </rss>
