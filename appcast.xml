@@ -6,6 +6,52 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.51.0</title>
+            <pubDate>Wed, 29 Jul 2026 15:30:01 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>96</sparkle:version>
+            <sparkle:shortVersionString>0.51.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## La bibliothèque se lit en deux colonnes
+
+L'aperçu s'ouvrait en feuille par-dessus la liste : il fallait l'ouvrir, puis
+la refermer, pour passer au fichier suivant. Or on parcourt une liste
+précisément **pour** trouver le bon document — chaque essai coûtait deux
+gestes.
+
+La liste occupe désormais la colonne de gauche, le fichier se lit à droite.
+
+- **Un simple clic suffit**, et les flèches du clavier parcourent la
+  bibliothèque en l'affichant au fur et à mesure. Aucune récupération n'en
+  bloque une autre : on descend la liste plus vite que le réseau ne répond, et
+  c'est le résultat périmé qui est écarté, jamais la sélection en cours.
+- **Les versions antérieures sont de vraies lignes.** Déplier « 3 versions »
+  ajoute des lignes sélectionnables : un exemplaire ancien se lit du même geste
+  que le courant, au clavier comme à la souris.
+- **Les commandes suivent le fichier affiché** — Enregistrer, Ouvrir, Le
+  message — au bas du panneau plutôt que dans une feuille.
+- **Un échec de récupération le dit.** Le panneau affichait « Sélectionnez un
+  fichier » alors que le nom du fichier était écrit juste au-dessus ; il
+  distingue maintenant la panne réseau de l'absence de sélection, et propose de
+  réessayer.
+
+## Sous le capot
+
+L'écran rejoint la famille des vues scindées, avec la contrainte qui va avec :
+un panneau de détail mal construit écrase la colonne de gauche sous sa largeur
+minimale — c'est arrivé trois fois (E-mails, Tâches, puis les deux). Les cinq
+règles issues de ces corrections s'appliquent désormais aussi à la
+bibliothèque, et cinq contrôles automatiques les vérifient à chaque
+construction.
+
+Trois de ces contrôles étaient plus faibles qu'ils n'en avaient l'air et ont
+été resserrés au passage : deux se satisfaisaient d'un commentaire qui citait
+la règle, et un troisième se taisait dans le cas précis qu'il devait attraper.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.51.0/Assistant-Mail-0.51.0.dmg" length="5671446" type="application/octet-stream" sparkle:edSignature="ahScQMmz7wSS76CkCm6tcEAqgLcloAe6wyK7Lpzd3zMbw//0DuvskaWRiEKkVJep1lQxKoxwihvWrRnKcJeGCw=="/>
+        </item>
+        <item>
             <title>0.50.0</title>
             <pubDate>Wed, 29 Jul 2026 14:17:31 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -132,51 +178,6 @@ compteur de messages écartés.
   restent accessibles au lieu de disparaître.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.49.0/Assistant-Mail-0.49.0.dmg" length="5434033" type="application/octet-stream" sparkle:edSignature="B/GfBnee1vCGm8ve4tWfM+ym3cTVWCkqc5AkT8UDiHtGq+26VGOGZZD1GL0jFnfUYhG2IagDRvn1EgqvVl8EBQ=="/>
-        </item>
-        <item>
-            <title>0.48.0</title>
-            <pubDate>Tue, 28 Jul 2026 11:23:58 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>93</sparkle:version>
-            <sparkle:shortVersionString>0.48.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Un envoi ne se déclare pas avant d'avoir eu lieu
-
-La version précédente corrigeait des messages qui affirmaient plus qu'ils ne
-savaient. Un second passage a montré que deux d'entre eux mentaient encore.
-
-- **Le digest du matin consommait sa journée avant de savoir s'il était
-  parti.** Il marquait le jour comme traité, l'enregistrait et notait « envoyé »
-  dans le journal — puis appelait seulement le service de notification. Un refus
-  d'autorisation supprimait donc toute nouvelle tentative jusqu'au lendemain, en
-  laissant une trace de succès. La journée n'est plus consommée qu'après
-  livraison confirmée, et un échec programme une reprise : une tentative par
-  jour pour un refus, qui ne se règle pas tout seul ; 15 minutes puis 30, 1 h,
-  2 h et 4 h pour une panne, qui peut passer. Cet état survit à un redémarrage.
-
-- **« Réessayer » lançait une synchronisation du courrier** après un échec de
-  notification — une opération sans aucun rapport. Le digest a désormais sa
-  propre reprise.
-
-- **Une durée d'événement inventée était présentée comme extraite.** Lorsque le
-  message donnait une heure de début mais pas de fin, une heure était ajoutée
-  d'office. La provenance se déclare maintenant champ par champ.
-
-- **Les erreurs pouvaient rester derrière une fenêtre.** Quinze feuilles
-  pouvaient produire un message d'erreur affiché dans la fenêtre principale,
-  donc masqué. Elles portent leur propre alerte.
-
-- **Il y avait deux endroits pour les réglages** — la fenêtre ⌘, et une entrée
-  de la barre latérale. Il n'en reste qu'un.
-
-- **VoiceOver ne pouvait pas atteindre les lignes du classement des dettes.**
-  Elles ouvrent chacune une fiche ; elles étaient fusionnées en un seul élément.
-
-- **Le filtre de projet vide la sélection à la source**, et non plus seulement
-  dans l'écran qui l'observe.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.48.0/Assistant-Mail-0.48.0.dmg" length="5417491" type="application/octet-stream" sparkle:edSignature="Y4IhYJtiljDZMKbtQTHWfUNUicWFJy/U8tsEfrDzWdUEqyLClPCoaz+WvX3vCDQ6Eu1ROFq0wMfkQfsRxFcIDA=="/>
         </item>
     </channel>
 </rss>
