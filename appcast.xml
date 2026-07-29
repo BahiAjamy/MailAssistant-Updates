@@ -6,6 +6,37 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.51.1</title>
+            <pubDate>Wed, 29 Jul 2026 15:43:54 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>97</sparkle:version>
+            <sparkle:shortVersionString>0.51.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Correctif : l'application pouvait se fermer brutalement
+
+Depuis la 0.51.0, parcourir la bibliothèque de documents un peu vite pouvait
+faire disparaître l'application d'un coup, sans message.
+
+La cause était une ligne que j'avais ajoutée par précaution, sans preuve :
+l'aperçu Quick Look était explicitement « fermé » quand il quittait l'écran.
+Or cette fermeture n'est valide que si l'aperçu a fini de s'ouvrir — et
+l'ouverture est asynchrone, elle passe par un service du système. Sélectionner
+un fichier qui n'est pas encore en cache remet l'aperçu à zéro : un clic un peu
+vif arrivait donc avant la fin de l'ouverture du précédent, et le système
+arrêtait l'application entière.
+
+La fermeture explicite est retirée — la vue se libère très bien toute seule.
+
+Reproduit en boucle sur six délais, de 20 millisecondes à 2 secondes, puis
+vérifié corrigé sur les mêmes six. Un contrôle automatique interdit désormais
+la réintroduction de cette ligne.
+
+Aucune donnée n'était en jeu : rien n'est écrit pendant un aperçu.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.51.1/Assistant-Mail-0.51.1.dmg" length="5671456" type="application/octet-stream" sparkle:edSignature="LRBqgQIjVIm1+GGciUVQBbWGqJpJ+dwbM9suGLqZX3fJWmejaHiJJ3XtC8bm2Kzh/9eEGKrYW/84ajJF8YPRBg=="/>
+        </item>
+        <item>
             <title>0.51.0</title>
             <pubDate>Wed, 29 Jul 2026 15:30:01 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -143,41 +174,6 @@ donc dans la bibliothèque au fil des deux ou trois prochaines relèves.
   latérale : Analyse passe à ⌘5, Projets à ⌘6, Comptes à ⌘7.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.50.0/Assistant-Mail-0.50.0.dmg" length="5653506" type="application/octet-stream" sparkle:edSignature="0srZwtUy+Bt+5yTlJi6Q9PqQDowtKcH/vjG9oS3VPC98xrXYhchqmDwULCRKapyvqlJeKb6vnszfO/zos5WhBg=="/>
-        </item>
-        <item>
-            <title>0.49.0</title>
-            <pubDate>Tue, 28 Jul 2026 11:59:04 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>94</sparkle:version>
-            <sparkle:shortVersionString>0.49.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## La colonne liste cesse de s'écraser
-
-Dans **Tâches** et dans **E-mails**, sélectionner un élément réduisait la
-colonne de gauche à sa largeur minimale. La barre d'onglets se coupait alors au
-milieu de « Terminées », et l'en-tête des e-mails perdait son filtre et son
-compteur de messages écartés.
-
-- **La colonne garde sa largeur.** Le panneau de détail alternait deux vues de
-  nature différente selon qu'un élément était sélectionné ou non ; pour macOS
-  cela revient à recréer le panneau, et le séparateur se replaçait de lui-même
-  en donnant tout à la droite. Une seule vue occupe désormais la place.
-
-- **Les onglets ne se coupent plus, quelle que soit la largeur.** Les cinq
-  onglets avec leurs compteurs réclament 515 points — davantage que la colonne
-  n'en offrait. Ils s'adaptent maintenant en trois temps : libellés avec
-  compteurs, puis libellés seuls, puis un menu déroulant. Rien n'est jamais
-  tronqué, y compris si vous tirez le séparateur au plus étroit.
-
-- **La colonne peut s'élargir un peu plus** (580 points au lieu de 540), pour
-  que les compteurs restent visibles quand la fenêtre le permet.
-
-- **L'en-tête des e-mails suit la même règle** : quand la place manque, les
-  libellés cèdent la place aux symboles, et le filtre comme « N écartés »
-  restent accessibles au lieu de disparaître.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.49.0/Assistant-Mail-0.49.0.dmg" length="5434033" type="application/octet-stream" sparkle:edSignature="B/GfBnee1vCGm8ve4tWfM+ym3cTVWCkqc5AkT8UDiHtGq+26VGOGZZD1GL0jFnfUYhG2IagDRvn1EgqvVl8EBQ=="/>
         </item>
     </channel>
 </rss>
