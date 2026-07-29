@@ -6,6 +6,99 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.50.0</title>
+            <pubDate>Wed, 29 Jul 2026 14:17:31 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>95</sparkle:version>
+            <sparkle:shortVersionString>0.50.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Où est le fichier ?
+
+L'application conservait 472 pièces jointes — dont 170 vrais fichiers de
+travail, 209 Mo, dans une centaine de messages — et n'offrait aucun moyen d'en
+voir un seul sans retrouver d'abord le message qui l'apportait. C'est-à-dire en
+partant de ce dont on se souvient le moins.
+
+Un onglet **Documents** rejoint la barre latérale.
+
+- **Une ligne par fichier**, avec sa date, la personne qui l'a envoyé ou reçu,
+  sa taille, son projet et l'objet du message. Filtres par type, par sens
+  (reçus, envoyés), par compte et par projet ; tri par date, par nom ou par
+  taille ; recherche sur le nom, le correspondant et l'objet. ⌘K trouve
+  désormais un fichier par son nom.
+
+- **Un clic l'enregistre dans Téléchargements** et le montre dans le Finder.
+  Rien n'est copié sur ce Mac tant que vous ne le demandez pas : la
+  bibliothèque n'indexe que des noms.
+
+- **Les versions se regroupent.** Vingt-cinq fichiers de votre courrier
+  existent en plusieurs exemplaires — quatre « Liste_Acteurs », trois « MR
+  IBRAHIMA BAH ». La ligne montre le plus récent et se déplie sur les
+  précédents. Le regroupement reste prudent : « VF » et « final » sont des mots
+  que l'on écrit aussi dans un titre, et fusionner deux fichiers distincts
+  cacherait un document, ce qui est bien pire qu'une ligne de trop.
+
+- **Les images de signature et les invitations sont masquées** par défaut :
+  elles font 302 des 472 pièces conservées et noieraient tout le reste.
+  « Tout » les ramène — une pièce d'identité scannée est une image.
+
+## Lire le document sans le télécharger
+
+Double-clic sur une ligne — ou le bouton en forme d'œil — et le fichier
+s'affiche. C'est Quick Look, le même moteur que la barre d'espace du Finder :
+PDF, Word, Excel, PowerPoint, images et textes s'ouvrent tels quels, sans
+qu'aucun lecteur ne soit embarqué dans l'application.
+
+Répondre à « c'est bien la dernière version ? » demandait jusque-là de
+l'enregistrer, de l'ouvrir, puis de penser à le supprimer.
+
+- **Rien n'atterrit dans Téléchargements.** La copie nécessaire à l'affichage
+  va dans les caches du système, plafonnée à 300 Mo, les plus anciennes
+  s'effaçant d'elles-mêmes. **Réglages › Données** en affiche le poids et
+  permet de tout vider.
+- La feuille garde les gestes utiles à portée : **Enregistrer** dans
+  Téléchargements, **Ouvrir** avec l'application par défaut, et **le message**
+  d'origine.
+- « Ouvrir » enregistre d'abord dans Téléchargements. C'est délibéré : ouvrir
+  la copie d'aperçu aurait été plus direct, et vos modifications seraient
+  parties avec le cache.
+
+## Le fichier survit à son e-mail
+
+C'est le point qui justifie l'écran plutôt qu'un filtre de plus dans E-mails.
+
+Les messages sont purgés à soixante jours et plafonnés à quatre cents par
+compte : un contrat reçu au printemps disparaissait de l'application alors
+qu'il n'a jamais bougé de Gmail. L'index documentaire, lui, **ne s'efface
+pas** — il est dérivé des messages mais leur survit, comme l'historique agrégé
+de l'Analyse. Le téléchargement redemande le message à Gmail au moment du clic,
+donc un fichier dont l'e-mail est parti reste récupérable ; à défaut, la ligne
+propose de l'ouvrir dans Gmail.
+
+La bibliothèque commence néanmoins à sa première synchronisation. Ce qui n'a
+jamais été relevé n'y entrera pas, et le pied de page dit en permanence depuis
+quelle date elle couvre votre courrier.
+
+## Vos envois aussi
+
+La relève du dossier Envoyés ne gardait que l'existence d'une pièce jointe, pas
+son nom — suffisant pour l'ancien détecteur d'engagements, inutilisable pour
+retrouver un fichier. **91 de vos 101 envois conservés** étaient dans ce cas.
+
+La relève garde désormais les noms (la charge utile était déjà téléchargée :
+cela ne coûte aucune requête), et un rattrapage complète l'existant à raison de
+quarante messages par compte et par synchronisation. Vos envois apparaîtront
+donc dans la bibliothèque au fil des deux ou trois prochaines relèves.
+
+## Aussi
+
+- **⌘4 ouvre les Documents.** Les raccourcis suivent l'ordre de la barre
+  latérale : Analyse passe à ⌘5, Projets à ⌘6, Comptes à ⌘7.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.50.0/Assistant-Mail-0.50.0.dmg" length="5653506" type="application/octet-stream" sparkle:edSignature="0srZwtUy+Bt+5yTlJi6Q9PqQDowtKcH/vjG9oS3VPC98xrXYhchqmDwULCRKapyvqlJeKb6vnszfO/zos5WhBg=="/>
+        </item>
+        <item>
             <title>0.49.0</title>
             <pubDate>Tue, 28 Jul 2026 11:59:04 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -84,45 +177,6 @@ savaient. Un second passage a montré que deux d'entre eux mentaient encore.
   dans l'écran qui l'observe.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.48.0/Assistant-Mail-0.48.0.dmg" length="5417491" type="application/octet-stream" sparkle:edSignature="Y4IhYJtiljDZMKbtQTHWfUNUicWFJy/U8tsEfrDzWdUEqyLClPCoaz+WvX3vCDQ6Eu1ROFq0wMfkQfsRxFcIDA=="/>
-        </item>
-        <item>
-            <title>0.47.0</title>
-            <pubDate>Tue, 28 Jul 2026 10:17:47 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>92</sparkle:version>
-            <sparkle:shortVersionString>0.47.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Ne plus présenter comme sûr ce qui ne l'est pas
-
-Cette version corrige six défauts qui avaient un point commun : l'application
-affirmait quelque chose que rien ne garantissait.
-
-- **Une date d'invitation inventée était présentée comme lue dans le message.**
-  Quand aucune date ne pouvait être extraite, « Ajouter au Calendrier »
-  proposait demain 9 h pendant une heure, sous un intitulé annonçant des
-  détails extraits de l'invitation. La feuille dit désormais qu'elle n'a rien
-  pu lire, et l'ajout reste bloqué tant que vous n'avez pas vérifié la date.
-
-- **L'aperçu du digest annonçait « envoyé » même quand rien ne partait.** Si
-  les notifications sont refusées, l'application vous le dit maintenant et
-  propose d'ouvrir le volet correspondant des réglages système.
-
-- **Un e-mail hors périmètre pouvait rester affiché après un changement de
-  filtre.** On pouvait alors y répondre, en tirer une tâche ou l'ajouter au
-  calendrier alors que la liste ne le montrait plus.
-
-- **Un statut de projet avait deux couleurs selon l'écran.** « En cours » était
-  bleu dans l'application et vert dans Santé des missions ; « Terminé » faisait
-  l'inverse. Un seul jeu de couleurs désormais.
-
-- **Les actions rapides de ⌘K n'étaient pas cliquables.** Elles le sont.
-
-- **Le texte trop clair est revenu par endroits.** Une encre réservée aux
-  séparateurs avait gagné une dizaine de textes au fil des versions. Deux
-  contrôles automatiques ferment désormais la porte.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.47.0/Assistant-Mail-0.47.0.dmg" length="5339828" type="application/octet-stream" sparkle:edSignature="6rdnb1b9Of4+Va5U5gnHBc3hCsP/s6g1KaXRdojjYaSIh9y+aqHOsRZVuvY4yRNKfxuRpp1O1nYg0vE20P57AA=="/>
         </item>
     </channel>
 </rss>
