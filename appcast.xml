@@ -6,6 +6,44 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.60.0</title>
+            <pubDate>Thu, 30 Jul 2026 14:48:54 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>107</sparkle:version>
+            <sparkle:shortVersionString>0.60.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Les documents Word ne flottent plus dans le vide
+
+Un document Word s'affichait en colonne étroite au milieu du panneau, encadré
+de deux grandes zones claires — l'écran donnait l'impression de n'avoir rien
+chargé.
+
+La cause n'était pas un chargement manqué : le module d'aperçu du système pose
+une page à largeur fixe et la centre. Sur un panneau large, tout le reste est
+du vide. Les PDF, tableurs, présentations et images n'ont pas ce comportement,
+et ne changent donc pas.
+
+Deux corrections :
+
+- **Un plan de travail sombre** derrière l'aperçu. Une feuille blanche posée
+  sur un crème presque blanc ne se détache pas ; sur un fond sombre, elle se lit
+  comme une feuille sur un bureau — c'est ce que fait Aperçu depuis toujours.
+- **Une largeur de lecture** pour les documents Word : la page occupe la place
+  qu'on lui laisse, et ce qui reste autour devient une marge assumée.
+
+## Et si ça ne vous convient pas
+
+Un bouton **Pleine largeur** apparaît dans la barre du bas, pour les documents
+Word uniquement. Votre choix est conservé.
+
+Il est là pour une raison précise : l'aperçu du système est rendu par un
+service extérieur à l'application, qu'aucune capture ne permet d'inspecter. Je
+ne peux donc pas voir le résultat — vous, oui. Le réglage vous laisse trancher.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.0/Assistant-Mail-0.60.0.dmg" length="6025824" type="application/octet-stream" sparkle:edSignature="JvuPQmrrwP+fRwcEXQSh4xmAWZqKXcOJc9bWkOZ7mnRAhHllg3ON9rkQ3lDOCZDbEcQYCZwbe+jzTnU2Y3IjBg=="/>
+        </item>
+        <item>
             <title>0.59.0</title>
             <pubDate>Thu, 30 Jul 2026 13:05:24 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -83,51 +121,6 @@ Les conversations d'avant cette version restent lisibles ; leurs réponses
 n'affichent simplement pas de moteur.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.58.0/Assistant-Mail-0.58.0.dmg" length="6022027" type="application/octet-stream" sparkle:edSignature="WWQHUlpHB9ioFMiz/0GTU6DIhPbeD2uB21LSPV0GQI8JC2mN+zqOdAiPGZDxMKaExKsfnhga3llkFTs1LxR2Bw=="/>
-        </item>
-        <item>
-            <title>0.57.0</title>
-            <pubDate>Thu, 30 Jul 2026 12:24:09 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>104</sparkle:version>
-            <sparkle:shortVersionString>0.57.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Épingler ce dont vous parlez
-
-Dans le Chat, le bouton en forme de punaise épingle une **personne**, un
-**projet**, une **tâche**, un **document** ou une **conversation**. L'élément
-épinglé reste devant l'assistant à chaque question : vous pouvez dire « lui »,
-« ce projet », « ce fichier » sans le renommer.
-
-Les épingles appartiennent à la conversation et lui survivent : rouvrir un
-échange d'hier, c'est retrouver son contexte.
-
-## Un budget qu'on voit
-
-Le modèle local ne dispose que de 4096 tokens, tout compris. L'écran affiche
-donc ce que les épingles consomment — « Contexte épinglé : ~110 tokens sur 2376
-disponibles ». Elles ne peuvent pas dépasser la moitié du budget, et si l'une
-d'elles est trop longue elle est **écourtée en le disant**, jamais écartée en
-silence.
-
-Les épingles passent avant l'historique et ne sont jamais sacrifiées : ce sont
-vos choix, là où un vieux tour de dialogue n'est qu'une trace.
-
-## Une limite, dite plutôt que cachée
-
-Avec deux épingles ou plus, le modèle local **mélange parfois leurs chiffres** :
-interrogé sur une personne et un projet épinglés ensemble, il a affirmé
-« 12 tâches en cours sur ce projet » alors qu'aucune donnée ne le disait.
-
-Les épingles ne portent donc plus aucun compteur — elles disent qui et quoi, les
-outils disent combien —, mais cela n'a pas suffi : il va chercher les nombres
-par un outil et les rattache quand même. C'est une limite du modèle, pas de la
-donnée.
-
-Un avertissement apparaît désormais dès la deuxième épingle. Pour croiser une
-personne et un projet, **DeepSeek est nettement plus fiable**.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.57.0/Assistant-Mail-0.57.0.dmg" length="6010858" type="application/octet-stream" sparkle:edSignature="Vbri6+1Fklju4APmUuuyrT4b34BymbokQs699F15n/aPx3dU0RxUxirqML692NHEwOb7z1zHEGqSUS/g09htDQ=="/>
         </item>
     </channel>
 </rss>
