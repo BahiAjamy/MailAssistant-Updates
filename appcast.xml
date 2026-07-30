@@ -6,6 +6,46 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.56.1</title>
+            <pubDate>Thu, 30 Jul 2026 11:52:00 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>103</sparkle:version>
+            <sparkle:shortVersionString>0.56.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Une question de suite obtient une vraie réponse
+
+Le Chat transmettait bien les échanges précédents — c'est vérifié —, mais le
+modèle local commençait par **répéter sa réponse d'avant** avant d'aborder la
+nouvelle question. À l'écran, les deux réponses semblaient identiques.
+
+Deux corrections :
+
+- **Les réponses passées sont résumées** dans le contexte transmis, au lieu
+  d'être recopiées en entier. Un modèle de cette taille reproduit ce qu'il voit ;
+  lui rendre l'essentiel de ce qu'il a dit suffit à tenir le fil, et libère au
+  passage une part du budget très limité du modèle local. Vos questions, elles,
+  restent intégrales.
+- **La consigne le dit explicitement** : une question de suite (« dans ce cas »,
+  « lequel », « pourquoi ») attend une information nouvelle, pas la liste déjà
+  affichée.
+
+Mesuré sur vos données : la deuxième réponse propose désormais un ordre de
+priorité au lieu de reproduire le tableau.
+
+## Ce qui reste imparfait
+
+Le modèle local reste bavard sur les rappels et peut affirmer un lien entre deux
+tâches que rien n'établit. Une consigne de plus a été essayée pour l'en
+empêcher — elle a rendu toutes les réponses laconiques et en a produit une
+absurde. Elle a donc été retirée : sur un modèle de cette taille, chaque règle
+ajoutée en affaiblit une autre.
+
+Pour les échanges suivis, DeepSeek s'en sort nettement mieux.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.56.1/Assistant-Mail-0.56.1.dmg" length="5945566" type="application/octet-stream" sparkle:edSignature="SJ/aO+wESAeoJHQWxfm7a/e646LjvDwSvFPIGJEtSuca5kJGSlubgUo/fK2cyeAhtWqSpTB3osiwsTb7pYTIDQ=="/>
+        </item>
+        <item>
             <title>0.56.0</title>
             <pubDate>Thu, 30 Jul 2026 11:21:23 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -119,60 +159,6 @@ Les outils annoncent maintenant, en tête de chaque résultat, le nombre qui
 répond à la question posée, et disent exactement sur quoi il porte.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.55.0/Assistant-Mail-0.55.0.dmg" length="5916502" type="application/octet-stream" sparkle:edSignature="qmFL1DYk+k85HnHiiky7RFrc+KD+KaBmCcs75QZLVhBqx9M3SPxsh7/4AaC8spNa+QuzElL/tgnVBb/QEiQfCw=="/>
-        </item>
-        <item>
-            <title>0.53.0</title>
-            <pubDate>Wed, 29 Jul 2026 16:46:36 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>99</sparkle:version>
-            <sparkle:shortVersionString>0.53.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## L'enveloppe ouvre enfin l'e-mail dans l'application
-
-Depuis un document, l'icône enveloppe partait presque toujours dans le
-navigateur. Elle ne savait retrouver qu'un message **reçu** : tous vos envois —
-et ils sont nombreux — sortaient de l'application alors que l'onglet E-mails
-les affiche.
-
-Mesuré sur vos données : **432 des 434 fichiers** ouvrent désormais leur
-conversation dans l'application (254 reçus, 175 envoyés, 3 retrouvés par leur
-fil). Les deux derniers sont des messages réellement purgés : ils vont dans
-Gmail, faute de mieux.
-
-Les filtres de la barre latérale ne peuvent plus faire échouer le geste : ils
-sont levés au passage, sinon la conversation visée pouvait être hors périmètre
-et la sélection s'effaçait toute seule.
-
-## Les signatures ne sont plus des documents
-
-Les logos de signature étaient indexés comme des fichiers. Sur votre courrier,
-**cinq motifs occupaient 309 des 743 lignes** — 151 exemplaires d'une même
-image de 42 Ko, 137 d'une autre de 131 Ko.
-
-Ils sont écartés de deux façons :
-
-- **Les nouveaux messages** déclarent eux-mêmes leurs images incorporées, par
-  leur en-tête MIME. C'est le message qui le dit, pas une heuristique de nom ou
-  de taille — « image001.png » de 21 Ko peut très bien être un scan.
-- **Le courrier déjà relevé** ne porte pas cette information : une même image
-  répétée à l'identique dans cinq messages différents est reconnue comme une
-  signature. La règle ne touche que les images, et seulement sous 300 Ko : un
-  document de travail peut légitimement circuler dix fois, et le perdre coûterait
-  bien plus cher qu'une ligne de trop.
-
-**L'index passe de 743 à 434 lignes**, dont 37 images au lieu de 346. Les
-pièces jointes des e-mails suivent la même règle : la signature de votre
-correspondant n'y compte plus comme une pièce jointe.
-
-## Sur le poids, pour lever un doute
-
-Les « 295,7 Mo » affichés en bas de la bibliothèque sont la taille des fichiers
-**chez Gmail**, pas sur votre Mac. L'index n'est qu'un carnet d'adresses de
-fichiers : il pèse **0,46 Mo** pour 743 lignes. Rien n'est copié sur ce Mac tant
-que vous n'ouvrez pas un aperçu ou ne demandez pas un téléchargement.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.53.0/Assistant-Mail-0.53.0.dmg" length="5703998" type="application/octet-stream" sparkle:edSignature="Cnyh9foDQASx0iEQUXOOWIqatEct6557xcAMx4jDZPrAFtd0+moezpalvYWN5WotyA25yq0b/3sCUBlO/2y+AQ=="/>
         </item>
     </channel>
 </rss>
