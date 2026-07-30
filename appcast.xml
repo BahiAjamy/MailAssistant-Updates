@@ -6,6 +6,48 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.61.0</title>
+            <pubDate>Thu, 30 Jul 2026 15:29:49 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>109</sparkle:version>
+            <sparkle:shortVersionString>0.61.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Les documents Word remplissent enfin l'écran
+
+La version précédente assombrissait le fond et bridait la largeur. Ça n'a pas
+suffi, et pour une raison que seule votre capture pouvait révéler : l'aperçu du
+système ajuste ces documents sur la **hauteur**, et leur largeur suit
+mécaniquement le rapport d'une page A4. Élargir ou rétrécir le panneau n'y
+change rien — la page ne bouge pas.
+
+macOS sait pourtant lire un document Word directement. Le texte est désormais
+**remis en page à la largeur du panneau**, comme dans un traitement de texte :
+plus de page rigide, plus de bandes vides.
+
+Mesuré sur quatre de vos documents : de 1 700 à 9 200 caractères, lus en moins
+de 30 millisecondes.
+
+Le bouton **Pleine largeur** garde son rôle : colonne de lecture confortable par
+défaut, ou toute la largeur si vous préférez.
+
+## Ce que vous perdez, et où le retrouver
+
+La remise en page abandonne les sauts de page, les en-têtes et pieds de page, et
+une partie des mises en forme complexes. C'est le prix d'un document qui se lit.
+
+Pour la page telle qu'elle sera imprimée, **Ouvrir** reste à un clic — le
+fichier s'enregistre dans Téléchargements et s'ouvre dans votre traitement de
+texte.
+
+Les documents que macOS ne parvient pas à relire — un format inhabituel, un
+fichier abîmé, ou au-delà de 8 Mo — continuent de s'afficher comme avant. Les
+PDF, tableurs, présentations et images ne changent pas : ils n'avaient pas ce
+défaut.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.61.0/Assistant-Mail-0.61.0.dmg" length="6043933" type="application/octet-stream" sparkle:edSignature="BQvyMFaJ8p5PHAAev0iWvwfc0mL6ubc5quUzoXDdWImH0jkbLLL3GQRrlfLbJuqjNNTqaC8j0UJ06IGd3YcPAQ=="/>
+        </item>
+        <item>
             <title>0.60.1</title>
             <pubDate>Thu, 30 Jul 2026 15:11:30 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -77,51 +119,6 @@ service extérieur à l'application, qu'aucune capture ne permet d'inspecter. Je
 ne peux donc pas voir le résultat — vous, oui. Le réglage vous laisse trancher.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.0/Assistant-Mail-0.60.0.dmg" length="6025824" type="application/octet-stream" sparkle:edSignature="JvuPQmrrwP+fRwcEXQSh4xmAWZqKXcOJc9bWkOZ7mnRAhHllg3ON9rkQ3lDOCZDbEcQYCZwbe+jzTnU2Y3IjBg=="/>
-        </item>
-        <item>
-            <title>0.59.0</title>
-            <pubDate>Thu, 30 Jul 2026 13:05:24 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>106</sparkle:version>
-            <sparkle:shortVersionString>0.59.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## L'assistant peut enfin lire un e-mail
-
-« Qu'est-ce que Cheikh a dit dans son dernier message ? » recevait jusqu'ici une
-réponse honnête mais frustrante : l'assistant ne disposait que des métadonnées —
-objet, expéditeur, date — et vous renvoyait à votre boîte.
-
-Il lit désormais le texte des messages. Un seul à la fois, le plus pertinent, et
-seulement quand la question le demande.
-
-**On cherche un e-mail par son expéditeur et son objet, jamais par son
-contenu.** Sans cette règle, demander « le message de Cheikh Diop » rapportait un
-message d'une autre personne qui *parlait* de lui — constaté à la mise au point.
-
-## Ce que cela change pour vos données
-
-Avec **Apple Intelligence**, rien ne bouge : tout reste sur ce Mac.
-
-Avec **DeepSeek**, le texte de l'e-mail que vous faites lire part chez eux, au
-même titre que votre question. La phrase des Réglages a été réécrite en
-conséquence : elle promettait que le contenu des messages n'était jamais
-transmis, ce qui serait devenu faux. Les pièces jointes, elles, ne partent
-toujours pas — seuls leur nom et leur date sont transmis.
-
-## Une précaution qui devient concrète
-
-C'est le premier endroit où un texte écrit par quelqu'un d'autre arrive mot pour
-mot devant un modèle qui dispose d'outils. Un message contenant « ignore tes
-consignes » est désormais lu.
-
-Trois protections, aucune décorative : les outils de l'assistant ne peuvent
-**rien modifier** — c'est garanti par la structure du code, pas par une
-promesse ; le texte reçu arrive **encadré** par des marqueurs qui le désignent
-comme donnée non fiable ; et la consigne du modèle nomme ce cadre et lui
-interdit d'en suivre les instructions.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.59.0/Assistant-Mail-0.59.0.dmg" length="6023788" type="application/octet-stream" sparkle:edSignature="c8Q4KPcbgd734UE0IqmPXVPVy2ozU+uwDpUgIeMhUHGQ7/xMYDoflOl9NsBbUCxwK2rk8bhD0uDJqVH4Ln3sBQ=="/>
         </item>
     </channel>
 </rss>
