@@ -6,6 +6,40 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.58.0</title>
+            <pubDate>Thu, 30 Jul 2026 12:41:10 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>105</sparkle:version>
+            <sparkle:shortVersionString>0.58.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changer de moteur sans quitter le Chat
+
+Le choix du moteur vivait dans les Réglages. Or on en change **parce qu'une
+réponse n'a pas convenu** — et à ce moment-là, on est dans le Chat.
+
+Un sélecteur apparaît donc au bas de la liste des conversations : Apple
+Intelligence en local, DeepSeek V4 Flash, DeepSeek V4 Pro. Il rappelle en une
+ligne où vont vos données — « rien ne sort de ce Mac » ou « vos données sortent
+de ce Mac ».
+
+Un moteur distant sans clé API reste **visible mais désactivé**, avec la mention
+« clé manquante » : le masquer laisserait croire qu'il n'existe pas. Les
+réglages restent accessibles depuis le même menu.
+
+## Chaque réponse dit qui l'a écrite
+
+Le moteur est désormais enregistré **par message**, pas par conversation. Vous
+pouvez changer d'avis en cours de dialogue, et retrouver ensuite laquelle des
+réponses a été produite en local et laquelle est sortie de la machine.
+
+L'étiquette apparaît à côté des sources consultées, au bas de chaque réponse.
+Les conversations d'avant cette version restent lisibles ; leurs réponses
+n'affichent simplement pas de moteur.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.58.0/Assistant-Mail-0.58.0.dmg" length="6022027" type="application/octet-stream" sparkle:edSignature="WWQHUlpHB9ioFMiz/0GTU6DIhPbeD2uB21LSPV0GQI8JC2mN+zqOdAiPGZDxMKaExKsfnhga3llkFTs1LxR2Bw=="/>
+        </item>
+        <item>
             <title>0.57.0</title>
             <pubDate>Thu, 30 Jul 2026 12:24:09 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -89,44 +123,6 @@ ajoutée en affaiblit une autre.
 Pour les échanges suivis, DeepSeek s'en sort nettement mieux.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.56.1/Assistant-Mail-0.56.1.dmg" length="5945566" type="application/octet-stream" sparkle:edSignature="SJ/aO+wESAeoJHQWxfm7a/e646LjvDwSvFPIGJEtSuca5kJGSlubgUo/fK2cyeAhtWqSpTB3osiwsTb7pYTIDQ=="/>
-        </item>
-        <item>
-            <title>0.56.0</title>
-            <pubDate>Thu, 30 Jul 2026 11:21:23 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>102</sparkle:version>
-            <sparkle:shortVersionString>0.56.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Les réponses du Chat sont mises en forme
-
-Les modèles écrivent en Markdown — DeepSeek plus encore que le modèle local. Le
-Chat affichait ce Markdown tel quel : un tableau devenait une rangée de barres
-verticales, un titre commençait par deux dièses, et le gras s'écrivait avec ses
-étoiles. La réponse était juste et illisible.
-
-Sont désormais rendus : **titres**, **tableaux**, **listes à puces et
-numérotées**, **gras**, *italique*, `code`, et les séparateurs.
-
-Un tableau trop large défile horizontalement plutôt que d'imposer sa largeur au
-panneau — sans quoi il écraserait la colonne voisine.
-
-Ce qui n'est pas du Markdown reste affiché tel quel : une ligne contenant une
-barre verticale ne devient pas un tableau. Mieux vaut une ligne brute qu'un
-texte avalé par un analyseur trop zélé.
-
-## Deux mots que les données ne portaient pas
-
-Interrogé sur la journée, l'assistant a répondu « 10 conversations attendent
-votre réponse **aujourd'hui** » — rien ne datait ces conversations d'aujourd'hui
-— et a présenté trois échéances **d'hier** comme étant à faire aujourd'hui.
-
-Les faits qui lui sont fournis portent maintenant la mention explicite
-« EN RETARD » ou « AUJOURD'HUI » sur chaque ligne, et le compteur de
-conversations précise « toutes anciennetés confondues ». Les dates étaient
-justes ; c'est la phrase qui ne l'était pas.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.56.0/Assistant-Mail-0.56.0.dmg" length="5947406" type="application/octet-stream" sparkle:edSignature="YWQgvpSYn/xVB5zbZSUcth5AqcjWw1BrvCZPzIrXzSUx/lf2NN0Kg5BvzA5EiMKx/wQW5nG+jexwEtansCp5AQ=="/>
         </item>
     </channel>
 </rss>
