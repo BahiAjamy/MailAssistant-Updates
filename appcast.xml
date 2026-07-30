@@ -6,6 +6,71 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.62.0</title>
+            <pubDate>Thu, 30 Jul 2026 16:58:02 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>110</sparkle:version>
+            <sparkle:shortVersionString>0.62.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Un e-mail qui demande trois choses ne fait plus une seule tâche
+
+Jusqu'ici, un message énumérant plusieurs demandes produisait une tâche unique,
+dont le titre reprenait la première et passait les autres sous silence. Rien ne
+signalait ce qui avait été perdu.
+
+L'assistant repère désormais les listes à puces ou numérotées dans le corps du
+message, et en tire une tâche par demande. Les tâches supplémentaires arrivent
+dans **À valider** — jamais directement dans vos tâches actives. Vous gardez le
+dernier mot, en une frappe.
+
+Celle que l'analyse avait déjà retenue n'est pas proposée deux fois, même
+reformulée autrement. Un message bilingue, qui répète ses demandes en deux
+langues, n'en produit qu'un seul jeu.
+
+## Ce que le découpage ne fait pas, et pourquoi
+
+**Il ne s'occupe que des listes.** Sur de la prose, même structurée, il ne se
+déclenche pas : le modèle embarqué y invente des actions qui n'existent pas.
+Mesuré sur votre courrier réel, il ne s'ouvre que sur sept messages sur cent.
+
+**Il ne pose aucune échéance.** Interrogé sur la date d'un point isolé, le
+modèle en fabrique une à tous les coups — jusqu'à des dates antérieures au
+message lui-même. La seule échéance affichée reste celle de la tâche
+principale, où elle est vérifiable.
+
+Le découpage s'active tout seul, y compris sur votre installation existante.
+Réglages → **E-mails à plusieurs demandes** pour l'éteindre.
+
+## Analyse : un nouvel onglet Chronologie
+
+Chaque mission y occupe une barre, de sa première à sa dernière échéance, avec
+sa part terminée en teinte pleine. Les échéances individuelles s'y posent en
+points, rouges quand elles sont dépassées, et un repère marque aujourd'hui.
+Trois échelles : mois, trimestre, ou tout.
+
+Dessous, deux panneaux : la **charge des huit prochaines semaines** et les
+**échéances à quatorze jours**, retards en tête. Un clic sur une échéance ouvre
+la tâche.
+
+## La barre décrit ce qui a été demandé, pas ce que vous aviez prévu
+
+C'est la limite à connaître avant de s'y fier. Une tâche ne porte qu'une date
+de fin : rien, dans l'application, ne dit quand un travail commence. La barre
+d'une mission est donc **déduite** de ses échéances, et elle se déplace dès
+qu'une tâche s'ajoute.
+
+Une mission a besoin d'au moins deux échéances, à deux dates différentes, pour
+apparaître. Les tâches sans projet forment leur propre ligne plutôt que de
+disparaître.
+
+Partout dans cet onglet, une tâche mise en veille est traitée comme vous
+l'avez voulue : hors du champ. Elle ne compte ni comme retard, ni dans la
+charge à venir, ni dans les échéances proches.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.0/Assistant-Mail-0.62.0.dmg" length="6184460" type="application/octet-stream" sparkle:edSignature="edbOuYBmOt1TmOQvPCfvINwGwuxwddDpnPTDwTo+D2M0kxWPHscPuEvU5ycyxQ7PWuOeb0vbs0x2I9XnZPmrBQ=="/>
+        </item>
+        <item>
             <title>0.61.0</title>
             <pubDate>Thu, 30 Jul 2026 15:29:49 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -81,44 +146,6 @@ Deux contrôles automatiques interdisent désormais qu'une vue ou l'indicateur d
 présence retournent lire le Trousseau.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.1/Assistant-Mail-0.60.1.dmg" length="6026922" type="application/octet-stream" sparkle:edSignature="MhS5nVx81o3WWfWiFc4tK7be6Bh3yf6zXIJY99wOlLAsnWWEt5vXC5z3rQeqY/6LJJdnoDfSXOR2+/Bq1pPyCA=="/>
-        </item>
-        <item>
-            <title>0.60.0</title>
-            <pubDate>Thu, 30 Jul 2026 14:48:54 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>107</sparkle:version>
-            <sparkle:shortVersionString>0.60.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Les documents Word ne flottent plus dans le vide
-
-Un document Word s'affichait en colonne étroite au milieu du panneau, encadré
-de deux grandes zones claires — l'écran donnait l'impression de n'avoir rien
-chargé.
-
-La cause n'était pas un chargement manqué : le module d'aperçu du système pose
-une page à largeur fixe et la centre. Sur un panneau large, tout le reste est
-du vide. Les PDF, tableurs, présentations et images n'ont pas ce comportement,
-et ne changent donc pas.
-
-Deux corrections :
-
-- **Un plan de travail sombre** derrière l'aperçu. Une feuille blanche posée
-  sur un crème presque blanc ne se détache pas ; sur un fond sombre, elle se lit
-  comme une feuille sur un bureau — c'est ce que fait Aperçu depuis toujours.
-- **Une largeur de lecture** pour les documents Word : la page occupe la place
-  qu'on lui laisse, et ce qui reste autour devient une marge assumée.
-
-## Et si ça ne vous convient pas
-
-Un bouton **Pleine largeur** apparaît dans la barre du bas, pour les documents
-Word uniquement. Votre choix est conservé.
-
-Il est là pour une raison précise : l'aperçu du système est rendu par un
-service extérieur à l'application, qu'aucune capture ne permet d'inspecter. Je
-ne peux donc pas voir le résultat — vous, oui. Le réglage vous laisse trancher.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.0/Assistant-Mail-0.60.0.dmg" length="6025824" type="application/octet-stream" sparkle:edSignature="JvuPQmrrwP+fRwcEXQSh4xmAWZqKXcOJc9bWkOZ7mnRAhHllg3ON9rkQ3lDOCZDbEcQYCZwbe+jzTnU2Y3IjBg=="/>
         </item>
     </channel>
 </rss>
