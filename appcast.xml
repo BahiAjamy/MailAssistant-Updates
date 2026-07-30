@@ -6,6 +6,41 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.60.1</title>
+            <pubDate>Thu, 30 Jul 2026 15:11:30 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>108</sparkle:version>
+            <sparkle:shortVersionString>0.60.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Le mot de passe de session ne sera plus demandé à l'ouverture du Chat
+
+Ouvrir le Chat déclenchait une demande du mot de passe de session, pour un
+élément nommé « google-oauth » — sans aucun rapport avec Google.
+
+Trois causes, toutes de mon fait :
+
+- L'écran vérifiait la présence de votre clé DeepSeek **à chaque rafraîchissement
+  de l'affichage**, et chaque vérification ouvrait le Trousseau.
+- Cette lecture n'avait **aucun cache**, contrairement à celle des identifiants
+  Google — qui avait reçu exactement le même correctif en janvier.
+- La clé DeepSeek est rangée sous le même service que les identifiants Google,
+  d'où le nom trompeur affiché par macOS.
+
+Désormais, l'application retient simplement *qu'une clé existe* — une
+information qui n'est pas un secret — et n'ouvre le Trousseau qu'au moment
+d'appeler réellement DeepSeek, une fois par lancement.
+
+Votre clé n'a pas bougé et reste dans le Trousseau. Si macOS vous demande encore
+l'autorisation lors du **premier** appel à DeepSeek après cette mise à jour,
+répondez « Toujours autoriser » : la demande ne reviendra pas.
+
+Deux contrôles automatiques interdisent désormais qu'une vue ou l'indicateur de
+présence retournent lire le Trousseau.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.1/Assistant-Mail-0.60.1.dmg" length="6026922" type="application/octet-stream" sparkle:edSignature="MhS5nVx81o3WWfWiFc4tK7be6Bh3yf6zXIJY99wOlLAsnWWEt5vXC5z3rQeqY/6LJJdnoDfSXOR2+/Bq1pPyCA=="/>
+        </item>
+        <item>
             <title>0.60.0</title>
             <pubDate>Thu, 30 Jul 2026 14:48:54 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -87,40 +122,6 @@ comme donnée non fiable ; et la consigne du modèle nomme ce cadre et lui
 interdit d'en suivre les instructions.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.59.0/Assistant-Mail-0.59.0.dmg" length="6023788" type="application/octet-stream" sparkle:edSignature="c8Q4KPcbgd734UE0IqmPXVPVy2ozU+uwDpUgIeMhUHGQ7/xMYDoflOl9NsBbUCxwK2rk8bhD0uDJqVH4Ln3sBQ=="/>
-        </item>
-        <item>
-            <title>0.58.0</title>
-            <pubDate>Thu, 30 Jul 2026 12:41:10 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>105</sparkle:version>
-            <sparkle:shortVersionString>0.58.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Changer de moteur sans quitter le Chat
-
-Le choix du moteur vivait dans les Réglages. Or on en change **parce qu'une
-réponse n'a pas convenu** — et à ce moment-là, on est dans le Chat.
-
-Un sélecteur apparaît donc au bas de la liste des conversations : Apple
-Intelligence en local, DeepSeek V4 Flash, DeepSeek V4 Pro. Il rappelle en une
-ligne où vont vos données — « rien ne sort de ce Mac » ou « vos données sortent
-de ce Mac ».
-
-Un moteur distant sans clé API reste **visible mais désactivé**, avec la mention
-« clé manquante » : le masquer laisserait croire qu'il n'existe pas. Les
-réglages restent accessibles depuis le même menu.
-
-## Chaque réponse dit qui l'a écrite
-
-Le moteur est désormais enregistré **par message**, pas par conversation. Vous
-pouvez changer d'avis en cours de dialogue, et retrouver ensuite laquelle des
-réponses a été produite en local et laquelle est sortie de la machine.
-
-L'étiquette apparaît à côté des sources consultées, au bas de chaque réponse.
-Les conversations d'avant cette version restent lisibles ; leurs réponses
-n'affichent simplement pas de moteur.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.58.0/Assistant-Mail-0.58.0.dmg" length="6022027" type="application/octet-stream" sparkle:edSignature="WWQHUlpHB9ioFMiz/0GTU6DIhPbeD2uB21LSPV0GQI8JC2mN+zqOdAiPGZDxMKaExKsfnhga3llkFTs1LxR2Bw=="/>
         </item>
     </channel>
 </rss>
