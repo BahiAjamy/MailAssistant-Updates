@@ -6,6 +6,51 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.59.0</title>
+            <pubDate>Thu, 30 Jul 2026 13:05:24 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>106</sparkle:version>
+            <sparkle:shortVersionString>0.59.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## L'assistant peut enfin lire un e-mail
+
+« Qu'est-ce que Cheikh a dit dans son dernier message ? » recevait jusqu'ici une
+réponse honnête mais frustrante : l'assistant ne disposait que des métadonnées —
+objet, expéditeur, date — et vous renvoyait à votre boîte.
+
+Il lit désormais le texte des messages. Un seul à la fois, le plus pertinent, et
+seulement quand la question le demande.
+
+**On cherche un e-mail par son expéditeur et son objet, jamais par son
+contenu.** Sans cette règle, demander « le message de Cheikh Diop » rapportait un
+message d'une autre personne qui *parlait* de lui — constaté à la mise au point.
+
+## Ce que cela change pour vos données
+
+Avec **Apple Intelligence**, rien ne bouge : tout reste sur ce Mac.
+
+Avec **DeepSeek**, le texte de l'e-mail que vous faites lire part chez eux, au
+même titre que votre question. La phrase des Réglages a été réécrite en
+conséquence : elle promettait que le contenu des messages n'était jamais
+transmis, ce qui serait devenu faux. Les pièces jointes, elles, ne partent
+toujours pas — seuls leur nom et leur date sont transmis.
+
+## Une précaution qui devient concrète
+
+C'est le premier endroit où un texte écrit par quelqu'un d'autre arrive mot pour
+mot devant un modèle qui dispose d'outils. Un message contenant « ignore tes
+consignes » est désormais lu.
+
+Trois protections, aucune décorative : les outils de l'assistant ne peuvent
+**rien modifier** — c'est garanti par la structure du code, pas par une
+promesse ; le texte reçu arrive **encadré** par des marqueurs qui le désignent
+comme donnée non fiable ; et la consigne du modèle nomme ce cadre et lui
+interdit d'en suivre les instructions.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.59.0/Assistant-Mail-0.59.0.dmg" length="6023788" type="application/octet-stream" sparkle:edSignature="c8Q4KPcbgd734UE0IqmPXVPVy2ozU+uwDpUgIeMhUHGQ7/xMYDoflOl9NsBbUCxwK2rk8bhD0uDJqVH4Ln3sBQ=="/>
+        </item>
+        <item>
             <title>0.58.0</title>
             <pubDate>Thu, 30 Jul 2026 12:41:10 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -83,46 +128,6 @@ Un avertissement apparaît désormais dès la deuxième épingle. Pour croiser u
 personne et un projet, **DeepSeek est nettement plus fiable**.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.57.0/Assistant-Mail-0.57.0.dmg" length="6010858" type="application/octet-stream" sparkle:edSignature="Vbri6+1Fklju4APmUuuyrT4b34BymbokQs699F15n/aPx3dU0RxUxirqML692NHEwOb7z1zHEGqSUS/g09htDQ=="/>
-        </item>
-        <item>
-            <title>0.56.1</title>
-            <pubDate>Thu, 30 Jul 2026 11:52:00 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>103</sparkle:version>
-            <sparkle:shortVersionString>0.56.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Une question de suite obtient une vraie réponse
-
-Le Chat transmettait bien les échanges précédents — c'est vérifié —, mais le
-modèle local commençait par **répéter sa réponse d'avant** avant d'aborder la
-nouvelle question. À l'écran, les deux réponses semblaient identiques.
-
-Deux corrections :
-
-- **Les réponses passées sont résumées** dans le contexte transmis, au lieu
-  d'être recopiées en entier. Un modèle de cette taille reproduit ce qu'il voit ;
-  lui rendre l'essentiel de ce qu'il a dit suffit à tenir le fil, et libère au
-  passage une part du budget très limité du modèle local. Vos questions, elles,
-  restent intégrales.
-- **La consigne le dit explicitement** : une question de suite (« dans ce cas »,
-  « lequel », « pourquoi ») attend une information nouvelle, pas la liste déjà
-  affichée.
-
-Mesuré sur vos données : la deuxième réponse propose désormais un ordre de
-priorité au lieu de reproduire le tableau.
-
-## Ce qui reste imparfait
-
-Le modèle local reste bavard sur les rappels et peut affirmer un lien entre deux
-tâches que rien n'établit. Une consigne de plus a été essayée pour l'en
-empêcher — elle a rendu toutes les réponses laconiques et en a produit une
-absurde. Elle a donc été retirée : sur un modèle de cette taille, chaque règle
-ajoutée en affaiblit une autre.
-
-Pour les échanges suivis, DeepSeek s'en sort nettement mieux.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.56.1/Assistant-Mail-0.56.1.dmg" length="5945566" type="application/octet-stream" sparkle:edSignature="SJ/aO+wESAeoJHQWxfm7a/e646LjvDwSvFPIGJEtSuca5kJGSlubgUo/fK2cyeAhtWqSpTB3osiwsTb7pYTIDQ=="/>
         </item>
     </channel>
 </rss>
