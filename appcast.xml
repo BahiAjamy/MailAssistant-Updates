@@ -6,6 +6,44 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.56.0</title>
+            <pubDate>Thu, 30 Jul 2026 11:21:23 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>102</sparkle:version>
+            <sparkle:shortVersionString>0.56.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Les réponses du Chat sont mises en forme
+
+Les modèles écrivent en Markdown — DeepSeek plus encore que le modèle local. Le
+Chat affichait ce Markdown tel quel : un tableau devenait une rangée de barres
+verticales, un titre commençait par deux dièses, et le gras s'écrivait avec ses
+étoiles. La réponse était juste et illisible.
+
+Sont désormais rendus : **titres**, **tableaux**, **listes à puces et
+numérotées**, **gras**, *italique*, `code`, et les séparateurs.
+
+Un tableau trop large défile horizontalement plutôt que d'imposer sa largeur au
+panneau — sans quoi il écraserait la colonne voisine.
+
+Ce qui n'est pas du Markdown reste affiché tel quel : une ligne contenant une
+barre verticale ne devient pas un tableau. Mieux vaut une ligne brute qu'un
+texte avalé par un analyseur trop zélé.
+
+## Deux mots que les données ne portaient pas
+
+Interrogé sur la journée, l'assistant a répondu « 10 conversations attendent
+votre réponse **aujourd'hui** » — rien ne datait ces conversations d'aujourd'hui
+— et a présenté trois échéances **d'hier** comme étant à faire aujourd'hui.
+
+Les faits qui lui sont fournis portent maintenant la mention explicite
+« EN RETARD » ou « AUJOURD'HUI » sur chaque ligne, et le compteur de
+conversations précise « toutes anciennetés confondues ». Les dates étaient
+justes ; c'est la phrase qui ne l'était pas.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.56.0/Assistant-Mail-0.56.0.dmg" length="5947406" type="application/octet-stream" sparkle:edSignature="YWQgvpSYn/xVB5zbZSUcth5AqcjWw1BrvCZPzIrXzSUx/lf2NN0Kg5BvzA5EiMKx/wQW5nG+jexwEtansCp5AQ=="/>
+        </item>
+        <item>
             <title>0.55.0</title>
             <pubDate>Thu, 30 Jul 2026 11:04:09 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -135,56 +173,6 @@ fichiers : il pèse **0,46 Mo** pour 743 lignes. Rien n'est copié sur ce Mac ta
 que vous n'ouvrez pas un aperçu ou ne demandez pas un téléchargement.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.53.0/Assistant-Mail-0.53.0.dmg" length="5703998" type="application/octet-stream" sparkle:edSignature="Cnyh9foDQASx0iEQUXOOWIqatEct6557xcAMx4jDZPrAFtd0+moezpalvYWN5WotyA25yq0b/3sCUBlO/2y+AQ=="/>
-        </item>
-        <item>
-            <title>0.52.0</title>
-            <pubDate>Wed, 29 Jul 2026 16:05:25 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>98</sparkle:version>
-            <sparkle:shortVersionString>0.52.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Reconnaître un fichier sans lire son nom
-
-Les documents portaient tous la même icône grise. Ils prennent la couleur de
-leur type — **rouge** pour un PDF, **bleu** pour un document Word, **vert**
-pour un tableur, **orange** pour une présentation — et la liste se parcourt
-désormais en diagonale.
-
-Ce sont les conventions que vous connaissez déjà, pas un code à apprendre. Le
-texte brut reste neutre : deux bleus voisins ne distingueraient plus rien.
-
-Les teintes viennent de la palette de l'application, la seule dont les
-rapports de contraste sont vérifiés à chaque construction, en clair comme en
-sombre.
-
-## Aller à l'e-mail depuis le fichier
-
-Chaque ligne porte une **icône enveloppe** qui ouvre la conversation d'origine
-— ou le message dans Gmail lorsqu'il est sorti de la fenêtre conservée. Elle
-reste visible au repos, simplement atténuée : n'apparaître qu'au survol la
-rendait introuvable au clavier.
-
-## Et l'inverse : du message au fichier
-
-Dans **E-mails**, cliquer une pièce jointe vous **mène au fichier dans la
-bibliothèque**, où il se lit immédiatement. Le téléchargement reste à un clic
-droit.
-
-C'est l'inverse de l'arbitrage précédent, et l'aperçu le justifie : tant que la
-seule chose qu'on pouvait faire d'une pièce jointe était de l'enregistrer, en
-faire l'action du clic allait de soi. Télécharger pour regarder est devenu un
-détour — et un fichier de plus dans Téléchargements.
-
-Les filtres en cours ne peuvent pas faire échouer ce geste : ils sont levés, et
-la portée s'élargit si le fichier visé est une image ou une invitation, que la
-bibliothèque masque par défaut. Un clic qui n'aurait rien affiché aurait passé
-pour une panne.
-
-Une pièce que la bibliothèque ne connaît pas encore retombe sur le
-téléchargement, comme avant.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.52.0/Assistant-Mail-0.52.0.dmg" length="5701886" type="application/octet-stream" sparkle:edSignature="PmvV12lZlaSZa4uzEdgrDdEOky+/GVkMPXoSrjMNwEMpcGUCEMaEoi8LsPEIoumqBlTmKb2ui8aOWW7e/TykDw=="/>
         </item>
     </channel>
 </rss>
