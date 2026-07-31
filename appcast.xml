@@ -6,6 +6,33 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.63.4</title>
+            <pubDate>Fri, 31 Jul 2026 16:42:25 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>116</sparkle:version>
+            <sparkle:shortVersionString>0.63.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Le titre se corrige, et l'échéance se pose
+
+La feuille qui crée des tâches depuis le Chat affichait des libellés figés, et
+ne proposait aucune date. Deux manques, comblés.
+
+**Les titres sont modifiables.** Ils viennent d'une réponse rédigée par un
+modèle : les corriger avant création plutôt qu'après est le geste évident. Un
+titre vidé ne crée rien.
+
+**Une échéance peut être posée**, comme dans la création manuelle : un
+interrupteur, puis le sélecteur de date. Elle s'applique à toutes les tâches
+cochées.
+
+Sans échéance par défaut, et volontairement : le Chat écrit « ce week-end » ou
+« lundi », ce qui n'est pas une date vérifiable. Mieux vaut aucune échéance
+qu'une échéance inventée.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.4/Assistant-Mail-0.63.4.dmg" length="6250770" type="application/octet-stream" sparkle:edSignature="TpmdBFOlWFYz2oWUvjZrGzpn7Swr/ALDQBf7coeGfA1H1qjPHs4eljQvKpKXXFG72esQZdvks9wiZABJqgC6Ag=="/>
+        </item>
+        <item>
             <title>0.63.3</title>
             <pubDate>Fri, 31 Jul 2026 16:32:16 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -86,44 +113,6 @@ seul : une ligne qui cite « Nouvelle tâche » sans nommer de titre ne propose
 toujours rien.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.2/Assistant-Mail-0.63.2.dmg" length="6246496" type="application/octet-stream" sparkle:edSignature="KXyZ83dX95RTgitYOSVw3T7HtbBRoD4F7bl1RP/NqpstY0iZoWQwxqP3dsY+SSe2U5w2/Nbf4w/swcoQ/6HJCA=="/>
-        </item>
-        <item>
-            <title>0.63.1</title>
-            <pubDate>Fri, 31 Jul 2026 16:04:05 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>113</sparkle:version>
-            <sparkle:shortVersionString>0.63.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Cinq corrections sur la création de tâches depuis le Chat
-
-Toutes viennent du premier usage réel.
-
-**Le bouton se voyait à peine.** Rendu en petit et sans contour, il se
-confondait avec la rangée d'étiquettes juste en dessous et se lisait comme un
-libellé. Il est désormais plein et coloré, et son texte va droit au but :
-« Créer 3 tâches ».
-
-**Des actions étaient perdues.** Le Chat annonçait trois points, la feuille
-n'en proposait que deux. Deux causes : une action dépassant 140 caractères
-était jetée au lieu d'être raccourcie, et une action commençant par un pronom
-— « Lui dire quels experts… » — n'était pas reconnue. C'était justement celle
-qui appelait une réponse.
-
-**Les titres traînaient un commentaire.** « Retravailler votre présentation
-Solution Showcase — l'améliorer avec les retours reçus après votre passage au
-Cap » tenait deux lignes dans la liste des tâches. Ce qui suit le tiret est une
-explication, pas la consigne : elle est retirée.
-
-**Le libellé du champ entrait dans le titre.** Quand le Chat détaille la tâche
-à saisir, il écrit « **Titre** : « Demander à Cheikh son retour » ». La tâche
-créée s'appelait ainsi, guillemets compris.
-
-**La feuille était mal composée.** Le mot « Priorité » se pliait lettre par
-lettre en colonne verticale entre deux contrôles, et la fenêtre gardait une
-hauteur fixe quel que soit le nombre de propositions.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.1/Assistant-Mail-0.63.1.dmg" length="6246629" type="application/octet-stream" sparkle:edSignature="esA1vSbPHHMcCg+Hc/inHvuv97HkrK/oxEmi+ir9wZl+59Z9H3bu8jD99DjNjnmFrdsfJQwW1aqxhtHqCQUEAA=="/>
         </item>
     </channel>
 </rss>
