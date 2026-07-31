@@ -6,6 +6,49 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.63.2</title>
+            <pubDate>Fri, 31 Jul 2026 16:18:58 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>114</sparkle:version>
+            <sparkle:shortVersionString>0.63.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Le bouton ne se propose plus quand il n'y a rien à faire
+
+À la question « qu'est-ce qui est en retard ? », une réponse qui ne demandait
+aucune action offrait pourtant de créer une tâche. La ligne fautive était
+« DAWAL-LIRE : échéance le 1er août » : le nom du projet se termine comme un
+verbe à l'infinitif, et il en avait pris la place.
+
+Deux règles le corrigent. Le trait d'union sépare désormais les mots, et une
+ligne dont le deux-points n'est précédé que d'un seul mot est reconnue pour ce
+qu'elle est : une fiche, pas une consigne.
+
+## Des titres plus courts et plus justes
+
+Quand le Chat enchaîne la consigne et son commentaire dans le même point, seule
+la première phrase devient le titre. « Répondre à Sarah sur les besoins
+d'accompagnement : elle propose explicitement de vous mettre en relation avec
+des experts… » tenait trois lignes ; il en tient une.
+
+Et lorsqu'un titre reste trop long, il se coupe au deux-points plutôt qu'à une
+virgule : un titre qui annonçait quatre modèles et n'en citait que trois valait
+moins que pas de détail du tout.
+
+## Le titre que le Chat vous dicte est enfin repris
+
+Quand vous demandez « ajoute cette tâche », le Chat répond par un mode d'emploi :
+ouvrez l'onglet Tâches, cliquez sur Nouvelle tâche, renseignez le titre — par
+exemple « Natation week-end ». Ces impératifs décrivent l'application, pas votre
+travail, et aucun bouton n'apparaissait.
+
+Le titre, lui, est bien là, entre guillemets. Il est désormais repris, et lui
+seul : une ligne qui cite « Nouvelle tâche » sans nommer de titre ne propose
+toujours rien.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.2/Assistant-Mail-0.63.2.dmg" length="6246496" type="application/octet-stream" sparkle:edSignature="KXyZ83dX95RTgitYOSVw3T7HtbBRoD4F7bl1RP/NqpstY0iZoWQwxqP3dsY+SSe2U5w2/Nbf4w/swcoQ/6HJCA=="/>
+        </item>
+        <item>
             <title>0.63.1</title>
             <pubDate>Fri, 31 Jul 2026 16:04:05 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -95,32 +138,6 @@ moyenne — un vrai écart, mesuré sur quinze cas seulement, bien trop mince po
 décider à votre place.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.0/Assistant-Mail-0.63.0.dmg" length="6229475" type="application/octet-stream" sparkle:edSignature="w+ayT7FTPppsG5iTQj+jjvGBq3hkAB0WuHemK2tIh/WkV4HfdB6C/8ip5jmZpcFeSIXvLyts/taS0cl6krc+CQ=="/>
-        </item>
-        <item>
-            <title>0.62.1</title>
-            <pubDate>Fri, 31 Jul 2026 15:08:32 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>111</sparkle:version>
-            <sparkle:shortVersionString>0.62.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Un e-mail trop long n'est plus trié en aveugle
-
-Certains messages dépassaient ce que l'analyse locale peut lire d'une traite.
-Quand cela arrivait, l'application ne le disait pas : elle retombait
-silencieusement sur un tri par mots-clés, bien plus grossier, et le classement
-affiché avait l'air d'un classement par l'IA comme les autres.
-
-L'analyse réessaie désormais avec un extrait plus court plutôt que d'abandonner.
-Le repli par mots-clés ne sert plus qu'aux pannes réelles.
-
-Mesuré en rejouant l'analyse sur 92 de vos e-mails : **3 étaient concernés**.
-C'est peu, mais rien ne les distinguait des autres à l'écran.
-
-Aucun changement visible ailleurs. Vos tâches, vos projets et vos réglages sont
-inchangés.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.1/Assistant-Mail-0.62.1.dmg" length="6186441" type="application/octet-stream" sparkle:edSignature="OWyrgN1KAjJ2aKHVtQO/ABaa2HGqU7O4uNa002pO2aqjrf0qR2Nlg9ghCh2ruOo+/bj3EVME1t3y4BLX7qZABw=="/>
         </item>
     </channel>
 </rss>
