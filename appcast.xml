@@ -6,6 +6,44 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.63.1</title>
+            <pubDate>Fri, 31 Jul 2026 16:04:05 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>113</sparkle:version>
+            <sparkle:shortVersionString>0.63.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Cinq corrections sur la création de tâches depuis le Chat
+
+Toutes viennent du premier usage réel.
+
+**Le bouton se voyait à peine.** Rendu en petit et sans contour, il se
+confondait avec la rangée d'étiquettes juste en dessous et se lisait comme un
+libellé. Il est désormais plein et coloré, et son texte va droit au but :
+« Créer 3 tâches ».
+
+**Des actions étaient perdues.** Le Chat annonçait trois points, la feuille
+n'en proposait que deux. Deux causes : une action dépassant 140 caractères
+était jetée au lieu d'être raccourcie, et une action commençant par un pronom
+— « Lui dire quels experts… » — n'était pas reconnue. C'était justement celle
+qui appelait une réponse.
+
+**Les titres traînaient un commentaire.** « Retravailler votre présentation
+Solution Showcase — l'améliorer avec les retours reçus après votre passage au
+Cap » tenait deux lignes dans la liste des tâches. Ce qui suit le tiret est une
+explication, pas la consigne : elle est retirée.
+
+**Le libellé du champ entrait dans le titre.** Quand le Chat détaille la tâche
+à saisir, il écrit « **Titre** : « Demander à Cheikh son retour » ». La tâche
+créée s'appelait ainsi, guillemets compris.
+
+**La feuille était mal composée.** Le mot « Priorité » se pliait lettre par
+lettre en colonne verticale entre deux contrôles, et la fenêtre gardait une
+hauteur fixe quel que soit le nombre de propositions.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.1/Assistant-Mail-0.63.1.dmg" length="6246629" type="application/octet-stream" sparkle:edSignature="esA1vSbPHHMcCg+Hc/inHvuv97HkrK/oxEmi+ir9wZl+59Z9H3bu8jD99DjNjnmFrdsfJQwW1aqxhtHqCQUEAA=="/>
+        </item>
+        <item>
             <title>0.63.0</title>
             <pubDate>Fri, 31 Jul 2026 15:45:25 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -83,71 +121,6 @@ Aucun changement visible ailleurs. Vos tâches, vos projets et vos réglages son
 inchangés.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.1/Assistant-Mail-0.62.1.dmg" length="6186441" type="application/octet-stream" sparkle:edSignature="OWyrgN1KAjJ2aKHVtQO/ABaa2HGqU7O4uNa002pO2aqjrf0qR2Nlg9ghCh2ruOo+/bj3EVME1t3y4BLX7qZABw=="/>
-        </item>
-        <item>
-            <title>0.62.0</title>
-            <pubDate>Thu, 30 Jul 2026 16:58:02 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>110</sparkle:version>
-            <sparkle:shortVersionString>0.62.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Un e-mail qui demande trois choses ne fait plus une seule tâche
-
-Jusqu'ici, un message énumérant plusieurs demandes produisait une tâche unique,
-dont le titre reprenait la première et passait les autres sous silence. Rien ne
-signalait ce qui avait été perdu.
-
-L'assistant repère désormais les listes à puces ou numérotées dans le corps du
-message, et en tire une tâche par demande. Les tâches supplémentaires arrivent
-dans **À valider** — jamais directement dans vos tâches actives. Vous gardez le
-dernier mot, en une frappe.
-
-Celle que l'analyse avait déjà retenue n'est pas proposée deux fois, même
-reformulée autrement. Un message bilingue, qui répète ses demandes en deux
-langues, n'en produit qu'un seul jeu.
-
-## Ce que le découpage ne fait pas, et pourquoi
-
-**Il ne s'occupe que des listes.** Sur de la prose, même structurée, il ne se
-déclenche pas : le modèle embarqué y invente des actions qui n'existent pas.
-Mesuré sur votre courrier réel, il ne s'ouvre que sur sept messages sur cent.
-
-**Il ne pose aucune échéance.** Interrogé sur la date d'un point isolé, le
-modèle en fabrique une à tous les coups — jusqu'à des dates antérieures au
-message lui-même. La seule échéance affichée reste celle de la tâche
-principale, où elle est vérifiable.
-
-Le découpage s'active tout seul, y compris sur votre installation existante.
-Réglages → **E-mails à plusieurs demandes** pour l'éteindre.
-
-## Analyse : un nouvel onglet Chronologie
-
-Chaque mission y occupe une barre, de sa première à sa dernière échéance, avec
-sa part terminée en teinte pleine. Les échéances individuelles s'y posent en
-points, rouges quand elles sont dépassées, et un repère marque aujourd'hui.
-Trois échelles : mois, trimestre, ou tout.
-
-Dessous, deux panneaux : la **charge des huit prochaines semaines** et les
-**échéances à quatorze jours**, retards en tête. Un clic sur une échéance ouvre
-la tâche.
-
-## La barre décrit ce qui a été demandé, pas ce que vous aviez prévu
-
-C'est la limite à connaître avant de s'y fier. Une tâche ne porte qu'une date
-de fin : rien, dans l'application, ne dit quand un travail commence. La barre
-d'une mission est donc **déduite** de ses échéances, et elle se déplace dès
-qu'une tâche s'ajoute.
-
-Une mission a besoin d'au moins deux échéances, à deux dates différentes, pour
-apparaître. Les tâches sans projet forment leur propre ligne plutôt que de
-disparaître.
-
-Partout dans cet onglet, une tâche mise en veille est traitée comme vous
-l'avez voulue : hors du champ. Elle ne compte ni comme retard, ni dans la
-charge à venir, ni dans les échéances proches.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.0/Assistant-Mail-0.62.0.dmg" length="6184460" type="application/octet-stream" sparkle:edSignature="edbOuYBmOt1TmOQvPCfvINwGwuxwddDpnPTDwTo+D2M0kxWPHscPuEvU5ycyxQ7PWuOeb0vbs0x2I9XnZPmrBQ=="/>
         </item>
     </channel>
 </rss>
