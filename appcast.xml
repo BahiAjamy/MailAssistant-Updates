@@ -6,6 +6,32 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.62.1</title>
+            <pubDate>Fri, 31 Jul 2026 15:08:32 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>111</sparkle:version>
+            <sparkle:shortVersionString>0.62.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Un e-mail trop long n'est plus trié en aveugle
+
+Certains messages dépassaient ce que l'analyse locale peut lire d'une traite.
+Quand cela arrivait, l'application ne le disait pas : elle retombait
+silencieusement sur un tri par mots-clés, bien plus grossier, et le classement
+affiché avait l'air d'un classement par l'IA comme les autres.
+
+L'analyse réessaie désormais avec un extrait plus court plutôt que d'abandonner.
+Le repli par mots-clés ne sert plus qu'aux pannes réelles.
+
+Mesuré en rejouant l'analyse sur 92 de vos e-mails : **3 étaient concernés**.
+C'est peu, mais rien ne les distinguait des autres à l'écran.
+
+Aucun changement visible ailleurs. Vos tâches, vos projets et vos réglages sont
+inchangés.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.1/Assistant-Mail-0.62.1.dmg" length="6186441" type="application/octet-stream" sparkle:edSignature="OWyrgN1KAjJ2aKHVtQO/ABaa2HGqU7O4uNa002pO2aqjrf0qR2Nlg9ghCh2ruOo+/bj3EVME1t3y4BLX7qZABw=="/>
+        </item>
+        <item>
             <title>0.62.0</title>
             <pubDate>Thu, 30 Jul 2026 16:58:02 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -111,41 +137,6 @@ PDF, tableurs, présentations et images ne changent pas : ils n'avaient pas ce
 défaut.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.61.0/Assistant-Mail-0.61.0.dmg" length="6043933" type="application/octet-stream" sparkle:edSignature="BQvyMFaJ8p5PHAAev0iWvwfc0mL6ubc5quUzoXDdWImH0jkbLLL3GQRrlfLbJuqjNNTqaC8j0UJ06IGd3YcPAQ=="/>
-        </item>
-        <item>
-            <title>0.60.1</title>
-            <pubDate>Thu, 30 Jul 2026 15:11:30 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>108</sparkle:version>
-            <sparkle:shortVersionString>0.60.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Le mot de passe de session ne sera plus demandé à l'ouverture du Chat
-
-Ouvrir le Chat déclenchait une demande du mot de passe de session, pour un
-élément nommé « google-oauth » — sans aucun rapport avec Google.
-
-Trois causes, toutes de mon fait :
-
-- L'écran vérifiait la présence de votre clé DeepSeek **à chaque rafraîchissement
-  de l'affichage**, et chaque vérification ouvrait le Trousseau.
-- Cette lecture n'avait **aucun cache**, contrairement à celle des identifiants
-  Google — qui avait reçu exactement le même correctif en janvier.
-- La clé DeepSeek est rangée sous le même service que les identifiants Google,
-  d'où le nom trompeur affiché par macOS.
-
-Désormais, l'application retient simplement *qu'une clé existe* — une
-information qui n'est pas un secret — et n'ouvre le Trousseau qu'au moment
-d'appeler réellement DeepSeek, une fois par lancement.
-
-Votre clé n'a pas bougé et reste dans le Trousseau. Si macOS vous demande encore
-l'autorisation lors du **premier** appel à DeepSeek après cette mise à jour,
-répondez « Toujours autoriser » : la demande ne reviendra pas.
-
-Deux contrôles automatiques interdisent désormais qu'une vue ou l'indicateur de
-présence retournent lire le Trousseau.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.60.1/Assistant-Mail-0.60.1.dmg" length="6026922" type="application/octet-stream" sparkle:edSignature="MhS5nVx81o3WWfWiFc4tK7be6Bh3yf6zXIJY99wOlLAsnWWEt5vXC5z3rQeqY/6LJJdnoDfSXOR2+/Bq1pPyCA=="/>
         </item>
     </channel>
 </rss>
