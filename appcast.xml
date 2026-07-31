@@ -6,6 +6,45 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.63.3</title>
+            <pubDate>Fri, 31 Jul 2026 16:32:16 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>115</sparkle:version>
+            <sparkle:shortVersionString>0.63.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## « Crée cette tâche » fonctionne enfin
+
+Vous l'avez demandé quatre fois de suite, et aucun bouton n'apparaissait. Le
+Chat répond toujours qu'il ne peut pas créer de tâche, mais il vous dicte le
+titre au passage — « intitulé « Natation » », « la tâche « Faire de la
+natation » ». C'est ce titre que l'application reprend désormais.
+
+Trois raisons l'en empêchaient : un titre court comme « Natation » tombait sous
+le plancher prévu pour écarter le bruit des listes ; une réponse rédigée en
+paragraphe plutôt qu'en liste n'était jamais examinée ; et un titre dicté en
+minuscule restait tel quel.
+
+Le nom d'un bouton de l'application, lui, n'est pas un titre : « cliquez sur
+« Nouvelle tâche » » ne propose toujours rien.
+
+## Plus de mot de passe du Trousseau à chaque lancement
+
+La clé DeepSeek logeait au même endroit que le secret Google. D'où une demande
+qui annonçait « google-oauth » alors qu'elle portait sur DeepSeek, et qui
+revenait à chaque ouverture du Chat après un redémarrage.
+
+Le mécanisme censé y mettre fin échouait sans rien dire, et réenregistrer la clé
+depuis les Réglages n'y changeait rien : on réécrivait au même endroit, sur un
+élément dont l'application n'était pas propriétaire.
+
+La clé a maintenant sa propre place, créée par l'application. **Une dernière
+autorisation vous sera demandée** au premier lancement — celle qui permet de
+déménager la clé. Ensuite, plus aucune.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.3/Assistant-Mail-0.63.3.dmg" length="6249051" type="application/octet-stream" sparkle:edSignature="Q5qNrSLpVc0IUEWhh1xONwCn2qL//9oq0WRih90io13W0spMRJGGRYg043Qmo3G99ia3KnAKwcacmTaLUcjyAQ=="/>
+        </item>
+        <item>
             <title>0.63.2</title>
             <pubDate>Fri, 31 Jul 2026 16:18:58 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -85,59 +124,6 @@ lettre en colonne verticale entre deux contrôles, et la fenêtre gardait une
 hauteur fixe quel que soit le nombre de propositions.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.1/Assistant-Mail-0.63.1.dmg" length="6246629" type="application/octet-stream" sparkle:edSignature="esA1vSbPHHMcCg+Hc/inHvuv97HkrK/oxEmi+ir9wZl+59Z9H3bu8jD99DjNjnmFrdsfJQwW1aqxhtHqCQUEAA=="/>
-        </item>
-        <item>
-            <title>0.63.0</title>
-            <pubDate>Fri, 31 Jul 2026 15:45:25 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>112</sparkle:version>
-            <sparkle:shortVersionString>0.63.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Créer des tâches depuis une réponse du Chat
-
-Vous demandiez au Chat de créer les tâches d'un e-mail ; il vous répondait
-qu'il ne pouvait pas, et vous listait les titres à recopier.
-
-Désormais, quand une réponse **énumère des actions**, un bouton apparaît
-dessous : *Créer des tâches à partir de cette réponse*. Une feuille s'ouvre
-avec les libellés déjà cochés — vous décochez ce qui n'en est pas, choisissez
-le compte et le projet, et c'est créé.
-
-Le bouton se montre sur une liste d'actions, pas sur une réponse en prose ni
-sur un constat. Il reconnaît les consignes à l'infinitif — *Créer, Répondre,
-Préparer, Relire* — parce que c'est ainsi que le Chat rédige ce qu'il y a à
-faire. Posez donc plutôt « **qu'est-ce que je dois faire ?** » que
-« résume-moi ce message ».
-
-Ce n'est pas le Chat qui crée quoi que ce soit : il ignore que ce bouton
-existe. L'application lit la réponse affichée à l'écran et vous propose d'en
-tirer des tâches. Rien n'est créé sans votre clic, et cela fonctionne avec les
-deux moteurs.
-
-## Le pourcentage de confiance a disparu
-
-Le détail d'une tâche affichait « Confiance 90 % ». Ce nombre a été mesuré en
-rejouant l'analyse sur 92 de vos e-mails dont vous aviez vous-même décidé du
-sort : **0,75 de moyenne sur les tâches que vous avez menées à terme, 0,73 sur
-celles que vous avez jetées**. Deux centièmes d'écart — il ne distinguait rien,
-et il l'affichait avec l'assurance d'un verdict.
-
-Le classement entre « À faire » et « À valider » continue de s'appuyer dessus,
-là où il ne prétend rien : il range simplement les suggestions les plus sûres.
-
-## « Vous avez répondu le… »
-
-À la place, une information vérifiable : quand vous avez écrit dans la
-conversation d'où vient la tâche, après le message qui l'a produite, la tâche
-le signale.
-
-C'est un fait, pas un verdict. L'application ne referme rien à votre place :
-sur les tâches ainsi marquées, 47 % finissaient écartées contre 27 % en
-moyenne — un vrai écart, mesuré sur quinze cas seulement, bien trop mince pour
-décider à votre place.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.0/Assistant-Mail-0.63.0.dmg" length="6229475" type="application/octet-stream" sparkle:edSignature="w+ayT7FTPppsG5iTQj+jjvGBq3hkAB0WuHemK2tIh/WkV4HfdB6C/8ip5jmZpcFeSIXvLyts/taS0cl6krc+CQ=="/>
         </item>
     </channel>
 </rss>
