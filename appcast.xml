@@ -6,6 +6,59 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.63.0</title>
+            <pubDate>Fri, 31 Jul 2026 15:45:25 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>112</sparkle:version>
+            <sparkle:shortVersionString>0.63.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Créer des tâches depuis une réponse du Chat
+
+Vous demandiez au Chat de créer les tâches d'un e-mail ; il vous répondait
+qu'il ne pouvait pas, et vous listait les titres à recopier.
+
+Désormais, quand une réponse **énumère des actions**, un bouton apparaît
+dessous : *Créer des tâches à partir de cette réponse*. Une feuille s'ouvre
+avec les libellés déjà cochés — vous décochez ce qui n'en est pas, choisissez
+le compte et le projet, et c'est créé.
+
+Le bouton se montre sur une liste d'actions, pas sur une réponse en prose ni
+sur un constat. Il reconnaît les consignes à l'infinitif — *Créer, Répondre,
+Préparer, Relire* — parce que c'est ainsi que le Chat rédige ce qu'il y a à
+faire. Posez donc plutôt « **qu'est-ce que je dois faire ?** » que
+« résume-moi ce message ».
+
+Ce n'est pas le Chat qui crée quoi que ce soit : il ignore que ce bouton
+existe. L'application lit la réponse affichée à l'écran et vous propose d'en
+tirer des tâches. Rien n'est créé sans votre clic, et cela fonctionne avec les
+deux moteurs.
+
+## Le pourcentage de confiance a disparu
+
+Le détail d'une tâche affichait « Confiance 90 % ». Ce nombre a été mesuré en
+rejouant l'analyse sur 92 de vos e-mails dont vous aviez vous-même décidé du
+sort : **0,75 de moyenne sur les tâches que vous avez menées à terme, 0,73 sur
+celles que vous avez jetées**. Deux centièmes d'écart — il ne distinguait rien,
+et il l'affichait avec l'assurance d'un verdict.
+
+Le classement entre « À faire » et « À valider » continue de s'appuyer dessus,
+là où il ne prétend rien : il range simplement les suggestions les plus sûres.
+
+## « Vous avez répondu le… »
+
+À la place, une information vérifiable : quand vous avez écrit dans la
+conversation d'où vient la tâche, après le message qui l'a produite, la tâche
+le signale.
+
+C'est un fait, pas un verdict. L'application ne referme rien à votre place :
+sur les tâches ainsi marquées, 47 % finissaient écartées contre 27 % en
+moyenne — un vrai écart, mesuré sur quinze cas seulement, bien trop mince pour
+décider à votre place.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.0/Assistant-Mail-0.63.0.dmg" length="6229475" type="application/octet-stream" sparkle:edSignature="w+ayT7FTPppsG5iTQj+jjvGBq3hkAB0WuHemK2tIh/WkV4HfdB6C/8ip5jmZpcFeSIXvLyts/taS0cl6krc+CQ=="/>
+        </item>
+        <item>
             <title>0.62.1</title>
             <pubDate>Fri, 31 Jul 2026 15:08:32 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -95,48 +148,6 @@ l'avez voulue : hors du champ. Elle ne compte ni comme retard, ni dans la
 charge à venir, ni dans les échéances proches.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.62.0/Assistant-Mail-0.62.0.dmg" length="6184460" type="application/octet-stream" sparkle:edSignature="edbOuYBmOt1TmOQvPCfvINwGwuxwddDpnPTDwTo+D2M0kxWPHscPuEvU5ycyxQ7PWuOeb0vbs0x2I9XnZPmrBQ=="/>
-        </item>
-        <item>
-            <title>0.61.0</title>
-            <pubDate>Thu, 30 Jul 2026 15:29:49 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>109</sparkle:version>
-            <sparkle:shortVersionString>0.61.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Les documents Word remplissent enfin l'écran
-
-La version précédente assombrissait le fond et bridait la largeur. Ça n'a pas
-suffi, et pour une raison que seule votre capture pouvait révéler : l'aperçu du
-système ajuste ces documents sur la **hauteur**, et leur largeur suit
-mécaniquement le rapport d'une page A4. Élargir ou rétrécir le panneau n'y
-change rien — la page ne bouge pas.
-
-macOS sait pourtant lire un document Word directement. Le texte est désormais
-**remis en page à la largeur du panneau**, comme dans un traitement de texte :
-plus de page rigide, plus de bandes vides.
-
-Mesuré sur quatre de vos documents : de 1 700 à 9 200 caractères, lus en moins
-de 30 millisecondes.
-
-Le bouton **Pleine largeur** garde son rôle : colonne de lecture confortable par
-défaut, ou toute la largeur si vous préférez.
-
-## Ce que vous perdez, et où le retrouver
-
-La remise en page abandonne les sauts de page, les en-têtes et pieds de page, et
-une partie des mises en forme complexes. C'est le prix d'un document qui se lit.
-
-Pour la page telle qu'elle sera imprimée, **Ouvrir** reste à un clic — le
-fichier s'enregistre dans Téléchargements et s'ouvre dans votre traitement de
-texte.
-
-Les documents que macOS ne parvient pas à relire — un format inhabituel, un
-fichier abîmé, ou au-delà de 8 Mo — continuent de s'afficher comme avant. Les
-PDF, tableurs, présentations et images ne changent pas : ils n'avaient pas ce
-défaut.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.61.0/Assistant-Mail-0.61.0.dmg" length="6043933" type="application/octet-stream" sparkle:edSignature="BQvyMFaJ8p5PHAAev0iWvwfc0mL6ubc5quUzoXDdWImH0jkbLLL3GQRrlfLbJuqjNNTqaC8j0UJ06IGd3YcPAQ=="/>
         </item>
     </channel>
 </rss>
