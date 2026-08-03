@@ -6,6 +6,59 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.64.0</title>
+            <pubDate>Mon, 03 Aug 2026 14:56:35 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>117</sparkle:version>
+            <sparkle:shortVersionString>0.64.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Votre propre courrier ne vous donne plus d'ordres
+
+Deux tiers des tâches que vous écartiez venaient de messages que vous aviez
+écrits vous-même. Elles s'appelaient « Envoyer un document à Cheikh Samb »,
+« Envoyer le document à Sarah Rotich » — des demandes fabriquées à partir de
+vos propres envois.
+
+**La cause n'était pas le modèle.** On posait à votre courrier sortant la
+question réservée au courrier reçu : « ce message impose-t-il une action à son
+destinataire ? » Elle n'a aucun sens quand le destinataire est quelqu'un
+d'autre. La bonne question, « qu'ai-je promis ici ? », était déjà posée
+ailleurs, par la détection d'engagements.
+
+**Pire, la mauvaise proposition empêchait la bonne.** La détection
+d'engagements écarte tout envoi portant déjà une tâche : en créant celle qu'il
+ne fallait pas, l'application se fermait la porte de celle qu'il fallait.
+
+Désormais, un message dont l'expéditeur est l'un de vos comptes ne produit plus
+de tâche. Il reste lu, conservé et visible dans ses fils — seule la proposition
+disparaît, et le message repart vers la validation d'engagement, qui le nomme
+correctement.
+
+**Mesuré sur vos 194 décisions passées** : 67 mauvaises propositions
+disparaissent, soit 66 % du bruit ; 12 bonnes changent de chemin, et les 12
+sont récupérables par la relève des envois. Aucun message d'un tiers n'est
+touché. La précision de ce qui reste passe de 47 % à 70 %.
+
+**Le test porte sur l'expéditeur, et sur rien d'autre.** Ni le fil, ni les
+destinataires, ni les copies. Un message où quelqu'un vous demande quelque
+chose porte SON adresse : il ne peut pas être réaiguillé par erreur, même si
+vous êtes en copie, même si vous avez déjà écrit trois fois dans la
+conversation. Vingt cas limites verrouillent cette propriété, dont douze qui
+doivent rester intouchés — un collègue du même domaine, un domaine voisin, une
+liste de diffusion, une adresse malformée.
+
+Les alias `+étiquette` sont reconnus, ainsi que les points d'une adresse Gmail,
+où ils ne comptent pas. Un alias de domaine ne l'est pas : ce cas produit une
+proposition de trop, jamais une demande masquée.
+
+Le correctif agit sur le courrier à venir. Les tâches déjà triées à la main ne
+sont pas rejouées : elles portent vos décisions, et c'est à ce titre qu'elles
+ont servi à mesurer tout ce qui précède.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.64.0/Assistant-Mail-0.64.0.dmg" length="6253083" type="application/octet-stream" sparkle:edSignature="eHMnSzHGk9ABcZXDK7m97TzcaEZI7LRmgUEpMBguu1brog8nd3X37d60affG0Qe0c+Z4X4zuzVvugi6eR/JxCA=="/>
+        </item>
+        <item>
             <title>0.63.4</title>
             <pubDate>Fri, 31 Jul 2026 16:42:25 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -70,49 +123,6 @@ autorisation vous sera demandée** au premier lancement — celle qui permet de
 déménager la clé. Ensuite, plus aucune.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.3/Assistant-Mail-0.63.3.dmg" length="6249051" type="application/octet-stream" sparkle:edSignature="Q5qNrSLpVc0IUEWhh1xONwCn2qL//9oq0WRih90io13W0spMRJGGRYg043Qmo3G99ia3KnAKwcacmTaLUcjyAQ=="/>
-        </item>
-        <item>
-            <title>0.63.2</title>
-            <pubDate>Fri, 31 Jul 2026 16:18:58 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>114</sparkle:version>
-            <sparkle:shortVersionString>0.63.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Le bouton ne se propose plus quand il n'y a rien à faire
-
-À la question « qu'est-ce qui est en retard ? », une réponse qui ne demandait
-aucune action offrait pourtant de créer une tâche. La ligne fautive était
-« DAWAL-LIRE : échéance le 1er août » : le nom du projet se termine comme un
-verbe à l'infinitif, et il en avait pris la place.
-
-Deux règles le corrigent. Le trait d'union sépare désormais les mots, et une
-ligne dont le deux-points n'est précédé que d'un seul mot est reconnue pour ce
-qu'elle est : une fiche, pas une consigne.
-
-## Des titres plus courts et plus justes
-
-Quand le Chat enchaîne la consigne et son commentaire dans le même point, seule
-la première phrase devient le titre. « Répondre à Sarah sur les besoins
-d'accompagnement : elle propose explicitement de vous mettre en relation avec
-des experts… » tenait trois lignes ; il en tient une.
-
-Et lorsqu'un titre reste trop long, il se coupe au deux-points plutôt qu'à une
-virgule : un titre qui annonçait quatre modèles et n'en citait que trois valait
-moins que pas de détail du tout.
-
-## Le titre que le Chat vous dicte est enfin repris
-
-Quand vous demandez « ajoute cette tâche », le Chat répond par un mode d'emploi :
-ouvrez l'onglet Tâches, cliquez sur Nouvelle tâche, renseignez le titre — par
-exemple « Natation week-end ». Ces impératifs décrivent l'application, pas votre
-travail, et aucun bouton n'apparaissait.
-
-Le titre, lui, est bien là, entre guillemets. Il est désormais repris, et lui
-seul : une ligne qui cite « Nouvelle tâche » sans nommer de titre ne propose
-toujours rien.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.2/Assistant-Mail-0.63.2.dmg" length="6246496" type="application/octet-stream" sparkle:edSignature="KXyZ83dX95RTgitYOSVw3T7HtbBRoD4F7bl1RP/NqpstY0iZoWQwxqP3dsY+SSe2U5w2/Nbf4w/swcoQ/6HJCA=="/>
         </item>
     </channel>
 </rss>
