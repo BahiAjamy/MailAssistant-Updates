@@ -6,6 +6,77 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.65.0</title>
+            <pubDate>Mon, 03 Aug 2026 17:33:55 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>118</sparkle:version>
+            <sparkle:shortVersionString>0.65.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Seize rendez-vous, pas trente notifications
+
+La boîte mesurée le 3 août 2026 contenait 460 e-mails. Trente portaient un
+lien de connexion Meet, Zoom ou Teams, mais ils ne décrivaient que seize
+réunions : une seule planification avait produit neuf messages, répartis dans
+autant de fils et quatre catégories différentes. La catégorie « Invitation »
+n'en retrouvait que 14 et incluait huit messages sans lien ni fichier
+calendrier. Elle ne décide donc plus de ce qui est une réunion.
+
+L'application s'appuie désormais sur deux faits reproductibles — le lien de
+connexion et la pièce `.ics` — puis réunit les notifications, réponses,
+déplacements et annulations autour du même rendez-vous. Le lien normalisé
+retrouve les seize groupes du corpus ; l'UID iCalendar prend la priorité dès
+que son contenu a été lu, afin qu'une future série récurrente ne soit pas
+confondue avec une occurrence unique. Les liens seulement cités peuvent
+rattacher une réponse à une réunion connue, jamais créer une ligne seuls.
+Une fois ces groupes établis, le fil, le sujet exact et le vocabulaire du
+message rattachent dix échanges humains sans lien ni `.ics` : la traînée
+visible atteint ainsi 40 e-mails sans créer de rendez-vous supplémentaire.
+Les pages d'inscription à un webinaire ne comptent pas comme liens de
+connexion.
+
+Les 24 messages avec invitation contenaient en réalité 47 pièces calendrier :
+Gmail avait presque toujours présenté deux fois le même `invite.ics`, sous
+deux types MIME. Une seule copie est maintenant choisie et lue. Le rattrapage
+est borné à douze invitations par synchronisation ; seuls l'UID, l'horaire,
+l'organisateur, les invités et le statut structurés sont conservés, jamais le
+fichier brut.
+
+Les trois annulations mesurées restent visibles et barrées. Deux réunions
+actives avaient changé d'horaire : leur ancien créneau reste explicable dans
+la traînée au lieu de disparaître. « À traiter » et « À venir » ne sont plus
+deux états rivaux : une invitation future qui demande encore une décision
+apparaît dans les deux vues, tandis qu'un horaire inconnu n'est jamais envoyé
+silencieusement parmi les réunions passées.
+
+La file de triage s'arrête, elle, au jour même. Un rendez-vous déjà tenu
+n'appelle plus de décision, et cela vaut aussi quand il a été annulé ou
+déplacé : le fait reste lisible sur sa ligne, il cesse de réclamer un geste.
+Sans cette borne, la file s'ouvrait sur onze entrées dont six passées — trois
+annulations de juin, deux déplacements de juillet — que seul un acquittement
+manuel pouvait retirer une à une. C'est le piège où le détecteur d'engagements
+était tombé avec ses cinquante-trois propositions déjà accomplies. Il en reste
+cinq, toutes actionnables : deux webinaires à venir et trois horaires inconnus.
+Un horaire manquant, lui, ne vieillit pas — c'est précisément pour cela qu'il
+attend quelqu'un. Sur la fiche d'une réunion passée, le rappel du Calendrier
+perd sa teinte d'avertissement et garde son bouton : on consigne parfois après
+coup, mais ce n'est plus l'action appuyée de l'écran.
+
+La nouvelle fiche reprend la tuile de date et la lecture liste–détail validées,
+mais retire les promesses que les données ne pouvaient pas tenir. Un horaire
+est dit « extrait », jamais « vérifié » sans geste humain ; aucun ordre du jour
+n'est inventé. Ajouter ou mettre à jour l'événement dans Calendrier reste une
+action distincte de la réponse, rappelée sans ambiguïté : **l'ajout ne vaut pas
+réponse à l'organisateur**.
+
+Deux invitations de webinaire transférées sont datées après le jour de la
+mesure. Elles restent visibles avec leur provenance plutôt que d'être
+supprimées par une règle générale sur les citations : les données ne
+permettaient pas d'établir qu'elles étaient de faux positifs.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.65.0/Assistant-Mail-0.65.0.dmg" length="6787645" type="application/octet-stream" sparkle:edSignature="eNnk7ixYBFakwAbBsCyu97KZL0nUvisRfpc9olpKMu3H1Wgu6RroxKUr6BmFkaQZWbjnCDES5RK9AAxWr1OEAw=="/>
+        </item>
+        <item>
             <title>0.64.0</title>
             <pubDate>Mon, 03 Aug 2026 14:56:35 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -84,45 +155,6 @@ Sans échéance par défaut, et volontairement : le Chat écrit « ce week-end �
 qu'une échéance inventée.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.4/Assistant-Mail-0.63.4.dmg" length="6250770" type="application/octet-stream" sparkle:edSignature="TpmdBFOlWFYz2oWUvjZrGzpn7Swr/ALDQBf7coeGfA1H1qjPHs4eljQvKpKXXFG72esQZdvks9wiZABJqgC6Ag=="/>
-        </item>
-        <item>
-            <title>0.63.3</title>
-            <pubDate>Fri, 31 Jul 2026 16:32:16 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>115</sparkle:version>
-            <sparkle:shortVersionString>0.63.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## « Crée cette tâche » fonctionne enfin
-
-Vous l'avez demandé quatre fois de suite, et aucun bouton n'apparaissait. Le
-Chat répond toujours qu'il ne peut pas créer de tâche, mais il vous dicte le
-titre au passage — « intitulé « Natation » », « la tâche « Faire de la
-natation » ». C'est ce titre que l'application reprend désormais.
-
-Trois raisons l'en empêchaient : un titre court comme « Natation » tombait sous
-le plancher prévu pour écarter le bruit des listes ; une réponse rédigée en
-paragraphe plutôt qu'en liste n'était jamais examinée ; et un titre dicté en
-minuscule restait tel quel.
-
-Le nom d'un bouton de l'application, lui, n'est pas un titre : « cliquez sur
-« Nouvelle tâche » » ne propose toujours rien.
-
-## Plus de mot de passe du Trousseau à chaque lancement
-
-La clé DeepSeek logeait au même endroit que le secret Google. D'où une demande
-qui annonçait « google-oauth » alors qu'elle portait sur DeepSeek, et qui
-revenait à chaque ouverture du Chat après un redémarrage.
-
-Le mécanisme censé y mettre fin échouait sans rien dire, et réenregistrer la clé
-depuis les Réglages n'y changeait rien : on réécrivait au même endroit, sur un
-élément dont l'application n'était pas propriétaire.
-
-La clé a maintenant sa propre place, créée par l'application. **Une dernière
-autorisation vous sera demandée** au premier lancement — celle qui permet de
-déménager la clé. Ensuite, plus aucune.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.63.3/Assistant-Mail-0.63.3.dmg" length="6249051" type="application/octet-stream" sparkle:edSignature="Q5qNrSLpVc0IUEWhh1xONwCn2qL//9oq0WRih90io13W0spMRJGGRYg043Qmo3G99ia3KnAKwcacmTaLUcjyAQ=="/>
         </item>
     </channel>
 </rss>
