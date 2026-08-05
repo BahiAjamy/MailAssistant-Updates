@@ -6,6 +6,94 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.67.0</title>
+            <pubDate>Wed, 05 Aug 2026 10:13:19 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>122</sparkle:version>
+            <sparkle:shortVersionString>0.67.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Une action qui dépasse son périmètre annoncé
+
+« Ignorer les 3 suggestions ? » pouvait en effacer trente. La liste « À valider »
+se filtrait par la recherche, la confirmation citait le nombre visible, et le
+modèle traitait la totalité. Rien ne le montrait — la liste se vidait, ce qu'on
+attendait justement du geste — et l'annulation de lot rattrapait les dégâts,
+jamais le malentendu.
+
+Le lot est désormais borné à ce qui est à l'écran, et les libellés le disent :
+« Tout valider » sur une liste complète, « Valider les 3 affichées » dès qu'un
+filtre en cache d'autres.
+
+## Le lot s'applique d'un seul tenant
+
+La validation attend Apple Rappels, une suggestion à la fois. Tant que cette
+attente vivait au milieu de la boucle, l'interface restait vivante entre deux
+éléments : on pouvait annuler un lot que la boucle continuait ensuite
+d'appliquer, ou écarter à la main une ligne que la suite ressuscitait.
+
+L'état s'applique maintenant sans rendre la main. Les rappels suivent, et
+rejouent leur décision au retour d'EventKit — une tâche annulée, écartée ou
+close pendant l'attente voit son rappel **supprimé** plutôt qu'abandonné dans
+Rappels, où plus aucun écran n'aurait su le nommer.
+
+## Une question tapée pendant une réponse disparaissait
+
+Le compositeur du Chat vidait son champ avant l'envoi, et le modèle refusait
+ensuite une seconde question tant qu'une réponse s'écrivait. Le texte partait
+sans être parti, et sans un mot. C'était la seule perte de contenu de
+l'application.
+
+## « Rien d'urgent » est une conclusion
+
+Avant la première relève, sept écrans affirmaient l'absence de ce qu'ils
+n'avaient pas encore lu. L'activité était pourtant visible dans la barre
+d'outils : le défaut était local, et c'est le message local qui devait dire la
+vérité.
+
+Chaque écran distingue désormais aucun compte, relève à lancer, relève en
+cours, échec, succès partiel et vrai vide — et une recherche sans résultat cite
+sa requête avec de quoi la réinitialiser. Le succès partiel compte : les
+données d'une adresse ne sont jamais masquées par l'échec d'une autre.
+
+## L'état lu redevient réversible
+
+Ouvrir un e-mail le marquait lu, définitivement. Le signal « je n'ai pas encore
+traité ça » se perdait au premier coup d'œil.
+
+Il fallait plus qu'un bouton : l'état combinait le drapeau de Gmail et la
+lecture locale par un ET, si bien qu'un état local ne pouvait que *masquer* un
+non-lu distant, jamais en poser un — or la relève trouve la quasi-totalité du
+courrier déjà lu. « Marquer comme non lu » aurait confirmé son succès sans rien
+changer. Le non-lu local est maintenant un vrai signal, et le libellé porte sa
+portée : Gmail n'en sait rien.
+
+## Ce qui ne répondait pas au clic
+
+Pendant un téléchargement, les boutons des autres fichiers restaient actifs et
+le modèle refusait en silence. Ils s'éteignent en nommant le fichier en cours.
+
+Le Chat gagne « Réessayer » sur une réponse en échec, un autodéfilement qui
+respecte la position de lecture, et un retour au dernier message. Son flux
+appartient enfin à sa conversation : commencé dans l'une, il s'écrivait dans
+celle qu'on venait d'ouvrir.
+
+## Accessibilité
+
+Les participants d'une réunion étaient remplacés, pour VoiceOver, par leur seul
+nombre. Ils se déplient, un nom par élément. Les bulles du Chat annoncent leur
+rôle, les cases des propositions portent le leur.
+
+Le bouton d'état d'une tâche — le plus cliqué de l'application — avait une
+région active de 16 points, sous le minimum macOS. Il passe à 28, sans que le
+symbole grossisse. Quatorze animations qui ignoraient « Réduire les animations »
+la consultent désormais, `⌘F` atteint la recherche des Réunions avec un focus
+visible, et Analyse conserve son mois, son jour, son échelle et son filtre d'un
+onglet à l'autre.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.67.0/Assistant-Mail-0.67.0.dmg" length="7014380" type="application/octet-stream" sparkle:edSignature="C9SD5yQui/crnkAsBrGxOWocXGCOq+UZRoqvYTMaGxfuozleAbrn9oVQY0N9NQWYsVj0857i01d+1rH86gZ5AA=="/>
+        </item>
+        <item>
             <title>0.66.2</title>
             <pubDate>Tue, 04 Aug 2026 12:52:22 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -67,80 +155,6 @@ autres écrans gardent le comportement d'origine, dont ils ont besoin : chez
 eux, la rangée passe bien sous l'aplat.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.66.1/Assistant-Mail-0.66.1.dmg" length="6811072" type="application/octet-stream" sparkle:edSignature="WqRr3Dmj+0N3HlwhfU117dtA5yi1GSDx2LLTZbE5tdqQi/jjqmn5xxk+be3ScfQfHR09JyAtQYz4LqcXF2+9Bg=="/>
-        </item>
-        <item>
-            <title>0.66.0</title>
-            <pubDate>Tue, 04 Aug 2026 10:53:49 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>119</sparkle:version>
-            <sparkle:shortVersionString>0.66.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Ce qu'une couleur a le droit de dire
-
-Les réunions se lisaient en rangées plates, et la ligne sélectionnée passait
-sous un aplat bleu saturé. Ce bleu forçait tout son contenu en blanc — y
-compris les pastilles qui disent « annulée », « à traiter », « horaire
-déplacé », c'est-à-dire l'information qu'on venait chercher. Chaque réunion est
-maintenant une carte, et la sélection se dit par un liseré teinté. Le carreau
-de date, jusqu'ici une carte blanche, est devenu un puits : sur une rangée
-blanche, il ne se détachait plus.
-
-Une seule pastille porte désormais une teinte, et elle vient toujours en tête :
-annulée, sinon ce qui reste à faire. La plateforme, le nombre d'e-mails et
-l'organisateur passent en neutre — trois pastilles colorées côte à côte ne
-hiérarchisaient plus rien.
-
-Les plateformes, elles, reprennent leur couleur : le vert de Meet, le bleu de
-Zoom, le violet de Teams. **Sur le glyphe seulement, jamais sur le fond.** Le
-budget couleur de l'application est entièrement dépensé par le sens, et ces
-teintes-là entreraient en collision frontale avec lui : le bleu de Zoom est
-exactement celui d'« aujourd'hui », le vert de Meet celui de « terminé ». Sur
-une icône, elles se lisent comme un logo ; sur une pastille, elles se
-liraient comme un état. Chacune est recalculée pour tenir le contraste sur le
-papier crème comme sur le charbon, faute de quoi le vert de Meet passerait
-sous le seuil en mode sombre.
-
-## Quatre choses fausses, aucune visible à la compilation
-
-Les deux webinaires Daara annonçaient « Horaire déplacé » alors que personne
-n'avait rien déplacé. La relecture de leur fichier d'invitation, à une
-synchronisation ultérieure, ajoutait une seconde lecture **du même message** au
-lieu de remplacer la première : leurs deux révisions partageaient jusqu'à
-l'horodatage. Un message porte un horaire ; quand notre lecture s'améliore,
-elle remplace. Les révisions sont reconstruites à chaque passage, donc un état
-déjà écrit se répare de lui-même.
-
-« Meeting M&E NWV 2026 » portait un lien Meet valide et aucun bouton pour
-l'ouvrir. Un horaire qu'on n'a pas su lire ne prouve pas qu'une réunion soit
-passée.
-
-Deux mises en page de la fiche restaient repliées en colonne unique, dans une
-fenêtre de n'importe quelle largeur. `ViewThatFits` compare la largeur
-*idéale* de sa première proposition à la place offerte — et une URL de
-visioconférence dépasse cet idéal partout. La place réellement disponible est
-maintenant mesurée.
-
-« invite.ics · 1 KB », au milieu d'une phrase française. La langue forcée de
-l'interface ne gouverne que SwiftUI ; le formateur de tailles de fichiers,
-lui, lit celle du système. Les neuf endroits qui affichaient une taille —
-pièces jointes, bibliothèque de documents, fiche de réunion, réglages —
-annoncent des kilo-octets.
-
-## Un nom de symbole n'est qu'une chaîne
-
-Le carreau des réunions sans date affichait un rectangle gris parfaitement
-muet. Il était posé sur `calendar.badge.questionmark`, qui n'existe pas.
-Aucune erreur de compilation, aucun avertissement, aucun instantané en défaut :
-un symbole introuvable rend simplement le vide.
-
-Les 112 noms de symboles des sources sont désormais résolus à chaque contrôle.
-Le premier passage en a trouvé un second, en production depuis longtemps :
-« Ajouter à Rappels », dans le menu d'une tâche, portait une icône absente.
-
-109 vérifications du cœur, 154 rapports de contraste, 112 symboles.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.66.0/Assistant-Mail-0.66.0.dmg" length="6809329" type="application/octet-stream" sparkle:edSignature="+DHE0D51uBL39XfQPc3un9AMhLQpKm+sGPcpLSJfIDeEQLT6SU+SnpmVm0xvCQuBhQyXSu1xI4miFcpmU08bAg=="/>
         </item>
     </channel>
 </rss>
