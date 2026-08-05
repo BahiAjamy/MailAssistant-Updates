@@ -6,6 +6,82 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.68.0</title>
+            <pubDate>Wed, 05 Aug 2026 11:43:02 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>123</sparkle:version>
+            <sparkle:shortVersionString>0.68.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Une attente qui ne montrait rien
+
+L'ajout d'une réunion au Calendrier écrit dans une application tierce, par le
+réseau, et pouvait durer. L'écran ne bougeait pas. Le signal existait pourtant
+dans le modèle depuis l'origine — simplement, aucune vue ne le lisait.
+
+Le motif « roue + libellé précis » existait déjà à cinq endroits, réécrit
+chaque fois avec des tailles et des encres différentes. Il devient un seul
+composant, et il couvre désormais les deux attentes qui n'affichaient rien :
+l'extraction d'un événement et l'ajout au Calendrier. Chaque roue de
+l'application porte un nom que VoiceOver peut annoncer.
+
+## Un avertissement effacé par son propre succès
+
+« Tâche créée, mais Rappels n'a pas pu être mis à jour » était publié à
+l'instant de l'échec, puis remplacé deux instructions plus bas par « Tâche
+créée ». Il n'atteignait jamais l'écran. Même sort pour les jetons non
+enregistrés, remplacés par le bilan de synchronisation.
+
+Un avertissement qu'on ne voit pas coûte plus qu'un avertissement absent : il
+donne l'illusion que le cas est traité. Chaque opération produit maintenant une
+seule notification finale, et c'est la réserve qui décide de sa nature. Les
+échecs rencontrés pendant une relève remontent jusqu'au bilan au lieu d'être
+posés en chemin.
+
+Plus largement, le bandeau traitait toute notification en succès : coche verte,
+teinte verte, effacement au bout de quatre secondes. Il distingue désormais le
+succès, l'information et l'avertissement — et un avertissement attend, il ne
+s'efface plus tout seul.
+
+## Une cible de dépôt qui répondait après coup
+
+Glisser une tâche sur un projet de la barre latérale ne produisait aucun signal
+avant le lâcher : le geste se terminait en pari. La destination survolée prend
+un fond teinté, une bordure et un symbole « déposez ici ».
+
+La teinte est celle de l'accentuation, pas du vert : on ne sait pas encore si
+le dépôt aboutira — un projet peut appartenir à une autre adresse que la tâche.
+Quand c'est le cas, le refus s'explique au lieu de rester muet.
+
+## Des chiffres qui ne roulaient pas
+
+Cinq compteurs portaient l'instruction de transition numérique. Aucun ne
+roulait : cette instruction décrit comment interpoler, pas quand — sans
+transaction d'animation, le nombre saute exactement comme avant. La ligne était
+là, l'effet absent.
+
+Les indicateurs de la Vue du jour, les compteurs d'en-tête et la numérotation
+de la revue quotidienne roulent désormais réellement. Une relève, qui modifie
+une dizaine de compteurs d'un coup, les laisse changer sans animation : le
+mouvement sert à remarquer ce qui vient de changer, pas à signaler qu'on
+travaille.
+
+## Une réponse du Chat qui repartait de zéro à chaque mot
+
+Chaque fragment reçu reconstruisait le message : pour l'affichage, la bulle
+changeait d'identité à chaque mot. L'identité naît maintenant avant le premier
+fragment et va jusqu'à la réponse finale — la bulle apparaît une fois, puis son
+texte se remplit.
+
+## Réduire les animations
+
+Les transitions ajoutées ici consultent toutes la préférence système, comme
+celles de la version précédente : sous « Réduire les animations », les nombres
+changent instantanément et les bulles apparaissent sans fondu.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.68.0/Assistant-Mail-0.68.0.dmg" length="7030382" type="application/octet-stream" sparkle:edSignature="jlW1hWIeQboHS09QOt1Plch+GqbB5u3vuFOQMSqGE/9pjwKif02cdLFAJllkBqs7mOlXFLZm+eYNLHrhc/kTAw=="/>
+        </item>
+        <item>
             <title>0.67.0</title>
             <pubDate>Wed, 05 Aug 2026 10:13:19 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -121,40 +197,6 @@ batterie d'instantanés remplace cette liste par une pile, et la capture de
 fenêtre revient blanche.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.66.2/Assistant-Mail-0.66.2.dmg" length="6811034" type="application/octet-stream" sparkle:edSignature="GFEYFf8bEC9Ri6IYPRRPZg420nqQ3XfpHgPZsbm6b5zsMAwx8TRQKq7vcZ5qkRsegktwy9JcCHlyMPqiqbRyAw=="/>
-        </item>
-        <item>
-            <title>0.66.1</title>
-            <pubDate>Tue, 04 Aug 2026 12:20:02 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>120</sparkle:version>
-            <sparkle:shortVersionString>0.66.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## L'aplat bleu n'aurait jamais dû rester
-
-La refonte de l'onglet Réunions disait que la sélection se lirait par un liseré
-teinté, et non plus par le bloc d'accentuation qui recouvre une rangée entière.
-Ce bloc était toujours là. La carte blanche s'y posait au milieu, le titre
-passait en blanc par-dessus : la couleur qu'on voulait retirer était restée, et
-une carte s'était ajoutée dedans.
-
-Demander à la liste de ne pas peindre son fond ne suffit pas. macOS ne dessine
-pas le surlignage de sélection dans le fond d'une rangée, mais **derrière
-elle** — et tant que la rangée laissait quatorze points de marge à sa cellule,
-il restait exactement cette marge pour l'y peindre.
-
-Ces marges appartiennent désormais à la rangée. La cellule est à zéro, la
-rangée l'occupe entière et repose elle-même le fond de la page. Il n'y a plus
-d'interstice à colorer.
-
-Restait l'encre. Une liste impose du blanc au texte sélectionné, ce qui est
-juste quand la rangée disparaît sous un aplat de couleur — et faux ici, où elle
-reste claire. Le titre d'une réunion sélectionnée prend donc une encre qui ne
-dépend que de l'apparence claire ou sombre, jamais de la sélection. Les six
-autres écrans gardent le comportement d'origine, dont ils ont besoin : chez
-eux, la rangée passe bien sous l'aplat.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.66.1/Assistant-Mail-0.66.1.dmg" length="6811072" type="application/octet-stream" sparkle:edSignature="WqRr3Dmj+0N3HlwhfU117dtA5yi1GSDx2LLTZbE5tdqQi/jjqmn5xxk+be3ScfQfHR09JyAtQYz4LqcXF2+9Bg=="/>
         </item>
     </channel>
 </rss>
