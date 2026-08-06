@@ -6,6 +6,161 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.72.0</title>
+            <pubDate>Thu, 06 Aug 2026 17:24:00 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>128</sparkle:version>
+            <sparkle:shortVersionString>0.72.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Un vrai composeur d'e-mail — et la fréquence de relève enfin réglable
+
+Cette mise à jour apporte **deux versions** : la 0.71.0 n'avait pas été publiée séparément.
+
+---
+
+
+L’écran « Brouillon de réponse » n’était pas un composeur : c’était un
+générateur de texte. Il s’ouvrait sur un corps vide portant la mention « le
+brouillon apparaîtra ici », ce qui invitait à faire produire un texte par le
+modèle plutôt qu’à écrire trois mots soi-même. L’objet du message n’existait
+nulle part avant la fenêtre de confirmation. Les destinataires se réduisaient à
+un interrupteur — « à l’expéditeur » ou « à tous » — dont on ne découvrait
+l’effet qu’au dernier écran. Et l’action mise en avant restait « Copier »,
+héritée de l’époque où l’application ne savait pas encore envoyer.
+
+## Ce que l’écran devient
+
+- **Un en-tête complet et modifiable** : De, À, Cc, Cci, Objet. Les
+  destinataires sont des jetons qu’on ajoute et qu’on retire ; on peut coller
+  une liste d’adresses depuis un autre client, séparées par des virgules, des
+  points-virgules ou des retours à la ligne.
+- **Le corps est modifiable dès l’ouverture**, curseur dedans. Répondre
+  « Merci, c’est noté » ne demande plus de passer par le modèle.
+- **La rédaction assistée devient un accessoire** : une barre fine au-dessus du
+  corps, avec le ton et les consignes. Elle rend exactement le même service
+  qu’avant, elle ne gouverne simplement plus l’écran.
+- **Le message d’origine est cité**, replié sous le corps. Il n’était pas
+  transmis du tout jusqu’ici : le destinataire d’une réponse courte devait
+  deviner de quoi elle parlait.
+- **« Répondre à tous » remplit le champ Cc** au lieu d’être un mode invisible.
+  Vous voyez les personnes ajoutées pendant que vous écrivez, et vous pouvez en
+  retirer.
+- **« Envoyer » devient l’action principale.** « Copier » et « Copier et ouvrir
+  dans Gmail » se replient dans un menu.
+
+## Écrire un message neuf
+
+Un composeur vierge s’ouvre par **⇧⌘N** ou par le bouton de l’écran E-mails
+(⌘N reste la nouvelle tâche). Il choisit l’adresse d’expédition parmi vos
+comptes, ne se rattache à aucune conversation, et suit le même chemin d’envoi
+que les réponses.
+
+## Pièces jointes
+
+Le trombone accepte plusieurs fichiers, affiche leur poids et le total atteint.
+La limite est de **3,5 Mo**, et elle est tenue par l’application : l’envoi passe
+par le point d’entrée simple de Gmail, dont la requête est plafonnée à 5 Mo, et
+l’encodage des fichiers gonfle d’un tiers. Au-delà, l’écran le dit clairement
+plutôt que de laisser Gmail renvoyer une erreur illisible.
+
+Les fichiers ne sont lus qu’au moment de l’envoi. Si l’un d’eux a été déplacé
+ou renommé entre-temps, l’envoi s’arrête et le nomme — un message qui promet
+une pièce jointe absente est la panne la plus embarrassante qui soit.
+
+## Signature
+
+Un nouveau réglage (**Réglages › Synchronisation › Signature**) porte le bloc
+apposé au bas de vos messages. Il est **vide par défaut**, et ce vide est un
+choix : jusqu’ici la signature dépendait du modèle, à qui l’on demandait de
+signer d’un nom déduit — elle apparaissait donc une fois sur deux, et jamais
+sous la même forme. Tant que le réglage reste vide, ce comportement est
+conservé à l’identique. Dès qu’il porte un texte, c’est lui qui signe, et le
+modèle reçoit la consigne de n’apposer aucun nom. Un bouton propose un bloc
+prérempli à partir du nom que vos messages déjà envoyés portent.
+
+## Ce qui ne change pas
+
+L’envoi reste la seule action irréversible de l’application, et il garde toutes
+ses protections : un seul point d’appel dans le code, une confirmation
+obligatoire qui affiche le message exact — expéditeur, destinataires, copies,
+copies **cachées**, objet, pièces jointes et corps — et jamais ⌘⏎ comme
+raccourci. Le périmètre s’ouvre toujours sur le seul expéditeur.
+
+## Sous le capot
+
+`OutgoingMessage` sait désormais produire un `multipart/mixed`. Sans pièce
+jointe, le message garde exactement sa forme d’avant — un texte simple :
+envelopper systématiquement afficherait une pièce jointe fantôme chez certains
+clients pour une réponse de trois lignes. La frontière du multipart ne peut pas
+apparaître dans le contenu, non par chance mais par construction : toutes les
+parties partent en base64, dont l’alphabet ne contient ni « = » ni « _ ».
+
+Les noms de fichiers et les types MIME arrivent du disque, donc de l’extérieur :
+guillemets, antislashs et sauts de ligne y sont neutralisés avant d’entrer dans
+un en-tête, sans quoi un nom de fichier bien choisi pourrait injecter un
+destinataire caché.
+
+---
+
+# Choisir la fréquence de ses relèves
+
+Jusqu’ici, l’écran **Réglages › Synchronisation** affichait « Toutes les
+heures » — un texte figé, qui décrivait fidèlement le comportement sans offrir
+de le changer. Le réglage existait pourtant dans l’état enregistré, il était
+décodé, et la relève le consultait bien pour décider de partir : il était
+simplement réécrit à une heure au chargement de l’application **et** à chaque
+sauvegarde de la configuration. Un réglage inatteignable, sans qu’aucun
+avertissement ne puisse le signaler.
+
+La fréquence est désormais un vrai choix : **15 minutes, 30 minutes, 1 heure,
+4 heures, ou manuelle**.
+
+## Trente minutes par défaut, et ce défaut est mesuré
+
+Le nouveau défaut ne vient pas d’une préférence mais du courrier réellement
+reçu — 417 messages sur 28 jours, soit environ 15 par jour, dont 75 % entre 9 h
+et 18 h en semaine. En heures ouvrées, le débit est d’environ 1,75 message par
+heure.
+
+À une heure, un message attendait trente minutes en moyenne avant d’être
+repéré. À trente minutes, cette attente tombe à quinze minutes et six relèves
+sur dix rapportent encore quelque chose. À quinze minutes, deux relèves sur
+trois reviennent les mains vides ; en dessous, on attendrait un message qui
+n’existe pas encore. C’est pourquoi la liste ne descend pas plus bas.
+
+Le coût, lui, ne suit pas la fréquence : le nombre de messages à analyser dans
+une journée est le même qu’on relève quatre fois ou quatre-vingt-seize fois.
+Seul le parcours de vérification se répète, mesuré à cinq secondes lorsqu’il ne
+rapporte rien.
+
+## Ce qui arrive à votre réglage actuel
+
+L’heure qu’affichait votre installation n’a jamais été choisie par personne :
+c’est le code qui l’imposait. Elle cède donc au nouveau défaut de trente
+minutes. Dès que vous choisissez une valeur — **y compris une heure à
+nouveau** — c’est la vôtre qui est conservée, et la migration ne se rejoue
+jamais.
+
+## Relève manuelle
+
+« Manuelle » interrompt toute relève automatique : le courrier n’entre plus dans
+l’assistant que par « Synchroniser maintenant ». Dans ce cas, « Prochaine
+analyse » annonce « À la demande » au lieu d’une heure que personne ne tiendra,
+et le widget cesse d’en afficher une.
+
+## Sous le capot
+
+Un contrôle vérifie désormais que la cadence enregistrée survit au
+rechargement, que la relève manuelle traverse l’enregistrement, et qu’une
+valeur posée hors des préréglages reste proposée dans la liste plutôt que
+d’être ramenée au préréglage voisin. Deux garde-fous supplémentaires rejettent
+toute réécriture en dur de la cadence et toute disparition du sélecteur — c’est
+exactement le défaut qui l’avait rendue inatteignable.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.72.0/Assistant-Mail-0.72.0.dmg" length="7433792" type="application/octet-stream" sparkle:edSignature="C44d3AtuH0qC/88E0ljIG7sBnb3jhd4zb04U+STgn+aaiUMTUgU74bfWDtqgAk9uT9n5aFCSifkSaW9bnG+LDg=="/>
+        </item>
+        <item>
             <title>0.70.0</title>
             <pubDate>Thu, 06 Aug 2026 14:27:44 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -118,98 +273,6 @@ correspond plus, explique lequel a été autorisé, et porte un bouton
 sans quitter le Chat.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.69.1/Assistant-Mail-0.69.1.dmg" length="7171584" type="application/octet-stream" sparkle:edSignature="gzjnnZgqq42wdAn51jnaOrhJqX/OromOeOIZbKtJxOGQXwViom0/5L3FPKdoGZfPyPJWms2rUs/GPoa8dpvpCw=="/>
-        </item>
-        <item>
-            <title>0.69.0</title>
-            <pubDate>Thu, 06 Aug 2026 11:34:24 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>124</sparkle:version>
-            <sparkle:shortVersionString>0.69.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Interroger un document dans le Chat
-
-Une pièce jointe se consultait, se téléchargeait, s'apercevait — mais aucune
-question ne pouvait porter dessus. Le panneau d'un document porte maintenant
-un bouton « Interroger » : l'application lit le fichier, montre ce qu'elle en a
-tiré, demande votre accord, puis vous amène au Chat avec le document en
-contexte.
-
-Ce qui est affiché avant l'envoi est ce qui part : le nom du fichier, le nombre
-de caractères extraits, le nombre de repères, le moteur nommé, et une phrase
-qui dit si le texte quitte ce Mac. Une formule vague vous ferait approuver une
-quantité que vous n'imaginez pas.
-
-L'autorisation vaut pour **ce** document, **cette** conversation et **ce**
-moteur. Changer de moteur en cours de route n'est pas un détail d'affichage :
-c'est une autre sortie de données, et l'accord vous est redemandé.
-
-## Une autorisation qui ne devient jamais permanente
-
-Le texte du document n'est pas conservé dans le fichier d'état. L'application y
-garde de quoi reconnaître ce que vous avez autorisé — une référence, une
-empreinte, la façon dont le fichier a été lu — jamais de quoi le reconstituer.
-
-Conséquence directe : à chaque question, le document est relu et comparé à
-l'empreinte avant de partir. Si le fichier a changé, si le cache a été vidé et
-le fichier retéléchargé différemment, ou si une mise à jour de l'application lit
-désormais ce type de fichier autrement, l'envoi s'arrête et l'accord vous est
-redemandé. Un « oui » donné pour un contenu précis ne se transforme pas en
-autorisation permanente pour toutes les versions futures du fichier.
-
-## Ce que l'application sait lire, et ce qu'elle ne sait pas
-
-Le modèle distant ne reçoit ni PDF, ni image, ni fichier : il ne lit que du
-texte. L'extraction se fait donc ici, sur cette machine, sans réseau.
-
-Mesuré sur les pièces jointes réellement présentes sur ce Mac : les PDF, les
-`.docx`, les `.xlsx` et les `.pptx` rendent leur texte, une présentation de
-24 Mo en un dixième de seconde. Chaque fragment porte son repère — la page d'un
-PDF, la feuille et les coordonnées de cellule d'un tableur, le rang d'une
-diapositive, le numéro d'une note de bas de page — de sorte qu'une réponse
-puisse être vérifiée dans le fichier.
-
-Ne sont **pas** lus, et le disent : les anciens `.doc` de Word, les images et
-les scans sans couche texte, les archives. « Format non lu » et « document sans
-texte » sont deux messages différents : le premier est un manque de
-l'application, le second une réalité du fichier.
-
-Deux pièges de tableur méritaient d'être traités, parce que le résultat faux y
-reste crédible : une colonne intitulée « Montant en dollars » n'est plus prise
-pour une colonne de dates, et les classeurs qui comptent leurs dates depuis 1904
-ne sont plus décalés de quatre ans.
-
-## Une limite dite plutôt qu'un document amputé
-
-Le modèle embarqué dispose d'une fenêtre de 4 096 jetons : au-delà de quelques
-pages, il ne peut pas tenir un document. Plutôt que d'en envoyer un morceau,
-l'application refuse et nomme le moteur capable de le porter en entier.
-
-Un document silencieusement amputé des trois quarts produirait des réponses
-assurées sur les parties absentes — c'est le pire résultat possible, et il ne se
-voit pas.
-
-## Un outil qui perdait son cadre en chemin
-
-Défaut existant, corrigé indépendamment de tout ce qui précède : lorsque le Chat
-utilisait le moteur distant, l'outil de lecture d'un e-mail ne rendait pas le
-message demandé mais un extrait de liste, et surtout le texte partait **sans**
-les marqueurs qui signalent au modèle qu'il lit la prose d'un tiers — alors même
-que les consignes envoyées dans la même requête lui affirmaient qu'il les
-trouverait.
-
-Les deux moteurs passent désormais par le même code. Les consignes reconnaissent
-aussi le document ouvert, à la fois comme source de faits et comme donnée dont
-aucune instruction ne doit être suivie.
-
-## Ce qui n'est pas encore là
-
-La recherche dans le texte de **toute** la bibliothèque demanderait de
-télécharger l'ensemble des pièces jointes ; elle n'est pas dans cette version.
-La reconnaissance de caractères sur les documents scannés et la lecture des
-anciens `.doc` non plus.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.69.0/Assistant-Mail-0.69.0.dmg" length="7150611" type="application/octet-stream" sparkle:edSignature="s3pWU7E4MQLr24Z3mAZbPIRYQX3WN+r8R0dAInZXlZ7fNA9YmPDBqkg26KSBoY4mVqlTPgbg34bcWQci8KJUCw=="/>
         </item>
     </channel>
 </rss>
