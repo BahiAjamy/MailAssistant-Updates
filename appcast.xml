@@ -6,6 +6,98 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.69.0</title>
+            <pubDate>Thu, 06 Aug 2026 11:34:24 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>124</sparkle:version>
+            <sparkle:shortVersionString>0.69.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Interroger un document dans le Chat
+
+Une pièce jointe se consultait, se téléchargeait, s'apercevait — mais aucune
+question ne pouvait porter dessus. Le panneau d'un document porte maintenant
+un bouton « Interroger » : l'application lit le fichier, montre ce qu'elle en a
+tiré, demande votre accord, puis vous amène au Chat avec le document en
+contexte.
+
+Ce qui est affiché avant l'envoi est ce qui part : le nom du fichier, le nombre
+de caractères extraits, le nombre de repères, le moteur nommé, et une phrase
+qui dit si le texte quitte ce Mac. Une formule vague vous ferait approuver une
+quantité que vous n'imaginez pas.
+
+L'autorisation vaut pour **ce** document, **cette** conversation et **ce**
+moteur. Changer de moteur en cours de route n'est pas un détail d'affichage :
+c'est une autre sortie de données, et l'accord vous est redemandé.
+
+## Une autorisation qui ne devient jamais permanente
+
+Le texte du document n'est pas conservé dans le fichier d'état. L'application y
+garde de quoi reconnaître ce que vous avez autorisé — une référence, une
+empreinte, la façon dont le fichier a été lu — jamais de quoi le reconstituer.
+
+Conséquence directe : à chaque question, le document est relu et comparé à
+l'empreinte avant de partir. Si le fichier a changé, si le cache a été vidé et
+le fichier retéléchargé différemment, ou si une mise à jour de l'application lit
+désormais ce type de fichier autrement, l'envoi s'arrête et l'accord vous est
+redemandé. Un « oui » donné pour un contenu précis ne se transforme pas en
+autorisation permanente pour toutes les versions futures du fichier.
+
+## Ce que l'application sait lire, et ce qu'elle ne sait pas
+
+Le modèle distant ne reçoit ni PDF, ni image, ni fichier : il ne lit que du
+texte. L'extraction se fait donc ici, sur cette machine, sans réseau.
+
+Mesuré sur les pièces jointes réellement présentes sur ce Mac : les PDF, les
+`.docx`, les `.xlsx` et les `.pptx` rendent leur texte, une présentation de
+24 Mo en un dixième de seconde. Chaque fragment porte son repère — la page d'un
+PDF, la feuille et les coordonnées de cellule d'un tableur, le rang d'une
+diapositive, le numéro d'une note de bas de page — de sorte qu'une réponse
+puisse être vérifiée dans le fichier.
+
+Ne sont **pas** lus, et le disent : les anciens `.doc` de Word, les images et
+les scans sans couche texte, les archives. « Format non lu » et « document sans
+texte » sont deux messages différents : le premier est un manque de
+l'application, le second une réalité du fichier.
+
+Deux pièges de tableur méritaient d'être traités, parce que le résultat faux y
+reste crédible : une colonne intitulée « Montant en dollars » n'est plus prise
+pour une colonne de dates, et les classeurs qui comptent leurs dates depuis 1904
+ne sont plus décalés de quatre ans.
+
+## Une limite dite plutôt qu'un document amputé
+
+Le modèle embarqué dispose d'une fenêtre de 4 096 jetons : au-delà de quelques
+pages, il ne peut pas tenir un document. Plutôt que d'en envoyer un morceau,
+l'application refuse et nomme le moteur capable de le porter en entier.
+
+Un document silencieusement amputé des trois quarts produirait des réponses
+assurées sur les parties absentes — c'est le pire résultat possible, et il ne se
+voit pas.
+
+## Un outil qui perdait son cadre en chemin
+
+Défaut existant, corrigé indépendamment de tout ce qui précède : lorsque le Chat
+utilisait le moteur distant, l'outil de lecture d'un e-mail ne rendait pas le
+message demandé mais un extrait de liste, et surtout le texte partait **sans**
+les marqueurs qui signalent au modèle qu'il lit la prose d'un tiers — alors même
+que les consignes envoyées dans la même requête lui affirmaient qu'il les
+trouverait.
+
+Les deux moteurs passent désormais par le même code. Les consignes reconnaissent
+aussi le document ouvert, à la fois comme source de faits et comme donnée dont
+aucune instruction ne doit être suivie.
+
+## Ce qui n'est pas encore là
+
+La recherche dans le texte de **toute** la bibliothèque demanderait de
+télécharger l'ensemble des pièces jointes ; elle n'est pas dans cette version.
+La reconnaissance de caractères sur les documents scannés et la lecture des
+anciens `.doc` non plus.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.69.0/Assistant-Mail-0.69.0.dmg" length="7150611" type="application/octet-stream" sparkle:edSignature="s3pWU7E4MQLr24Z3mAZbPIRYQX3WN+r8R0dAInZXlZ7fNA9YmPDBqkg26KSBoY4mVqlTPgbg34bcWQci8KJUCw=="/>
+        </item>
+        <item>
             <title>0.68.0</title>
             <pubDate>Wed, 05 Aug 2026 11:43:02 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -168,35 +260,6 @@ visible, et Analyse conserve son mois, son jour, son échelle et son filtre d'un
 onglet à l'autre.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.67.0/Assistant-Mail-0.67.0.dmg" length="7014380" type="application/octet-stream" sparkle:edSignature="C9SD5yQui/crnkAsBrGxOWocXGCOq+UZRoqvYTMaGxfuozleAbrn9oVQY0N9NQWYsVj0857i01d+1rH86gZ5AA=="/>
-        </item>
-        <item>
-            <title>0.66.2</title>
-            <pubDate>Tue, 04 Aug 2026 12:52:22 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>121</sparkle:version>
-            <sparkle:shortVersionString>0.66.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Les deux derniers liserés
-
-La correction précédente avait retiré l'aplat bleu de derrière la carte
-sélectionnée, et lui avait rendu son texte sombre. Il restait deux liserés
-verticaux, aux bords extrêmes de la colonne.
-
-Une liste se réserve une bande sur chaque bord, que le fond d'une rangée
-n'atteint pas — quoi qu'on lui demande. Cette bande ne répond qu'à un seul
-réglage, et ce réglage était posé sur « transparent » : l'application
-demandait donc explicitement qu'on voie le surlignage de sélection au travers,
-exactement là où il passait. Il est maintenant opaque.
-
-Le fond de la rangée déborde en plus de trente points de chaque côté et vise
-la même bande par un autre chemin. Là où la cellule rogne ce débordement, il
-ne se voit pas et ne coûte rien. Deux mécanismes valent mieux qu'un pour un
-défaut qu'aucune vérification automatique de ce projet ne sait montrer : la
-batterie d'instantanés remplace cette liste par une pile, et la capture de
-fenêtre revient blanche.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.66.2/Assistant-Mail-0.66.2.dmg" length="6811034" type="application/octet-stream" sparkle:edSignature="GFEYFf8bEC9Ri6IYPRRPZg420nqQ3XfpHgPZsbm6b5zsMAwx8TRQKq7vcZ5qkRsegktwy9JcCHlyMPqiqbRyAw=="/>
         </item>
     </channel>
 </rss>
