@@ -6,6 +6,62 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.69.1</title>
+            <pubDate>Thu, 06 Aug 2026 12:01:59 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>125</sparkle:version>
+            <sparkle:shortVersionString>0.69.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Une règle inventée dans une liste d'actions
+
+Sur une proposition de projet de 25 000 caractères, la réponse a été vérifiée
+affirmation par affirmation contre le fichier : le montant, les marqueurs
+laissés vides par le rédacteur, le programme d'origine, le dispositif
+d'évaluation et le calendrier des rapports étaient exacts au paragraphe près.
+
+Une sixième affirmation ne l'était pas. « Les rapports sont dus 45 jours après
+chaque semestre » n'apparaît nulle part dans le document. Les échéances, elles,
+y sont bien — le modèle les a lues, en a déduit une règle, et l'a énoncée du
+même ton que le reste. Elle se trouvait dans la liste des actions à faire,
+c'est-à-dire à l'endroit exact où une règle fausse passe dans un calendrier.
+
+Rien ne permettait de la distinguer des cinq autres.
+
+## Chaque fait doit désormais citer son repère
+
+L'application découpe déjà les documents en fragments repérés — la page d'un
+PDF, le paragraphe d'un Word, la feuille et la cellule d'un tableur, le rang
+d'une diapositive. Ces repères partaient avec le document, mais rien ne
+demandait au modèle de les rendre.
+
+Il doit maintenant citer le repère après chaque fait tiré du document, et
+signaler comme déduction ce qu'il ne peut rattacher à aucun. Une phrase
+inventée n'a aucun repère à citer : l'exigence rend l'invention visible sans
+avoir à connaître le dossier, et une vérification qui prenait l'ouverture du
+fichier prend maintenant un coup d'œil.
+
+Cette consigne ne pèse que sur les échanges où un document est ouvert. Les
+questions ordinaires ne la voient pas.
+
+## Un refus qui ne proposait rien
+
+Changer de moteur en cours de conversation rend l'autorisation caduque, et
+c'est voulu : envoyer un document ailleurs est une autre sortie de données, pas
+un détail d'affichage. Mais le message se contentait d'écrire « autorisez-le à
+nouveau pour ce moteur » — sans dire où, ni offrir de le faire.
+
+Il fallait deviner qu'on repassait par l'onglet Documents. Un refus sans issue
+se lit comme une panne.
+
+Le bandeau du document passe désormais en avertissement dès que le moteur ne
+correspond plus, explique lequel a été autorisé, et porte un bouton
+**Réautoriser** qui relit le fichier et présente la même demande d'accord —
+sans quitter le Chat.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.69.1/Assistant-Mail-0.69.1.dmg" length="7171584" type="application/octet-stream" sparkle:edSignature="gzjnnZgqq42wdAn51jnaOrhJqX/OromOeOIZbKtJxOGQXwViom0/5L3FPKdoGZfPyPJWms2rUs/GPoa8dpvpCw=="/>
+        </item>
+        <item>
             <title>0.69.0</title>
             <pubDate>Thu, 06 Aug 2026 11:34:24 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -172,94 +228,6 @@ celles de la version précédente : sous « Réduire les animations », les nomb
 changent instantanément et les bulles apparaissent sans fondu.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.68.0/Assistant-Mail-0.68.0.dmg" length="7030382" type="application/octet-stream" sparkle:edSignature="jlW1hWIeQboHS09QOt1Plch+GqbB5u3vuFOQMSqGE/9pjwKif02cdLFAJllkBqs7mOlXFLZm+eYNLHrhc/kTAw=="/>
-        </item>
-        <item>
-            <title>0.67.0</title>
-            <pubDate>Wed, 05 Aug 2026 10:13:19 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>122</sparkle:version>
-            <sparkle:shortVersionString>0.67.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Une action qui dépasse son périmètre annoncé
-
-« Ignorer les 3 suggestions ? » pouvait en effacer trente. La liste « À valider »
-se filtrait par la recherche, la confirmation citait le nombre visible, et le
-modèle traitait la totalité. Rien ne le montrait — la liste se vidait, ce qu'on
-attendait justement du geste — et l'annulation de lot rattrapait les dégâts,
-jamais le malentendu.
-
-Le lot est désormais borné à ce qui est à l'écran, et les libellés le disent :
-« Tout valider » sur une liste complète, « Valider les 3 affichées » dès qu'un
-filtre en cache d'autres.
-
-## Le lot s'applique d'un seul tenant
-
-La validation attend Apple Rappels, une suggestion à la fois. Tant que cette
-attente vivait au milieu de la boucle, l'interface restait vivante entre deux
-éléments : on pouvait annuler un lot que la boucle continuait ensuite
-d'appliquer, ou écarter à la main une ligne que la suite ressuscitait.
-
-L'état s'applique maintenant sans rendre la main. Les rappels suivent, et
-rejouent leur décision au retour d'EventKit — une tâche annulée, écartée ou
-close pendant l'attente voit son rappel **supprimé** plutôt qu'abandonné dans
-Rappels, où plus aucun écran n'aurait su le nommer.
-
-## Une question tapée pendant une réponse disparaissait
-
-Le compositeur du Chat vidait son champ avant l'envoi, et le modèle refusait
-ensuite une seconde question tant qu'une réponse s'écrivait. Le texte partait
-sans être parti, et sans un mot. C'était la seule perte de contenu de
-l'application.
-
-## « Rien d'urgent » est une conclusion
-
-Avant la première relève, sept écrans affirmaient l'absence de ce qu'ils
-n'avaient pas encore lu. L'activité était pourtant visible dans la barre
-d'outils : le défaut était local, et c'est le message local qui devait dire la
-vérité.
-
-Chaque écran distingue désormais aucun compte, relève à lancer, relève en
-cours, échec, succès partiel et vrai vide — et une recherche sans résultat cite
-sa requête avec de quoi la réinitialiser. Le succès partiel compte : les
-données d'une adresse ne sont jamais masquées par l'échec d'une autre.
-
-## L'état lu redevient réversible
-
-Ouvrir un e-mail le marquait lu, définitivement. Le signal « je n'ai pas encore
-traité ça » se perdait au premier coup d'œil.
-
-Il fallait plus qu'un bouton : l'état combinait le drapeau de Gmail et la
-lecture locale par un ET, si bien qu'un état local ne pouvait que *masquer* un
-non-lu distant, jamais en poser un — or la relève trouve la quasi-totalité du
-courrier déjà lu. « Marquer comme non lu » aurait confirmé son succès sans rien
-changer. Le non-lu local est maintenant un vrai signal, et le libellé porte sa
-portée : Gmail n'en sait rien.
-
-## Ce qui ne répondait pas au clic
-
-Pendant un téléchargement, les boutons des autres fichiers restaient actifs et
-le modèle refusait en silence. Ils s'éteignent en nommant le fichier en cours.
-
-Le Chat gagne « Réessayer » sur une réponse en échec, un autodéfilement qui
-respecte la position de lecture, et un retour au dernier message. Son flux
-appartient enfin à sa conversation : commencé dans l'une, il s'écrivait dans
-celle qu'on venait d'ouvrir.
-
-## Accessibilité
-
-Les participants d'une réunion étaient remplacés, pour VoiceOver, par leur seul
-nombre. Ils se déplient, un nom par élément. Les bulles du Chat annoncent leur
-rôle, les cases des propositions portent le leur.
-
-Le bouton d'état d'une tâche — le plus cliqué de l'application — avait une
-région active de 16 points, sous le minimum macOS. Il passe à 28, sans que le
-symbole grossisse. Quatorze animations qui ignoraient « Réduire les animations »
-la consultent désormais, `⌘F` atteint la recherche des Réunions avec un focus
-visible, et Analyse conserve son mois, son jour, son échelle et son filtre d'un
-onglet à l'autre.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.67.0/Assistant-Mail-0.67.0.dmg" length="7014380" type="application/octet-stream" sparkle:edSignature="C9SD5yQui/crnkAsBrGxOWocXGCOq+UZRoqvYTMaGxfuozleAbrn9oVQY0N9NQWYsVj0857i01d+1rH86gZ5AA=="/>
         </item>
     </channel>
 </rss>
