@@ -6,6 +6,62 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.78.0</title>
+            <pubDate>Tue, 11 Aug 2026 15:10:41 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>134</sparkle:version>
+            <sparkle:shortVersionString>0.78.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# L'onglet Réunions, sur du papier réglé
+
+Cette version ne change qu'un écran, mais entièrement : la liste des réunions.
+Elle ne gagne aucune fonction — elle en perd du décor.
+
+## Plus de bleu
+
+La réunion ouverte était remplie d'un bleu système à 9 % et cernée du même bleu
+à 65 %. Sur du papier crème, c'était assez pour faire basculer toute la ligne
+dans une couleur que rien d'autre ne porte dans l'application.
+
+La ligne ouverte se dit maintenant par un filet à l'encre sur toute sa hauteur,
+et par le chiffre du jour qui passe du gris à l'encre pleine.
+
+## Plus de cartes, donc plus de vides
+
+Chaque réunion vivait dans une carte blanche posée sur le papier. La carte
+portait sa marge, la rangée ajoutait la sienne, et chaque interstice se lisait
+comme une bande morte — d'autant plus voyante que la liste est longue. Une
+bande inutile courait aussi le long du bord droit.
+
+Les cartes ont disparu. Un filet sépare deux réunions, les marges vivent dans la
+ligne, et la colonne montre à peu près un tiers de rendez-vous en plus sans
+défiler.
+
+## Rejoindre sans ouvrir le détail
+
+Le bouton **Rejoindre** est descendu dans la liste. Il est plein pour une
+réunion en cours ou qui commence dans moins de trente minutes — la seule sur
+laquelle vous allez cliquer — et en simple contour pour les autres. Il
+disparaît sur ce qui est passé ou annulé.
+
+## Ce que chaque ligne dit désormais
+
+Le chiffre du jour en serif ancre le regard. Le titre reste un nom propre.
+Horaire, organisateur et nombre d'e-mails tiennent sur une seule ligne, au lieu
+de six pastilles côte à côte qui ne hiérarchisaient plus rien.
+
+« À traiter » quitte les lignes : c'était un état de file, pas une information
+sur le rendez-vous. Ne subsiste que ce qu'un humain doit aller vérifier —
+« horaire à vérifier », « horaire déplacé », « annulée ».
+
+Un rendez-vous dont la date reste inconnue garde sa place, avec un tiret et la
+mention « à dater » : ils sont nombreux dans une boîte réelle, et les rendre
+discrets au point de les effacer reviendrait à les perdre.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.78.0/Assistant-Mail-0.78.0.dmg" length="7704802" type="application/octet-stream" sparkle:edSignature="Yv0igGp2Z9H4pQ4AORSg843X6N3pDBuLcmaGZDoyC0XOuvNGhz/8yxigNJNbearK5/4tmYRmN9Gi2Lf72N4rAQ=="/>
+        </item>
+        <item>
             <title>0.77.0</title>
             <pubDate>Tue, 11 Aug 2026 13:27:33 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -235,64 +291,6 @@ toute réécriture en dur de la cadence et toute disparition du sélecteur — c
 exactement le défaut qui l’avait rendue inatteignable.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.72.0/Assistant-Mail-0.72.0.dmg" length="7433792" type="application/octet-stream" sparkle:edSignature="C44d3AtuH0qC/88E0ljIG7sBnb3jhd4zb04U+STgn+aaiUMTUgU74bfWDtqgAk9uT9n5aFCSifkSaW9bnG+LDg=="/>
-        </item>
-        <item>
-            <title>0.70.0</title>
-            <pubDate>Thu, 06 Aug 2026 14:27:44 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>126</sparkle:version>
-            <sparkle:shortVersionString>0.70.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Une Analyse plus riche, sans faire dire aux données ce qu’elles ne disent pas
-
-Cette version refond l’onglet **Analyse** à partir d’un contrôle complet des
-données réellement disponibles. Les graphiques indiquent désormais leur
-périmètre et conservent la différence entre une période absente et une valeur
-observée égale à zéro.
-
-## Cinq informations nouvelles
-
-- Le volume quotidien sépare les messages entrants conservés ou écartés des
-  messages envoyés.
-- Le journal des décisions montre, date par date, les propositions, validations,
-  refus et purges automatiques — sans les présenter comme une même cohorte.
-- Les interlocuteurs affichent leur dernier échange conservé et peuvent être
-  classés par volume ou par récence.
-- Les réunions sont regroupées par semaine selon leur durée programmée, avec le
-  nombre utilisé et les exclusions visibles. Cette durée décrit le calendrier,
-  pas la présence effective.
-- Un tableau par compte distingue le parcours du fournisseur, la fenêtre
-  demandée, les dates encore conservées, les plafonds de stock et les erreurs
-  de synchronisation.
-
-## Des graphiques corrigés
-
-La Chronologie n’invente plus une date à partir du pourcentage de tâches
-terminées : les échéances restent sur l’axe temporel et la complétion apparaît
-à part. « Charge à venir » devient **Tâches dues par semaine**, puisqu’aucune
-durée de travail n’est enregistrée.
-
-Le Flux sépare maintenant les messages et les tâches au lieu de les aligner
-comme les étapes d’un même entonnoir. Le délai affiché porte le nom exact de son
-calcul — le prochain envoi observé dans le fil — et le score du détecteur reste
-un score déclaré, jamais une probabilité de justesse.
-
-## Une base de données plus sûre
-
-Les tâches rattachées à une ancienne connexion sont réparées uniquement
-lorsque l’adresse correspond exactement à un seul compte actuel. Toute
-ambiguïté ou collision reste inchangée et journalisée.
-
-Le parcours des messages envoyés dispose aussi de son propre registre : une
-trace sortie du stock plafonné ne redevient plus artificiellement nouvelle à
-chaque synchronisation.
-
-Les nouveaux graphiques et tableaux disposent de résumés VoiceOver détaillés,
-et les règles analytiques importantes sont maintenant protégées par les tests
-de régression.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.70.0/Assistant-Mail-0.70.0.dmg" length="7332032" type="application/octet-stream" sparkle:edSignature="vEfF8O01ig3/olcHv+6InHuj27UemYjYILJ6djMNI6jGxoF9ahrPhj0rAE+d75lE5hKHn4xQDDiF2tGJ5rY2Cg=="/>
         </item>
     </channel>
 </rss>
