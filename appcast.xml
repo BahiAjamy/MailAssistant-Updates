@@ -6,6 +6,82 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.77.0</title>
+            <pubDate>Tue, 11 Aug 2026 13:27:33 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>133</sparkle:version>
+            <sparkle:shortVersionString>0.77.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Ce que l'application dit d'elle-même
+
+Cette version ne corrige aucun calcul de fond. Elle referme l'écart entre ce que
+l'application fait et ce qu'elle en dit — dans les chiffres de l'Analyse, dans
+les documents transmis au Chat, et dans le README.
+
+## Un PDF troué le dit avant de partir
+
+Les pages d'un PDF sans couche texte — des scans, le plus souvent — étaient
+écartées en silence. Le document arrivait au modèle avec des repères
+d'apparence complète : « p. 1, p. 4, p. 7 » se lit comme un document entier
+quand on ne compte pas les numéros manquants.
+
+La feuille d'autorisation annonce désormais combien de pages n'ont pas pu être
+lues, avec sa propre phrase : un document coupé à la fin et un document troué au
+milieu ne se corrigent pas de la même façon.
+
+## Le panneau de tri tombe juste
+
+« Comment les tâches ont été triées » comptait au total les tâches que vous avez
+créées **et** rangées vous-même — qu'aucune de ses trois lignes ne reprend,
+puisqu'elles n'ont été triées par rien. Les fractions affichées ne totalisaient
+pas leur propre dénominateur.
+
+## Les pastilles des cartes redeviennent lisibles
+
+Le contraste du texte sur les pastilles neutres tombait à 3,99:1 en mode sombre,
+pour un seuil d'accessibilité de 4,5. La vérification automatique ne le voyait
+pas : elle mesurait ces pastilles sur le fond de page, alors qu'elles sont
+posées sur une carte, plus claire. Elle les mesure maintenant à leur vraie
+place, et l'encre est calculée contre ce fond — 158 rapports vérifiés au lieu de
+154.
+
+## Le Calendrier ne montre plus deux mois à la fois
+
+Les flèches déplaçaient la grille sans toucher au jour ouvert à droite : l'écran
+affichait le nouveau mois d'un côté et un jour de l'ancien de l'autre.
+
+## Deux périmètres annoncés honnêtement
+
+La carte « Prochain envoi : 3 sur 4 » dit maintenant que le filtre de projet ne
+s'y applique pas, comme les autres panneaux qui font exception. Et le bloc
+« Résultats observés des détecteurs » cesse d'appliquer ce filtre : le Flux
+annonce en tête qu'il se lit avant le classement, ce bloc était le seul à ne pas
+le respecter.
+
+## Un seul mot pour une seule chose
+
+L'Analyse parlait de « missions » là où la barre latérale, juste à gauche,
+propose « Sans projet ». C'est « projet » qui reste le nom de la chose ;
+« missions » ne subsiste que dans les titres d'écrans, où il nomme une vue.
+
+*Le renommage ne peut pas aller plus loin : « Assistant Mail — Sans projet » est
+le nom d'une liste Apple Rappels, et le changer orphelinerait les listes déjà
+créées sur votre Mac.*
+
+## Le README décrivait une application d'avant
+
+Il promettait encore l'entonnoir e-mail → tâche démonté en 0.70.0 parce qu'il
+empilait des populations sans lien, une tuile « non-lus » et un panneau
+« Nouveaux e-mails » retirés le 27 juillet, et un aperçu Documents au double-clic
+alors qu'il part de la sélection.
+
+Le code laissé derrière est retiré avec eux, ainsi que le dernier avertissement
+du compilateur.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.77.0/Assistant-Mail-0.77.0.dmg" length="7692937" type="application/octet-stream" sparkle:edSignature="0bG86+z89kFSjEA2+rqTLEc+HdKJYmOmMBR0GTKVJ/DTRhZqU0ejv86pZGhn45IYWbL54XP1fOfZbJIBApJmBA=="/>
+        </item>
+        <item>
             <title>0.72.0</title>
             <pubDate>Thu, 06 Aug 2026 17:24:00 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -217,62 +293,6 @@ et les règles analytiques importantes sont maintenant protégées par les tests
 de régression.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.70.0/Assistant-Mail-0.70.0.dmg" length="7332032" type="application/octet-stream" sparkle:edSignature="vEfF8O01ig3/olcHv+6InHuj27UemYjYILJ6djMNI6jGxoF9ahrPhj0rAE+d75lE5hKHn4xQDDiF2tGJ5rY2Cg=="/>
-        </item>
-        <item>
-            <title>0.69.1</title>
-            <pubDate>Thu, 06 Aug 2026 12:01:59 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>125</sparkle:version>
-            <sparkle:shortVersionString>0.69.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Une règle inventée dans une liste d'actions
-
-Sur une proposition de projet de 25 000 caractères, la réponse a été vérifiée
-affirmation par affirmation contre le fichier : le montant, les marqueurs
-laissés vides par le rédacteur, le programme d'origine, le dispositif
-d'évaluation et le calendrier des rapports étaient exacts au paragraphe près.
-
-Une sixième affirmation ne l'était pas. « Les rapports sont dus 45 jours après
-chaque semestre » n'apparaît nulle part dans le document. Les échéances, elles,
-y sont bien — le modèle les a lues, en a déduit une règle, et l'a énoncée du
-même ton que le reste. Elle se trouvait dans la liste des actions à faire,
-c'est-à-dire à l'endroit exact où une règle fausse passe dans un calendrier.
-
-Rien ne permettait de la distinguer des cinq autres.
-
-## Chaque fait doit désormais citer son repère
-
-L'application découpe déjà les documents en fragments repérés — la page d'un
-PDF, le paragraphe d'un Word, la feuille et la cellule d'un tableur, le rang
-d'une diapositive. Ces repères partaient avec le document, mais rien ne
-demandait au modèle de les rendre.
-
-Il doit maintenant citer le repère après chaque fait tiré du document, et
-signaler comme déduction ce qu'il ne peut rattacher à aucun. Une phrase
-inventée n'a aucun repère à citer : l'exigence rend l'invention visible sans
-avoir à connaître le dossier, et une vérification qui prenait l'ouverture du
-fichier prend maintenant un coup d'œil.
-
-Cette consigne ne pèse que sur les échanges où un document est ouvert. Les
-questions ordinaires ne la voient pas.
-
-## Un refus qui ne proposait rien
-
-Changer de moteur en cours de conversation rend l'autorisation caduque, et
-c'est voulu : envoyer un document ailleurs est une autre sortie de données, pas
-un détail d'affichage. Mais le message se contentait d'écrire « autorisez-le à
-nouveau pour ce moteur » — sans dire où, ni offrir de le faire.
-
-Il fallait deviner qu'on repassait par l'onglet Documents. Un refus sans issue
-se lit comme une panne.
-
-Le bandeau du document passe désormais en avertissement dès que le moteur ne
-correspond plus, explique lequel a été autorisé, et porte un bouton
-**Réautoriser** qui relit le fichier et présente la même demande d'accord —
-sans quitter le Chat.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.69.1/Assistant-Mail-0.69.1.dmg" length="7171584" type="application/octet-stream" sparkle:edSignature="gzjnnZgqq42wdAn51jnaOrhJqX/OromOeOIZbKtJxOGQXwViom0/5L3FPKdoGZfPyPJWms2rUs/GPoa8dpvpCw=="/>
         </item>
     </channel>
 </rss>
