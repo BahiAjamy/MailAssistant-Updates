@@ -6,6 +6,52 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.83.0</title>
+            <pubDate>Mon, 17 Aug 2026 14:12:23 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>142</sparkle:version>
+            <sparkle:shortVersionString>0.83.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Deux vides comblés dans les Statistiques
+
+La grille laissait deux cases blanches. Plutôt que d'y étirer les panneaux
+voisins, chacune reçoit une lecture que rien n'exploitait — et qui appartient à
+la ligne où elle tombe.
+
+## Ce que vous repoussez
+
+La mise en veille n'était analysée nulle part. Elle servait à masquer une tâche,
+chaque report laissait une trace dans le journal des décisions, et aucun écran
+ne rapprochait les deux.
+
+Le panneau compte vos tâches endormies, le nombre de fois où chacune a été
+repoussée, et la date de son réveil. **Au-delà de trois reports, la tâche passe
+au rouge** : ce n'est plus un report, c'est une décision ajournée.
+
+C'est le seul panneau de l'onglet qui ne dise pas ce que l'assistant a fait,
+mais ce que vous évitez.
+
+Une tâche repoussée dix fois puis terminée n'y figure pas : seules comptent
+celles qui dorment encore.
+
+## Vos réunions, au-delà des heures
+
+Le panneau voisin donne des heures par semaine. Celui-ci dit **qui les
+demande** — le classement des organisateurs, vous compris — combien de réunions
+ont été annulées ou déplacées, combien restent sans mission, et sur quelles
+plateformes elles se tiennent.
+
+Une réunion dont l'organisateur n'est pas nommé ne compte pour personne :
+l'attribuer à « inconnu » créerait un premier du classement qui ne désigne
+personne.
+
+Les réunions sans mission ne sont pas un défaut de l'agenda mais un classement
+qui reste à faire — le panneau le dit plutôt que de les compter en silence.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.83.0/Assistant-Mail-0.83.0.dmg" length="7956099" type="application/octet-stream" sparkle:edSignature="Iumu2CviuNJ5uclGQTCGUOD94o18p88ZQ9zitIBTBYtpdAVcBczpwdiTfNu6BbGUQuDyWG2DxYvfprKNKHFZBw=="/>
+        </item>
+        <item>
             <title>0.82.0</title>
             <pubDate>Mon, 17 Aug 2026 13:41:22 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -110,47 +156,6 @@ heures de réception, qui tient la même promesse avec vingt-quatre colonnes —
 seule la largeur se partage.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.81.1/Assistant-Mail-0.81.1.dmg" length="7850154" type="application/octet-stream" sparkle:edSignature="M1e3DL+AHAikQ4WzEb/3j+gqJpqcufdQBa348AQnoIQzBeoNRs0IAFh0IemXl6ubX34fW4HAAArB77Jn59U+Ag=="/>
-        </item>
-        <item>
-            <title>0.81.0</title>
-            <pubDate>Mon, 17 Aug 2026 12:55:07 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>139</sparkle:version>
-            <sparkle:shortVersionString>0.81.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Le journal des décisions, et la grille qui remplit sa place
-
-## Décisions : est-ce que l'assistant s'améliore
-
-Le panneau posait trente jours de barres groupées à quatre séries pour une
-poignée d'événements par jour. Illisible, écrasé par deux pics — et surtout
-muet sur la seule question qui compte ici. Le bandeau du dessus annonce une part
-retenue, mais **le même pourcentage ne dit pas la même chose selon qu'il monte
-ou qu'il descend** : l'un veut dire que l'assistant apprend, l'autre qu'il
-dérive.
-
-Deux lectures le remplacent.
-
-**La part retenue, semaine par semaine**, avec la moyenne de la période en
-repère. Ne comptent que les suggestions que vous avez réellement tranchées :
-les écartées automatiquement ne pèsent ni pour ni contre, puisque vous ne les
-avez jamais vues. Une semaine de moins de cinq décisions n'est pas tracée du
-tout — un taux calculé sur trois avis afficherait 0 ou 100 % sans rien mesurer.
-
-**La file d'attente**, ensuite : l'âge des suggestions que personne n'a
-tranchées. Au-delà d'une semaine elles passent à l'orange, parce qu'une
-suggestion laissée sept jours ne se tranchera probablement jamais. C'est le seul
-chiffre de ce panneau qui appelle un geste.
-
-## Le jour par jour occupe enfin sa largeur
-
-La grille de densité gardait des carrés de taille fixe et se calait à gauche :
-les deux tiers du panneau restaient vides. La cellule se déduit désormais de la
-place disponible, bornée pour qu'une grille courte ne produise pas des carrés
-démesurés.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.81.0/Assistant-Mail-0.81.0.dmg" length="7836187" type="application/octet-stream" sparkle:edSignature="wjgRGS6TGOOLI7E38jh6n+dXGnLeGGRitO0H48xx6DpwwR079noXIquyOkPzcIJNHSUS/ch7slNx7ygSee38Dg=="/>
         </item>
     </channel>
 </rss>
