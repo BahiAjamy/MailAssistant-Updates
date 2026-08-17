@@ -6,6 +6,54 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.81.1</title>
+            <pubDate>Mon, 17 Aug 2026 13:13:37 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>140</sparkle:version>
+            <sparkle:shortVersionString>0.81.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Le Flux dit enfin ce qu'il montre
+
+## Deux totaux, deux bandes
+
+Le panneau posait cinq barres sur une piste de même longueur pour **deux totaux
+différents** : les messages relevés d'un côté, les tâches créées de l'autre. Il
+fallait une phrase sous le graphique pour prévenir que les deux groupes ne se
+divisent pas l'un par l'autre — l'aveu que le dessin ne le disait pas.
+
+Chaque bande occupe désormais toute la largeur avec son propre total. La
+confusion devient impossible au lieu d'être déconseillée.
+
+La seconde bande répond à une question que l'écran éparpillait : d'où viennent
+vos tâches. Le panneau « Autres origines de tâches » a disparu, absorbé par
+elle — il traitait le même sujet à côté.
+
+## Ce que chaque source produit, et ce qui tient
+
+Un tableau nouveau, qui porte le jugement que rien n'affichait. Pour chaque
+origine : combien de tâches elle a proposées, combien sont encore actives ou
+terminées, et la part que cela représente. En dessous d'un tiers, le taux passe
+à l'orange.
+
+Une source qui propose beaucoup et dont vous ne gardez presque rien vous coûte
+du tri à chaque relève — et c'est un réglage, pas une fatalité.
+
+La saisie manuelle n'affiche pas de taux : le modèle ne compte pas les tâches
+manuelles encore vivantes, et inventer 100 % serait une mesure fausse plutôt
+qu'une mesure absente.
+
+## Le jour par jour s'étire au lieu de grossir
+
+La grille de densité faisait grandir ses cases avec la largeur disponible : neuf
+semaines produisaient des carrés démesurés qui débordaient du panneau et
+recouvraient la légende. La hauteur est fixe désormais — comme la carte des
+heures de réception, qui tient la même promesse avec vingt-quatre colonnes — et
+seule la largeur se partage.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.81.1/Assistant-Mail-0.81.1.dmg" length="7850154" type="application/octet-stream" sparkle:edSignature="M1e3DL+AHAikQ4WzEb/3j+gqJpqcufdQBa348AQnoIQzBeoNRs0IAFh0IemXl6ubX34fW4HAAArB77Jn59U+Ag=="/>
+        </item>
+        <item>
             <title>0.81.0</title>
             <pubDate>Mon, 17 Aug 2026 12:55:07 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -83,55 +131,6 @@ trait orange signale la semaine de silence — celle au-delà de laquelle les
 points changent de couleur.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.1/Assistant-Mail-0.80.1.dmg" length="7795989" type="application/octet-stream" sparkle:edSignature="6eSTLUfUQiAscLJhzaEQqR+BlFL55TlUuT9AypOgmPXCiUULfIgqfruR7bcgwcno2XhE+TEA2a8xZyl+D9RwBg=="/>
-        </item>
-        <item>
-            <title>0.80.0</title>
-            <pubDate>Mon, 17 Aug 2026 12:17:42 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>137</sparkle:version>
-            <sparkle:shortVersionString>0.80.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Le volume, en trois lectures
-
-Le panneau **Volume quotidien** posait cinquante-et-une barres pour une
-quinzaine de messages par jour. À ce grain, chaque barre est un bruit. Ses deux
-séries avaient de surcroît des échelles verticales indépendantes : une barre
-d'envois pouvait paraître aussi haute qu'une barre de réceptions en valant sept
-fois moins.
-
-Trois lectures le remplacent, et chacune répond à une question.
-
-## Quelle est ma charge
-
-Une phrase en tête donne la journée ordinaire — la médiane, pas la moyenne, qui
-serait tirée vers le haut par quelques journées exceptionnelles et ne
-décrirait aucune journée réelle.
-
-Ces journées hors norme sont nommées, avec leur date et leur poids dans la
-période. Elles ne sont plus une anomalie graphique à ignorer : elles sont
-l'information.
-
-Trois chiffres complètent : la part écartée par le filtre, ce que vous envoyez
-par jour, et le nombre de jours réellement relevés.
-
-## Est-ce que ça monte
-
-Le miroir hebdomadaire regroupe par semaine et pose les reçus au-dessus, les
-envoyés au-dessous, **sur la même échelle**. Le rapport entre les deux se lit
-enfin directement.
-
-## Quand exactement
-
-Un carré par jour, l'intensité pour le volume. Le rythme de la semaine apparaît,
-et surtout un jour qui n'a jamais été relevé reste **en pointillé** au lieu
-d'être peint comme une journée creuse — c'est la règle que la version 0.70.0
-avait imposée partout ailleurs, et un dégradé de couleur est précisément
-l'endroit où l'on serait tenté de la trahir sans s'en apercevoir.
-
-Pointer une semaine ou un jour affiche ses chiffres exacts.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.0/Assistant-Mail-0.80.0.dmg" length="7772719" type="application/octet-stream" sparkle:edSignature="CbssnjF575t2syiD/Dd8Nk4sDDHrHFESUdh8uccdRNiPMhtnljgKoaO8hXmXU6kLCzYJBTEE1Ka4MVIYHdXsAw=="/>
         </item>
     </channel>
 </rss>
