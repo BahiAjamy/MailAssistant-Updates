@@ -6,6 +6,44 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.80.1</title>
+            <pubDate>Mon, 17 Aug 2026 12:34:13 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>138</sparkle:version>
+            <sparkle:shortVersionString>0.80.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Trois graphiques qui se lisent enfin
+
+Cette version corrige ce que la 0.80.0 avait laissé illisible.
+
+## La journée ordinaire se voit, et pas seulement se lit
+
+La phrase « 14 messages une journée ordinaire » était arrivée sans son
+graphique. Or elle ne dit pas si vos journées se ressemblent ou varient du
+simple au décuple — et c'est justement ce qu'on veut savoir.
+
+Une barre le montre désormais : le rail couvre l'étendue, le bloc clair la
+moitié centrale de vos journées, le trait la médiane, et chaque journée hors
+norme apparaît en point à sa vraie position. Pointer un point donne sa date et
+son volume.
+
+## Le jour par jour respire
+
+Les carrés passent de 14 à 20 points, les gouttières de 3 à 5. Le mois s'inscrit
+sous la colonne qui l'ouvre : huit semaines sans repère se lisaient comme une
+grille abstraite.
+
+## Volume et silence a retrouvé son échelle
+
+Le nuage n'avait aucune graduation verticale : un point haut ne voulait rien
+dire. Trois repères marquent maintenant zéro, la moitié et le maximum, et un
+trait orange signale la semaine de silence — celle au-delà de laquelle les
+points changent de couleur.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.1/Assistant-Mail-0.80.1.dmg" length="7795989" type="application/octet-stream" sparkle:edSignature="6eSTLUfUQiAscLJhzaEQqR+BlFL55TlUuT9AypOgmPXCiUULfIgqfruR7bcgwcno2XhE+TEA2a8xZyl+D9RwBg=="/>
+        </item>
+        <item>
             <title>0.80.0</title>
             <pubDate>Mon, 17 Aug 2026 12:17:42 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -99,31 +137,6 @@ messages reçus, envoyés, mises en copie, dernier échange et nombre de tâches
 clic ouvre la fiche de la personne, comme avant.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.79.0/Assistant-Mail-0.79.0.dmg" length="7735902" type="application/octet-stream" sparkle:edSignature="wJGl5NjlgkECj24Vg2Svo3i4XUMShSsi57iUX372wOLLJdU0gETOk3PZRh3VJHs5luXsSXqvUjdwak1gUTPXCw=="/>
-        </item>
-        <item>
-            <title>0.78.1</title>
-            <pubDate>Mon, 17 Aug 2026 11:40:18 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>135</sparkle:version>
-            <sparkle:shortVersionString>0.78.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Le Calendrier s'ouvre sur aujourd'hui
-
-Le sous-onglet **Calendrier** de l'Analyse s'ouvrait sur une invite —
-« Sélectionnez un jour » — et il fallait cliquer une première fois pour voir
-quoi que ce soit. Or la question qu'on se pose en arrivant est déjà connue :
-qu'est-ce que j'ai aujourd'hui.
-
-Le jour courant est désormais ouvert d'emblée, avec ses tâches dans le panneau
-de droite, sans rien cliquer.
-
-Ce repli ne vaut que si le mois affiché contient le jour courant. En feuilletant
-vers un autre mois, le panneau se vide plutôt que de montrer un jour qui n'est
-pas dans la grille — la grille et le panneau ne parlent jamais de deux mois à la
-fois.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.78.1/Assistant-Mail-0.78.1.dmg" length="7705512" type="application/octet-stream" sparkle:edSignature="9U4ybN14srYaXwZLprODtT8fbfw9KEXi+IoF3KI4Pd+BFXSfZgOJq2Lt140qpUNdZo96HytS1Mrxgb7i/1L/Cg=="/>
         </item>
     </channel>
 </rss>
