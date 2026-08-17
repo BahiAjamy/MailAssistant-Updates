@@ -6,6 +6,64 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.82.0</title>
+            <pubDate>Mon, 17 Aug 2026 13:41:22 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>141</sparkle:version>
+            <sparkle:shortVersionString>0.82.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Trois manques comblés dans l'Analyse
+
+## Vos pièces jointes existent enfin
+
+L'onglet Analyse ne parlait **nulle part** de la bibliothèque documentaire —
+pas une mention — alors qu'elle porte plusieurs centaines de fichiers avec leur
+correspondant, leur type, leur taille et leur sens. C'était le plus gros
+gisement inexploité de l'application.
+
+Un panneau répond maintenant à trois questions qu'aucun écran ne posait : ce que
+vous recevez et envoyez, la répartition par type, et qui vous envoie des
+fichiers.
+
+Deux précautions y sont inscrites. Le poids total n'additionne que les tailles
+**connues** : compter zéro pour un fichier dont le fournisseur n'a jamais annoncé
+la taille ferait un total faussement précis. Et le classement des expéditeurs ne
+retient que le courrier reçu — y mêler vos envois ferait passer vos
+destinataires pour des expéditeurs.
+
+Ce panneau ne couvre pas la même période que ses voisins, et il le dit :
+l'index documentaire survit à la purge des messages, donc il porte plus loin
+que trente jours.
+
+## Le calendrier montre vos réunions
+
+Il n'affichait que des échéances de tâches, alors que l'application connaît vos
+rendez-vous à l'heure près. Il fallait deux onglets pour savoir à quoi ressemble
+une journée — et la moitié basse de l'écran restait vide.
+
+Un trait sous le numéro du jour donne la durée programmée. Seules comptent les
+réunions non annulées dont la fin est déclarée : sans durée explicite, supposer
+une heure par défaut inventerait une charge.
+
+## Cinq tâches ne méritaient pas un anneau
+
+L'anneau découpait vos tâches ouvertes en secteurs de 2, 1, 1 et 1 — quatre
+parts pour quatre unités, quand la légende disait déjà tout.
+
+Un carré par tâche les remplace, à la couleur du projet. Il code de surcroît ce
+qu'un secteur ne pouvait pas : une tâche en retard passe au rouge.
+
+## Et le nuage respire
+
+« Volume et silence » gardait les adresses qui écrivent sans jamais rien
+recevoir, alors que le graphique juste au-dessus les met à part depuis la
+version précédente. Une seule d'entre elles tassait tous vos interlocuteurs
+réels dans le bas du cadre. La même règle s'applique désormais aux deux.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.82.0/Assistant-Mail-0.82.0.dmg" length="7898627" type="application/octet-stream" sparkle:edSignature="b83stv5cTajcKbEio+RXqJjbk8bCP63e9Cfw+MfppKNy/Edz9YI9cq6xMAWCpFgFq3wLOyzV4tXYVcqPOXDpBQ=="/>
+        </item>
+        <item>
             <title>0.81.1</title>
             <pubDate>Mon, 17 Aug 2026 13:13:37 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -93,44 +151,6 @@ place disponible, bornée pour qu'une grille courte ne produise pas des carrés
 démesurés.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.81.0/Assistant-Mail-0.81.0.dmg" length="7836187" type="application/octet-stream" sparkle:edSignature="wjgRGS6TGOOLI7E38jh6n+dXGnLeGGRitO0H48xx6DpwwR079noXIquyOkPzcIJNHSUS/ch7slNx7ygSee38Dg=="/>
-        </item>
-        <item>
-            <title>0.80.1</title>
-            <pubDate>Mon, 17 Aug 2026 12:34:13 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>138</sparkle:version>
-            <sparkle:shortVersionString>0.80.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Trois graphiques qui se lisent enfin
-
-Cette version corrige ce que la 0.80.0 avait laissé illisible.
-
-## La journée ordinaire se voit, et pas seulement se lit
-
-La phrase « 14 messages une journée ordinaire » était arrivée sans son
-graphique. Or elle ne dit pas si vos journées se ressemblent ou varient du
-simple au décuple — et c'est justement ce qu'on veut savoir.
-
-Une barre le montre désormais : le rail couvre l'étendue, le bloc clair la
-moitié centrale de vos journées, le trait la médiane, et chaque journée hors
-norme apparaît en point à sa vraie position. Pointer un point donne sa date et
-son volume.
-
-## Le jour par jour respire
-
-Les carrés passent de 14 à 20 points, les gouttières de 3 à 5. Le mois s'inscrit
-sous la colonne qui l'ouvre : huit semaines sans repère se lisaient comme une
-grille abstraite.
-
-## Volume et silence a retrouvé son échelle
-
-Le nuage n'avait aucune graduation verticale : un point haut ne voulait rien
-dire. Trois repères marquent maintenant zéro, la moitié et le maximum, et un
-trait orange signale la semaine de silence — celle au-delà de laquelle les
-points changent de couleur.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.1/Assistant-Mail-0.80.1.dmg" length="7795989" type="application/octet-stream" sparkle:edSignature="6eSTLUfUQiAscLJhzaEQqR+BlFL55TlUuT9AypOgmPXCiUULfIgqfruR7bcgwcno2XhE+TEA2a8xZyl+D9RwBg=="/>
         </item>
     </channel>
 </rss>
