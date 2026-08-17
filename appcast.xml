@@ -6,6 +6,52 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.79.0</title>
+            <pubDate>Mon, 17 Aug 2026 12:04:11 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>136</sparkle:version>
+            <sparkle:shortVersionString>0.79.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Les interlocuteurs, en deux lectures
+
+Le panneau **Interlocuteurs** de l'Analyse alignait huit colonnes de nombres par
+personne. Il donnait tout et ne répondait à rien : la question qu'on se pose
+devant une liste d'interlocuteurs — cette relation est-elle réciproque, qui
+compte et devient silencieux — ne se lit pas dans un tableau.
+
+Deux graphiques le remplacent.
+
+## Le balancier
+
+Ce que vous recevez part à gauche, ce que vous envoyez part à droite, depuis un
+axe central. Un coup d'œil suffit à voir qui vous écrit sans jamais recevoir de
+réponse, et à qui vous écrivez plus qu'il ne vous écrit.
+
+Les adresses qui envoient sans jamais rien recevoir sortent du graphique et
+prennent leur propre ligne, avec leur volume. Ce ne sont pas des interlocuteurs
+mais des émetteurs, et à leur échelle tous les autres se réduiraient à des
+traits.
+
+## Volume et silence
+
+Chaque personne est un point. La hauteur donne le poids de la relation,
+l'horizontale le temps écoulé depuis le dernier échange, la taille du point le
+nombre de tâches nées de ses messages. Au-delà d'une semaine sans échange, le
+point passe à l'orange.
+
+Le bas à droite — beaucoup d'échanges, long silence — est le seul endroit que
+l'ancien tableau ne montrait nulle part, et c'est celui qui appelle un geste.
+
+## Les chiffres n'ont pas disparu
+
+Pointer une barre ou un point affiche le détail que les colonnes portaient :
+messages reçus, envoyés, mises en copie, dernier échange et nombre de tâches. Un
+clic ouvre la fiche de la personne, comme avant.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.79.0/Assistant-Mail-0.79.0.dmg" length="7735902" type="application/octet-stream" sparkle:edSignature="wJGl5NjlgkECj24Vg2Svo3i4XUMShSsi57iUX372wOLLJdU0gETOk3PZRh3VJHs5luXsSXqvUjdwak1gUTPXCw=="/>
+        </item>
+        <item>
             <title>0.78.1</title>
             <pubDate>Mon, 17 Aug 2026 11:40:18 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -85,82 +131,6 @@ mention « à dater » : ils sont nombreux dans une boîte réelle, et les rendr
 discrets au point de les effacer reviendrait à les perdre.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.78.0/Assistant-Mail-0.78.0.dmg" length="7704802" type="application/octet-stream" sparkle:edSignature="Yv0igGp2Z9H4pQ4AORSg843X6N3pDBuLcmaGZDoyC0XOuvNGhz/8yxigNJNbearK5/4tmYRmN9Gi2Lf72N4rAQ=="/>
-        </item>
-        <item>
-            <title>0.77.0</title>
-            <pubDate>Tue, 11 Aug 2026 13:27:33 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>133</sparkle:version>
-            <sparkle:shortVersionString>0.77.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Ce que l'application dit d'elle-même
-
-Cette version ne corrige aucun calcul de fond. Elle referme l'écart entre ce que
-l'application fait et ce qu'elle en dit — dans les chiffres de l'Analyse, dans
-les documents transmis au Chat, et dans le README.
-
-## Un PDF troué le dit avant de partir
-
-Les pages d'un PDF sans couche texte — des scans, le plus souvent — étaient
-écartées en silence. Le document arrivait au modèle avec des repères
-d'apparence complète : « p. 1, p. 4, p. 7 » se lit comme un document entier
-quand on ne compte pas les numéros manquants.
-
-La feuille d'autorisation annonce désormais combien de pages n'ont pas pu être
-lues, avec sa propre phrase : un document coupé à la fin et un document troué au
-milieu ne se corrigent pas de la même façon.
-
-## Le panneau de tri tombe juste
-
-« Comment les tâches ont été triées » comptait au total les tâches que vous avez
-créées **et** rangées vous-même — qu'aucune de ses trois lignes ne reprend,
-puisqu'elles n'ont été triées par rien. Les fractions affichées ne totalisaient
-pas leur propre dénominateur.
-
-## Les pastilles des cartes redeviennent lisibles
-
-Le contraste du texte sur les pastilles neutres tombait à 3,99:1 en mode sombre,
-pour un seuil d'accessibilité de 4,5. La vérification automatique ne le voyait
-pas : elle mesurait ces pastilles sur le fond de page, alors qu'elles sont
-posées sur une carte, plus claire. Elle les mesure maintenant à leur vraie
-place, et l'encre est calculée contre ce fond — 158 rapports vérifiés au lieu de
-154.
-
-## Le Calendrier ne montre plus deux mois à la fois
-
-Les flèches déplaçaient la grille sans toucher au jour ouvert à droite : l'écran
-affichait le nouveau mois d'un côté et un jour de l'ancien de l'autre.
-
-## Deux périmètres annoncés honnêtement
-
-La carte « Prochain envoi : 3 sur 4 » dit maintenant que le filtre de projet ne
-s'y applique pas, comme les autres panneaux qui font exception. Et le bloc
-« Résultats observés des détecteurs » cesse d'appliquer ce filtre : le Flux
-annonce en tête qu'il se lit avant le classement, ce bloc était le seul à ne pas
-le respecter.
-
-## Un seul mot pour une seule chose
-
-L'Analyse parlait de « missions » là où la barre latérale, juste à gauche,
-propose « Sans projet ». C'est « projet » qui reste le nom de la chose ;
-« missions » ne subsiste que dans les titres d'écrans, où il nomme une vue.
-
-*Le renommage ne peut pas aller plus loin : « Assistant Mail — Sans projet » est
-le nom d'une liste Apple Rappels, et le changer orphelinerait les listes déjà
-créées sur votre Mac.*
-
-## Le README décrivait une application d'avant
-
-Il promettait encore l'entonnoir e-mail → tâche démonté en 0.70.0 parce qu'il
-empilait des populations sans lien, une tuile « non-lus » et un panneau
-« Nouveaux e-mails » retirés le 27 juillet, et un aperçu Documents au double-clic
-alors qu'il part de la sélection.
-
-Le code laissé derrière est retiré avec eux, ainsi que le dernier avertissement
-du compilateur.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.77.0/Assistant-Mail-0.77.0.dmg" length="7692937" type="application/octet-stream" sparkle:edSignature="0bG86+z89kFSjEA2+rqTLEc+HdKJYmOmMBR0GTKVJ/DTRhZqU0ejv86pZGhn45IYWbL54XP1fOfZbJIBApJmBA=="/>
         </item>
     </channel>
 </rss>
