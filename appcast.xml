@@ -6,6 +6,47 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.81.0</title>
+            <pubDate>Mon, 17 Aug 2026 12:55:07 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>139</sparkle:version>
+            <sparkle:shortVersionString>0.81.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Le journal des décisions, et la grille qui remplit sa place
+
+## Décisions : est-ce que l'assistant s'améliore
+
+Le panneau posait trente jours de barres groupées à quatre séries pour une
+poignée d'événements par jour. Illisible, écrasé par deux pics — et surtout
+muet sur la seule question qui compte ici. Le bandeau du dessus annonce une part
+retenue, mais **le même pourcentage ne dit pas la même chose selon qu'il monte
+ou qu'il descend** : l'un veut dire que l'assistant apprend, l'autre qu'il
+dérive.
+
+Deux lectures le remplacent.
+
+**La part retenue, semaine par semaine**, avec la moyenne de la période en
+repère. Ne comptent que les suggestions que vous avez réellement tranchées :
+les écartées automatiquement ne pèsent ni pour ni contre, puisque vous ne les
+avez jamais vues. Une semaine de moins de cinq décisions n'est pas tracée du
+tout — un taux calculé sur trois avis afficherait 0 ou 100 % sans rien mesurer.
+
+**La file d'attente**, ensuite : l'âge des suggestions que personne n'a
+tranchées. Au-delà d'une semaine elles passent à l'orange, parce qu'une
+suggestion laissée sept jours ne se tranchera probablement jamais. C'est le seul
+chiffre de ce panneau qui appelle un geste.
+
+## Le jour par jour occupe enfin sa largeur
+
+La grille de densité gardait des carrés de taille fixe et se calait à gauche :
+les deux tiers du panneau restaient vides. La cellule se déduit désormais de la
+place disponible, bornée pour qu'une grille courte ne produise pas des carrés
+démesurés.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.81.0/Assistant-Mail-0.81.0.dmg" length="7836187" type="application/octet-stream" sparkle:edSignature="wjgRGS6TGOOLI7E38jh6n+dXGnLeGGRitO0H48xx6DpwwR079noXIquyOkPzcIJNHSUS/ch7slNx7ygSee38Dg=="/>
+        </item>
+        <item>
             <title>0.80.1</title>
             <pubDate>Mon, 17 Aug 2026 12:34:13 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -91,52 +132,6 @@ l'endroit où l'on serait tenté de la trahir sans s'en apercevoir.
 Pointer une semaine ou un jour affiche ses chiffres exacts.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.0/Assistant-Mail-0.80.0.dmg" length="7772719" type="application/octet-stream" sparkle:edSignature="CbssnjF575t2syiD/Dd8Nk4sDDHrHFESUdh8uccdRNiPMhtnljgKoaO8hXmXU6kLCzYJBTEE1Ka4MVIYHdXsAw=="/>
-        </item>
-        <item>
-            <title>0.79.0</title>
-            <pubDate>Mon, 17 Aug 2026 12:04:11 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>136</sparkle:version>
-            <sparkle:shortVersionString>0.79.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Les interlocuteurs, en deux lectures
-
-Le panneau **Interlocuteurs** de l'Analyse alignait huit colonnes de nombres par
-personne. Il donnait tout et ne répondait à rien : la question qu'on se pose
-devant une liste d'interlocuteurs — cette relation est-elle réciproque, qui
-compte et devient silencieux — ne se lit pas dans un tableau.
-
-Deux graphiques le remplacent.
-
-## Le balancier
-
-Ce que vous recevez part à gauche, ce que vous envoyez part à droite, depuis un
-axe central. Un coup d'œil suffit à voir qui vous écrit sans jamais recevoir de
-réponse, et à qui vous écrivez plus qu'il ne vous écrit.
-
-Les adresses qui envoient sans jamais rien recevoir sortent du graphique et
-prennent leur propre ligne, avec leur volume. Ce ne sont pas des interlocuteurs
-mais des émetteurs, et à leur échelle tous les autres se réduiraient à des
-traits.
-
-## Volume et silence
-
-Chaque personne est un point. La hauteur donne le poids de la relation,
-l'horizontale le temps écoulé depuis le dernier échange, la taille du point le
-nombre de tâches nées de ses messages. Au-delà d'une semaine sans échange, le
-point passe à l'orange.
-
-Le bas à droite — beaucoup d'échanges, long silence — est le seul endroit que
-l'ancien tableau ne montrait nulle part, et c'est celui qui appelle un geste.
-
-## Les chiffres n'ont pas disparu
-
-Pointer une barre ou un point affiche le détail que les colonnes portaient :
-messages reçus, envoyés, mises en copie, dernier échange et nombre de tâches. Un
-clic ouvre la fiche de la personne, comme avant.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.79.0/Assistant-Mail-0.79.0.dmg" length="7735902" type="application/octet-stream" sparkle:edSignature="wJGl5NjlgkECj24Vg2Svo3i4XUMShSsi57iUX372wOLLJdU0gETOk3PZRh3VJHs5luXsSXqvUjdwak1gUTPXCw=="/>
         </item>
     </channel>
 </rss>
