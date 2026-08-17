@@ -6,6 +6,55 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.80.0</title>
+            <pubDate>Mon, 17 Aug 2026 12:17:42 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>137</sparkle:version>
+            <sparkle:shortVersionString>0.80.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Le volume, en trois lectures
+
+Le panneau **Volume quotidien** posait cinquante-et-une barres pour une
+quinzaine de messages par jour. À ce grain, chaque barre est un bruit. Ses deux
+séries avaient de surcroît des échelles verticales indépendantes : une barre
+d'envois pouvait paraître aussi haute qu'une barre de réceptions en valant sept
+fois moins.
+
+Trois lectures le remplacent, et chacune répond à une question.
+
+## Quelle est ma charge
+
+Une phrase en tête donne la journée ordinaire — la médiane, pas la moyenne, qui
+serait tirée vers le haut par quelques journées exceptionnelles et ne
+décrirait aucune journée réelle.
+
+Ces journées hors norme sont nommées, avec leur date et leur poids dans la
+période. Elles ne sont plus une anomalie graphique à ignorer : elles sont
+l'information.
+
+Trois chiffres complètent : la part écartée par le filtre, ce que vous envoyez
+par jour, et le nombre de jours réellement relevés.
+
+## Est-ce que ça monte
+
+Le miroir hebdomadaire regroupe par semaine et pose les reçus au-dessus, les
+envoyés au-dessous, **sur la même échelle**. Le rapport entre les deux se lit
+enfin directement.
+
+## Quand exactement
+
+Un carré par jour, l'intensité pour le volume. Le rythme de la semaine apparaît,
+et surtout un jour qui n'a jamais été relevé reste **en pointillé** au lieu
+d'être peint comme une journée creuse — c'est la règle que la version 0.70.0
+avait imposée partout ailleurs, et un dégradé de couleur est précisément
+l'endroit où l'on serait tenté de la trahir sans s'en apercevoir.
+
+Pointer une semaine ou un jour affiche ses chiffres exacts.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.80.0/Assistant-Mail-0.80.0.dmg" length="7772719" type="application/octet-stream" sparkle:edSignature="CbssnjF575t2syiD/Dd8Nk4sDDHrHFESUdh8uccdRNiPMhtnljgKoaO8hXmXU6kLCzYJBTEE1Ka4MVIYHdXsAw=="/>
+        </item>
+        <item>
             <title>0.79.0</title>
             <pubDate>Mon, 17 Aug 2026 12:04:11 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -75,62 +124,6 @@ pas dans la grille — la grille et le panneau ne parlent jamais de deux mois à
 fois.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.78.1/Assistant-Mail-0.78.1.dmg" length="7705512" type="application/octet-stream" sparkle:edSignature="9U4ybN14srYaXwZLprODtT8fbfw9KEXi+IoF3KI4Pd+BFXSfZgOJq2Lt140qpUNdZo96HytS1Mrxgb7i/1L/Cg=="/>
-        </item>
-        <item>
-            <title>0.78.0</title>
-            <pubDate>Tue, 11 Aug 2026 15:10:41 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>134</sparkle:version>
-            <sparkle:shortVersionString>0.78.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# L'onglet Réunions, sur du papier réglé
-
-Cette version ne change qu'un écran, mais entièrement : la liste des réunions.
-Elle ne gagne aucune fonction — elle en perd du décor.
-
-## Plus de bleu
-
-La réunion ouverte était remplie d'un bleu système à 9 % et cernée du même bleu
-à 65 %. Sur du papier crème, c'était assez pour faire basculer toute la ligne
-dans une couleur que rien d'autre ne porte dans l'application.
-
-La ligne ouverte se dit maintenant par un filet à l'encre sur toute sa hauteur,
-et par le chiffre du jour qui passe du gris à l'encre pleine.
-
-## Plus de cartes, donc plus de vides
-
-Chaque réunion vivait dans une carte blanche posée sur le papier. La carte
-portait sa marge, la rangée ajoutait la sienne, et chaque interstice se lisait
-comme une bande morte — d'autant plus voyante que la liste est longue. Une
-bande inutile courait aussi le long du bord droit.
-
-Les cartes ont disparu. Un filet sépare deux réunions, les marges vivent dans la
-ligne, et la colonne montre à peu près un tiers de rendez-vous en plus sans
-défiler.
-
-## Rejoindre sans ouvrir le détail
-
-Le bouton **Rejoindre** est descendu dans la liste. Il est plein pour une
-réunion en cours ou qui commence dans moins de trente minutes — la seule sur
-laquelle vous allez cliquer — et en simple contour pour les autres. Il
-disparaît sur ce qui est passé ou annulé.
-
-## Ce que chaque ligne dit désormais
-
-Le chiffre du jour en serif ancre le regard. Le titre reste un nom propre.
-Horaire, organisateur et nombre d'e-mails tiennent sur une seule ligne, au lieu
-de six pastilles côte à côte qui ne hiérarchisaient plus rien.
-
-« À traiter » quitte les lignes : c'était un état de file, pas une information
-sur le rendez-vous. Ne subsiste que ce qu'un humain doit aller vérifier —
-« horaire à vérifier », « horaire déplacé », « annulée ».
-
-Un rendez-vous dont la date reste inconnue garde sa place, avec un tiret et la
-mention « à dater » : ils sont nombreux dans une boîte réelle, et les rendre
-discrets au point de les effacer reviendrait à les perdre.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.78.0/Assistant-Mail-0.78.0.dmg" length="7704802" type="application/octet-stream" sparkle:edSignature="Yv0igGp2Z9H4pQ4AORSg843X6N3pDBuLcmaGZDoyC0XOuvNGhz/8yxigNJNbearK5/4tmYRmN9Gi2Lf72N4rAQ=="/>
         </item>
     </channel>
 </rss>
