@@ -6,6 +6,148 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.85.0</title>
+            <pubDate>Wed, 19 Aug 2026 12:26:50 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>144</sparkle:version>
+            <sparkle:shortVersionString>0.85.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Le Suivi tenait en deux cents lignes et un clic droit
+
+Le sous-onglet Suivi affichait 201 conversations d'affilée. La seule façon d'en
+dire « aucune réponse attendue » était un menu contextuel que rien n'annonçait,
+et la seule façon d'en désigner plusieurs était de les pointer une à une avec ⌘
+ou ⇧ — un clic mal placé effaçant au passage tout le lot qu'on venait de
+composer.
+
+Cette version range la liste, rend l'action visible, et s'attaque d'abord à ce
+qui remplissait la liste.
+
+## 183 des 201 conversations venaient d'un seul robot
+
+En rejouant le calcul sur l'état réel de ce poste au 19 août 2026 : **183 des
+201 conversations en attente venaient de `adminogaa@ared-edu.org`**, le robot de
+notification OGAA. Un message par activité, 187 fils distincts, dont le corps
+annonce « Notification automatique OGAA — ARED ». Il restait **19 conversations
+humaines** derrière ce mur.
+
+Aucun filtre existant ne pouvait les atteindre, et c'est ce qui rend le cas
+intéressant : l'adresse n'est pas un `no-reply@`, le domaine est celui de
+l'employeur, les envois sont individuels, et leur nature est bien « action
+requise » — ce qui est juste, il y a une activité à préparer. Requérir une
+action et attendre une réponse sont deux choses différentes, et rien dans le
+message ne permettait de les séparer sans risquer d'effacer une demande réelle.
+
+Le Suivi propose donc désormais la règle lui-même, quand la liste la justifie :
+
+> **183 de ces 201 conversations viennent d'OGAA** — vous n'avez jamais répondu
+> dans aucun de ces fils. *[Plus tard]* *[Ne plus attendre]*
+
+Le seuil est haut à dessein : dix conversations ou plus du même expéditeur, et
+**aucun** de ces fils ne porte de réponse de votre part. Sur le corpus réel, un
+seul expéditeur le franchit ; le suivant en compte cinq, dont un déjà répondu.
+Proposer d'ignorer un collègue bavard serait bien pire que de laisser passer un
+robot.
+
+Accepter ne supprime rien et n'arrête aucune analyse. Le courrier reste relevé,
+lisible, et continue de produire des tâches ; seule la dette de réponse cesse de
+le compter. La règle se voit et se défait dans Réglages ▸ *Expéditeurs qui
+n'attendent jamais de réponse*, et la retirer ramène aussitôt les conversations.
+
+## La liste est rangée par semaine
+
+Les conversations sont regroupées par semaine de réception, de la plus ancienne
+à la plus récente — l'ordre d'avant, avec des paliers. « Cette semaine », « La
+semaine dernière », puis « Semaine du 3 au 9 août ». Chaque en-tête porte son
+compte et se replie.
+
+La semaine commence un lundi quels que soient les réglages de la machine.
+
+## Une case par semaine, à trois états
+
+L'en-tête de chaque semaine porte une case : vide, pleine, ou barrée quand la
+semaine n'est cochée qu'en partie. Un clic prend les 119 conversations de la
+semaine, un second les relâche.
+
+Chaque ligne garde la sienne : après avoir pris la semaine, on décoche à la main
+les trois conversations qui, elles, appellent une réponse. ⇧ étend la sélection
+depuis la dernière ligne touchée.
+
+Et surtout : **plus rien n'efface un lot sans le dire.** La liste ne s'appuie
+plus sur la sélection AppKit, où un clic simple remplaçait tout ce qui était
+sélectionné.
+
+## Les envois d'un même expéditeur tiennent en une ligne
+
+À l'intérieur d'une semaine, quatre conversations ou plus d'un même expéditeur
+se replient derrière une seule ligne, avec sa propre case et son propre chevron :
+
+> **OGAA — 112 conversations** · `adminogaa@ared-edu.org` · « Activité à
+> préparer … »
+
+L'intitulé se lit dans les objets des messages quand les deux tiers le
+partagent ; sinon il n'y en a pas. Une étiquette fausse serait pire qu'une
+étiquette absente.
+
+C'est le geste qui vide vraiment la liste — et il laisse les sept conversations
+humaines de la semaine intactes, là où cocher la semaine entière les aurait
+emportées.
+
+## « Aucune réponse attendue » est un bouton
+
+L'action principale de l'onglet sort du menu contextuel. Dès qu'une case est
+cochée, une barre apparaît au-dessus de la liste :
+
+> ✓ **112 conversations sélectionnées** — *[Aucune réponse attendue]*
+> *[Désélectionner]*
+
+Le menu contextuel la garde, avec son comportement d'avant.
+
+## Le panneau de droite dit ce que contient le lot
+
+Il affichait « Sélectionnez une tâche » pendant qu'on cochait cent lignes à
+gauche. Il montre maintenant qui écrit dans le lot, la plus ancienne
+conversation, et un avertissement quand certaines portent déjà une réponse de
+votre part — ce sont celles où l'on attend une relance, pas celles qu'on balaie.
+
+Les chiffres sont des faits, pas des verdicts : le panneau ne dit pas « douze
+robots », il n'a aucun moyen de le savoir. Il dit qui écrit et où vous avez déjà
+écrit.
+
+## Ce qui n'a pas changé
+
+Écarter reste réversible et ne détruit rien : la clé est le dernier message
+reçu, donc un nouveau message dans le fil ramène la conversation, et
+« Restaurer » les rend toutes d'un coup.
+
+## Ce que cette version ne fait pas
+
+Le Suivi n'a toujours pas de raccourcis clavier. Il n'en avait aucun avant non
+plus — la légende des touches passait déjà cet onglet. En annoncer un qui ne
+répondrait pas se lirait comme une panne du clavier ; ce sera fait quand ce sera
+vérifiable.
+
+Il n'y a pas non plus de « repousser d'une semaine » sur une conversation. La
+maquette en montrait un ; il demande un état persistant qui n'existe pas encore.
+
+## Sous le capot
+
+- `DebtDigest` : le regroupement par semaine puis par expéditeur, en Foundation
+  pur, compilé et éprouvé par le banc d'essai du cœur.
+- `SentMailRadar.replyDebts` reçoit les expéditeurs muets, et la courbe de dette
+  de la Vue du jour les applique aussi — sans quoi le graphique contredirait le
+  compteur.
+- Deux vérifications de plus au contrôle du cœur : **133**. L'une d'elles a
+  trouvé un défaut réel pendant l'écriture — l'intitulé de semaine formatait sa
+  date dans le fuseau de la machine et non dans celui du calendrier, ce qui
+  affichait « Semaine du 19 au 25 juillet » pour un paquet commençant le 20.
+- Le journal des décisions distingue enfin les règles d'expéditeur, qui se
+  rangeaient jusqu'ici sous « Projet corrigé ».
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.85.0/Assistant-Mail-0.85.0.dmg" length="8121993" type="application/octet-stream" sparkle:edSignature="ChfyiU4KEA1NFYEGoQ9YiQ0wrVKBQ+3/UP1i5Fa2qa2xPh6/affiw5HYu4cHybarlRCaap+YQPAD8RMN1VYeAQ=="/>
+        </item>
+        <item>
             <title>0.84.0</title>
             <pubDate>Tue, 18 Aug 2026 11:27:01 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -173,64 +315,6 @@ Les réunions sans mission ne sont pas un défaut de l'agenda mais un classement
 qui reste à faire — le panneau le dit plutôt que de les compter en silence.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.83.0/Assistant-Mail-0.83.0.dmg" length="7956099" type="application/octet-stream" sparkle:edSignature="Iumu2CviuNJ5uclGQTCGUOD94o18p88ZQ9zitIBTBYtpdAVcBczpwdiTfNu6BbGUQuDyWG2DxYvfprKNKHFZBw=="/>
-        </item>
-        <item>
-            <title>0.82.0</title>
-            <pubDate>Mon, 17 Aug 2026 13:41:22 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>141</sparkle:version>
-            <sparkle:shortVersionString>0.82.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Trois manques comblés dans l'Analyse
-
-## Vos pièces jointes existent enfin
-
-L'onglet Analyse ne parlait **nulle part** de la bibliothèque documentaire —
-pas une mention — alors qu'elle porte plusieurs centaines de fichiers avec leur
-correspondant, leur type, leur taille et leur sens. C'était le plus gros
-gisement inexploité de l'application.
-
-Un panneau répond maintenant à trois questions qu'aucun écran ne posait : ce que
-vous recevez et envoyez, la répartition par type, et qui vous envoie des
-fichiers.
-
-Deux précautions y sont inscrites. Le poids total n'additionne que les tailles
-**connues** : compter zéro pour un fichier dont le fournisseur n'a jamais annoncé
-la taille ferait un total faussement précis. Et le classement des expéditeurs ne
-retient que le courrier reçu — y mêler vos envois ferait passer vos
-destinataires pour des expéditeurs.
-
-Ce panneau ne couvre pas la même période que ses voisins, et il le dit :
-l'index documentaire survit à la purge des messages, donc il porte plus loin
-que trente jours.
-
-## Le calendrier montre vos réunions
-
-Il n'affichait que des échéances de tâches, alors que l'application connaît vos
-rendez-vous à l'heure près. Il fallait deux onglets pour savoir à quoi ressemble
-une journée — et la moitié basse de l'écran restait vide.
-
-Un trait sous le numéro du jour donne la durée programmée. Seules comptent les
-réunions non annulées dont la fin est déclarée : sans durée explicite, supposer
-une heure par défaut inventerait une charge.
-
-## Cinq tâches ne méritaient pas un anneau
-
-L'anneau découpait vos tâches ouvertes en secteurs de 2, 1, 1 et 1 — quatre
-parts pour quatre unités, quand la légende disait déjà tout.
-
-Un carré par tâche les remplace, à la couleur du projet. Il code de surcroît ce
-qu'un secteur ne pouvait pas : une tâche en retard passe au rouge.
-
-## Et le nuage respire
-
-« Volume et silence » gardait les adresses qui écrivent sans jamais rien
-recevoir, alors que le graphique juste au-dessus les met à part depuis la
-version précédente. Une seule d'entre elles tassait tous vos interlocuteurs
-réels dans le bas du cadre. La même règle s'applique désormais aux deux.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.82.0/Assistant-Mail-0.82.0.dmg" length="7898627" type="application/octet-stream" sparkle:edSignature="b83stv5cTajcKbEio+RXqJjbk8bCP63e9Cfw+MfppKNy/Edz9YI9cq6xMAWCpFgFq3wLOyzV4tXYVcqPOXDpBQ=="/>
         </item>
     </channel>
 </rss>
