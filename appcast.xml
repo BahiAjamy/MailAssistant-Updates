@@ -6,6 +6,116 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.90.0</title>
+            <pubDate>Fri, 21 Aug 2026 16:12:26 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>149</sparkle:version>
+            <sparkle:shortVersionString>0.90.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Le mot « Heure » suffisait à perdre un rendez-vous
+
+Le §7 de la vérification du diagnostic signalait depuis la 0.83.0 un défaut du
+lecteur d'horaires : le motif prévu pour `« Mardi, 7 juillet · De 3:00 à 3:30pm »`
+ne reconnaissait pas son propre exemple. Correctif annoncé : un caractère.
+
+En allant le corriger, deux autres défauts de la même famille sont apparus — et
+le plus coûteux des trois n'était pas celui qui était consigné.
+
+## Trois échecs, une seule cause
+
+Quatre motifs lisaient les horaires, et chacun recopiait à sa façon ce qui peut
+se glisser **entre la date et l'heure**. Chacun avait donc sa lacune.
+
+| Texte | Avant | Après |
+|---|---|---|
+| `Mardi, 7 juillet · De 3:00 à 3:30pm` | échec | 15:00 → 15:30 |
+| `Mardi, 7 juillet ·De 3:00 à 3:30pm` *(sans espace)* | lu | lu |
+| `Mardi 7 juillet, 15:00 - 16:00` | échec | 15:00 → 16:00 |
+| `7 juillet 2026, 15:00 - 16:00` | échec | 15:00 → 16:00 |
+| `Date : mercredi 05 Août 2026 · Heure : de 17h00 à 18h30` | échec | 17:00 → 18:30 |
+
+Le premier échouait sur **l'espace entre deux séparateurs** — sans l'espace, le
+même texte passait. Le deuxième sur **une virgule**. Le troisième sur **le mot
+« Heure »**.
+
+C'est le troisième qui coûtait le plus cher, et il ne figurait nulle part.
+`Date : … / Heure : …` est la mise en page des invitations de webinaire et de la
+plupart des outils français. Sur ce poste, **deux e-mails de l'index portaient
+« Date : mercredi 05 Août 2026 » et « Heure : de 17h00 à 18h30 »**, et
+l'application affichait « horaire à confirmer » sur un rendez-vous dont l'heure
+était écrite noir sur blanc, deux lignes plus bas.
+
+Ce qui pouvait s'intercaler est désormais défini **une seule fois**, en un seul
+endroit, et les quatre motifs le partagent.
+
+## L'ensemble reste fermé
+
+Élargir un séparateur, c'est risquer de lire un horaire dans n'importe quel
+nombre. Le garde-fou posé en 0.84.0 tient : `« Budget 7 juillet 2026 version
+3 - 4 »` et `« Rapport 7 juillet 2026 pages 12 à 15 »` ne sont toujours pas des
+réunions, et le banc le vérifie.
+
+**Une distinction a dû être ajoutée en cours de route, et c'est le banc qui l'a
+imposée.** Un motif à *plage* se passe de marqueur : la plage atteste elle-même
+qu'on lit un horaire. Un motif à *heure seule* n'a que le marqueur pour preuve —
+et une virgule n'en est pas une. La première version du correctif faisait de
+`« Livrable 7 juillet 2026, 9h »` un rendez-vous ; la vérification écrite le
+matin même l'a refusée.
+
+Mesuré en comparant deux binaires sur le corpus réel : la version permissive
+lisait un horaire dans **130** e-mails, la version livrée dans **124**. Les six
+écarts portent sur cinq messages — « Feuille de calcul partagée avec vous »,
+« Fin de collaboration avec notre Chargé de la communication », « Critères
+d'échantillonnage des écoles », « Collecte des données sur les écoles », « Test ».
+**Aucun n'est une invitation.** La borne resserrée ne coûte donc rien et évite
+six horaires inventés.
+
+## Ce que ça change chez vous
+
+Sur les 455 e-mails conservés, **119 portaient un horaire lisible, ils sont 124**.
+
+L'index des réunions est reconstruit à chaque chargement à partir des messages
+encore présents : le rendez-vous du webinaire **récupère son horaire au prochain
+lancement**, sans rien réinitialiser. Il quitte donc la file « à traiter »,
+apparaît à sa place dans « Passées », entre dans les minutes de l'onglet Semaine
+et se dit avec son heure dans le Chat.
+
+Les deux autres réunions sans horaire de votre index le restent, et c'est juste :
+l'une est un appel vidéo « en ce moment », qui n'a pas d'horaire par nature ;
+l'autre a vu ses e-mails sources quitter la fenêtre de rétention, il n'y a plus
+rien à relire.
+
+## Ce que cette version ne fait pas
+
+- **Un e-mail purgé ne se rattrape pas.** Le correctif ne vaut que pour les
+  messages encore conservés. Une réunion dont les sources sont sorties de la
+  fenêtre de soixante jours garde son horaire manquant, définitivement.
+- **Les libellés reconnus sont ceux du corpus** : « heure », « heures »,
+  « horaire », « time ». Un outil qui écrirait « Quand : » ou « Début : » ne
+  serait pas lu. L'ensemble reste fermé à dessein — l'ouvrir au premier mot venu
+  ferait revenir les horaires inventés.
+- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
+  ment toujours après 18 h sur la mise en veille des tâches,
+  `totalOpenTaskCount` n'a toujours aucun appelant, et `E` sur une tâche déjà
+  ignorée rejoue encore sa décision au journal.
+- **L'instantané des widgets** s'écrit toujours sans permissions restreintes,
+  seul fichier local dans ce cas. Le risque reste consigné et non tranché : il
+  est lu par l'extension WidgetKit, un autre processus, et cette machine ne sait
+  pas l'éprouver.
+
+## Sous le capot
+
+- `MeetingScheduleParser.dateTimeSeparator` et `dateTimeMarker` : deux
+  constantes, une différence — la virgule —, et un commentaire qui dit laquelle
+  sert à quoi et pourquoi.
+- Une vérification de plus au contrôle du cœur : **149**. Elle couvre les trois
+  formes réparées, les formes qui marchaient déjà, quatre pièges à faux positif,
+  et la distinction entre marqueur et séparateur.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.90.0/Assistant-Mail-0.90.0.dmg" length="8319730" type="application/octet-stream" sparkle:edSignature="cQUhbIE+ghGE0XEAdaYzQUb+zv8f86Gca+1aQrRl3TKvXFy4jb+p5h7zafmzOJL4srXkAjIZzu424NP8PGjcCQ=="/>
+        </item>
+        <item>
             <title>0.89.0</title>
             <pubDate>Fri, 21 Aug 2026 12:50:53 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -593,148 +703,6 @@ Le commentaire qui l'accompagne dit que toute réécriture se remesure.
   l'écrasement de colonne que le banc verrouille depuis la 0.72.0.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.87.0/Assistant-Mail-0.87.0.dmg" length="8191908" type="application/octet-stream" sparkle:edSignature="tjMpT2lx3ktVHa6QHKqoCYcFLzypzcTS9GCipQs9PTEvLpWW7gMdVQQf2jpUId4m7blwrQEIKoQEGRk/Pye/Bw=="/>
-        </item>
-        <item>
-            <title>0.85.0</title>
-            <pubDate>Wed, 19 Aug 2026 12:26:50 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>144</sparkle:version>
-            <sparkle:shortVersionString>0.85.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Le Suivi tenait en deux cents lignes et un clic droit
-
-Le sous-onglet Suivi affichait 201 conversations d'affilée. La seule façon d'en
-dire « aucune réponse attendue » était un menu contextuel que rien n'annonçait,
-et la seule façon d'en désigner plusieurs était de les pointer une à une avec ⌘
-ou ⇧ — un clic mal placé effaçant au passage tout le lot qu'on venait de
-composer.
-
-Cette version range la liste, rend l'action visible, et s'attaque d'abord à ce
-qui remplissait la liste.
-
-## 183 des 201 conversations venaient d'un seul robot
-
-En rejouant le calcul sur l'état réel de ce poste au 19 août 2026 : **183 des
-201 conversations en attente venaient de `adminogaa@ared-edu.org`**, le robot de
-notification OGAA. Un message par activité, 187 fils distincts, dont le corps
-annonce « Notification automatique OGAA — ARED ». Il restait **19 conversations
-humaines** derrière ce mur.
-
-Aucun filtre existant ne pouvait les atteindre, et c'est ce qui rend le cas
-intéressant : l'adresse n'est pas un `no-reply@`, le domaine est celui de
-l'employeur, les envois sont individuels, et leur nature est bien « action
-requise » — ce qui est juste, il y a une activité à préparer. Requérir une
-action et attendre une réponse sont deux choses différentes, et rien dans le
-message ne permettait de les séparer sans risquer d'effacer une demande réelle.
-
-Le Suivi propose donc désormais la règle lui-même, quand la liste la justifie :
-
-> **183 de ces 201 conversations viennent d'OGAA** — vous n'avez jamais répondu
-> dans aucun de ces fils. *[Plus tard]* *[Ne plus attendre]*
-
-Le seuil est haut à dessein : dix conversations ou plus du même expéditeur, et
-**aucun** de ces fils ne porte de réponse de votre part. Sur le corpus réel, un
-seul expéditeur le franchit ; le suivant en compte cinq, dont un déjà répondu.
-Proposer d'ignorer un collègue bavard serait bien pire que de laisser passer un
-robot.
-
-Accepter ne supprime rien et n'arrête aucune analyse. Le courrier reste relevé,
-lisible, et continue de produire des tâches ; seule la dette de réponse cesse de
-le compter. La règle se voit et se défait dans Réglages ▸ *Expéditeurs qui
-n'attendent jamais de réponse*, et la retirer ramène aussitôt les conversations.
-
-## La liste est rangée par semaine
-
-Les conversations sont regroupées par semaine de réception, de la plus ancienne
-à la plus récente — l'ordre d'avant, avec des paliers. « Cette semaine », « La
-semaine dernière », puis « Semaine du 3 au 9 août ». Chaque en-tête porte son
-compte et se replie.
-
-La semaine commence un lundi quels que soient les réglages de la machine.
-
-## Une case par semaine, à trois états
-
-L'en-tête de chaque semaine porte une case : vide, pleine, ou barrée quand la
-semaine n'est cochée qu'en partie. Un clic prend les 119 conversations de la
-semaine, un second les relâche.
-
-Chaque ligne garde la sienne : après avoir pris la semaine, on décoche à la main
-les trois conversations qui, elles, appellent une réponse. ⇧ étend la sélection
-depuis la dernière ligne touchée.
-
-Et surtout : **plus rien n'efface un lot sans le dire.** La liste ne s'appuie
-plus sur la sélection AppKit, où un clic simple remplaçait tout ce qui était
-sélectionné.
-
-## Les envois d'un même expéditeur tiennent en une ligne
-
-À l'intérieur d'une semaine, quatre conversations ou plus d'un même expéditeur
-se replient derrière une seule ligne, avec sa propre case et son propre chevron :
-
-> **OGAA — 112 conversations** · `adminogaa@ared-edu.org` · « Activité à
-> préparer … »
-
-L'intitulé se lit dans les objets des messages quand les deux tiers le
-partagent ; sinon il n'y en a pas. Une étiquette fausse serait pire qu'une
-étiquette absente.
-
-C'est le geste qui vide vraiment la liste — et il laisse les sept conversations
-humaines de la semaine intactes, là où cocher la semaine entière les aurait
-emportées.
-
-## « Aucune réponse attendue » est un bouton
-
-L'action principale de l'onglet sort du menu contextuel. Dès qu'une case est
-cochée, une barre apparaît au-dessus de la liste :
-
-> ✓ **112 conversations sélectionnées** — *[Aucune réponse attendue]*
-> *[Désélectionner]*
-
-Le menu contextuel la garde, avec son comportement d'avant.
-
-## Le panneau de droite dit ce que contient le lot
-
-Il affichait « Sélectionnez une tâche » pendant qu'on cochait cent lignes à
-gauche. Il montre maintenant qui écrit dans le lot, la plus ancienne
-conversation, et un avertissement quand certaines portent déjà une réponse de
-votre part — ce sont celles où l'on attend une relance, pas celles qu'on balaie.
-
-Les chiffres sont des faits, pas des verdicts : le panneau ne dit pas « douze
-robots », il n'a aucun moyen de le savoir. Il dit qui écrit et où vous avez déjà
-écrit.
-
-## Ce qui n'a pas changé
-
-Écarter reste réversible et ne détruit rien : la clé est le dernier message
-reçu, donc un nouveau message dans le fil ramène la conversation, et
-« Restaurer » les rend toutes d'un coup.
-
-## Ce que cette version ne fait pas
-
-Le Suivi n'a toujours pas de raccourcis clavier. Il n'en avait aucun avant non
-plus — la légende des touches passait déjà cet onglet. En annoncer un qui ne
-répondrait pas se lirait comme une panne du clavier ; ce sera fait quand ce sera
-vérifiable.
-
-Il n'y a pas non plus de « repousser d'une semaine » sur une conversation. La
-maquette en montrait un ; il demande un état persistant qui n'existe pas encore.
-
-## Sous le capot
-
-- `DebtDigest` : le regroupement par semaine puis par expéditeur, en Foundation
-  pur, compilé et éprouvé par le banc d'essai du cœur.
-- `SentMailRadar.replyDebts` reçoit les expéditeurs muets, et la courbe de dette
-  de la Vue du jour les applique aussi — sans quoi le graphique contredirait le
-  compteur.
-- Deux vérifications de plus au contrôle du cœur : **133**. L'une d'elles a
-  trouvé un défaut réel pendant l'écriture — l'intitulé de semaine formatait sa
-  date dans le fuseau de la machine et non dans celui du calendrier, ce qui
-  affichait « Semaine du 19 au 25 juillet » pour un paquet commençant le 20.
-- Le journal des décisions distingue enfin les règles d'expéditeur, qui se
-  rangeaient jusqu'ici sous « Projet corrigé ».
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.85.0/Assistant-Mail-0.85.0.dmg" length="8121993" type="application/octet-stream" sparkle:edSignature="ChfyiU4KEA1NFYEGoQ9YiQ0wrVKBQ+3/UP1i5Fa2qa2xPh6/affiw5HYu4cHybarlRCaap+YQPAD8RMN1VYeAQ=="/>
         </item>
     </channel>
 </rss>
