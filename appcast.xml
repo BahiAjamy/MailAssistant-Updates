@@ -6,6 +6,243 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.92.0</title>
+            <pubDate>Mon, 24 Aug 2026 11:03:56 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>151</sparkle:version>
+            <sparkle:shortVersionString>0.92.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Les projets que vos données dessinent déjà
+
+La 0.91.0 a rattaché 94 pièces jointes que vos règles réclamaient sans que
+personne n'essaie. Il en restait **307 qu'aucune règle ne réclame** — et parmi
+elles, des ensembles cohérents : les mêmes correspondants, les mêmes mots, mois
+après mois. Des projets que rien ne déclare.
+
+L'écran Projets les propose maintenant. **Il les propose. Il ne les crée jamais.**
+
+## Ce que le panneau montre
+
+Sous vos projets actifs, une section « Projets possibles ». Chaque grappe porte
+ce qu'il faut pour juger sur pièces plutôt que sur un compte : son effectif en
+documents et en réunions, ses correspondants, **trois objets réels**, et surtout
+les **règles que le formulaire posera** — expéditeurs et mots-clés, montrés avant
+d'être écrits.
+
+« En faire un projet » ouvre le formulaire complet, prérempli et modifiable : le
+nom, les expéditeurs, les mots-clés. Rien n'existe tant que vous n'avez pas
+validé. Un projet créé à tort se voit dans toute la barre latérale et filtre les
+tâches, le courrier et l'analyse — il ne peut pas naître d'un seul clic.
+
+« Plus tard » masque jusqu'au prochain lancement. « Jamais » est conservé, et se
+défait depuis l'en-tête de la section. Le partage est celui du Suivi : « plus
+tard » décrit l'humeur du moment, « jamais » décrit une préférence.
+
+## Le comptage trouve les grappes. Il ne sait pas les trier.
+
+C'est tout le travail de cette version, et chaque règle vient d'un cas observé
+sur votre corpus — aucune n'est une précaution de principe.
+
+**Six villes ne font pas six projets.** « kaolack », « matam », « nioro »,
+« bambey », « diourbel », « mbacke » comptaient dix-sept à dix-huit éléments
+chacune — et tous étaient compris dans les quatre-vingt-seize du terme
+« consentement ». La première version comparait les ensembles par **similarité** :
+elle mesurait 0,19, très loin de tout seuil raisonnable, et sortait six
+propositions identiques. C'est l'**inclusion** qui répond à cette question-là, et
+elle vaut 1,0. Les six villes sont désormais **une** proposition, qui les emporte
+toutes les six comme mots-clés — c'est ce qui permettra à la règle d'attraper les
+prochaines.
+
+**Une ville ne nomme pas la grappe.** Le nom ne retient que les termes qui
+couvrent au moins 60 % de ses éléments. Sans ce filtre, la proposition s'appelait
+« Consentement Retour Kaolack » : deux mots qui décrivent le sujet, un troisième
+qui décrit un sixième d'entre eux.
+
+**Votre prénom n'est pas un projet.** « ibrahima » apparaissait dans vingt-cinq
+objets, chez seize correspondants et cinq domaines. Sans exclusion, la première
+proposition du panneau aurait été vous.
+
+**Un mot générique numéroté reste générique.** `image001.png` est le nom que les
+clients de messagerie donnent aux images incorporées : treize d'entre elles, chez
+six correspondants, formaient une proposition nommée « Image001 ». La racine sans
+ses chiffres interroge la liste d'arrêt.
+
+**Un domaine qui couvre presque tout n'est pas un projet.** `@ared-edu.org`
+portait 294 des 401 pièces sans projet et dix-neuf personnes : c'est l'employeur,
+pas une mission. Et deux correspondants chez `gmail.com` n'ont rien en commun —
+les messageries grand public ne fondent aucune règle d'expéditeur.
+
+## Ce que ça donne chez vous
+
+Six propositions, toutes tirées de vos données réelles :
+
+| Proposition | Éléments | Correspondants |
+|---|---:|---:|
+| Consentement Retour | 103 documents | 2 |
+| Fluency Forward Moving | 13 documents | 1 |
+| Contrat Rising | 8 documents | 4 |
+| Ressources Numériques | 7 documents, 1 réunion | 6 |
+| Ucad | 7 documents | 1 |
+| Daara | 5 documents, 3 réunions | 6 |
+
+La grappe Daara réunit `@betterpurpose.co`, ses séries pédagogiques et ses trois
+réunions récurrentes. Celle d'Ucad se fonde sur le domaine seul, sans mot-clé :
+sept fichiers de vérification de questionnaires, un correspondant.
+
+## L'IA n'intervient pas ici, et c'est mesuré
+
+Le travail à faire n'est pas volumineux — il est **discriminant**. Compter est
+gratuit et local ; ce sont les six règles ci-dessus qui séparent le signal du
+bruit, et elles ne demandent aucun modèle. Le nom proposé est déterministe, tiré
+des mots réels de vos objets, et il est modifiable avant création.
+
+Envoyer les objets et les expéditeurs de trois cents documents à un service
+distant pour obtenir un nom légèrement mieux tourné n'était pas un échange
+raisonnable. **DeepSeek reste ce que le README promet : optionnel, et limité au
+Chat.**
+
+## Ce que cette version ne fait pas
+
+- **Aucun nommage par modèle.** Le nom vient des mots dominants de la grappe.
+  « Contrat Rising » et « Fluency Forward Moving » sont exacts mais secs ; un
+  modèle local pourrait les tourner mieux. C'est un ajout possible, pas un
+  manque : le champ est modifiable et le formulaire s'ouvre dessus.
+- **Le panneau ne regarde ni les tâches ni les e-mails.** Sur ce poste, aucune
+  tâche ouverte n'est sans projet, et les e-mails hors fenêtre n'existent plus.
+  Les pièces jointes et les réunions sont le seul gisement qui survive.
+- **Accepter une proposition ne rattache pas rétroactivement ses éléments.** Le
+  projet est créé avec ses règles ; il faut ensuite « Appliquer les règles » pour
+  que la bibliothèque suive. Deux gestes au lieu d'un, mais aucune surprise.
+- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
+  ment toujours après 18 h, `totalOpenTaskCount` n'a toujours aucun appelant, et
+  l'instantané des widgets s'écrit toujours sans permissions restreintes.
+
+## Sous le capot
+
+- `ProjectSuggestionBuilder`, en Foundation pur, éprouvé par le banc sur les cas
+  réels : les six villes, le prénom, `image001`, le domaine de l'employeur, la
+  messagerie grand public, le seuil, et vos propres envois.
+- La clé d'une grappe est faite de ses **termes**, pas de son contenu : deux
+  fichiers de plus n'en font pas une proposition neuve, et un « Jamais » tient.
+  Le banc le vérifie en ajoutant un élément et en exigeant la même clé.
+- Deux vérifications de plus au contrôle du cœur : **152**. L'une d'elles a
+  trouvé un défaut réel pendant l'écriture — le plafond de mots-clés coupait deux
+  des six villes, si bien que la règle proposée n'aurait pas attrapé les
+  prochains fichiers de Nioro et de Mbacké.
+- La place de la section — sous les projets actifs et non au-dessus — a été
+  décidée en regardant le rendu : six cartes de propositions repoussaient
+  « Projets actifs » de neuf cents points.
+
+
+---
+
+# Cette mise à jour contient aussi la 0.91.0
+
+La 0.91.0 n’a jamais été construite en image d’installation : sa
+fonctionnalité arrive donc avec celle-ci.
+
+
+La barre latérale porte une ligne « Sans projet ». En l'ouvrant, on ne trouve
+rien : sur ce poste, **aucune tâche ouverte** n'est sans projet. Le gisement est
+ailleurs, et il est considérable — **401 pièces jointes sur 605**.
+
+En cherchant pourquoi, un mécanisme est apparu, puis un manque.
+
+## Le mécanisme, d'abord
+
+Le projet d'un document n'est pas décidé sur le document. Il est décidé sur son
+**e-mail**, puis recopié sur la ligne, et rafraîchi à chaque reconstruction de
+l'index — tant que l'e-mail est là.
+
+Or l'index documentaire **survit délibérément à la purge du courrier** : c'est
+sa raison d'être, et c'est ce qui permet de retrouver un fichier reçu il y a six
+mois. Passé soixante jours, le message part, et le rattachement du document se
+fige sur la valeur qu'il avait. Si la règle du projet n'existait pas encore à ce
+moment-là, il se fige sur **« aucun projet », définitivement**.
+
+Mesuré sur l'état réel de ce poste au 21 août 2026 : sur les 401 pièces sans
+projet, **348 avaient perdu leur message**.
+
+## Le manque
+
+Une ligne d'index porte pourtant son correspondant, son objet et son nom de
+fichier. C'est assez pour beaucoup de règles. Personne ne s'en servait.
+
+Sur les 401 : **94 portaient de quoi être rattachées par une règle déjà écrite.**
+
+| Documents | Projet | Par |
+|---:|---|---|
+| 33 | DAWAL-LIRE | mot-clé et expéditeur |
+| 23 | SENSTAT | expéditeur |
+| 21 | NDAW-WUNE VACANCE | mot-clé |
+| 9 | FAME | expéditeur |
+| 8 | NDAW-WUNE ANNEE SCOLAIRE | mot-clé |
+
+Ils le sont désormais, dès le prochain chargement. **401 → 307.** Et
+« Appliquer les règles », dans l'écran Projets, couvre maintenant la
+bibliothèque : ajouter une règle vaut pour ce qui est déjà indexé, plus seulement
+pour le courrier à venir.
+
+## Quatre garde-fous, parce qu'un rattachement de masse se fait vite
+
+- **Une ligne rattachée par son e-mail n'est jamais touchée.** Cette lecture-là
+  voit le corps du message ; elle est plus riche que tout ce qu'on peut faire
+  depuis la ligne. Vérifié sur les données réelles : **aucune des 204 pièces déjà
+  classées ne change de projet.**
+- **Le projet par défaut d'un compte ne s'applique pas ici.** Ce réglage dit
+  « quand je ne sais pas ». L'appliquer à des lignes dont le message a disparu
+  déplacerait des centaines de documents d'un coup, sur la plus faible des
+  preuves.
+- **Une règle retirée libère ce qu'elle avait pris.** Sans quoi supprimer une
+  règle laisserait derrière elle des documents rattachés au nom d'une règle qui
+  n'existe plus.
+- **La passe est idempotente.** Rejouée sur son propre résultat, elle ne change
+  rien — c'est ce qui permet de l'appeler à chaque reconstruction sans avoir à
+  savoir si elle a déjà tourné.
+
+## L'écran dit comment, pas seulement quoi
+
+Un rattachement obtenu depuis la ligne est une **lecture appauvrie** : ni corps
+du message, ni contexte. Présenter les deux comme équivalentes ferait passer une
+déduction pour un constat. Le détail d'un document le dit donc :
+
+> Règle de mot-clé — l'e-mail d'origine n'était plus disponible pour trancher.
+
+`DocumentRecord` porte pour cela une origine, comme les tâches en portent une
+depuis longtemps. Un index enregistré avant cette version se relit sans rien
+perdre : l'absence d'origine s'y lit « rattaché par l'e-mail », ce qui est
+exactement ce qui se passait.
+
+## Ce que cette version ne fait pas
+
+- **Les réunions ne sont pas concernées, et c'est mesuré.** Sur les 11 réunions
+  sans projet, **zéro** serait rattachée par une règle depuis sa propre ligne —
+  et 9 d'entre elles ont encore une source vivante, donc leur projet se
+  recalcule déjà. Livrer le même mécanisme pour elles serait du code à effet nul.
+- **Une règle de mot-clé est plus faible sur un document.** Elle ne voit que
+  l'objet et le nom de fichier. Un fichier nommé `a2f_v3.xlsx` sans rapport avec
+  le projet A2F serait rattaché à tort — d'où l'origine affichée, qui permet de
+  le voir et de le défaire.
+- **Il reste 307 pièces sans projet.** Aucune règle existante ne les réclame.
+  C'est le sujet du lot suivant : proposer des projets à partir de ce qui reste.
+- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
+  ment toujours après 18 h, `totalOpenTaskCount` n'a toujours aucun appelant, et
+  l'instantané des widgets s'écrit toujours sans permissions restreintes.
+
+## Sous le capot
+
+- `ProjectClassifier.classify(documentSenderAddress:subject:fileName:…)` et
+  `DocumentLibrary.applyingProjectRules(to:projects:classify:)`, en Foundation
+  pur : la passe reçoit sa fonction de classement en paramètre, ce qui permet au
+  banc de l'éprouver sans le classifieur réel, et au classifieur d'être éprouvé
+  séparément.
+- Une vérification de plus au contrôle du cœur : **150**. Elle couvre les sept
+  invariants ci-dessus, dont l'idempotence et le périmètre de compte.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.92.0/Assistant-Mail-0.92.0.dmg" length="8383107" type="application/octet-stream" sparkle:edSignature="gt2lBxQZqcAd56VWqt/V3JUGuimhHTJiVqlcYdzFrpajtCVb7ODif2sGPuhazNndrNERCKOvcS30zmiO/zwJCw=="/>
+        </item>
+        <item>
             <title>0.90.0</title>
             <pubDate>Fri, 21 Aug 2026 16:12:26 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -397,312 +634,6 @@ passent.
   `mode.persistsDraft` — éprouvé en réintroduisant la régression.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.89.0/Assistant-Mail-0.89.0.dmg" length="8319612" type="application/octet-stream" sparkle:edSignature="VvSpYmWH9MRhV6QHwmPMRFapNNtylOXYwsy4AwB03XTlYJYNSjAs79fahfzBKkLQWIQ8HJKo/Br2OLkrrBAhDw=="/>
-        </item>
-        <item>
-            <title>0.87.0</title>
-            <pubDate>Fri, 21 Aug 2026 11:35:51 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>146</sparkle:version>
-            <sparkle:shortVersionString>0.87.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# « Je réponds lundi » n'était pas un geste
-
-Le Suivi offrait deux issues à une conversation : y répondre, ou déclarer
-qu'aucune réponse n'était attendue. Rien entre les deux. Une conversation qu'on
-compte traiter mardi devait donc être écartée — c'est-à-dire rangée avec celles
-qui n'appellent rien — ou laissée à peser sur le compteur en attendant.
-
-Les tâches ont leur mise en veille depuis longtemps. Les conversations, non. La
-maquette du Suivi en montrait pourtant une, et les notes de la 0.85.0 disaient
-franchement pourquoi elle manquait : « il demande un état persistant qui n'existe
-pas encore ». Il existe.
-
-## Repousser
-
-Une conversation, ou tout un lot coché, part à **demain matin**, à **lundi
-matin**, ou **dans une semaine**. Elle quitte la liste, le compteur et la courbe
-de la Vue du jour, et revient d'elle-même le jour venu.
-
-**Aucun réveil n'est programmé, et il n'en faut aucun.** La date est relue à
-chaque calcul de la dette : la conversation revient même si l'application est
-restée fermée entre-temps, même si le Mac a redémarré. Il n'y a pas de minuterie
-à rater.
-
-Deux garde-fous qui comptent :
-
-- **Un nouveau message passe devant le rangement.** La clé est celle du dernier
-  message reçu — la même que pour l'écart. Si votre correspondant relance mardi
-  une conversation repoussée à lundi prochain, elle revient mardi. Repousser
-  range, ça ne met pas en sourdine.
-- **Un second report ne rapproche pas l'échéance.** Repousser à demain une
-  conversation déjà repoussée à lundi ne fait rien. Deux gestes successifs ne
-  doivent pas défaire silencieusement le premier.
-
-Le pied de liste compte les reports encore actifs et propose de tout réveiller,
-à côté du « Restaurer » des conversations écartées qui existait déjà.
-
-## Trois libellés qui ne mentent pas
-
-L'application dispose déjà d'un sélecteur d'horizons — celui de la mise en veille
-des tâches. Il n'a pas été réemployé, pour deux raisons.
-
-La première est un **défaut connu et toujours pas corrigé** : passé 18 h,
-`SnoozeOption.laterToday` affiche « Ce soir (18 h) » et pose en réalité demain
-9 h. Le libellé ment une fois par jour, tous les jours. Le corriger toucherait la
-mise en veille des tâches, qui n'est pas le sujet de cette version ; l'importer
-ici aurait propagé un libellé faux dans une surface neuve. **Le défaut reste donc
-entier sur les tâches**, et il est consigné ici pour ne pas être redécouvert.
-
-La seconde est qu'il n'aurait pas eu de sens : « ce soir » n'est pas une échéance
-pour répondre à un courrier.
-
-Les trois horizons du Suivi posent tous 9 h, et le disent. Le banc les confronte à
-la date qu'ils produisent depuis cinq instants différents de la semaine — dont un
-lundi 14 h, un mercredi 23 h 30 et un dimanche soir. Un libellé qui divergerait
-de sa date fait tomber le contrôle.
-
-## Le graphique contredisait déjà le compteur
-
-En branchant les reports sur les quatre lectures de la dette, un défaut plus
-ancien est apparu.
-
-`replyDebts` est un calculé nu : la liste et la tuile tombent toujours juste.
-`debtTrend()`, lui, est mis en cache sur la génération des faits dérivés — et
-**`dismissedDebts` ne bousculait pas cette génération**. `tasks`, `emails`,
-`sentMessages`, `documents` et `meetings` le font tous ; la table des
-conversations écartées avait été oubliée. `acceptDebtSenderRule` invalidait
-explicitement, ce qui explique que le cas ait échappé à la 0.85.0 : la règle
-d'expéditeur était juste, c'est l'écart manuel qui ne l'était pas.
-
-Concrètement : écarter cinquante conversations mettait la tuile à jour et laissait
-la courbe posée juste en dessous affirmer le contraire, jusqu'à la relève
-suivante.
-
-C'est corrigé pour les deux tables. Un garde-fou relit la déclaration des deux
-propriétés dans `AppModel` et refuse la compilation si l'une d'elles perd son
-invalidation — éprouvé en réintroduisant la régression.
-
-## Mesuré sur cet état
-
-Rejoué hors application sur `state.json` au 21 août 2026 :
-
-- la table des reports est **absente de l'état existant** et se lit comme vide,
-  sans migration ni perte ;
-- la dette est aujourd'hui de **5 conversations** — la règle OGAA de la 0.85.0
-  tient : elles étaient 201 ;
-- après report de ces cinq à lundi, **compteur et dernier point de la courbe
-  affichent 0 tous les deux** ;
-- une seconde après l'échéance, **les cinq sont revenues**, sans qu'aucun réveil
-  ait été programmé.
-
-## Ce que cette version ne fait pas
-
-- **Le Suivi n'a toujours pas de raccourcis clavier.** Repousser se fait à la
-  souris, comme écarter. En annoncer une touche qui ne répondrait pas se lirait
-  comme une panne du clavier.
-- **`SnoozeOption.laterToday` reste faux sur les tâches**, comme dit plus haut.
-- **Les reports ne se voient pas depuis la conversation elle-même.** L'onglet
-  E-mails n'indique pas qu'un fil a été repoussé ; seul le Suivi le sait.
-- **La table des conversations écartées n'est toujours pas purgée.**
-  `dismissedDebts` grossit d'une entrée par conversation écartée et n'en perd
-  jamais aucune. Les reports, eux, sont purgés dès leur échéance passée — sans
-  quoi `state.json` aurait accumulé des centaines de dates échues qui ne filtrent
-  plus rien. Le même traitement pour les écarts demanderait de décider quand une
-  conversation écartée cesse de mériter sa ligne, et cette décision n'est pas
-  prise.
-- `totalOpenTaskCount` n'a toujours aucun appelant, et le motif à meridiem de
-  `MeetingScheduleParser` ne reconnaît toujours pas son propre exemple.
-
-## Sous le capot
-
-- `DebtSnoozeHorizon` et les deux fonctions de purge vivent dans `DebtDigest`, en
-  Foundation pur : c'est ce qui permet au banc de les éprouver.
-- `PersistentState.debtSnoozes` suit la convention du dépôt —
-  `decodeIfPresent ?? [:]`, avec le commentaire qui décrit l'état antérieur. Une
-  version plus ancienne de l'application relit le fichier sans broncher : elle
-  ignore la clé, et les conversations repoussées lui réapparaissent, ce qui est
-  le comportement qu'elle connaît.
-- Quatre vérifications de plus au contrôle du cœur : **143**, plus un garde-fou
-  de source. L'une d'elles a trouvé un défaut réel pendant l'écriture — le test
-  employait l'identifiant de message nu là où la clé est « compte-message », ce
-  que le code de production faisait correctement depuis le début.
-
-
----
-
-# Cette mise à jour contient aussi la 0.86.0
-
-La 0.86.0 n’a jamais été construite en image d’installation : ses deux
-fonctionnalités arrivent donc avec celle-ci.
-
-
-L'onglet Réunions existe depuis la 0.65.0. Il range quarante e-mails en seize
-rendez-vous, retrouve un horaire dans un `.ics`, distingue un déplacement d'une
-annulation. Le Chat, lui, ne savait rien de tout cela : « à quelle heure le
-point de demain ? » recevait un « je ne trouve rien là-dessus » parfaitement
-honnête, et parfaitement absurde à deux onglets de la réponse.
-
-Cette version relie les deux, et répare au passage une arithmétique qui se
-trompait depuis longtemps.
-
-## Neuf sources, dont les réunions
-
-Le Chat interroge désormais l'index des réunions comme il interroge déjà les
-tâches, le courrier, les personnes et les documents. « Qu'est-ce que j'ai cette
-semaine », « qui est invité au comité », « le point ARED a-t-il bougé » trouvent
-leur réponse, avec la pastille **Réunions** sous le texte pour dire d'où elle
-vient.
-
-**Une ligne par rendez-vous, pas une par e-mail.** C'est tout l'intérêt de
-passer par l'index : une invitation, un déplacement et trois réponses de
-participants font cinq messages et une seule réunion. Interrogé sur le courrier,
-le Chat en aurait compté cinq.
-
-## Ce qu'une réunion ne dit pas, elle ne l'invente pas
-
-La moitié du courrier d'invitation ne porte pas d'horaire lisible. `start` est
-donc optionnel dans l'index, et il l'est depuis le premier jour.
-
-- Sans horaire connu, la réponse porte **`[HORAIRE À CONFIRMER]`** et **aucune
-  heure**, pas même un jour.
-- Une fin qui n'a pas été lue dans le `.ics` ne devient pas une plage : « jeudi
-  22 août à 10:00 », et non « 10:00 – 11:00 ». Une plage inventée annoncerait une
-  indisponibilité que personne n'a déclarée.
-- Un fuseau que le parseur n'a pas su résoudre est dit : « heure incertaine,
-  fuseau du message non résolu ». C'est le cas le plus traître de tous — une
-  heure fausse se lit exactement comme une heure vraie.
-- Une annulation prime sur tout le reste, y compris sur la date.
-
-Le banc vérifie la première règle par un motif d'expression régulière : si une
-heure apparaît dans la ligne d'une réunion qui n'en a pas, le contrôle tombe.
-
-## La carte « Pour préparer »
-
-Le détail d'une réunion montrait son horaire, son lien, ses participants et sa
-traînée d'e-mails. Il ne montrait pas ce qu'on ouvre juste avant d'y entrer.
-
-Une troisième carte rassemble maintenant **les pièces jointes arrivées dans ses
-fils** et **les tâches ouvertes qui en sont nées**. Un clic ouvre le fichier dans
-la bibliothèque, ou la tâche dans son onglet.
-
-Quelques précisions qui comptent :
-
-- **Plusieurs fils, pas un seul.** L'invitation et le déplacement n'arrivent
-  presque jamais dans le même fil ; la carte les suit tous.
-- **Les `.ics` et les logos de signature restent dehors.** L'invitation est déjà
-  montrée par la carte Détails, à sa place ; les images répétées sont écartées
-  par le même mécanisme que la bibliothèque.
-- **Les tâches terminées, ignorées et en veille restent dehors** : une carte de
-  préparation qui déroulerait ce qui est déjà fait remplirait l'écran de choses
-  dont il n'y a rien à faire.
-- **La carte ne s'affiche pas du tout quand elle n'a rien à dire.** Pas de
-  section vide, pas de « aucun document ». Une réunion sans support n'est pas une
-  anomalie, c'est le cas ordinaire.
-- L'index documentaire survivant à la purge des e-mails, le support d'une
-  réunion d'il y a six mois reste là longtemps après son message. Les tâches, non
-  : une réunion ancienne peut donc rendre des pièces et aucune tâche.
-
-## Ce que ça donne sur votre boîte
-
-Rejoué hors application sur l'état réel de ce poste au 21 août 2026 — 30
-réunions, 605 documents, 322 tâches :
-
-- l'outil du Chat rend **22 réunions** (les prochaines, plus les trente derniers
-  jours), dont **3 sans horaire connu** — et aucune des trois ne porte d'heure ;
-- **73 pièces jointes** vivent dans les fils de ces réunions. **67 sont les
-  `.ics` d'invitation eux-mêmes** et 2 des images. Il reste **4 fichiers de
-  travail** — deux classeurs et deux documents —, répartis sur **3 réunions**.
-  Les 27 autres n'affichent pas la carte du tout ;
-- **aucune tâche ouverte** ne tombe aujourd'hui sur un fil de réunion. Huit
-  tâches en portent un, mais toutes sont terminées ou ignorées : vous les avez
-  déjà traitées. La moitié « tâches » de la carte est donc juste et, pour
-  l'instant, muette.
-
-Ces chiffres disent la valeur réelle de la carte mieux qu'une description : elle
-ne se déclenche pas souvent, et c'est voulu — elle ne parle que quand il y a
-quelque chose à ouvrir avant d'entrer en réunion.
-
-## L'application comptait mal sa propre fenêtre
-
-Le neuvième outil devait être mesuré avant d'être écrit. Il l'a été, et la mesure
-a trouvé autre chose.
-
-Par dichotomie sur la taille du prompt accepté par le modèle embarqué, le 21 août
-2026 :
-
-| Outils déclarés | Prompt accepté |
-|---|---:|
-| aucun | 17 893 caractères |
-| un seul | 17 198 |
-| les huit d'avant | 13 209 |
-| les neuf, description brève | 12 653 |
-
-Une définition d'outil coûte donc **environ 437 caractères de structure avant sa
-description** — le nom, le schéma de ses arguments, l'encadrement. Les huit
-outils existants pesaient **1 115 jetons**, et `ChatBudget` n'en comptait **aucun**.
-
-L'application s'autorisait 2 211 jetons de dialogue là où le modèle, une fois la
-place des extraits et de la réponse retirée, n'en acceptait que ~934. Un écart
-d'environ 466 jetons, invisible sur les conversations courtes, payé en
-« conversation trop longue » sur les longues — c'est-à-dire exactement celles que
-ce calcul dit vouloir protéger.
-
-Les définitions sont désormais comptées. Le banc verrouille le résultat contre le
-plafond mesuré : si l'application venait à s'autoriser plus que ce que le modèle
-accepte, le contrôle tombe.
-
-**Ce que vous allez voir changer.** Le Chat retient moins d'historique
-qu'avant — le budget de dialogue passe de 2 211 à 915 jetons. Et la capacité
-documentaire du moteur **local** suit, puisqu'elle en est la moitié : elle tombe
-de 4 641 à 1 919 caractères. Un document que le modèle local acceptait hier peut
-être refusé aujourd'hui.
-
-Ce refus n'est pas une régression déguisée en correction : il dit que le document
-ne tenait pas, ce qui était déjà vrai hier — il partait simplement amputé, et le
-modèle répondait avec assurance sur les parties absentes. Le message de refus
-nomme DeepSeek, qui accepte 64 000 jetons et reste le moteur des documents.
-
-La description du nouvel outil a été taillée pour cela : une variante de 288
-caractères coûtait 742 caractères de fenêtre, celle qui est livrée en coûte 556.
-Le commentaire qui l'accompagne dit que toute réécriture se remesure.
-
-## Ce que cette version ne fait pas
-
-- **Le Suivi n'a toujours pas de raccourcis clavier**, et il n'y a toujours pas
-  de « repousser d'une semaine » sur une conversation. Rien n'a bougé de ce côté
-  depuis la 0.85.0.
-- **Le Chat ne voit qu'une réunion à la fois pour un document.** L'autorisation
-  documentaire reste attachée à une conversation et à un fichier ; comparer deux
-  versions d'un même contrat n'est toujours pas possible.
-- **La carte « Pour préparer » ne se filtre pas.** Au-delà de six pièces ou six
-  tâches, le reste se compte mais ne se clique pas d'ici : aucune vue ne sait
-  filtrer sur les fils d'une réunion, et un lien qui atterrirait sur la liste
-  entière promettrait plus qu'il ne tient.
-- **La mesure de la fenêtre n'est pas rejouée par le banc.** Elle demande le
-  modèle Apple, que `check-core.sh` ne peut pas exiger. Le banc verrouille le
-  chiffre mesuré, pas la mesure : changer une description d'outil oblige à
-  remesurer à la main.
-- `totalOpenTaskCount` n'a toujours aucun appelant, et le motif à meridiem de
-  `MeetingScheduleParser` ne reconnaît toujours pas son propre exemple. Les deux
-  restent consignés au §7 de la vérification du diagnostic.
-
-## Sous le capot
-
-- `MeetingDigest` : la phrase rendue au Chat et les deux jointures du dossier, en
-  Foundation pur, compilées et éprouvées par le banc d'essai du cœur. Même motif
-  que `DebtDigest` — une décision enfouie dans `AppModel` ou dans une vue SwiftUI
-  n'est pas vérifiable.
-- Six vérifications de plus au contrôle du cœur : **139**. Deux d'entre elles ont
-  trouvé un défaut réel pendant l'écriture — un gabarit de 2 000 caractères
-  recopié en dur à côté d'un budget qui venait de changer, et une assertion sur
-  un en-tête d'outil qui ignorait que celui-ci change de forme selon qu'une
-  recherche a eu lieu ou non. Le premier a été rendu dérivé de sa source.
-- La carte est posée **sous** les deux cartes existantes et non à côté :
-  `detailCards` bascule à 620 pt, et y glisser une troisième colonne rejouerait
-  l'écrasement de colonne que le banc verrouille depuis la 0.72.0.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.87.0/Assistant-Mail-0.87.0.dmg" length="8191908" type="application/octet-stream" sparkle:edSignature="tjMpT2lx3ktVHa6QHKqoCYcFLzypzcTS9GCipQs9PTEvLpWW7gMdVQQf2jpUId4m7blwrQEIKoQEGRk/Pye/Bw=="/>
         </item>
     </channel>
 </rss>
