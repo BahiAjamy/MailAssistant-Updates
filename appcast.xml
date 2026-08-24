@@ -6,6 +6,130 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.93.0</title>
+            <pubDate>Mon, 24 Aug 2026 11:57:28 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>152</sparkle:version>
+            <sparkle:shortVersionString>0.93.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# « Ce n'est pas un projet, c'est un morceau de DAWAL-LIRE »
+
+La 0.92.0 proposait six projets possibles. En les regardant, vous avez fait
+l'observation que le programme n'avait pas su faire : *« Fluency Forward Moving
+est un élément du projet Dawal-Lire »*.
+
+La mesure vous a donné raison, et plus largement que sur cette seule grappe.
+
+## Ce que le panneau ne savait pas dire
+
+Une grappe peut être deux choses très différentes, et la 0.92.0 les confondait :
+
+- **un projet que vous n'avez pas déclaré** — il faut le créer ;
+- **un morceau d'un projet existant que ses règles ne couvrent pas encore** — il
+  faut compléter la règle.
+
+Sur votre corpus, la seconde était le cas majoritaire. La preuve tient en deux
+lignes : DAWAL-LIRE porte le mot-clé **« acceleration a la fluidité »**, en
+français. Les objets réels de la grappe disent **« Acceleration to Fluency
+contract »**, en anglais. Même programme, autre langue — et une règle qui passe à
+côté.
+
+## Le passé des correspondants, et rien d'autre
+
+Le signal n'est pas dans les mots, il est dans les gens. Si ceux qui envoient ces
+pièces classent déjà l'essentiel de leur courrier dans un projet, la grappe est
+très probablement le même sujet sous un vocabulaire que les règles n'attrapent
+pas.
+
+`sellendiaye@ared-edu.org` a 62 pièces déjà classées, dont **49 dans
+DAWAL-LIRE** : 79 %.
+
+Le panneau l'écrit maintenant sur la carte, et son bouton principal devient
+**« Ajouter à DAWAL-LIRE »**. Créer un projet neuf reste possible, mais cesse
+d'être ce qui est proposé.
+
+**Les mots-clés seulement, jamais les expéditeurs.** Une règle d'expéditeur prend
+tout ce que la personne envoie : ajouter `sylvie.manga@ared-edu.org` à NDAW-WUNE
+VACANCE lui donnerait aussi les treize pièces qu'elle envoie pour NDAW-WUNE
+ANNEE SCOLAIRE. Le mot-clé ne prend que ce qui porte le mot. C'est exactement ce
+qui manquait, et rien de plus.
+
+Les règles s'appliquent aussitôt à la bibliothèque : le geste est complet, il n'y
+a pas de second clic.
+
+## Le premier calcul était faux, et la mesure l'a dit
+
+Écrit une première fois, le verdict tombait sur **cinq propositions sur six** —
+« morceau de DAWAL-LIRE » y compris pour des grappes dont aucun correspondant
+principal n'avait jamais rien classé là.
+
+La cause : l'affinité prenait **tous** les correspondants d'une grappe. Or une
+grappe qui contient une réunion hérite de **tous ses invités**, et il suffit
+qu'un seul d'entre eux soit un gros contributeur d'un projet pour emporter le
+verdict de la grappe entière.
+
+Ne comptent désormais que les correspondants qui **caractérisent** la grappe :
+présents dans au moins un quart de ses éléments, et au moins deux fois. La
+différence entre quelqu'un qui la porte et quelqu'un qui la traverse.
+
+Trois seuils, tous affichés dans le code avec le cas qui les a fixés : au moins
+cinq pièces déjà classées (« Contrat Rising » n'en avait que deux), un projet
+dominant à deux tiers (une répartition 10/9 ne désigne personne), et la présence
+ci-dessus.
+
+## Ce que ça donne chez vous
+
+| Proposition | Verdict |
+|---|---|
+| Consentement Retour — 103 éléments | morceau de **NDAW-WUNE VACANCE** (21/29, 72 %) |
+| Fluency Forward Moving — 13 | morceau de **DAWAL-LIRE** (49/62, 79 %) |
+| Daara — 8 | morceau de **DAWAL-LIRE** (6/9, 67 %) |
+| Contrat Rising — 8 | projet neuf |
+| Ressources Numériques — 8 | projet neuf |
+| Ucad — 7 | projet neuf |
+
+Trois morceaux, trois projets neufs. La 0.92.0 en proposait six à créer.
+
+## « Plus tard » se comporte enfin comme « Jamais »
+
+Le panneau plafonne à six cartes. Le refus était appliqué **avant** ce plafond —
+écarter une proposition révélait donc la suivante. Le « Plus tard », lui, était
+appliqué **après** : il vidait une ligne sans rien montrer de plus.
+
+Ce n'était pas un arbitrage, c'était une conséquence de l'ordre des filtres, et
+rien à l'écran ne le disait. Les deux passent maintenant par le même paramètre,
+avant le plafond. Écarter une carte libère sa place, quelle que soit la façon de
+l'écarter.
+
+## Ce que cette version ne fait pas
+
+- **Le rattachement ne déplace pas les pièces déjà classées ailleurs.** Ajouter
+  un mot-clé à un projet fait entrer ce qui n'avait pas de projet ; ce qui en
+  avait déjà un le garde, conformément à la règle qui veut qu'un rattachement
+  obtenu par l'e-mail ne soit jamais réécrit.
+- **L'affinité ne regarde que la bibliothèque documentaire.** C'est le seul
+  gisement qui survive à la purge du courrier, donc le seul à porter assez
+  d'histoire — mais une personne qui n'envoie jamais de pièce jointe reste
+  invisible pour ce calcul.
+- **Aucun nommage par modèle**, comme en 0.92.0. Le nom vient des mots dominants
+  et reste modifiable.
+- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
+  ment toujours après 18 h, `totalOpenTaskCount` n'a toujours aucun appelant, et
+  l'instantané des widgets s'écrit toujours sans permissions restreintes.
+
+## Sous le capot
+
+- `LikelyProject` porte ses deux chiffres bruts — pièces dans ce projet, pièces
+  classées en tout — plutôt qu'un pourcentage seul : l'écran affiche « 49 de
+  leurs 62 pièces », et le lecteur juge de la force du signal.
+- Une vérification de plus au contrôle du cœur : **153**. Elle couvre les six
+  cas, dont celui de l'invité de réunion qui emportait le verdict — la
+  régression que la mesure a trouvée avant la livraison.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.93.0/Assistant-Mail-0.93.0.dmg" length="8400293" type="application/octet-stream" sparkle:edSignature="WXuEa+IuCWeIROG6V4jceyuoZALvjR7ZrF2M4J+6Y3OTc+PbRLl2r2CoJvbTU1vEAHOBxD8AY2DACifRkA88Bw=="/>
+        </item>
+        <item>
             <title>0.92.0</title>
             <pubDate>Mon, 24 Aug 2026 11:03:56 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -351,289 +475,6 @@ rien à relire.
   et la distinction entre marqueur et séparateur.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.90.0/Assistant-Mail-0.90.0.dmg" length="8319730" type="application/octet-stream" sparkle:edSignature="cQUhbIE+ghGE0XEAdaYzQUb+zv8f86Gca+1aQrRl3TKvXFy4jb+p5h7zafmzOJL4srXkAjIZzu424NP8PGjcCQ=="/>
-        </item>
-        <item>
-            <title>0.89.0</title>
-            <pubDate>Fri, 21 Aug 2026 12:50:53 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>148</sparkle:version>
-            <sparkle:shortVersionString>0.89.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# La semaine revient, sans le chiffre qu'elle inventait
-
-Un onglet « Capacité » a existé, puis a été retiré en 0.25.3 après deux
-réparations. Le commit ne disait qu'une chose : « onglet Capacité instable ». Le
-panneau, lui, est resté dans le dépôt — compilé à chaque construction, éprouvé
-par le banc du cœur, et accessible depuis nulle part. Trois cents lignes de code
-mort, entretenues au fil des refontes visuelles.
-
-Il revient sous le nom de **Semaine**, et il a perdu en route ce qu'il ne pouvait
-pas prouver.
-
-## Ce qu'il n'affiche plus
-
-L'ancien panneau annonçait « Tenable », « Serré », « Intenable », et un « besoin
-estimé » en heures pour chaque journée.
-
-Ce besoin était le nombre d'échéances **multiplié par trente minutes**. Autrement
-dit : un comptage de lignes réaffiché dans une unité de temps. Le panneau
-l'admettait en pied de page — « c'est une hypothèse, pas une mesure » — mais
-l'admettre ne le rendait pas vrai, et le mot « intenable » posé au-dessus tenait
-lieu de verdict.
-
-Deux façons de rendre ce verdict honnête. La première était d'ajouter une durée
-sur chaque tâche. Elle a été écartée : sur les 322 tâches de ce poste, aucune
-n'en aurait eu le premier jour, et le panneau aurait alors mélangé du mesuré et
-du supposé **sans que le lecteur puisse distinguer les deux** — plus trompeur
-qu'une hypothèse uniforme et assumée.
-
-La seconde, retenue : **cesser de convertir les tâches en minutes**. Restent deux
-faits exacts, chacun dans son unité propre.
-
-- **Les minutes que des réunions connues occupent.** Mesurées, pas estimées.
-- **Le nombre d'échéances qui tombent ce jour-là.** Un compte, et il reste un
-  compte.
-
-Une journée est signalée quand elle porte **3 échéances ou plus ET** qu'il lui
-reste **moins de 2 h**. C'est un seuil choisi, pas une mesure, et il est écrit à
-l'écran sous le tableau.
-
-## Trois choses que le panneau refuse de supposer
-
-- **Une réunion sans fin explicite ne donne aucune minute.** Sa durée est
-  inconnue, pas nulle. Elle est comptée à part — « 2 sans durée » — plutôt que
-  convertie en une heure par défaut. Même règle que la phrase rendue au Chat en
-  0.86.0.
-- **Deux réunions qui se chevauchent ne comptent qu'une fois.** Une invitation et
-  son déplacement, ou deux convocations au même créneau, donnaient deux heures
-  occupées sur une heure réelle — et le temps libre en devenait faux. Les
-  intervalles sont fusionnés avant d'être comptés.
-- **Le week-end n'est pas « une journée sans temps libre ».** Il n'a pas d'heures
-  ouvrées du tout. Sans cette distinction, tous les samedis portant une échéance
-  auraient été annoncés « journée chargée », et le signal n'aurait plus rien dit.
-
-## Le panneau nomme sa source
-
-« 4 h de réunions » n'a pas le même sens selon qu'on a lu tout l'agenda ou
-seulement le courrier. Sans autorisation d'accès à Calendrier, le panneau ne
-connaît que les rendez-vous repérés dans vos e-mails — et il l'écrit, au lieu de
-laisser croire à une journée vide là où il n'a simplement rien vu. Le bouton
-*Lire l'agenda* demande l'accès ; une fois accordé, les deux sources sont
-fusionnées, et un rendez-vous présent des deux côtés ne compte qu'une fois.
-
-**L'agenda n'est jamais lu depuis un rendu.** C'est l'autre moitié de la panne de
-la 0.25.3 : la lecture d'EventKit est synchrone, et la faire à chaque passe de
-mise en page suffisait à rendre l'onglet imprévisible.
-
-## La page blanche, attrapée une seconde fois
-
-`check-core.sh` portait depuis la 0.25.3 un garde-fou qui interdisait de
-réexposer ce panneau « tant que ce composant ne serait pas réintroduit avec un
-test de fenêtre complet ».
-
-Ce test était réputé impossible sur cette machine. Il ne l'est pas : la batterie
-d'instantanés produit bien ses 33 PNG depuis le terminal. **Et elle a servi.**
-
-Au premier rendu, l'onglet est sorti **entièrement vide** — en-tête, colonnes et
-légende compris —, c'est-à-dire exactement l'apparence de la panne de la 0.25.3.
-La cause : un `ScrollView` nu ne rend rien sous `ImageRenderer`. Les quinze
-autres écrans de l'application emploient `SnapshotAwareScrollView` pour cette
-raison précise ; celui-ci l'avait oublié. Sans le rendu, le défaut serait parti
-en production.
-
-Le rendu a aussi corrigé deux choses qu'une relecture ne montre pas : un vide de
-trois colonnes à droite du tableau, et un rail gris qui, sur cinq journées sans
-réunion, pesait plus lourd à l'œil que les données elles-mêmes.
-
-L'interdiction est donc remplacée par **ce qu'elle protégeait**, sous forme
-vérifiable : aucun `GeometryReader` ni grille flexible dans le panneau, un
-`SnapshotAwareScrollView` obligatoire dans son hôte, et l'onglet obligatoirement
-présent dans l'énumération pour que la galerie continue de le rendre. Les trois
-branches ont été éprouvées en réintroduisant chaque régression — et les deux
-premières versions du garde-fou étaient fausses : l'une refusait le commentaire
-qui la justifiait, l'autre se satisfaisait du sien.
-
-## Ce que cette version ne fait pas
-
-- **Aucune durée n'est saisissable sur une tâche.** C'est le choix décrit
-  plus haut, pas un oubli. Le jour où les tâches porteront une durée réelle, le
-  panneau pourra dire autre chose ; d'ici là il ne dira pas plus qu'il ne sait.
-- **La journée de travail théorique reste 7 h, non réglable.** Elle ne sert qu'à
-  situer les réunions dans la journée, jamais à estimer une tâche — mais elle
-  reste une convention.
-- **Le seuil de signalement n'est pas réglable non plus.** 3 échéances et 2 h
-  sont écrits en dur, et affichés.
-- **Le panneau ne montre pas quelles tâches tombent quel jour.** Il compte ; la
-  liste est dans l'onglet Tâches, groupée par échéance.
-- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
-  ment toujours après 18 h, `totalOpenTaskCount` n'a toujours aucun appelant, et
-  le motif à meridiem de `MeetingScheduleParser` ne reconnaît toujours pas son
-  propre exemple.
-
-## Mesuré sur cet état
-
-Rendu de la galerie au 21 août 2026, sur les données réelles de ce poste :
-vendredi 21 porte 2 échéances et rien de posé, samedi 22 en porte 1 et le panneau
-écrit « hors semaine », mardi 25 affiche **1 h 15 pris** — la session Zoom de
-14:00 à 15:15, dont l'horaire vient du `.ics`. Aucune journée de la semaine ne
-franchit le seuil de signalement.
-
-## Sous le capot
-
-- `CapacityPlanner` ne connaît plus de `minutesPerTask`. `DayCapacity` et
-  `CapacityVerdict` — dont les cas s'appelaient `comfortable`, `tight` et
-  `overloaded` — sont remplacés par `DayLoad` et `DayLoadSignal`.
-- Deux vérifications du cœur au lieu d'une sur ce moteur : **148** au total. L'une
-  d'elles interdit à toute étiquette de contenir « tenable » ou « serré » — le
-  vocabulaire du jugement ne doit pas revenir par la petite porte.
-
-
----
-
-# Cette mise à jour contient aussi la 0.88.0
-
-La 0.88.0 n’a jamais été construite en image d’installation : ses deux
-fonctionnalités arrivent donc avec celle-ci.
-
-
-La bibliothèque de documents promet qu'un fichier reste retrouvable longtemps
-après que son e-mail a quitté l'application. Elle tenait la promesse à moitié :
-on le retrouvait, on l'ouvrait, on l'apercevait — et pour le renvoyer à
-quelqu'un, il fallait l'enregistrer dans Téléchargements, ouvrir un message
-neuf, puis aller le rechercher dans le panneau d'ouverture du Finder. Trois
-gestes pour un fichier que l'application avait déjà sous la main.
-
-Et il n'y avait pas de transfert du tout.
-
-## Transférer
-
-Un quatrième geste rejoint répondre, relancer et écrire. « Transférer » est dans
-le détail d'un e-mail et dans son menu contextuel.
-
-Trois décisions qui le séparent d'une réponse :
-
-- **Aucun destinataire n'est prérempli.** Reprendre l'expéditeur d'origine
-  renverrait le message à celui qui l'a écrit — une erreur silencieuse au clic,
-  parfaitement visible en face.
-- **Le transfert ne se coud pas au fil d'origine.** Poser `In-Reply-To` sur un
-  transfert placerait le message dans un fil que le destinataire n'a jamais vu :
-  son client afficherait une réponse à un message absent. Conséquence assumée :
-  votre transfert n'apparaît pas dans le fil d'origine de votre propre boîte.
-  C'est le prix d'un message qui arrive lisible en face.
-- **Le transfert n'est pas conservé.** Un e-mail ne porte qu'un emplacement de
-  brouillon, celui de sa réponse. Le partager aurait produit deux pannes qui ne
-  se rattrapent pas : un transfert qui charge le texte destiné à votre
-  correspondant et le porte à un tiers, ou un transfert qui écrase une réponse
-  en cours. L'écran annonce donc, dans son en-tête, que fermer la fenêtre
-  abandonne le message — plutôt que de laisser croire à un brouillon puis
-  laisser découvrir sa disparition.
-
-L'objet devient « Fwd: … », une seule fois : « Fwd: », « Fw: » et la forme
-française « Tr: » sont reconnues, sans quoi trois transferts successifs
-produiraient « Fwd: Tr: Fwd: … » avant d'être informatifs.
-
-## Joindre ce qu'on a déjà reçu
-
-Deux entrées, selon d'où l'on part :
-
-- depuis le composeur, le trombone propose **« Depuis ce Mac… »** et
-  **« Depuis la bibliothèque… »** ;
-- depuis la bibliothèque, chaque fichier propose **« Envoyer… »**, qui ouvre un
-  message neuf avec la pièce déjà jointe.
-
-Les `.ics` et les images de signature restent dehors, comme partout ailleurs.
-
-## Le plafond se dit avant le clic, pas après
-
-Gmail plafonne l'envoi à 3,5 Mo — une contrainte de son point d'entrée, pas un
-choix de l'application. Le bouton d'envoi refusait déjà au-delà, en le nommant.
-C'était trop tard : on avait choisi le fichier et attendu son téléchargement pour
-découvrir au dernier moment qu'il fallait tout défaire.
-
-La feuille de choix le dit maintenant **sur la ligne**. Un fichier trop lourd est
-grisé, et la raison est écrite à côté de son nom :
-
-> `Rapport annuel.pdf` — 4,2 Mo — au-delà de la limite d’envoi de 3,5 Mo.
->
-> `Annexe 3.xlsx` — 1,1 Mo — il ne reste que 400 Ko sur ce message.
-
-Le calcul tient compte de ce qui est **déjà coché** : cocher deux fichiers de
-2 Mo refuse le second sur sa ligne, au lieu de les accepter tous les deux pour
-les refuser ensemble à l'envoi. Une taille inconnue est refusée plutôt que
-supposée — laisser passer reviendrait à parier, et le pari se règle à l'envoi.
-
-Et le récapitulatif de confirmation, dernier écran avant la seule action
-irréversible de l'application, nomme les pièces **et les pèse**.
-
-## Mesuré sur cette bibliothèque
-
-Rejoué hors application sur `state.json` au 21 août 2026 :
-
-- **605 pièces jointes** indexées, dont **470 de travail** une fois les `.ics` et
-  les images de signature écartés ;
-- **441 sont joignables d'emblée**, **29 sont refusées avant le clic** parce
-  qu'elles dépassent 3,5 Mo à elles seules — la plus lourde pèse 7,6 Mo — et
-  **aucune** n'a de taille inconnue ;
-- sur un message portant **déjà 3 Mo**, il en reste **385** de joignables ; les
-  56 autres se grisent avec la place restante écrite à côté de leur nom.
-
-Sur les objets réels de la boîte, « Fwd: » ne s'ajoute qu'une fois : un message
-déjà transféré garde son objet, un « Re: … » devient « Fwd: Re: … » — la forme
-qu'emploie Gmail lui-même, et qui dit exactement ce qui s'est passé.
-
-## Une pièce jointe ne peut plus disparaître entre-temps
-
-C'est le point le moins visible et le plus important.
-
-Un brouillon ne garde de ses pièces jointes qu'un chemin ; le contenu est relu
-une seule fois, à l'envoi. Bon pour un fichier pris sur le disque, qui appartient
-à l'utilisateur. Sans valeur pour un fichier venu de la bibliothèque : ces
-octets-là ne vivent que dans le cache d'aperçu, **plafonné à 300 Mo et qui
-s'évince tout seul du moins récemment consulté**. Ouvrir quelques gros documents
-entre le moment où l'on joint et celui où l'on envoie aurait suffi à faire
-disparaître la pièce — et l'envoi aurait échoué en accusant l'utilisateur d'avoir
-déplacé un fichier auquel il n'a jamais touché.
-
-Les octets sont donc recopiés dans un dossier propre au composeur, hors de toute
-politique d'éviction, avec les mêmes permissions `0600` que `state.json` et le
-coffre à jetons. Ils n'en repartent que lorsque plus aucun brouillon ne les
-réclame : au retrait de la pièce, et au chargement pour ceux dont l'e-mail
-porteur est sorti de la fenêtre de soixante jours entre-temps.
-
-Rien n'échoue en silence : un document qui ne peut être ni descendu ni écrit ne
-rejoint pas le brouillon et **se nomme** dans le message d'erreur ; les autres
-passent.
-
-## Ce que cette version ne fait pas
-
-- **Un transfert n'emporte pas encore les pièces jointes du message d'origine.**
-  Il cite le texte ; les fichiers se rejoignent par « Depuis la bibliothèque… »,
-  en deux clics de plus. Les emporter d'office ferait partir des mégaoctets que
-  personne n'a demandés, et se heurterait au plafond de 3,5 Mo sans que rien ne
-  l'ait annoncé.
-- **Le plafond reste 3,5 Mo.** Au-delà, Gmail impose son point d'entrée de
-  téléversement, qui est un autre chantier.
-- **Le Suivi n'a toujours pas de raccourcis clavier**, et `SnoozeOption.laterToday`
-  ment toujours après 18 h sur la mise en veille des tâches.
-- `totalOpenTaskCount` n'a toujours aucun appelant, et le motif à meridiem de
-  `MeetingScheduleParser` ne reconnaît toujours pas son propre exemple.
-
-## Sous le capot
-
-- `ComposerAttachmentStore` et `ComposerAttachmentAdmission` vivent en
-  Foundation pur : la règle d'admission qui grise une ligne est exactement celle
-  que le banc éprouve, et c'est la seule façon de garantir que la ligne grisée et
-  le bouton d'envoi disent la même chose.
-- Le nom de fichier sur disque est construit à partir d'un identifiant, puis du
-  nom d'origine — qui est une donnée écrite par un tiers. Le banc vérifie qu'une
-  barre oblique ou un deux-points ne peut pas en faire sortir un fichier de son
-  dossier.
-- Quatre vérifications de plus au contrôle du cœur : **147**, plus un garde-fou
-  de source qui refuse la compilation si le composeur cesse de consulter
-  `mode.persistsDraft` — éprouvé en réintroduisant la régression.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.89.0/Assistant-Mail-0.89.0.dmg" length="8319612" type="application/octet-stream" sparkle:edSignature="VvSpYmWH9MRhV6QHwmPMRFapNNtylOXYwsy4AwB03XTlYJYNSjAs79fahfzBKkLQWIQ8HJKo/Br2OLkrrBAhDw=="/>
         </item>
     </channel>
 </rss>
