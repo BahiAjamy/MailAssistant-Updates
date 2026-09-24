@@ -6,6 +6,40 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.97.1</title>
+            <pubDate>Thu, 24 Sep 2026 20:43:42 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>157</sparkle:version>
+            <sparkle:shortVersionString>0.97.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Les actions des autres arrivent vraiment chez les autres
+
+Version corrective. Codex a relu les versions 0.94.0 à 0.97.0 et a trouvé trois défauts dans le
+routage des actions confiées à d'autres personnes.
+
+- **Des actions d'autrui n'arrivaient jamais dans « Tâches des autres ».** L'analyse ne
+  considérait comme « action requise » qu'une demande qui vous était adressée. Une consigne donnée
+  à un collègue était donc classée « information » avant d'avoir pu être proposée. L'analyse
+  reconnaît maintenant une demande concrète faite à une autre personne nommée, et la dirige vers
+  Tâches des autres, jamais vers Mes tâches.
+- **Une proposition exige que la phrase citée nomme le responsable.** Il ne suffit plus que ce
+  nom apparaisse ailleurs dans le message.
+- **Les listes mixtes ne perdent plus de points.** Quand l'action principale revenait à une autre
+  personne, les puces du message étaient ignorées, y compris celles qui vous nommaient. Elles sont
+  maintenant réparties :
+  - les points qui vous nomment vont en validation dans Mes tâches ;
+  - ceux d'autrui sont proposés dans Tâches des autres ;
+  - les points sans nom suivent le responsable principal, seulement si celui-ci est établi.
+
+Limite connue : l'analyse ne tire encore qu'une demande principale par e-mail. Deux demandes
+écrites dans un même paragraphe, sans liste, peuvent être confondues.
+
+Banc du cœur : 182 vérifications.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.1/Assistant-Mail-0.97.1.dmg" length="8684612" type="application/octet-stream" sparkle:edSignature="x7GJkTwYcnjhSe+k24sheljlcWmKUquad/gClDDO9+N3K9so2HS+Wusi8ThtXyRCaifmJRT5R4uWbPTrRLkEDw=="/>
+        </item>
+        <item>
             <title>0.97.0</title>
             <pubDate>Thu, 24 Sep 2026 20:02:42 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -150,98 +184,6 @@ l'instant. Éprouvée sur toutes les lignes de vos messages, la détection a dé
 Banc du cœur : 161 → 169 vérifications.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.96.0/Assistant-Mail-0.96.0.dmg" length="8451912" type="application/octet-stream" sparkle:edSignature="L8cg50qsgoUfe1vwINOyzdXPn5048klrrYbIBeMA1NNr35TcvUI6EZrgXJZ8RGCD6wD3TtBfCfz2BSoOApgTBw=="/>
-        </item>
-        <item>
-            <title>0.95.0</title>
-            <pubDate>Thu, 24 Sep 2026 16:46:42 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>154</sparkle:version>
-            <sparkle:shortVersionString>0.95.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Recevoir un e-mail ne veut pas dire que la tâche vous revient
-
-Deuxième lot issu des diagnostics du 24 septembre. Le premier a vérifié les **dates**. Celui-ci
-vérifie **la personne** : quand un e-mail contient une demande, à qui revient-elle ?
-
-## Ce qui se passait
-
-L'analyse ne voyait que l'adresse du compte qui recevait le message. Elle ne savait pas si vous
-étiez en « À » ou en « Cc », ni à qui d'autre le message était adressé. Les consignes lui disaient
-pourtant de ne jamais créer d'action pour un message reçu en copie. Or, sur vos données, 17 des 113
-e-mails reçus en copie portaient bien une demande qui vous était adressée.
-
-Elle lisait aussi le message en entier, historique cité compris. Une ancienne demande citée sous
-une nouvelle réponse pouvait donc redevenir une tâche.
-
-## Ce qui change
-
-1. **L'analyse voit les destinataires.** Elle reçoit « À » et « Cc », votre nom et votre place dans
-   le message : seul destinataire, l'un des destinataires, en copie, ou absent (liste de diffusion,
-   copie cachée).
-2. **Le texte nouveau est lu à part.** L'historique cité n'est plus qu'un contexte. Une demande qui
-   ne figure que là n'est pas nouvelle, sauf si le nouveau message la transfère pour action.
-3. **La copie n'exclut plus rien d'office.** C'est la phrase qui formule la demande qui dit à qui
-   elle revient. L'analyse doit la recopier mot pour mot et préciser si elle vous désigne, s'adresse
-   à tous les destinataires, concerne toute l'équipe ou confie l'action à quelqu'un d'autre.
-4. **Aucune tâche n'est activée sans preuve.** Même avec une confiance élevée, une tâche ne devient
-   active d'elle-même que si :
-   - la phrase recopiée figure bien dans le texte nouveau ;
-   - et elle vous vise, par votre nom ou parce que vous êtes destinataire direct.
-
-   Si vous êtes en copie, ou si le message vous est arrivé par une liste, il faut que le message
-   vous **nomme**.
-
-   Dans tous les autres cas, la tâche part en **validation**, avec son motif :
-   - « Demande collective : à vous de dire si vous la prenez » ;
-   - « Action confiée à Awa : reclassez-la dans Tâches des autres si vous la suivez » ;
-   - « Attribution incertaine : vous êtes en copie et le message ne vous nomme pas »…
-
-   Rien n'est perdu, mais rien ne vous est imposé.
-
-## Mesuré sur vos e-mails, sans rien créer
-
-La nouvelle analyse a été rejouée sur 60 e-mails que l'ancienne avait classés « action requise ».
-L'échantillon comprenait les 17 reçus en copie, les 2 reçus par une liste et les plus récents
-reçus en « À ».
-
-| Votre place | Activable | En validation | Plus d'action |
-|---|---:|---:|---:|
-| Seul en « À » (35) | 27 | 3, toutes confiées à une personne nommée | 5 |
-| Plusieurs en « À » (6) | 0 | 1 | 5 |
-| En copie (17) | 0 | 8 | 9 |
-| Absent (2) | 0 | 1 | 1 |
-
-Les messages qui ne portent plus d'action sont des annonces (un webinaire), des documents envoyés
-« à regarder ensemble pendant la réunion », des « n'hésitez pas à revenir vers moi », ou des
-demandes qui ne figuraient que dans l'historique cité.
-
-Une première version de la règle laissait encore passer deux messages reçus en copie ou par une
-liste : le modèle y voyait une demande qui vous désignait, par exemple « Nous avons besoin de
-savoir le nombre de classes… », alors que le message ne vous nommait pas. La règle a été durcie
-avant la publication.
-
-## Finitions d'interface
-
-- **Analyse** : les sept vues sont rangées en deux groupes, *Planifier* et *Comprendre*. Chaque
-  onglet a la largeur de son libellé, et les deux groupes s'empilent quand la fenêtre est étroite.
-  Le premier onglet ne se lit plus « er ».
-- **Tâches des autres** : l'écran reprend la présentation des Réunions. Un état vide indique
-  comment ajouter un suivi, et les segments portent leurs compteurs.
-- **Brief hebdomadaire** : trois lignes au lieu de deux, texte complet au survol. Le texte ne répète
-  plus les compteurs affichés juste en dessous.
-- « Jeudi 24 Septembre » s'écrit maintenant « Jeudi 24 septembre ».
-
-## Ce qui reste à faire
-
-- Un fil qui a déjà une tâche, même terminée, n'en reçoit toujours pas de nouvelle. Les doublons
-  seront repérés demande par demande dans un prochain lot.
-- Une action confiée à un autre part en validation dans Mes tâches. Elle n'arrive pas encore
-  directement dans Tâches des autres.
-
-Banc du cœur : 160 → 161 vérifications.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.95.0/Assistant-Mail-0.95.0.dmg" length="8353429" type="application/octet-stream" sparkle:edSignature="cayTJLtK+pmZ5UekWczf63vZHdJcw6kkmtORB+zp3TQEdy8VW7DaqYDBDUwHwGcADRvvLAeEK8bzGakbSlQeDA=="/>
         </item>
     </channel>
 </rss>
