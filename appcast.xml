@@ -6,6 +6,77 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.96.0</title>
+            <pubDate>Thu, 24 Sep 2026 17:53:50 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>155</sparkle:version>
+            <sparkle:shortVersionString>0.96.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Vos tâches d'un côté, celles des autres de l'autre
+
+Suite du diagnostic d'attribution du 24 septembre. La 0.95.0 vérifiait à qui revient une
+demande. La 0.96.0 range chaque demande à sa place et laisse entrer les nouvelles demandes dans
+les conversations déjà suivies.
+
+## Une action confiée à quelqu'un d'autre arrive dans « Tâches des autres »
+
+Quand l'analyse repère qu'une **personne nommée** doit agir (« Awa prépare le budget pour
+vendredi »), l'application ne crée plus de tâche dans Mes tâches. L'action arrive dans
+**Tâches des autres**, en tête de « À suivre », dans une section *Repérées par l'analyse — à
+trancher*. Chaque proposition a deux boutons :
+
+- **Suivre** : le suivi commence, et l'application guette la réponse du responsable dans le fil ;
+- **Ignorer** : la proposition disparaît. Le geste peut être annulé depuis le bandeau et ne compte
+  jamais comme un refus de l'expéditeur.
+
+L'adresse du responsable est retrouvée par son nom parmi l'expéditeur et les destinataires. Si
+deux personnes peuvent correspondre, l'adresse reste vide plutôt que d'être devinée ; vous pouvez
+la compléter avec « Modifier… ». Si le responsable n'est pas nommé, la demande reste une tâche à
+valider, comme avant.
+
+Mesuré sur vos e-mails : sur 214 messages « action requise », 14 deviendraient des propositions.
+9 d'entre elles venaient des notifications répétées d'une même plateforme, pour la même activité.
+Désormais, une **seule proposition** est faite par activité et par responsable, tant que la
+précédente est encore ouverte.
+
+## Une conversation déjà suivie peut recevoir une nouvelle demande
+
+Jusqu'ici, un fil qui avait déjà une tâche, même terminée, n'en recevait plus aucune. Sur vos
+données, 41 messages plus récents dans 16 conversations suivies n'avaient donc aucune chance de
+produire une tâche.
+
+Le tri se fait maintenant **demande par demande** :
+
+- le même message, ou la même demande qu'une tâche encore ouverte du fil, est écarté ;
+- la relance d'une tâche terminée depuis moins de 14 jours est écartée aussi ;
+- une demande différente devient une tâche, **toujours en validation**, puisque le fil en porte
+  déjà une.
+
+Rejoué sur ces 41 messages : 10 nouvelles demandes, dont une qui vous était bien adressée et qui
+se perdait jusqu'ici, et 1 relance correctement reconnue. Chaque doublon écarté laisse une ligne
+dans le journal de synchronisation.
+
+## Chaque point d'une liste a son responsable
+
+Dans un e-mail qui énumère plusieurs demandes, un point comme « Awa : préparer le budget » ou
+« Relire la note (Moussa) » ne devient plus une de vos tâches. S'il nomme une seule personne du
+message, il est proposé dans Tâches des autres. Le nom doit appartenir à une personne du message :
+une rubrique comme « Budget : » ou un sigle ne désigne personne.
+
+Sur vos données actuelles, aucun point de liste ne nomme de responsable, donc rien ne change pour
+l'instant. Éprouvée sur toutes les lignes de vos messages, la détection a désigné quelqu'un
+28 fois, dont 27 fois la bonne personne.
+
+## Aussi
+
+- Les dates de Tâches des autres s'affichent en français (« 27 sept. 2026 »).
+
+Banc du cœur : 161 → 169 vérifications.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.96.0/Assistant-Mail-0.96.0.dmg" length="8451912" type="application/octet-stream" sparkle:edSignature="L8cg50qsgoUfe1vwINOyzdXPn5048klrrYbIBeMA1NNr35TcvUI6EZrgXJZ8RGCD6wD3TtBfCfz2BSoOApgTBw=="/>
+        </item>
+        <item>
             <title>0.95.0</title>
             <pubDate>Thu, 24 Sep 2026 16:46:42 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -180,130 +251,6 @@ désormais une fois 18 h passées. « Demain matin (9 h) » reste proposé.
 Banc du cœur : 155 → 160 vérifications.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.94.0/Assistant-Mail-0.94.0.dmg" length="8338896" type="application/octet-stream" sparkle:edSignature="o+hi9q3QhSBSSSQMN+jrGAiUfzh+Kz2WDK/kJgw4ezaWEws3dTe4BreraSDaEWdCVUvXmsi3L2PX/G7/i9QRCQ=="/>
-        </item>
-        <item>
-            <title>0.93.0</title>
-            <pubDate>Mon, 24 Aug 2026 11:57:28 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>152</sparkle:version>
-            <sparkle:shortVersionString>0.93.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# « Ce n'est pas un projet, c'est un morceau de DAWAL-LIRE »
-
-La 0.92.0 proposait six projets possibles. En les regardant, vous avez fait
-l'observation que le programme n'avait pas su faire : *« Fluency Forward Moving
-est un élément du projet Dawal-Lire »*.
-
-La mesure vous a donné raison, et plus largement que sur cette seule grappe.
-
-## Ce que le panneau ne savait pas dire
-
-Une grappe peut être deux choses très différentes, et la 0.92.0 les confondait :
-
-- **un projet que vous n'avez pas déclaré** — il faut le créer ;
-- **un morceau d'un projet existant que ses règles ne couvrent pas encore** — il
-  faut compléter la règle.
-
-Sur votre corpus, la seconde était le cas majoritaire. La preuve tient en deux
-lignes : DAWAL-LIRE porte le mot-clé **« acceleration a la fluidité »**, en
-français. Les objets réels de la grappe disent **« Acceleration to Fluency
-contract »**, en anglais. Même programme, autre langue — et une règle qui passe à
-côté.
-
-## Le passé des correspondants, et rien d'autre
-
-Le signal n'est pas dans les mots, il est dans les gens. Si ceux qui envoient ces
-pièces classent déjà l'essentiel de leur courrier dans un projet, la grappe est
-très probablement le même sujet sous un vocabulaire que les règles n'attrapent
-pas.
-
-`sellendiaye@ared-edu.org` a 62 pièces déjà classées, dont **49 dans
-DAWAL-LIRE** : 79 %.
-
-Le panneau l'écrit maintenant sur la carte, et son bouton principal devient
-**« Ajouter à DAWAL-LIRE »**. Créer un projet neuf reste possible, mais cesse
-d'être ce qui est proposé.
-
-**Les mots-clés seulement, jamais les expéditeurs.** Une règle d'expéditeur prend
-tout ce que la personne envoie : ajouter `sylvie.manga@ared-edu.org` à NDAW-WUNE
-VACANCE lui donnerait aussi les treize pièces qu'elle envoie pour NDAW-WUNE
-ANNEE SCOLAIRE. Le mot-clé ne prend que ce qui porte le mot. C'est exactement ce
-qui manquait, et rien de plus.
-
-Les règles s'appliquent aussitôt à la bibliothèque : le geste est complet, il n'y
-a pas de second clic.
-
-## Le premier calcul était faux, et la mesure l'a dit
-
-Écrit une première fois, le verdict tombait sur **cinq propositions sur six** —
-« morceau de DAWAL-LIRE » y compris pour des grappes dont aucun correspondant
-principal n'avait jamais rien classé là.
-
-La cause : l'affinité prenait **tous** les correspondants d'une grappe. Or une
-grappe qui contient une réunion hérite de **tous ses invités**, et il suffit
-qu'un seul d'entre eux soit un gros contributeur d'un projet pour emporter le
-verdict de la grappe entière.
-
-Ne comptent désormais que les correspondants qui **caractérisent** la grappe :
-présents dans au moins un quart de ses éléments, et au moins deux fois. La
-différence entre quelqu'un qui la porte et quelqu'un qui la traverse.
-
-Trois seuils, tous affichés dans le code avec le cas qui les a fixés : au moins
-cinq pièces déjà classées (« Contrat Rising » n'en avait que deux), un projet
-dominant à deux tiers (une répartition 10/9 ne désigne personne), et la présence
-ci-dessus.
-
-## Ce que ça donne chez vous
-
-| Proposition | Verdict |
-|---|---|
-| Consentement Retour — 103 éléments | morceau de **NDAW-WUNE VACANCE** (21/29, 72 %) |
-| Fluency Forward Moving — 13 | morceau de **DAWAL-LIRE** (49/62, 79 %) |
-| Daara — 8 | morceau de **DAWAL-LIRE** (6/9, 67 %) |
-| Contrat Rising — 8 | projet neuf |
-| Ressources Numériques — 8 | projet neuf |
-| Ucad — 7 | projet neuf |
-
-Trois morceaux, trois projets neufs. La 0.92.0 en proposait six à créer.
-
-## « Plus tard » se comporte enfin comme « Jamais »
-
-Le panneau plafonne à six cartes. Le refus était appliqué **avant** ce plafond —
-écarter une proposition révélait donc la suivante. Le « Plus tard », lui, était
-appliqué **après** : il vidait une ligne sans rien montrer de plus.
-
-Ce n'était pas un arbitrage, c'était une conséquence de l'ordre des filtres, et
-rien à l'écran ne le disait. Les deux passent maintenant par le même paramètre,
-avant le plafond. Écarter une carte libère sa place, quelle que soit la façon de
-l'écarter.
-
-## Ce que cette version ne fait pas
-
-- **Le rattachement ne déplace pas les pièces déjà classées ailleurs.** Ajouter
-  un mot-clé à un projet fait entrer ce qui n'avait pas de projet ; ce qui en
-  avait déjà un le garde, conformément à la règle qui veut qu'un rattachement
-  obtenu par l'e-mail ne soit jamais réécrit.
-- **L'affinité ne regarde que la bibliothèque documentaire.** C'est le seul
-  gisement qui survive à la purge du courrier, donc le seul à porter assez
-  d'histoire — mais une personne qui n'envoie jamais de pièce jointe reste
-  invisible pour ce calcul.
-- **Aucun nommage par modèle**, comme en 0.92.0. Le nom vient des mots dominants
-  et reste modifiable.
-- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
-  ment toujours après 18 h, `totalOpenTaskCount` n'a toujours aucun appelant, et
-  l'instantané des widgets s'écrit toujours sans permissions restreintes.
-
-## Sous le capot
-
-- `LikelyProject` porte ses deux chiffres bruts — pièces dans ce projet, pièces
-  classées en tout — plutôt qu'un pourcentage seul : l'écran affiche « 49 de
-  leurs 62 pièces », et le lecteur juge de la force du signal.
-- Une vérification de plus au contrôle du cœur : **153**. Elle couvre les six
-  cas, dont celui de l'invité de réunion qui emportait le verdict — la
-  régression que la mesure a trouvée avant la livraison.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.93.0/Assistant-Mail-0.93.0.dmg" length="8400293" type="application/octet-stream" sparkle:edSignature="WXuEa+IuCWeIROG6V4jceyuoZALvjR7ZrF2M4J+6Y3OTc+PbRLl2r2CoJvbTU1vEAHOBxD8AY2DACifRkA88Bw=="/>
         </item>
     </channel>
 </rss>
