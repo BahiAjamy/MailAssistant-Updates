@@ -6,6 +6,90 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.94.0</title>
+            <pubDate>Thu, 24 Sep 2026 15:49:13 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>153</sparkle:version>
+            <sparkle:shortVersionString>0.94.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Une échéance doit être écrite dans le message
+
+Premier lot du diagnostic du 24 septembre. Il porte sur trois informations que l'application
+affichait avec assurance alors qu'elles étaient fausses.
+
+## Les échéances recopiées
+
+Apple Intelligence recevait l'heure exacte de réception du message. Quand il ne trouvait pas de
+date limite, il reprenait souvent cette heure comme échéance. La tâche naissait alors déjà en
+retard.
+
+Mesuré sur vos données du 24 septembre :
+
+- 220 des 238 tâches créées automatiquement avaient une échéance ;
+- 75 de ces échéances étaient à la seconde près, ce qu'aucun humain n'écrit ;
+- sur les 41 tâches dont l'e-mail est encore conservé, 23 portaient **exactement** l'heure de
+  réception.
+
+Deux changements :
+
+1. **Le modèle ne reçoit plus que le jour.** L'invite indique « 2026-09-24 (jeudi) », ce qui lui
+   suffit pour interpréter « vendredi » ou « demain ». Elle ne contient plus d'heure à recopier.
+2. **Une échéance n'est retenue que si le message l'écrit.** L'application relève elle-même les
+   dates présentes dans l'objet et le corps : « avant le 30 septembre », « 26/09 »,
+   « vendredi 12h », « sous 48h », « fin octobre », « d'ici la fin de la semaine »… Le jour proposé
+   par le modèle doit correspondre à l'une d'elles. Sinon, la tâche est créée sans échéance.
+
+Trois précisions :
+
+- les en-têtes de transfert (« De : … Envoyé : … ») et les lignes « Le jeu. 24 sept. à 10:03,
+  … a écrit » sont ignorés, car ce sont eux qui portent la date de réception ;
+- l'heure vient du texte ; à défaut, l'échéance est fixée à **18 h** ce jour-là. « Vendredi » veut
+  dire « d'ici la fin de vendredi », pas « dès minuit » ;
+- le motif de la tâche cite le passage retenu (« Échéance lue dans le message : « avant le
+  30 septembre » »), ou indique qu'une date proposée a été écartée.
+
+Rejoué sur les 41 tâches encore vérifiables :
+
+| | retenues | écartées |
+|---|---:|---:|
+| échéance recopiée (23) | 4, chacune justifiée par une date écrite du même jour ; leur heure ne recopie plus la réception | 19 |
+| autre échéance (18) | 11 | 7 : le jour de réception sans date écrite, un samedi pour « lundi matin », un dimanche pour « jeudi ou vendredi »… |
+
+Les engagements repérés dans vos envois passent par la même vérification. Les tâches existantes
+ne sont pas modifiées.
+
+## La synthèse hebdomadaire qui contredisait ses chiffres
+
+Dans la Vue du jour, une synthèse annonçait « deux messages non lus » juste au-dessus de
+« 0 non lu ». Les chiffres étaient recalculés à chaque affichage. Le texte, lui, datait de la
+génération précédente et restait affiché, même pendant la suivante.
+
+- Chaque texte généré est lié aux chiffres de son projet. Si l'un d'eux change, **ce projet
+  seulement** revient à la synthèse locale, calculée sur les chiffres actuels. L'en-tête l'indique :
+  « synthèse locale pour 1 projet modifié depuis 14:05 ».
+- Un texte généré qui cite un nombre absent des données n'est pas publié. La synthèse locale le
+  remplace, et le brief se dit partiel.
+
+## « Ce soir (18 h) » après 18 h
+
+Après 18 h, ce choix reportait la tâche au lendemain 9 h, sans changer de libellé. Il disparaît
+désormais une fois 18 h passées. « Demain matin (9 h) » reste proposé.
+
+## Aussi dans cette version
+
+- **Tâches des autres**, un nouvel espace à côté de Mes tâches (⌘0). Il sert à suivre ce qu'une
+  autre personne doit faire : un suivi se crée depuis un e-mail reçu ou envoyé, ou en reclassant
+  une tâche. Le reclassement peut être annulé, et il n'est jamais compté comme un refus de
+  l'expéditeur.
+- Le message de « Recommencer la classification » est découpé : il empêchait la compilation avec
+  Swift 6.4.
+
+Banc du cœur : 155 → 160 vérifications.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.94.0/Assistant-Mail-0.94.0.dmg" length="8338896" type="application/octet-stream" sparkle:edSignature="o+hi9q3QhSBSSSQMN+jrGAiUfzh+Kz2WDK/kJgw4ezaWEws3dTe4BreraSDaEWdCVUvXmsi3L2PX/G7/i9QRCQ=="/>
+        </item>
+        <item>
             <title>0.93.0</title>
             <pubDate>Mon, 24 Aug 2026 11:57:28 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -365,116 +449,6 @@ exactement ce qui se passait.
   invariants ci-dessus, dont l'idempotence et le périmètre de compte.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.92.0/Assistant-Mail-0.92.0.dmg" length="8383107" type="application/octet-stream" sparkle:edSignature="gt2lBxQZqcAd56VWqt/V3JUGuimhHTJiVqlcYdzFrpajtCVb7ODif2sGPuhazNndrNERCKOvcS30zmiO/zwJCw=="/>
-        </item>
-        <item>
-            <title>0.90.0</title>
-            <pubDate>Fri, 21 Aug 2026 16:12:26 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>149</sparkle:version>
-            <sparkle:shortVersionString>0.90.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Le mot « Heure » suffisait à perdre un rendez-vous
-
-Le §7 de la vérification du diagnostic signalait depuis la 0.83.0 un défaut du
-lecteur d'horaires : le motif prévu pour `« Mardi, 7 juillet · De 3:00 à 3:30pm »`
-ne reconnaissait pas son propre exemple. Correctif annoncé : un caractère.
-
-En allant le corriger, deux autres défauts de la même famille sont apparus — et
-le plus coûteux des trois n'était pas celui qui était consigné.
-
-## Trois échecs, une seule cause
-
-Quatre motifs lisaient les horaires, et chacun recopiait à sa façon ce qui peut
-se glisser **entre la date et l'heure**. Chacun avait donc sa lacune.
-
-| Texte | Avant | Après |
-|---|---|---|
-| `Mardi, 7 juillet · De 3:00 à 3:30pm` | échec | 15:00 → 15:30 |
-| `Mardi, 7 juillet ·De 3:00 à 3:30pm` *(sans espace)* | lu | lu |
-| `Mardi 7 juillet, 15:00 - 16:00` | échec | 15:00 → 16:00 |
-| `7 juillet 2026, 15:00 - 16:00` | échec | 15:00 → 16:00 |
-| `Date : mercredi 05 Août 2026 · Heure : de 17h00 à 18h30` | échec | 17:00 → 18:30 |
-
-Le premier échouait sur **l'espace entre deux séparateurs** — sans l'espace, le
-même texte passait. Le deuxième sur **une virgule**. Le troisième sur **le mot
-« Heure »**.
-
-C'est le troisième qui coûtait le plus cher, et il ne figurait nulle part.
-`Date : … / Heure : …` est la mise en page des invitations de webinaire et de la
-plupart des outils français. Sur ce poste, **deux e-mails de l'index portaient
-« Date : mercredi 05 Août 2026 » et « Heure : de 17h00 à 18h30 »**, et
-l'application affichait « horaire à confirmer » sur un rendez-vous dont l'heure
-était écrite noir sur blanc, deux lignes plus bas.
-
-Ce qui pouvait s'intercaler est désormais défini **une seule fois**, en un seul
-endroit, et les quatre motifs le partagent.
-
-## L'ensemble reste fermé
-
-Élargir un séparateur, c'est risquer de lire un horaire dans n'importe quel
-nombre. Le garde-fou posé en 0.84.0 tient : `« Budget 7 juillet 2026 version
-3 - 4 »` et `« Rapport 7 juillet 2026 pages 12 à 15 »` ne sont toujours pas des
-réunions, et le banc le vérifie.
-
-**Une distinction a dû être ajoutée en cours de route, et c'est le banc qui l'a
-imposée.** Un motif à *plage* se passe de marqueur : la plage atteste elle-même
-qu'on lit un horaire. Un motif à *heure seule* n'a que le marqueur pour preuve —
-et une virgule n'en est pas une. La première version du correctif faisait de
-`« Livrable 7 juillet 2026, 9h »` un rendez-vous ; la vérification écrite le
-matin même l'a refusée.
-
-Mesuré en comparant deux binaires sur le corpus réel : la version permissive
-lisait un horaire dans **130** e-mails, la version livrée dans **124**. Les six
-écarts portent sur cinq messages — « Feuille de calcul partagée avec vous »,
-« Fin de collaboration avec notre Chargé de la communication », « Critères
-d'échantillonnage des écoles », « Collecte des données sur les écoles », « Test ».
-**Aucun n'est une invitation.** La borne resserrée ne coûte donc rien et évite
-six horaires inventés.
-
-## Ce que ça change chez vous
-
-Sur les 455 e-mails conservés, **119 portaient un horaire lisible, ils sont 124**.
-
-L'index des réunions est reconstruit à chaque chargement à partir des messages
-encore présents : le rendez-vous du webinaire **récupère son horaire au prochain
-lancement**, sans rien réinitialiser. Il quitte donc la file « à traiter »,
-apparaît à sa place dans « Passées », entre dans les minutes de l'onglet Semaine
-et se dit avec son heure dans le Chat.
-
-Les deux autres réunions sans horaire de votre index le restent, et c'est juste :
-l'une est un appel vidéo « en ce moment », qui n'a pas d'horaire par nature ;
-l'autre a vu ses e-mails sources quitter la fenêtre de rétention, il n'y a plus
-rien à relire.
-
-## Ce que cette version ne fait pas
-
-- **Un e-mail purgé ne se rattrape pas.** Le correctif ne vaut que pour les
-  messages encore conservés. Une réunion dont les sources sont sorties de la
-  fenêtre de soixante jours garde son horaire manquant, définitivement.
-- **Les libellés reconnus sont ceux du corpus** : « heure », « heures »,
-  « horaire », « time ». Un outil qui écrirait « Quand : » ou « Début : » ne
-  serait pas lu. L'ensemble reste fermé à dessein — l'ouvrir au premier mot venu
-  ferait revenir les horaires inventés.
-- **Le Suivi n'a toujours pas de raccourcis clavier**, `SnoozeOption.laterToday`
-  ment toujours après 18 h sur la mise en veille des tâches,
-  `totalOpenTaskCount` n'a toujours aucun appelant, et `E` sur une tâche déjà
-  ignorée rejoue encore sa décision au journal.
-- **L'instantané des widgets** s'écrit toujours sans permissions restreintes,
-  seul fichier local dans ce cas. Le risque reste consigné et non tranché : il
-  est lu par l'extension WidgetKit, un autre processus, et cette machine ne sait
-  pas l'éprouver.
-
-## Sous le capot
-
-- `MeetingScheduleParser.dateTimeSeparator` et `dateTimeMarker` : deux
-  constantes, une différence — la virgule —, et un commentaire qui dit laquelle
-  sert à quoi et pourquoi.
-- Une vérification de plus au contrôle du cœur : **149**. Elle couvre les trois
-  formes réparées, les formes qui marchaient déjà, quatre pièges à faux positif,
-  et la distinction entre marqueur et séparateur.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.90.0/Assistant-Mail-0.90.0.dmg" length="8319730" type="application/octet-stream" sparkle:edSignature="cQUhbIE+ghGE0XEAdaYzQUb+zv8f86Gca+1aQrRl3TKvXFy4jb+p5h7zafmzOJL4srXkAjIZzu424NP8PGjcCQ=="/>
         </item>
     </channel>
 </rss>
