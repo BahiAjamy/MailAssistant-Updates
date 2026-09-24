@@ -6,6 +6,81 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.97.0</title>
+            <pubDate>Thu, 24 Sep 2026 20:02:42 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>156</sparkle:version>
+            <sparkle:shortVersionString>0.97.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Lire plus vite, et dire pourquoi on refuse
+
+Cette version termine le lot « lecture quotidienne » du diagnostic du 24 septembre. Elle ajoute
+aussi le motif de refus, prévu par le diagnostic d'attribution.
+
+## E-mails : une ligne par conversation
+
+L'onglet E-mails s'ouvre désormais sur la vue **Conversations** : une ligne par fil, et non plus
+une par message. Chaque ligne montre :
+
+- les participants ;
+- le dernier message, précédé de « Vous : » quand c'est vous qui avez écrit en dernier ;
+- le nombre de messages et de non-lus ;
+- la tâche liée, ou la réponse qu'on attend de vous ;
+- la date du dernier message.
+
+Sur vos données, la liste passe de **494 lignes à 365 conversations**. Dans 73 des 83 fils à
+plusieurs messages, c'est vous qui avez écrit en dernier.
+
+La vue **Messages** reste disponible sous le titre. Chaque bouton de bascule affiche son propre
+compte. Filtres, recherche et ⌘K fonctionnent dans les deux vues, et votre choix est mémorisé.
+
+## Réunions : la raison avant tout
+
+Chaque réunion « À traiter » affiche **sa raison** dès la ligne. Il n'y en a qu'une, dans cet
+ordre de priorité : annulée, fuseau incertain, horaire déplacé, horaire à vérifier, à ajouter au
+calendrier. Le bouton principal de la fiche découle de cette raison.
+
+Un e-mail « Declined: » ne vaut plus refus de votre part. L'application lit la réponse de **votre**
+ligne dans l'invitation `.ics`. La réponse d'un autre participant s'affiche comme telle
+(« Moussa a décliné »). Si vous avez vous-même décliné, la réunion quitte la file et ne propose
+plus « Rejoindre ».
+
+Au passage, le doute sur un fuseau horaire n'était jamais relu après un redémarrage. Il est
+désormais conservé.
+
+## Motif de refus
+
+Après « Ignorer », le bandeau « Annuler » propose **cinq motifs facultatifs** : Pas pour moi,
+Déjà fait, Simple information, Doublon, Mauvaise date. Le refus reste instantané, et la touche E ne
+change pas.
+
+- **Pas pour moi** propose « Confier / suivre chez… », qui déplace la tâche dans Tâches des
+  autres.
+- Seuls un refus sans motif et le motif « Simple information » comptent encore pour proposer de
+  ne plus créer de tâches à partir d'un expéditeur. « Pas pour moi », « Déjà fait », « Doublon » et
+  « Mauvaise date » n'accusent pas l'expéditeur.
+- L'onglet **Décisions** de l'Analyse montre la répartition des motifs.
+
+Sur vos données, 6 expéditeurs atteignent le seuil de cette proposition. Or vous avez aussi mené
+à bien 69 tâches venues d'eux. Qualifier quelques refus suffit à retirer la proposition.
+
+## Trois corrections
+
+- **Le bandeau d'état ne recouvre plus les commandes.** « Synchronisation terminée » s'affiche
+  désormais sous l'écran, et non plus par-dessus « Ouvrir », « Interroger » ou « Envoyer… ».
+- **La tuile « Aujourd'hui » devient « Échéances du jour ».** Elle compte toutes les tâches dues
+  aujourd'hui, y compris celles dont l'heure est passée, et précise « dont N déjà en retard ». Un
+  0 ne veut donc plus dire « rien aujourd'hui » quand il reste une échéance du jour.
+- **Les réponses du Chat sont datées.** Chacune indique l'heure de la réponse et celle de la
+  relève dont elle vient. Après une relève plus récente, « Actualiser cette réponse » pose de
+  nouveau la question. La nouvelle réponse s'ajoute sous l'ancienne, qui reste en place.
+
+Banc du cœur : 169 → 182 vérifications.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.0/Assistant-Mail-0.97.0.dmg" length="8681316" type="application/octet-stream" sparkle:edSignature="Utm38i4NKn0W9RZ4BWffe1MXOPKvXsI2BeAje5WLg3AvwXiI25v4oy/gll9xTLwTIUV3NIZAFuhF9Hd6Jl6pDA=="/>
+        </item>
+        <item>
             <title>0.96.0</title>
             <pubDate>Thu, 24 Sep 2026 17:53:50 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -167,90 +242,6 @@ avant la publication.
 Banc du cœur : 160 → 161 vérifications.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.95.0/Assistant-Mail-0.95.0.dmg" length="8353429" type="application/octet-stream" sparkle:edSignature="cayTJLtK+pmZ5UekWczf63vZHdJcw6kkmtORB+zp3TQEdy8VW7DaqYDBDUwHwGcADRvvLAeEK8bzGakbSlQeDA=="/>
-        </item>
-        <item>
-            <title>0.94.0</title>
-            <pubDate>Thu, 24 Sep 2026 15:49:13 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>153</sparkle:version>
-            <sparkle:shortVersionString>0.94.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Une échéance doit être écrite dans le message
-
-Premier lot du diagnostic du 24 septembre. Il porte sur trois informations que l'application
-affichait avec assurance alors qu'elles étaient fausses.
-
-## Les échéances recopiées
-
-Apple Intelligence recevait l'heure exacte de réception du message. Quand il ne trouvait pas de
-date limite, il reprenait souvent cette heure comme échéance. La tâche naissait alors déjà en
-retard.
-
-Mesuré sur vos données du 24 septembre :
-
-- 220 des 238 tâches créées automatiquement avaient une échéance ;
-- 75 de ces échéances étaient à la seconde près, ce qu'aucun humain n'écrit ;
-- sur les 41 tâches dont l'e-mail est encore conservé, 23 portaient **exactement** l'heure de
-  réception.
-
-Deux changements :
-
-1. **Le modèle ne reçoit plus que le jour.** L'invite indique « 2026-09-24 (jeudi) », ce qui lui
-   suffit pour interpréter « vendredi » ou « demain ». Elle ne contient plus d'heure à recopier.
-2. **Une échéance n'est retenue que si le message l'écrit.** L'application relève elle-même les
-   dates présentes dans l'objet et le corps : « avant le 30 septembre », « 26/09 »,
-   « vendredi 12h », « sous 48h », « fin octobre », « d'ici la fin de la semaine »… Le jour proposé
-   par le modèle doit correspondre à l'une d'elles. Sinon, la tâche est créée sans échéance.
-
-Trois précisions :
-
-- les en-têtes de transfert (« De : … Envoyé : … ») et les lignes « Le jeu. 24 sept. à 10:03,
-  … a écrit » sont ignorés, car ce sont eux qui portent la date de réception ;
-- l'heure vient du texte ; à défaut, l'échéance est fixée à **18 h** ce jour-là. « Vendredi » veut
-  dire « d'ici la fin de vendredi », pas « dès minuit » ;
-- le motif de la tâche cite le passage retenu (« Échéance lue dans le message : « avant le
-  30 septembre » »), ou indique qu'une date proposée a été écartée.
-
-Rejoué sur les 41 tâches encore vérifiables :
-
-| | retenues | écartées |
-|---|---:|---:|
-| échéance recopiée (23) | 4, chacune justifiée par une date écrite du même jour ; leur heure ne recopie plus la réception | 19 |
-| autre échéance (18) | 11 | 7 : le jour de réception sans date écrite, un samedi pour « lundi matin », un dimanche pour « jeudi ou vendredi »… |
-
-Les engagements repérés dans vos envois passent par la même vérification. Les tâches existantes
-ne sont pas modifiées.
-
-## La synthèse hebdomadaire qui contredisait ses chiffres
-
-Dans la Vue du jour, une synthèse annonçait « deux messages non lus » juste au-dessus de
-« 0 non lu ». Les chiffres étaient recalculés à chaque affichage. Le texte, lui, datait de la
-génération précédente et restait affiché, même pendant la suivante.
-
-- Chaque texte généré est lié aux chiffres de son projet. Si l'un d'eux change, **ce projet
-  seulement** revient à la synthèse locale, calculée sur les chiffres actuels. L'en-tête l'indique :
-  « synthèse locale pour 1 projet modifié depuis 14:05 ».
-- Un texte généré qui cite un nombre absent des données n'est pas publié. La synthèse locale le
-  remplace, et le brief se dit partiel.
-
-## « Ce soir (18 h) » après 18 h
-
-Après 18 h, ce choix reportait la tâche au lendemain 9 h, sans changer de libellé. Il disparaît
-désormais une fois 18 h passées. « Demain matin (9 h) » reste proposé.
-
-## Aussi dans cette version
-
-- **Tâches des autres**, un nouvel espace à côté de Mes tâches (⌘0). Il sert à suivre ce qu'une
-  autre personne doit faire : un suivi se crée depuis un e-mail reçu ou envoyé, ou en reclassant
-  une tâche. Le reclassement peut être annulé, et il n'est jamais compté comme un refus de
-  l'expéditeur.
-- Le message de « Recommencer la classification » est découpé : il empêchait la compilation avec
-  Swift 6.4.
-
-Banc du cœur : 155 → 160 vérifications.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.94.0/Assistant-Mail-0.94.0.dmg" length="8338896" type="application/octet-stream" sparkle:edSignature="o+hi9q3QhSBSSSQMN+jrGAiUfzh+Kz2WDK/kJgw4ezaWEws3dTe4BreraSDaEWdCVUvXmsi3L2PX/G7/i9QRCQ=="/>
         </item>
     </channel>
 </rss>
