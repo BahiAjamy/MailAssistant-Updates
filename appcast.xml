@@ -6,6 +6,96 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.98.0</title>
+            <pubDate>Fri, 25 Sep 2026 08:49:16 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>159</sparkle:version>
+            <sparkle:shortVersionString>0.98.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Chaque demande à sa place, et le modèle local à sa vraie taille
+
+Cette version réalise le plan d'amélioration consolidé après la 0.97.1. Le correctif du Suivi,
+publié en 0.97.2, y est inclus.
+
+## « À clarifier »
+
+Certaines suggestions de « À valider » viennent d'un message qui ne dit pas clairement qui doit
+agir : une demande adressée à toute l'équipe, un message reçu en copie sans être nommé, une
+phrase de demande introuvable dans le message. Elles sont désormais regroupées dans une section
+**« À clarifier »**, chacune avec la raison du doute. Elles ne sont jamais activées d'office :
+
+- valider la suggestion, c'est dire « c'est pour moi » ;
+- **Reclasser…** la confie à quelqu'un dans Tâches des autres ;
+- Ignorer fonctionne comme avant.
+
+## Le détail d'un e-mail distingue vos actions de celles de l'équipe
+
+Sous « Pourquoi ce classement », deux blocs résument la conversation :
+- **À faire par moi** ;
+- **Actions de l'équipe**, les actions confiées à d'autres.
+
+Chaque ligne indique le responsable et la phrase du message qui le montre. Un clic ouvre la tâche
+ou Tâches des autres. Les éléments terminés restent visibles en fin de liste.
+
+## Une relève en échec ne ressemble plus à une boîte vide
+
+Quand l'accès à une adresse échoue après une première relève réussie, la liste des E-mails
+affichait « Aucun e-mail conservé », comme une boîte vide. La Vue du jour, Mes tâches, le Suivi,
+Réunions et Documents faisaient de même. Ces écrans disent maintenant
+**« Relève de … en échec »**, avec le motif et deux boutons : **Réessayer** et **Voir les
+comptes**.
+
+## Projets et bibliothèque
+
+- **D'où vient le projet d'une tâche** se lit au survol des listes et par VoiceOver. Une petite
+  étincelle signale les classements faits par Apple Intelligence, les seuls qui soient devinés.
+- **Changer de projet** et **Retirer du projet** sont dans le menu contextuel d'une tâche : plus
+  besoin d'ouvrir son détail.
+- Le pied de la bibliothèque distingue les **fichiers affichés** des **fichiers indexés** et
+  indique la période couverte par l'index, limité à 2 000 fichiers.
+
+## Le modèle local à sa vraie taille
+
+L'application lit désormais la taille réelle de la fenêtre du modèle d'Apple : 8 192 jetons sous
+macOS 27, contre 4 096 auparavant.
+- Le Chat s'en sert : il conserve davantage d'historique et de contexte épinglé.
+- Sous macOS 27, un message trop long pour le modèle n'était plus réessayé en plus court : il
+  retombait sans le dire sur un classement par mots-clés. Il est de nouveau réessayé.
+
+L'analyse du courrier garde, elle, ses limites habituelles. Une coupe plus fine des longs
+messages, adaptée à la fenêtre réelle, a été essayée. Sur un jeu d'essai, elle manquait un peu
+moins de demandes, mais créait des tâches sans objet dans les très longs messages. Elle reste à
+l'essai tant qu'elle n'a pas fait ses preuves sur du courrier réel.
+
+## Clavier et VoiceOver
+
+- VoiceOver nomme les boutons qui n'étaient qu'une icône. Il annonce aussi une adresse en échec
+  dans la barre latérale et les avertissements des widgets.
+- Échap et Retour fonctionnent dans l'éditeur des tâches d'autrui.
+- Dans le Suivi, « Répondre » n'est plus réservé au survol de la souris. Chaque conversation
+  propose ses gestes à VoiceOver.
+- Un document de la bibliothèque se joint à un message au clavier.
+
+L'instantané que partagent les widgets n'est plus lisible par les autres comptes du Mac.
+
+## Expérimental : une tâche par demande
+
+Désactivé par défaut : Réglages › E-mails à plusieurs demandes › **Extraire chaque demande et son
+responsable**. Quand un même message contient plusieurs demandes, même dans un seul paragraphe,
+chacune devient :
+- une tâche pour vous ;
+- une proposition dans Tâches des autres ;
+- ou une question « À clarifier ».
+
+Chaque demande garde la phrase qui la justifie. Le modèle ne fait que recopier les phrases de
+demande, et celles qu'il invente sont écartées. L'analyse est plus lente, d'environ un appel au
+modèle par demande. Ce réglage reste à éprouver sur du courrier réel avant de devenir le
+comportement par défaut.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.98.0/Assistant-Mail-0.98.0.dmg" length="9269731" type="application/octet-stream" sparkle:edSignature="94QdGC51IhdRENSKzCbYPnbL9TrMzg7GaMofbPktuwcDkcRk94uLv2WZuCvnanyKYtzrlbI7Jhsfwqi8Zz6ZAQ=="/>
+        </item>
+        <item>
             <title>0.97.2</title>
             <pubDate>Fri, 25 Sep 2026 07:16:58 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -72,81 +162,6 @@ Limite connue : l'analyse ne tire encore qu'une demande principale par e-mail. D
 Banc du cœur : 182 vérifications.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.1/Assistant-Mail-0.97.1.dmg" length="8684612" type="application/octet-stream" sparkle:edSignature="x7GJkTwYcnjhSe+k24sheljlcWmKUquad/gClDDO9+N3K9so2HS+Wusi8ThtXyRCaifmJRT5R4uWbPTrRLkEDw=="/>
-        </item>
-        <item>
-            <title>0.97.0</title>
-            <pubDate>Thu, 24 Sep 2026 20:02:42 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>156</sparkle:version>
-            <sparkle:shortVersionString>0.97.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Lire plus vite, et dire pourquoi on refuse
-
-Cette version termine le lot « lecture quotidienne » du diagnostic du 24 septembre. Elle ajoute
-aussi le motif de refus, prévu par le diagnostic d'attribution.
-
-## E-mails : une ligne par conversation
-
-L'onglet E-mails s'ouvre désormais sur la vue **Conversations** : une ligne par fil, et non plus
-une par message. Chaque ligne montre :
-
-- les participants ;
-- le dernier message, précédé de « Vous : » quand c'est vous qui avez écrit en dernier ;
-- le nombre de messages et de non-lus ;
-- la tâche liée, ou la réponse qu'on attend de vous ;
-- la date du dernier message.
-
-Sur vos données, la liste passe de **494 lignes à 365 conversations**. Dans 73 des 83 fils à
-plusieurs messages, c'est vous qui avez écrit en dernier.
-
-La vue **Messages** reste disponible sous le titre. Chaque bouton de bascule affiche son propre
-compte. Filtres, recherche et ⌘K fonctionnent dans les deux vues, et votre choix est mémorisé.
-
-## Réunions : la raison avant tout
-
-Chaque réunion « À traiter » affiche **sa raison** dès la ligne. Il n'y en a qu'une, dans cet
-ordre de priorité : annulée, fuseau incertain, horaire déplacé, horaire à vérifier, à ajouter au
-calendrier. Le bouton principal de la fiche découle de cette raison.
-
-Un e-mail « Declined: » ne vaut plus refus de votre part. L'application lit la réponse de **votre**
-ligne dans l'invitation `.ics`. La réponse d'un autre participant s'affiche comme telle
-(« Moussa a décliné »). Si vous avez vous-même décliné, la réunion quitte la file et ne propose
-plus « Rejoindre ».
-
-Au passage, le doute sur un fuseau horaire n'était jamais relu après un redémarrage. Il est
-désormais conservé.
-
-## Motif de refus
-
-Après « Ignorer », le bandeau « Annuler » propose **cinq motifs facultatifs** : Pas pour moi,
-Déjà fait, Simple information, Doublon, Mauvaise date. Le refus reste instantané, et la touche E ne
-change pas.
-
-- **Pas pour moi** propose « Confier / suivre chez… », qui déplace la tâche dans Tâches des
-  autres.
-- Seuls un refus sans motif et le motif « Simple information » comptent encore pour proposer de
-  ne plus créer de tâches à partir d'un expéditeur. « Pas pour moi », « Déjà fait », « Doublon » et
-  « Mauvaise date » n'accusent pas l'expéditeur.
-- L'onglet **Décisions** de l'Analyse montre la répartition des motifs.
-
-Sur vos données, 6 expéditeurs atteignent le seuil de cette proposition. Or vous avez aussi mené
-à bien 69 tâches venues d'eux. Qualifier quelques refus suffit à retirer la proposition.
-
-## Trois corrections
-
-- **Le bandeau d'état ne recouvre plus les commandes.** « Synchronisation terminée » s'affiche
-  désormais sous l'écran, et non plus par-dessus « Ouvrir », « Interroger » ou « Envoyer… ».
-- **La tuile « Aujourd'hui » devient « Échéances du jour ».** Elle compte toutes les tâches dues
-  aujourd'hui, y compris celles dont l'heure est passée, et précise « dont N déjà en retard ». Un
-  0 ne veut donc plus dire « rien aujourd'hui » quand il reste une échéance du jour.
-- **Les réponses du Chat sont datées.** Chacune indique l'heure de la réponse et celle de la
-  relève dont elle vient. Après une relève plus récente, « Actualiser cette réponse » pose de
-  nouveau la question. La nouvelle réponse s'ajoute sous l'ancienne, qui reste en place.
-
-Banc du cœur : 169 → 182 vérifications.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.0/Assistant-Mail-0.97.0.dmg" length="8681316" type="application/octet-stream" sparkle:edSignature="Utm38i4NKn0W9RZ4BWffe1MXOPKvXsI2BeAje5WLg3AvwXiI25v4oy/gll9xTLwTIUV3NIZAFuhF9Hd6Jl6pDA=="/>
         </item>
     </channel>
 </rss>
