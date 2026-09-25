@@ -6,6 +6,69 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.99.0</title>
+            <pubDate>Fri, 25 Sep 2026 10:53:54 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>160</sparkle:version>
+            <sparkle:shortVersionString>0.99.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Des projets mieux choisis, et une cause qu'on peut lire
+
+Des tâches se retrouvaient dans un projet qui n'était pas le leur. Exemple réel : un e-mail
+« Mission IA ARED » rangé dans NDAW-WUNE VACANCE, parce que ce projet avait le mot-clé
+« retour » et que le message disait « par retour de courriel ». Cette version corrige la façon
+dont les règles de projet lisent le courrier.
+
+## Les mots-clés sont lus comme des mots
+
+- Un mot-clé ne se déclenche plus à l'intérieur d'un autre mot. « forward » ne prend plus chaque
+  « Forwarded message », et « A2F » n'est plus reconnu au milieu d'un lien.
+- Le pluriel reste reconnu (« vacance » trouve « vacances »), tout comme un sigle suivi d'une
+  année (« NWV » trouve « NWV2026 »).
+- Dans les noms de fichiers, les mots collés sont séparés avant la lecture :
+  `BaseNWVFinale2026.xlsx` reste rattaché à son projet.
+
+## Seul le nouveau texte compte
+
+Les règles lisent l'objet et ce que le correspondant vient d'écrire. L'historique cité sous une
+réponse ne compte plus : un « merci pour votre retour » d'il y a trois semaines ne classe plus
+le message d'aujourd'hui.
+
+## Le projet le mieux justifié l'emporte
+
+Avant, le premier projet de la barre latérale qui avait un mot-clé présent n'importe où dans le
+message l'emportait. Désormais, un mot trouvé dans l'objet pèse plus qu'un mot trouvé dans le
+corps, et plusieurs mots-clés pèsent plus qu'un seul. Si deux projets sont à égalité, aucune
+règle ne tranche : l'ordre de la barre latérale n'est pas une preuve.
+
+## La cause d'un classement est affichée
+
+Au survol du projet d'une tâche, dans son menu contextuel, dans son détail et sur la pastille
+projet d'un e-mail, l'application indique ce qui a décidé du classement. Par exemple : « Classée
+dans NDAW-WUNE VACANCE par le mot-clé « retour », trouvé dans le texte du message ». Vous savez
+ainsi quelle règle corriger, au lieu de corriger les tâches une par une.
+
+## Votre choix vaut pour toute la conversation
+
+Quand vous rangez une tâche à la main dans un projet, les messages suivants de la même
+conversation vont dans ce projet, avant toute règle. Si vous changez d'avis, les tâches ouvertes
+qui en avaient hérité vous suivent. « Sans projet », choisi à la main, ne se transmet pas.
+
+## « Appliquer les règles aux tâches existantes »
+
+Quand vous retirez un mot-clé, ce bouton retire aussi de ce projet les tâches que ce mot-clé
+avait rangées. Cela ne concerne que les tâches ouvertes dont l'e-mail est encore disponible,
+pour que l'application puisse vérifier. Les tâches terminées gardent leur projet.
+
+## Ce qui ne change pas encore
+
+Quand aucune règle ne s'applique, c'est toujours Apple Intelligence qui propose un projet, et
+ses propositions restent à vérifier (repère ✦). Ce sera l'objet d'une prochaine version.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.99.0/Assistant-Mail-0.99.0.dmg" length="9313501" type="application/octet-stream" sparkle:edSignature="UBoTR0QU8OzY1DklnQ2LMUh7sqkqzjwqa8uI4bu4nic7KpIy08/O9ZK95YO1IblbUvZIcx+eTgSn9U08SlWNCA=="/>
+        </item>
+        <item>
             <title>0.98.0</title>
             <pubDate>Fri, 25 Sep 2026 08:49:16 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -128,40 +191,6 @@ Limite connue : la détection d'une demande de réponse repose sur des formulati
 peut manquer des demandes implicites.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.2/Assistant-Mail-0.97.2.dmg" length="8730324" type="application/octet-stream" sparkle:edSignature="10Rz3ZvYsB/IRgNGTCRi8zpSZi2niUiqFmIwptqmRho6Y6kfAMk8aCXgzdA+y0sit3RCIVsi0dYZbjw8nVi3AA=="/>
-        </item>
-        <item>
-            <title>0.97.1</title>
-            <pubDate>Thu, 24 Sep 2026 20:43:42 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>157</sparkle:version>
-            <sparkle:shortVersionString>0.97.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Les actions des autres arrivent vraiment chez les autres
-
-Version corrective. Codex a relu les versions 0.94.0 à 0.97.0 et a trouvé trois défauts dans le
-routage des actions confiées à d'autres personnes.
-
-- **Des actions d'autrui n'arrivaient jamais dans « Tâches des autres ».** L'analyse ne
-  considérait comme « action requise » qu'une demande qui vous était adressée. Une consigne donnée
-  à un collègue était donc classée « information » avant d'avoir pu être proposée. L'analyse
-  reconnaît maintenant une demande concrète faite à une autre personne nommée, et la dirige vers
-  Tâches des autres, jamais vers Mes tâches.
-- **Une proposition exige que la phrase citée nomme le responsable.** Il ne suffit plus que ce
-  nom apparaisse ailleurs dans le message.
-- **Les listes mixtes ne perdent plus de points.** Quand l'action principale revenait à une autre
-  personne, les puces du message étaient ignorées, y compris celles qui vous nommaient. Elles sont
-  maintenant réparties :
-  - les points qui vous nomment vont en validation dans Mes tâches ;
-  - ceux d'autrui sont proposés dans Tâches des autres ;
-  - les points sans nom suivent le responsable principal, seulement si celui-ci est établi.
-
-Limite connue : l'analyse ne tire encore qu'une demande principale par e-mail. Deux demandes
-écrites dans un même paragraphe, sans liste, peuvent être confondues.
-
-Banc du cœur : 182 vérifications.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.1/Assistant-Mail-0.97.1.dmg" length="8684612" type="application/octet-stream" sparkle:edSignature="x7GJkTwYcnjhSe+k24sheljlcWmKUquad/gClDDO9+N3K9so2HS+Wusi8ThtXyRCaifmJRT5R4uWbPTrRLkEDw=="/>
         </item>
     </channel>
 </rss>
