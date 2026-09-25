@@ -6,6 +6,40 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.97.2</title>
+            <pubDate>Fri, 25 Sep 2026 07:16:58 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>158</sparkle:version>
+            <sparkle:shortVersionString>0.97.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# « Suivi » ne garde que ce qui attend vraiment une réponse
+
+Version corrective.
+
+« Suivi » faisait entrer tout e-mail récent, adressé à vous et resté sans réponse : Microsoft
+Rewards, un document partagé ou un compte rendu pouvaient y apparaître comme des réponses dues.
+
+- **Une réponse doit être demandée.** Un e-mail reçu n'entre dans « Suivi » que s'il appelle une
+  action et que son texte nouveau demande un retour : « merci de me confirmer », « où en est le
+  rapport ? ». Une citation ancienne, une formule de politesse ou un travail à réaliser n'y
+  suffisent plus ; ils restent visibles dans E-mails et Mes tâches.
+- **Les suggestions d'attente exigent un vrai envoi.** Une tâche n'est plus proposée en attente
+  parce qu'un brouillon a été rédigé ou qu'un document a été envoyé. Il faut un message réellement
+  parti, qui sollicite lui-même un retour.
+- **Le suivi sait de qui vous attendez la réponse.** Dans un fil à plusieurs, la réponse d'un
+  collègue en copie clôturait l'attente. La tâche retient maintenant le correspondant attendu :
+  - s'il était le seul destinataire externe de votre dernier envoi, il est choisi automatiquement ;
+  - sinon, le détail de la tâche vous propose les adresses du fil, ou une autre adresse ;
+  - seule sa réponse clôt le suivi. Les réponses automatiques et celles des autres participants
+    ne comptent pas, et aucune relance n'est proposée tant que personne n'est choisi.
+
+Limite connue : la détection d'une demande de réponse repose sur des formulations prudentes et
+peut manquer des demandes implicites.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.2/Assistant-Mail-0.97.2.dmg" length="8730324" type="application/octet-stream" sparkle:edSignature="10Rz3ZvYsB/IRgNGTCRi8zpSZi2niUiqFmIwptqmRho6Y6kfAMk8aCXgzdA+y0sit3RCIVsi0dYZbjw8nVi3AA=="/>
+        </item>
+        <item>
             <title>0.97.1</title>
             <pubDate>Thu, 24 Sep 2026 20:43:42 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -113,77 +147,6 @@ Sur vos données, 6 expéditeurs atteignent le seuil de cette proposition. Or vo
 Banc du cœur : 169 → 182 vérifications.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.97.0/Assistant-Mail-0.97.0.dmg" length="8681316" type="application/octet-stream" sparkle:edSignature="Utm38i4NKn0W9RZ4BWffe1MXOPKvXsI2BeAje5WLg3AvwXiI25v4oy/gll9xTLwTIUV3NIZAFuhF9Hd6Jl6pDA=="/>
-        </item>
-        <item>
-            <title>0.96.0</title>
-            <pubDate>Thu, 24 Sep 2026 17:53:50 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>155</sparkle:version>
-            <sparkle:shortVersionString>0.96.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Vos tâches d'un côté, celles des autres de l'autre
-
-Suite du diagnostic d'attribution du 24 septembre. La 0.95.0 vérifiait à qui revient une
-demande. La 0.96.0 range chaque demande à sa place et laisse entrer les nouvelles demandes dans
-les conversations déjà suivies.
-
-## Une action confiée à quelqu'un d'autre arrive dans « Tâches des autres »
-
-Quand l'analyse repère qu'une **personne nommée** doit agir (« Awa prépare le budget pour
-vendredi »), l'application ne crée plus de tâche dans Mes tâches. L'action arrive dans
-**Tâches des autres**, en tête de « À suivre », dans une section *Repérées par l'analyse — à
-trancher*. Chaque proposition a deux boutons :
-
-- **Suivre** : le suivi commence, et l'application guette la réponse du responsable dans le fil ;
-- **Ignorer** : la proposition disparaît. Le geste peut être annulé depuis le bandeau et ne compte
-  jamais comme un refus de l'expéditeur.
-
-L'adresse du responsable est retrouvée par son nom parmi l'expéditeur et les destinataires. Si
-deux personnes peuvent correspondre, l'adresse reste vide plutôt que d'être devinée ; vous pouvez
-la compléter avec « Modifier… ». Si le responsable n'est pas nommé, la demande reste une tâche à
-valider, comme avant.
-
-Mesuré sur vos e-mails : sur 214 messages « action requise », 14 deviendraient des propositions.
-9 d'entre elles venaient des notifications répétées d'une même plateforme, pour la même activité.
-Désormais, une **seule proposition** est faite par activité et par responsable, tant que la
-précédente est encore ouverte.
-
-## Une conversation déjà suivie peut recevoir une nouvelle demande
-
-Jusqu'ici, un fil qui avait déjà une tâche, même terminée, n'en recevait plus aucune. Sur vos
-données, 41 messages plus récents dans 16 conversations suivies n'avaient donc aucune chance de
-produire une tâche.
-
-Le tri se fait maintenant **demande par demande** :
-
-- le même message, ou la même demande qu'une tâche encore ouverte du fil, est écarté ;
-- la relance d'une tâche terminée depuis moins de 14 jours est écartée aussi ;
-- une demande différente devient une tâche, **toujours en validation**, puisque le fil en porte
-  déjà une.
-
-Rejoué sur ces 41 messages : 10 nouvelles demandes, dont une qui vous était bien adressée et qui
-se perdait jusqu'ici, et 1 relance correctement reconnue. Chaque doublon écarté laisse une ligne
-dans le journal de synchronisation.
-
-## Chaque point d'une liste a son responsable
-
-Dans un e-mail qui énumère plusieurs demandes, un point comme « Awa : préparer le budget » ou
-« Relire la note (Moussa) » ne devient plus une de vos tâches. S'il nomme une seule personne du
-message, il est proposé dans Tâches des autres. Le nom doit appartenir à une personne du message :
-une rubrique comme « Budget : » ou un sigle ne désigne personne.
-
-Sur vos données actuelles, aucun point de liste ne nomme de responsable, donc rien ne change pour
-l'instant. Éprouvée sur toutes les lignes de vos messages, la détection a désigné quelqu'un
-28 fois, dont 27 fois la bonne personne.
-
-## Aussi
-
-- Les dates de Tâches des autres s'affichent en français (« 27 sept. 2026 »).
-
-Banc du cœur : 161 → 169 vérifications.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.96.0/Assistant-Mail-0.96.0.dmg" length="8451912" type="application/octet-stream" sparkle:edSignature="L8cg50qsgoUfe1vwINOyzdXPn5048klrrYbIBeMA1NNr35TcvUI6EZrgXJZ8RGCD6wD3TtBfCfz2BSoOApgTBw=="/>
         </item>
     </channel>
 </rss>
