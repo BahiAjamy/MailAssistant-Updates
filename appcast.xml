@@ -6,6 +6,105 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.101.0</title>
+            <pubDate>Sat, 26 Sep 2026 12:53:50 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>162</sparkle:version>
+            <sparkle:shortVersionString>0.101.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Des propositions de projet qui en sont, une Analyse qui se vérifie
+
+Cette version fait deux choses. Elle rend fiables les cartes « Projets possibles », dont une sur
+deux ne désignait pas un vrai projet. Elle révise aussi les sept panneaux de l'Analyse pour que
+chaque chiffre dise ce qu'il compte et ouvre la liste qu'il annonce.
+
+## Projets possibles : de 10 cartes à 4
+
+Sur votre courrier, le panneau proposait dix cartes. Cinq ne désignaient aucun projet : une
+seule conversation, un webinaire de deux jours, des factures, des passeports. Les cinq autres
+arrivaient avec de mauvaises règles.
+
+- **Des conversations, plus des pièces jointes.** Un fichier renvoyé à chaque réponse comptait à
+  chaque fois : « 92 documents » correspondait à 14 fichiers. Une carte demande désormais au moins
+  trois conversations étalées sur au moins une semaine, et elle affiche « 13 fichiers ·
+  15 conversations ».
+- **Pas de mot courant.** Un mot présent dans plus de 5 % de votre courrier, comme « partage »,
+  « retour » ou « contrat », ne peut plus fonder une carte. Les natures de pièce non plus :
+  facture, passeport, devis, attestation…
+- **Seulement les mots qui désignent le sujet.** Les villes des listes de consentement restent
+  visibles en gris, mais ne sont plus proposées comme règles. Le nom de la carte suit l'ordre du
+  texte, ou celui de l'organisation : « Rising Road ».
+- **Un rattachement justifié.** « Ajouter à… » s'appuie d'abord sur les conversations déjà
+  classées, et la carte l'écrit : « 3 conversations sur 15 sont déjà dans « NDAW-WUNE VACANCE » ».
+  Un collègue seul ne décide plus du projet. Quand un partenaire extérieur sans historique
+  caractérise la carte, elle propose un projet neuf : c'est désormais le cas de Daara.
+- **Jamais de collègue en règle d'expéditeur.** « En faire un projet » ne préremplit plus un
+  collègue ni votre domaine, et le formulaire dit lesquels il a écartés. Tous les mots-clés
+  préremplis sont mesurés dès l'ouverture, comme ceux que vous ajoutez à la main.
+- **Un mot retiré ne revient plus.** Chaque projet garde la liste des mots-clés que vous lui avez
+  retirés, reconstituée depuis votre journal : « retour » et les six villes pour
+  NDAW-WUNE VACANCE, « forward » et « moving » pour DAWAL-LIRE. La feuille « Ajouter à… » les
+  laisse décochés.
+- **« Jamais » tient.** Une carte refusée ne revient plus quand ses mots changent un peu.
+
+## Analyse : chaque chiffre ouvre ce qu'il compte
+
+- **Calendrier et Semaine.** Un clic sur un jour ouvre le même détail dans les deux panneaux :
+  échéances et réunions, avec leur heure et leur durée. La case du calendrier écrit la durée
+  des réunions (« 1 h 30 »). Le week-end n'est plus présenté comme « hors semaine » quand il porte
+  une réunion. Les réunions de la Semaine suivent désormais les filtres, comme au Calendrier.
+- **Chronologie.** Les échéances en retard passent en tête, chacune cliquable. L'historique des
+  missions terminées est replié par défaut.
+- **Statistiques.** Les cartes sont regroupées en Tâches, Courrier, puis Documents et réunions.
+  Le taux de résolution affiche son pourcentage. Deux cartes arrivent :
+  - l'évolution du stock de tâches, avec un instantané par jour à partir d'aujourd'hui ; rien
+    n'est reconstitué ;
+  - les angles morts de la planification : tâches sans échéance, réunions sans durée ou sans
+    projet.
+
+  La carte « État des données » montre, par compte et par source, les jours réellement relevés
+  et les jours inconnus. Un jour sans relevé n'est jamais compté comme un zéro.
+- **Santé des missions.**
+  - Tri par retards, échéance, ouvertes ou nom, et vue compacte. Le statut déclaré s'écrit en
+    toutes lettres.
+  - Cliquer une ligne ne change plus le filtre de toute l'application : c'est devenu un choix
+    du menu ⋯.
+  - « Voir les N tâches à faire » annonce le nombre exact de tâches qu'il ouvre.
+  - Le tableau « Classements à revoir » se trie. Un clic sur un nombre ouvre la file filtrée sur
+    ce projet et cette cause.
+- **Flux.** Le bloc de classement dit qu'il porte sur toutes les tâches conservées, pas sur
+  30 jours. Le score s'appelle « confiance déclarée par l'analyse » : il ne mesure pas une
+  exactitude.
+- **Décisions.**
+  - Les issues ne portent plus que sur les propositions de la période. Le bilan tombe
+    désormais juste : 41 proposées = 29 retenues + 9 refusées + 2 écartées + 1 en attente.
+  - Les suggestions en attente passent en tête, avec leur liste à ouvrir.
+  - Une suggestion reclassée chez quelqu'un d'autre, ou à laquelle vous avez répondu, compte
+    maintenant comme retenue.
+
+## Exporter ce que l'on voit
+
+Le bouton **Exporter** propose deux choix : le rapport hebdomadaire habituel, ou les données de la
+vue affichée. Ce second export reprend les chiffres exacts de chacun des sept panneaux. Chaque
+ligne indique sa période, sa population, les filtres appliqués ou ignorés et sa source. Le fichier
+s'ouvre directement dans Excel en français, sans aucun identifiant interne.
+
+## Accessibilité
+
+- Les titres de cartes sont annoncés comme titres.
+- Une ligne du journal de Décisions se lit d'un seul tenant, avec l'action « Ouvrir la tâche ».
+- Les graphiques de l'Analyse portent tous un résumé chiffré.
+- Les écrans ont été vérifiés en fenêtre étroite.
+
+## Pour les curieux
+
+- 292 vérifications du cœur.
+- Le travail sur l'Analyse a été commencé par Codex, puis repris et terminé.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.101.0/Assistant-Mail-0.101.0.dmg" length="10339544" type="application/octet-stream" sparkle:edSignature="glntERprW87SS2Xye39VlkANIFHEGuLBvQOqph2vWtsPXHyWNbKRUkJO+G9u51AMYrH0ZUmpoB4QjD1NzsCkBw=="/>
+        </item>
+        <item>
             <title>0.100.0</title>
             <pubDate>Fri, 25 Sep 2026 18:18:51 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -165,96 +264,6 @@ Quand aucune règle ne s'applique, c'est toujours Apple Intelligence qui propose
 ses propositions restent à vérifier (repère ✦). Ce sera l'objet d'une prochaine version.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.99.0/Assistant-Mail-0.99.0.dmg" length="9313501" type="application/octet-stream" sparkle:edSignature="UBoTR0QU8OzY1DklnQ2LMUh7sqkqzjwqa8uI4bu4nic7KpIy08/O9ZK95YO1IblbUvZIcx+eTgSn9U08SlWNCA=="/>
-        </item>
-        <item>
-            <title>0.98.0</title>
-            <pubDate>Fri, 25 Sep 2026 08:49:16 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>159</sparkle:version>
-            <sparkle:shortVersionString>0.98.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Chaque demande à sa place, et le modèle local à sa vraie taille
-
-Cette version réalise le plan d'amélioration consolidé après la 0.97.1. Le correctif du Suivi,
-publié en 0.97.2, y est inclus.
-
-## « À clarifier »
-
-Certaines suggestions de « À valider » viennent d'un message qui ne dit pas clairement qui doit
-agir : une demande adressée à toute l'équipe, un message reçu en copie sans être nommé, une
-phrase de demande introuvable dans le message. Elles sont désormais regroupées dans une section
-**« À clarifier »**, chacune avec la raison du doute. Elles ne sont jamais activées d'office :
-
-- valider la suggestion, c'est dire « c'est pour moi » ;
-- **Reclasser…** la confie à quelqu'un dans Tâches des autres ;
-- Ignorer fonctionne comme avant.
-
-## Le détail d'un e-mail distingue vos actions de celles de l'équipe
-
-Sous « Pourquoi ce classement », deux blocs résument la conversation :
-- **À faire par moi** ;
-- **Actions de l'équipe**, les actions confiées à d'autres.
-
-Chaque ligne indique le responsable et la phrase du message qui le montre. Un clic ouvre la tâche
-ou Tâches des autres. Les éléments terminés restent visibles en fin de liste.
-
-## Une relève en échec ne ressemble plus à une boîte vide
-
-Quand l'accès à une adresse échoue après une première relève réussie, la liste des E-mails
-affichait « Aucun e-mail conservé », comme une boîte vide. La Vue du jour, Mes tâches, le Suivi,
-Réunions et Documents faisaient de même. Ces écrans disent maintenant
-**« Relève de … en échec »**, avec le motif et deux boutons : **Réessayer** et **Voir les
-comptes**.
-
-## Projets et bibliothèque
-
-- **D'où vient le projet d'une tâche** se lit au survol des listes et par VoiceOver. Une petite
-  étincelle signale les classements faits par Apple Intelligence, les seuls qui soient devinés.
-- **Changer de projet** et **Retirer du projet** sont dans le menu contextuel d'une tâche : plus
-  besoin d'ouvrir son détail.
-- Le pied de la bibliothèque distingue les **fichiers affichés** des **fichiers indexés** et
-  indique la période couverte par l'index, limité à 2 000 fichiers.
-
-## Le modèle local à sa vraie taille
-
-L'application lit désormais la taille réelle de la fenêtre du modèle d'Apple : 8 192 jetons sous
-macOS 27, contre 4 096 auparavant.
-- Le Chat s'en sert : il conserve davantage d'historique et de contexte épinglé.
-- Sous macOS 27, un message trop long pour le modèle n'était plus réessayé en plus court : il
-  retombait sans le dire sur un classement par mots-clés. Il est de nouveau réessayé.
-
-L'analyse du courrier garde, elle, ses limites habituelles. Une coupe plus fine des longs
-messages, adaptée à la fenêtre réelle, a été essayée. Sur un jeu d'essai, elle manquait un peu
-moins de demandes, mais créait des tâches sans objet dans les très longs messages. Elle reste à
-l'essai tant qu'elle n'a pas fait ses preuves sur du courrier réel.
-
-## Clavier et VoiceOver
-
-- VoiceOver nomme les boutons qui n'étaient qu'une icône. Il annonce aussi une adresse en échec
-  dans la barre latérale et les avertissements des widgets.
-- Échap et Retour fonctionnent dans l'éditeur des tâches d'autrui.
-- Dans le Suivi, « Répondre » n'est plus réservé au survol de la souris. Chaque conversation
-  propose ses gestes à VoiceOver.
-- Un document de la bibliothèque se joint à un message au clavier.
-
-L'instantané que partagent les widgets n'est plus lisible par les autres comptes du Mac.
-
-## Expérimental : une tâche par demande
-
-Désactivé par défaut : Réglages › E-mails à plusieurs demandes › **Extraire chaque demande et son
-responsable**. Quand un même message contient plusieurs demandes, même dans un seul paragraphe,
-chacune devient :
-- une tâche pour vous ;
-- une proposition dans Tâches des autres ;
-- ou une question « À clarifier ».
-
-Chaque demande garde la phrase qui la justifie. Le modèle ne fait que recopier les phrases de
-demande, et celles qu'il invente sont écartées. L'analyse est plus lente, d'environ un appel au
-modèle par demande. Ce réglage reste à éprouver sur du courrier réel avant de devenir le
-comportement par défaut.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.98.0/Assistant-Mail-0.98.0.dmg" length="9269731" type="application/octet-stream" sparkle:edSignature="94QdGC51IhdRENSKzCbYPnbL9TrMzg7GaMofbPktuwcDkcRk94uLv2WZuCvnanyKYtzrlbI7Jhsfwqi8Zz6ZAQ=="/>
         </item>
     </channel>
 </rss>
