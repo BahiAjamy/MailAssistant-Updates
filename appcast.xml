@@ -6,6 +6,75 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.103.0</title>
+            <pubDate>Mon, 28 Sep 2026 13:12:37 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>164</sparkle:version>
+            <sparkle:shortVersionString>0.103.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# « Sans projet » ne montre plus que ce qui reste à classer
+
+Sur votre courrier, la liste « Sans projet » comptait 242 e-mails, dont 62 % n'étaient pas du
+courrier de projet. Cette version sépare ce qui est automatique, transmet le projet d'une
+conversation à ses réponses, et vous permet de décider pour une conversation entière. Sur vos
+données, la liste passe de **242 à 110 e-mails**.
+
+## Le robot OGAA est enfin exclu
+
+Votre liste « toujours exclure » contenait `adminogaa`, mais cette règle ne s'appliquait pas :
+la liste blanche `@ared-edu.org` passait avant elle, et un mot sans domaine ne correspondait à
+rien. Désormais :
+
+- **la règle la plus précise gagne** : une adresse ou un nom de boîte exclu l'emporte sur un
+  domaine en liste blanche. Vos collègues d'ARED restent analysés ;
+- **un mot sans point désigne un nom de boîte** : `adminogaa` vise `adminOGAA@ared-edu.org`,
+  quel que soit le domaine.
+
+Les 167 notifications d'OGAA quittent la liste des e-mails.
+
+## Une case « Automatiques »
+
+Sur l'écran E-mails, une nouvelle ligne « Automatiques » réunit les messages sans projet écrits
+par une machine :
+
+- réponses d'absence ;
+- reçus et paiements ;
+- expéditeurs que vous avez mis de côté ;
+- lettres d'information d'un expéditeur qui n'écrit qu'en masse et à qui vous n'écrivez jamais
+  (J-PAL, annonces générales d'ARED).
+
+Un collègue qui écrit à une liste de diffusion n'y va **jamais**, ni une invitation d'agenda :
+ces messages viennent de personnes et attendent un classement.
+
+## Le projet d'une conversation passe à ses réponses
+
+- **Une réponse prend le projet de son fil** quand tout ce qui y est déjà classé désigne le
+  même projet et forme au moins la moitié du fil. Exemples : Batazia et le Kick-off IA dans
+  ARED-IA, « TdR et budget » dans NDAW-WUNE VACANCE. Une devinette d'Apple Intelligence ou un
+  projet par défaut ne se transmettent jamais. Trois mentions de « MOHEBS » dans un fil de
+  quatorze messages ne suffisent pas.
+- **Vos propres fils passent par vos mots-clés** : l'objet et le texte que vous avez écrits,
+  jamais une règle d'expéditeur.
+- **Vos engagements et les nouveaux messages** reprennent le projet de leur fil avant toute
+  devinette.
+
+## « Hors projet » et « Classer la conversation »
+
+Un e-mail sans tâche avait une pastille de projet fixe. Elle devient un menu :
+
+- **un projet** : toute la conversation y est classée, y compris ses messages à venir et ses
+  tâches encore ouvertes ;
+- **Hors projet** : la conversation quitte « Sans projet » pour une nouvelle case « Hors
+  projet ». Aucun projet ne lui est plus deviné ;
+- **Retirer mon choix** : vos règles classent de nouveau la conversation.
+
+Jusqu'ici, « je n'ai pas classé » et « il n'y a rien à classer » s'affichaient de la même
+façon.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.103.0/Assistant-Mail-0.103.0.dmg" length="10710170" type="application/octet-stream" sparkle:edSignature="QqiEAd4EOg2TQ7w1RQ/XmesYTWMoqnPm/lsQHolgJ7s7uGcTBIHhzzDeumxrwt+G9NlN0W6r9AEhPrKU0PZ6Cg=="/>
+        </item>
+        <item>
             <title>0.102.0</title>
             <pubDate>Mon, 28 Sep 2026 11:06:40 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -167,104 +236,6 @@ s'ouvre directement dans Excel en français, sans aucun identifiant interne.
 - Le travail sur l'Analyse a été commencé par Codex, puis repris et terminé.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.101.0/Assistant-Mail-0.101.0.dmg" length="10339544" type="application/octet-stream" sparkle:edSignature="glntERprW87SS2Xye39VlkANIFHEGuLBvQOqph2vWtsPXHyWNbKRUkJO+G9u51AMYrH0ZUmpoB4QjD1NzsCkBw=="/>
-        </item>
-        <item>
-            <title>0.100.0</title>
-            <pubDate>Fri, 25 Sep 2026 18:18:51 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>161</sparkle:version>
-            <sparkle:shortVersionString>0.100.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Des règles qu'on ne peut plus fausser sans le voir
-
-La 0.99.0 a corrigé la façon dont les règles de projet lisent le courrier. Cette version empêche
-qu'elles se refaussent, apprend de vos corrections et retire à Apple Intelligence le droit de
-deviner un projet sans preuve.
-
-## Un mot-clé est mesuré avant d'être ajouté
-
-Dans le formulaire d'un projet, chaque mot-clé ajouté indique combien d'e-mails conservés il
-prendrait, avec quelques objets d'exemple. Un mot est signalé comme trop courant dans trois cas :
-
-- c'est un mot du vocabulaire courant du courrier (« retour », « forward ») ;
-- il désigne d'autres projets autant que celui-ci (« Kaolack », où travaillent plusieurs programmes) ;
-- il apparaît dans plus d'un dixième du courrier.
-
-Le nom du projet lui-même n'est jamais signalé. Enregistrer un mot trop courant demande une
-confirmation.
-
-Dans « Projets possibles », **Ajouter à…** ouvre désormais une liste à cocher, un mot-clé par ligne.
-Chaque mot y est mesuré, et les mots trop courants arrivent décochés. Avant, les dix mots d'une
-grappe entraient d'un coup : c'est ainsi que « retour » était arrivé dans NDAW-WUNE VACANCE.
-
-## Vos corrections servent
-
-- Quand vous déplacez une tâche qu'un mot-clé avait mal rangée, l'application le nomme et propose
-  de le retirer : « Retirer le mot-clé « retour » de « NDAW-WUNE VACANCE » ? ». Le retirer sort
-  aussi de ce projet les tâches ouvertes que ce mot y avait rangées.
-- Pour un collègue de votre organisation, la règle « toujours classer ses e-mails ici » n'est
-  proposée que si son courrier va déjà presque entièrement dans ce projet. La même personne
-  écrit souvent pour plusieurs programmes.
-- La pastille projet en haut d'un e-mail est un menu : on change le projet de la tâche liée en
-  un clic. La première ligne du menu dit ce qui l'avait classée.
-
-## Apple Intelligence doit citer sa preuve
-
-Quand aucune règle ne classe un e-mail, Apple Intelligence propose un projet. Jusqu'ici, il en
-choisissait un presque toujours, même sans raison : sur les tâches qu'il avait rangées, la très
-grande majorité l'étaient dans NDAW-WUNE, pour des reçus, des notifications ou un passeport.
-
-- Il doit désormais recopier le mot de l'e-mail qui désigne le projet : un sigle, le nom du
-  programme ou un sujet qui lui est propre. L'application vérifie que ce mot figure bien dans
-  l'objet ou dans le nouveau texte du message, et qu'il désigne ce projet et pas un autre. Le nom
-  de l'organisation (« ARED ») ne suffit jamais, pas plus qu'un mot courant.
-- Sans preuve valable, la tâche reste **Sans projet**. Mieux vaut une tâche à classer qu'une
-  tâche mal classée.
-- La preuve retenue s'affiche : « Classée dans « DAWAL-LIRE » par Apple Intelligence, d'après
-  « DawalLire » trouvé dans l'objet : à vérifier ».
-- « aucun » est désormais la première réponse proposée au modèle, et l'objectif de chaque projet
-  lui est transmis avec sa description.
-
-Mesuré sur 108 de vos e-mails réels, en laissant l'IA seule, sans vos règles : les mauvais projets
-passent de 19 à 1, et les projets inventés sur des e-mails qui n'en ont pas de 29 à 4. En
-contrepartie, l'IA laisse davantage d'e-mails sans projet. Vos règles, qui passent avant elle,
-continuent de ranger ceux qui nomment un programme dans l'objet.
-
-## Pas de projet deviné pour un robot
-
-Apple Intelligence ne propose plus de projet pour :
-- les expéditeurs de vos listes « ne crée plus de tâche » et « n'attend jamais de réponse »
-  (le robot OGAA, par exemple) ;
-- les messages automatiques ou envoyés en masse ;
-- les adresses de non-réponse, de facturation ou de notification ;
-- les messages qu'il juge lui-même être des notifications.
-
-Vos règles d'expéditeur et de mots-clés, elles, s'appliquent toujours à ces messages.
-
-## Des descriptions de projets qui se distinguent
-
-Apple Intelligence s'appuie sur la description de chaque projet pour choisir. Quand deux
-descriptions partagent les mêmes mots, il ne peut pas les départager. Le formulaire d'un projet le
-signale désormais sous la description : « Ces mots se retrouvent aussi chez « NDAW-WUNE ANNEE
-SCOLAIRE » : « programme », « ared », « remediation », « scolaire » ». Pour les deux projets
-NDAW-WUNE, dites ce qui les distingue : la période, les classes visées, les lieux.
-
-## Classements à revoir
-
-L'écran Projets affiche une nouvelle carte, **Classements à revoir**. Elle regroupe les tâches des
-90 derniers jours dont le projet est douteux, avec la raison du doute :
-
-- **règle retirée** : un mot-clé que vous avez supprimé depuis les avait rangées ;
-- **mot-clé trop courant** : le mot qui les a rangées est aujourd'hui jugé trop courant ;
-- **Apple Intelligence sans preuve** : l'IA les avait devinées sans rien citer.
-
-Dans la liste, cochez les tâches puis choisissez **Déplacer vers…**, **Sans projet** ou
-**Confirmer**. Chaque ligne a aussi son propre menu. Un déplacement groupé s'annule d'un seul
-geste. Rien ne bouge sans vous : la liste propose, vous décidez. Les bilans par projet de
-l'écran Analyse suivent vos corrections.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.100.0/Assistant-Mail-0.100.0.dmg" length="9793460" type="application/octet-stream" sparkle:edSignature="awthSoX6iP97848fk+Hhge3lKc9wgmETsIrEFZ16mMNwkyDj/PqkaRuZxV8QQslF5lsC12Cex94HtvGEGzYPAA=="/>
         </item>
     </channel>
 </rss>
