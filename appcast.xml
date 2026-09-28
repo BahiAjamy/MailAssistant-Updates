@@ -6,6 +6,70 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.102.0</title>
+            <pubDate>Mon, 28 Sep 2026 11:06:40 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>163</sparkle:version>
+            <sparkle:shortVersionString>0.102.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Ce que vous dites, projet par projet
+
+Cette version ajoute un huitième onglet à l'Analyse : **Vocabulaire**. Il montre les mots de
+votre courrier, projet par projet : ce que vous écrivez dans vos envois, et ce qu'on vous écrit
+dans les messages reçus.
+
+## Sept cartes
+
+En tête de l'onglet, vous choisissez le projet, le sens (vos envois, les reçus ou les deux) et la
+période (30 jours ou tout le courrier conservé).
+
+- **Nuage de mots.** Les 45 mots les plus fréquents. Leur taille suit leur nombre d'occurrences.
+- **Mot en contexte.** Un clic sur un mot, dans n'importe quelle carte, affiche les phrases où il
+  apparaît, avec le mot surligné. « Voir » ouvre l'e-mail reçu dans l'application, et « Ouvrir »
+  ouvre votre envoi chez le fournisseur.
+- **Vos mots, leurs mots.** Des barres en miroir : à gauche, les mots que vous écrivez plus
+  qu'on ne vous les écrit ; à droite, l'inverse. Un mot rare ne ressort que s'il revient assez
+  souvent.
+- **Expressions fréquentes.** Les groupes de deux ou trois mots qui reviennent, avec leurs petits
+  mots : « élèves de comparaison », « critères d'échantillonnage », « écoles par bras ».
+- **Thèmes dans le temps.** Les huit mots principaux, semaine par semaine.
+- **Signature de chaque projet.** Les mots qui distinguent un projet de tous les autres.
+- **Qui parle dans chaque projet.** Messages reçus et envoyés, et nombre de mots que vous avez
+  écrits.
+
+## Un prétraitement vérifiable
+
+Sans prétraitement, le haut des nuages montrait surtout du bruit. Avant tout calcul, l'onglet
+applique ces étapes :
+
+- accents et majuscules ignorés ; pluriels et conjugaisons ramenés à leur forme de base
+  (« écoles » devient « école », « demandé » devient « demander ») ;
+- articles, prépositions, pronoms et formules de politesse retirés, en français comme en
+  anglais ;
+- historique cité et signature coupés : vos réponses ne répètent plus le message auquel vous
+  répondiez. Un « Merci pour votre retour » en début de message est gardé ;
+- noms de personnes retirés, ainsi que les mots des règles de projet (« nwas », « dawallire ») ;
+- messages automatiques (robot OGAA compris) et invitations d'agenda comptés dans les volumes,
+  mais sans que leur texte soit lu.
+
+Le lien « Voir le prétraitement » donne les chiffres de chaque étape. Sur votre courrier, par
+exemple : 227 messages automatiques écartés et 438 noms de personnes retirés. L'analyse
+linguistique utilise l'outil d'Apple, entièrement sur ce Mac. Elle prend moins d'une seconde
+pour 577 messages.
+
+Un envoi prend le projet de sa conversation : celui des messages reçus du même fil, sinon celui
+des tâches de ce fil.
+
+Quand un projet compte moins de 40 mots, l'onglet affiche « pas assez de texte » au lieu d'un
+nuage trompeur. C'est aujourd'hui le cas d'ARED-IA, MOHEBS MATHS et SENSTAT pour vos envois.
+
+L'export « Données de cette vue » écrit le prétraitement et chaque carte, pour le projet, le sens
+et la période affichés.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.102.0/Assistant-Mail-0.102.0.dmg" length="10650877" type="application/octet-stream" sparkle:edSignature="xobXQ2u2TvsXZPN5YsRK+/QQa/vgKwLtdWSGHxud4J3aHS8Hy6wpoQc4cOCSee7UBW72xpVMs3UBx1PEKw8lDw=="/>
+        </item>
+        <item>
             <title>0.101.0</title>
             <pubDate>Sat, 26 Sep 2026 12:53:50 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -201,69 +265,6 @@ geste. Rien ne bouge sans vous : la liste propose, vous décidez. Les bilans par
 l'écran Analyse suivent vos corrections.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.100.0/Assistant-Mail-0.100.0.dmg" length="9793460" type="application/octet-stream" sparkle:edSignature="awthSoX6iP97848fk+Hhge3lKc9wgmETsIrEFZ16mMNwkyDj/PqkaRuZxV8QQslF5lsC12Cex94HtvGEGzYPAA=="/>
-        </item>
-        <item>
-            <title>0.99.0</title>
-            <pubDate>Fri, 25 Sep 2026 10:53:54 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>160</sparkle:version>
-            <sparkle:shortVersionString>0.99.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Des projets mieux choisis, et une cause qu'on peut lire
-
-Des tâches se retrouvaient dans un projet qui n'était pas le leur. Exemple réel : un e-mail
-« Mission IA ARED » rangé dans NDAW-WUNE VACANCE, parce que ce projet avait le mot-clé
-« retour » et que le message disait « par retour de courriel ». Cette version corrige la façon
-dont les règles de projet lisent le courrier.
-
-## Les mots-clés sont lus comme des mots
-
-- Un mot-clé ne se déclenche plus à l'intérieur d'un autre mot. « forward » ne prend plus chaque
-  « Forwarded message », et « A2F » n'est plus reconnu au milieu d'un lien.
-- Le pluriel reste reconnu (« vacance » trouve « vacances »), tout comme un sigle suivi d'une
-  année (« NWV » trouve « NWV2026 »).
-- Dans les noms de fichiers, les mots collés sont séparés avant la lecture :
-  `BaseNWVFinale2026.xlsx` reste rattaché à son projet.
-
-## Seul le nouveau texte compte
-
-Les règles lisent l'objet et ce que le correspondant vient d'écrire. L'historique cité sous une
-réponse ne compte plus : un « merci pour votre retour » d'il y a trois semaines ne classe plus
-le message d'aujourd'hui.
-
-## Le projet le mieux justifié l'emporte
-
-Avant, le premier projet de la barre latérale qui avait un mot-clé présent n'importe où dans le
-message l'emportait. Désormais, un mot trouvé dans l'objet pèse plus qu'un mot trouvé dans le
-corps, et plusieurs mots-clés pèsent plus qu'un seul. Si deux projets sont à égalité, aucune
-règle ne tranche : l'ordre de la barre latérale n'est pas une preuve.
-
-## La cause d'un classement est affichée
-
-Au survol du projet d'une tâche, dans son menu contextuel, dans son détail et sur la pastille
-projet d'un e-mail, l'application indique ce qui a décidé du classement. Par exemple : « Classée
-dans NDAW-WUNE VACANCE par le mot-clé « retour », trouvé dans le texte du message ». Vous savez
-ainsi quelle règle corriger, au lieu de corriger les tâches une par une.
-
-## Votre choix vaut pour toute la conversation
-
-Quand vous rangez une tâche à la main dans un projet, les messages suivants de la même
-conversation vont dans ce projet, avant toute règle. Si vous changez d'avis, les tâches ouvertes
-qui en avaient hérité vous suivent. « Sans projet », choisi à la main, ne se transmet pas.
-
-## « Appliquer les règles aux tâches existantes »
-
-Quand vous retirez un mot-clé, ce bouton retire aussi de ce projet les tâches que ce mot-clé
-avait rangées. Cela ne concerne que les tâches ouvertes dont l'e-mail est encore disponible,
-pour que l'application puisse vérifier. Les tâches terminées gardent leur projet.
-
-## Ce qui ne change pas encore
-
-Quand aucune règle ne s'applique, c'est toujours Apple Intelligence qui propose un projet, et
-ses propositions restent à vérifier (repère ✦). Ce sera l'objet d'une prochaine version.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.99.0/Assistant-Mail-0.99.0.dmg" length="9313501" type="application/octet-stream" sparkle:edSignature="UBoTR0QU8OzY1DklnQ2LMUh7sqkqzjwqa8uI4bu4nic7KpIy08/O9ZK95YO1IblbUvZIcx+eTgSn9U08SlWNCA=="/>
         </item>
     </channel>
 </rss>
