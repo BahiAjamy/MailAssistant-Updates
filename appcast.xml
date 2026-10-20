@@ -6,6 +6,52 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.106.0</title>
+            <pubDate>Tue, 20 Oct 2026 18:06:15 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>168</sparkle:version>
+            <sparkle:shortVersionString>0.106.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Une validation plus claire et plus rapide
+
+Cette version reprend l’écran **Tâches > À valider** pour qu’il dise toujours la même chose que la liste, et pour que chaque décision demande moins de clics.
+
+## Le motif d’une suggestion en trois lignes
+
+**Pourquoi cette suggestion** montre désormais :
+
+- **Demande** — la phrase du message qui formule la demande. Quand aucune phrase n’a été retrouvée dans le texte, l’écran le dit au lieu de montrer un extrait.
+- **Pour** — qui doit agir, et pourquoi : destinataire direct, nommé dans la demande, demande collective, ou à trancher.
+- **Échéance** — la date telle que le message l’écrit, quand il en donne une.
+
+Le raisonnement complet de l’analyse reste disponible sous **Détails de l’analyse**. Le motif suit l’état de la tâche : une tâche déjà dans vos tâches ne vous demande plus de la reclasser.
+
+## Un aperçu de l’e-mail lisible
+
+L’aperçu de l’e-mail d’origine ne montre plus les mentions « voir cet e-mail dans votre navigateur », les adresses web brutes ni les astérisques de mise en forme. Quand la phrase source est retrouvée, l’aperçu commence à cet endroit. Un lien ouvre directement le message chez son fournisseur.
+
+## Ignorer sans passer par « Plus »
+
+Sur une suggestion, **Ignorer** est désormais à côté de **Valider**. Après chaque décision, la suggestion suivante s’ouvre automatiquement, sans jamais dépasser la sélection du jour. Toutes les décisions restent annulables.
+
+## Une échéance dépassée se signale
+
+Quand la date écrite d’une suggestion est passée, un bandeau l’indique (« Échéance dépassée de 4 jours ») et propose trois choix : **Toujours à faire**, **Déjà fait** ou **Ignorer**. La suggestion garde sa place et sa priorité.
+
+## Des compteurs cohérents
+
+- Le badge de **Mes tâches** ne compte plus que les tâches à faire. Les suggestions et les tâches en veille ne s’y ajoutent plus.
+- L’en-tête des tâches indique, par exemple, « 2 à faire · 3 à valider aujourd’hui ».
+- L’onglet **À valider**, la tuile de la Vue du jour et le menu de la barre des menus comptent la sélection du jour. La tuile précise combien d’autres suggestions attendent dans la file.
+
+## La sélection du jour terminée
+
+Quand les suggestions du jour sont toutes tranchées, l’onglet n’annonce plus « Aucune suggestion à vérifier ». Il indique **« Votre sélection du jour est terminée »**, le nombre de suggestions qui restent dans la file, et un bouton **Examiner les suggestions restantes**. Aucune suggestion ne s’éteint à cause de la limite quotidienne.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.106.0/Assistant-Mail-0.106.0.dmg" length="10995594" type="application/octet-stream" sparkle:edSignature="kJIDItoIZmWlaNYF0sdN/aPeqzaTmdtNqvjotUjDOoQAv21Vcyrag08/9TzBsyf1S2YE7giz8slFSirou9hWAA=="/>
+        </item>
+        <item>
             <title>0.105.0</title>
             <pubDate>Tue, 20 Oct 2026 09:58:55 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -135,75 +181,6 @@ Une relève demandée à la main essaie toujours.
 308 vérifications du cœur (302 auparavant).
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.104.0/Assistant-Mail-0.104.0.dmg" length="10755602" type="application/octet-stream" sparkle:edSignature="FXTj7nWosk4e78jL25oCe1qGdMMXmeGzS9/zh1yHb9k1YJoZVwsDSkbN6O9EXKrDYOa2CyBbnZExNCAvDA0/Ag=="/>
-        </item>
-        <item>
-            <title>0.103.0</title>
-            <pubDate>Mon, 28 Sep 2026 13:12:37 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>164</sparkle:version>
-            <sparkle:shortVersionString>0.103.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# « Sans projet » ne montre plus que ce qui reste à classer
-
-Sur votre courrier, la liste « Sans projet » comptait 242 e-mails, dont 62 % n'étaient pas du
-courrier de projet. Cette version sépare ce qui est automatique, transmet le projet d'une
-conversation à ses réponses, et vous permet de décider pour une conversation entière. Sur vos
-données, la liste passe de **242 à 110 e-mails**.
-
-## Le robot OGAA est enfin exclu
-
-Votre liste « toujours exclure » contenait `adminogaa`, mais cette règle ne s'appliquait pas :
-la liste blanche `@ared-edu.org` passait avant elle, et un mot sans domaine ne correspondait à
-rien. Désormais :
-
-- **la règle la plus précise gagne** : une adresse ou un nom de boîte exclu l'emporte sur un
-  domaine en liste blanche. Vos collègues d'ARED restent analysés ;
-- **un mot sans point désigne un nom de boîte** : `adminogaa` vise `adminOGAA@ared-edu.org`,
-  quel que soit le domaine.
-
-Les 167 notifications d'OGAA quittent la liste des e-mails.
-
-## Une case « Automatiques »
-
-Sur l'écran E-mails, une nouvelle ligne « Automatiques » réunit les messages sans projet écrits
-par une machine :
-
-- réponses d'absence ;
-- reçus et paiements ;
-- expéditeurs que vous avez mis de côté ;
-- lettres d'information d'un expéditeur qui n'écrit qu'en masse et à qui vous n'écrivez jamais
-  (J-PAL, annonces générales d'ARED).
-
-Un collègue qui écrit à une liste de diffusion n'y va **jamais**, ni une invitation d'agenda :
-ces messages viennent de personnes et attendent un classement.
-
-## Le projet d'une conversation passe à ses réponses
-
-- **Une réponse prend le projet de son fil** quand tout ce qui y est déjà classé désigne le
-  même projet et forme au moins la moitié du fil. Exemples : Batazia et le Kick-off IA dans
-  ARED-IA, « TdR et budget » dans NDAW-WUNE VACANCE. Une devinette d'Apple Intelligence ou un
-  projet par défaut ne se transmettent jamais. Trois mentions de « MOHEBS » dans un fil de
-  quatorze messages ne suffisent pas.
-- **Vos propres fils passent par vos mots-clés** : l'objet et le texte que vous avez écrits,
-  jamais une règle d'expéditeur.
-- **Vos engagements et les nouveaux messages** reprennent le projet de leur fil avant toute
-  devinette.
-
-## « Hors projet » et « Classer la conversation »
-
-Un e-mail sans tâche avait une pastille de projet fixe. Elle devient un menu :
-
-- **un projet** : toute la conversation y est classée, y compris ses messages à venir et ses
-  tâches encore ouvertes ;
-- **Hors projet** : la conversation quitte « Sans projet » pour une nouvelle case « Hors
-  projet ». Aucun projet ne lui est plus deviné ;
-- **Retirer mon choix** : vos règles classent de nouveau la conversation.
-
-Jusqu'ici, « je n'ai pas classé » et « il n'y a rien à classer » s'affichaient de la même
-façon.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.103.0/Assistant-Mail-0.103.0.dmg" length="10710170" type="application/octet-stream" sparkle:edSignature="QqiEAd4EOg2TQ7w1RQ/XmesYTWMoqnPm/lsQHolgJ7s7uGcTBIHhzzDeumxrwt+G9NlN0W6r9AEhPrKU0PZ6Cg=="/>
         </item>
     </channel>
 </rss>
