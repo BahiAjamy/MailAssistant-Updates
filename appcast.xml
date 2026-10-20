@@ -6,6 +6,42 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.105.0</title>
+            <pubDate>Tue, 20 Oct 2026 09:58:55 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>167</sparkle:version>
+            <sparkle:shortVersionString>0.105.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Une question claire pour chaque demande incertaine
+
+Dans **Tâches > À valider**, les demandes à clarifier présentent maintenant une question et le passage qui la justifie :
+
+- **Qui prend cette action ?** — Moi, Une personne… ou Personne.
+- **Prenez-vous ce point ?** — Oui, Non, c’est pour… ou Plus tard.
+- **Quelle échéance retenir ?** — choisissez une date ou gardez la demande sans échéance.
+- **Ces deux demandes sont-elles la même action ?** — comparez-les, puis fusionnez-les ou gardez les deux.
+
+Une délégation ouvre le formulaire de **Tâches des autres**. Elle est enregistrée comme une délégation. Une fusion conserve la tâche déjà suivie ; la seconde source reste consultable dans Ignorées.
+
+## Choisir la portée de sa réponse
+
+Avant de répondre, choisissez **Ce message**, **Cette conversation** ou, pour une attribution, **Une règle réutilisable**. Le nombre de suggestions en attente concernées est affiché. Les règles s’appliquent aussi à ces suggestions et se désactivent depuis À valider. La réponse et sa portée sont annulables ensemble.
+
+Les dates peuvent concerner le message ou la conversation. La comparaison d’un doublon concerne les deux demandes présentées.
+
+## Une revue quotidienne bornée
+
+L’application présente au plus **cinq validations ou questions dans la journée**, en commençant par les suggestions les plus sûres. Répondre ne fait pas apparaître une sixième question.
+
+Les autres attendent dans une **file consultable** : le bouton **Voir la file** les affiche à la suite, dans l’ordre où elles seraient présentées. Cette limite borne ce qui vous est présenté, pas ce qui existe : **aucune suggestion ne s’éteint ni ne disparaît** parce que le quota est atteint.
+
+Le journal conserve les réponses, leur acteur, leur portée et le changement d’état. Il horodate aussi l’ouverture et la fin des revues quotidiennes pour mesurer leur durée après usage.
+
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.105.0/Assistant-Mail-0.105.0.dmg" length="10932822" type="application/octet-stream" sparkle:edSignature="dAy32BYN8Nrflz9MUPsceeP6uw+LSmUNp74wWBYjIdruTfmhFdUbLs1tWfhnA+HjozOvTQEY5xkoMQ9b/ZN7CQ=="/>
+        </item>
+        <item>
             <title>0.104.0</title>
             <pubDate>Mon, 19 Oct 2026 16:15:59 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -168,70 +204,6 @@ Jusqu'ici, « je n'ai pas classé » et « il n'y a rien à classer » s'afficha
 façon.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.103.0/Assistant-Mail-0.103.0.dmg" length="10710170" type="application/octet-stream" sparkle:edSignature="QqiEAd4EOg2TQ7w1RQ/XmesYTWMoqnPm/lsQHolgJ7s7uGcTBIHhzzDeumxrwt+G9NlN0W6r9AEhPrKU0PZ6Cg=="/>
-        </item>
-        <item>
-            <title>0.102.0</title>
-            <pubDate>Mon, 28 Sep 2026 11:06:40 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>163</sparkle:version>
-            <sparkle:shortVersionString>0.102.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Ce que vous dites, projet par projet
-
-Cette version ajoute un huitième onglet à l'Analyse : **Vocabulaire**. Il montre les mots de
-votre courrier, projet par projet : ce que vous écrivez dans vos envois, et ce qu'on vous écrit
-dans les messages reçus.
-
-## Sept cartes
-
-En tête de l'onglet, vous choisissez le projet, le sens (vos envois, les reçus ou les deux) et la
-période (30 jours ou tout le courrier conservé).
-
-- **Nuage de mots.** Les 45 mots les plus fréquents. Leur taille suit leur nombre d'occurrences.
-- **Mot en contexte.** Un clic sur un mot, dans n'importe quelle carte, affiche les phrases où il
-  apparaît, avec le mot surligné. « Voir » ouvre l'e-mail reçu dans l'application, et « Ouvrir »
-  ouvre votre envoi chez le fournisseur.
-- **Vos mots, leurs mots.** Des barres en miroir : à gauche, les mots que vous écrivez plus
-  qu'on ne vous les écrit ; à droite, l'inverse. Un mot rare ne ressort que s'il revient assez
-  souvent.
-- **Expressions fréquentes.** Les groupes de deux ou trois mots qui reviennent, avec leurs petits
-  mots : « élèves de comparaison », « critères d'échantillonnage », « écoles par bras ».
-- **Thèmes dans le temps.** Les huit mots principaux, semaine par semaine.
-- **Signature de chaque projet.** Les mots qui distinguent un projet de tous les autres.
-- **Qui parle dans chaque projet.** Messages reçus et envoyés, et nombre de mots que vous avez
-  écrits.
-
-## Un prétraitement vérifiable
-
-Sans prétraitement, le haut des nuages montrait surtout du bruit. Avant tout calcul, l'onglet
-applique ces étapes :
-
-- accents et majuscules ignorés ; pluriels et conjugaisons ramenés à leur forme de base
-  (« écoles » devient « école », « demandé » devient « demander ») ;
-- articles, prépositions, pronoms et formules de politesse retirés, en français comme en
-  anglais ;
-- historique cité et signature coupés : vos réponses ne répètent plus le message auquel vous
-  répondiez. Un « Merci pour votre retour » en début de message est gardé ;
-- noms de personnes retirés, ainsi que les mots des règles de projet (« nwas », « dawallire ») ;
-- messages automatiques (robot OGAA compris) et invitations d'agenda comptés dans les volumes,
-  mais sans que leur texte soit lu.
-
-Le lien « Voir le prétraitement » donne les chiffres de chaque étape. Sur votre courrier, par
-exemple : 227 messages automatiques écartés et 438 noms de personnes retirés. L'analyse
-linguistique utilise l'outil d'Apple, entièrement sur ce Mac. Elle prend moins d'une seconde
-pour 577 messages.
-
-Un envoi prend le projet de sa conversation : celui des messages reçus du même fil, sinon celui
-des tâches de ce fil.
-
-Quand un projet compte moins de 40 mots, l'onglet affiche « pas assez de texte » au lieu d'un
-nuage trompeur. C'est aujourd'hui le cas d'ARED-IA, MOHEBS MATHS et SENSTAT pour vos envois.
-
-L'export « Données de cette vue » écrit le prétraitement et chaque carte, pour le projet, le sens
-et la période affichés.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.102.0/Assistant-Mail-0.102.0.dmg" length="10650877" type="application/octet-stream" sparkle:edSignature="xobXQ2u2TvsXZPN5YsRK+/QQa/vgKwLtdWSGHxud4J3aHS8Hy6wpoQc4cOCSee7UBW72xpVMs3UBx1PEKw8lDw=="/>
         </item>
     </channel>
 </rss>
