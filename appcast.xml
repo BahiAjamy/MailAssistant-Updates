@@ -6,6 +6,39 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.107.0</title>
+            <pubDate>Wed, 21 Oct 2026 13:15:50 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>169</sparkle:version>
+            <sparkle:shortVersionString>0.107.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Version 0.107.0 — Une interface plus légère
+
+Version préparée, build 169. Aucune publication ni installation automatique.
+
+- Vue du jour : Plan du jour et Brief hebdomadaire masqués par défaut, réactivables depuis l’accueil et Réglages > Général. Un plan déjà préparé aujourd’hui reste visible. Un Brief masqué ne lance plus de génération depuis cet écran.
+- Les panneaux sans priorité ou réponse attendue deviennent compacts. Les états de première relève et d’échec gardent leurs explications.
+- Projets : les projets sans tâche ouverte, action confiée, réponse attendue, réunion proche ni signal à examiner sont regroupés dans une section dépliable. Les statuts À risque et En pause restent visibles. Les filtres d’un autre écran ne masquent pas les signaux des autres projets.
+- Réunions : lieu physique conservé, liens bruts retirés du lieu, actions de connexion regroupées. Le titre du détail reste affiché en entier.
+- Classements : formulations sans numéro de version ni jargon, détail de l’origine conservé.
+- Conversations : les deux derniers messages, le message sélectionné et les sources des tâches restent accessibles ; les autres sont regroupés derrière un bouton. Un second bouton replie à nouveau l’historique. Les non-lus restent identifiés comme locaux à Assistant Mail.
+- Navigation : E-mails et Documents restent dans Au quotidien. Chat et Analyse sont regroupés dans Consulter, replié par défaut et ouvert automatiquement lors d’un accès direct. Les raccourcis existants restent les mêmes. L’onglet Suivi des tâches devient Échanges, pour le distinguer de Tâches des autres.
+- Lisibilité : textes secondaires à 12 points et métadonnées compactes à 11 points sur les écrans concernés.
+
+Le Registre ne devient pas l’accueil dans cette version.
+
+## Vérification
+
+- Compilation Swift réussie.
+- 332 contrôles du cœur, dont migration des deux choix d’affichage, conservation des sources reçues et envoyées des tâches personnelles ou confiées, séparation des comptes, signaux de projet et nettoyage des lieux avec liens en majuscules ou incomplets.
+- 78 instantanés en clair et 78 en sombre générés sur une copie isolée de l’état. Les écrans modifiés ont été relus ; ImageRenderer ne restitue pas tous les contrôles AppKit.
+- Essais interactifs sur l’application d’aperçu isolée : réactivation du Plan depuis l’accueil ; masquage du Plan et réactivation du Brief dans Réglages ; démarrage immédiat du Brief ; accès à Analyse par ⌘7 avec ouverture de Consulter ; dépliage/repliage d’un fil ; accès aux projets repliés.
+- Les liens externes de réunion ont été vérifiés comme commandes présentes, sans rejoindre de réunion. L’installation et la publication restent à faire après accord.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.107.0/Assistant-Mail-0.107.0.dmg" length="11071861" type="application/octet-stream" sparkle:edSignature="mC5YoJfeh3PkKmHWHdQHzrNVIMyzq0XyZ4IIw5QQDo524Fv8wKEDXafi0NbwXVes+Ipa6R/u0zakM9jAeQXBAw=="/>
+        </item>
+        <item>
             <title>0.106.0</title>
             <pubDate>Tue, 20 Oct 2026 18:06:15 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -86,101 +119,6 @@ Le journal conserve les réponses, leur acteur, leur portée et le changement d�
 
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.105.0/Assistant-Mail-0.105.0.dmg" length="10932822" type="application/octet-stream" sparkle:edSignature="dAy32BYN8Nrflz9MUPsceeP6uw+LSmUNp74wWBYjIdruTfmhFdUbLs1tWfhnA+HjozOvTQEY5xkoMQ9b/ZN7CQ=="/>
-        </item>
-        <item>
-            <title>0.104.0</title>
-            <pubDate>Mon, 19 Oct 2026 16:15:59 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>165</sparkle:version>
-            <sparkle:shortVersionString>0.104.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# L'assistant arrête de vous faire arbitrer ses propres erreurs
-
-Premier lot de la refondation du 19 octobre. Pas de nouvel écran : cette version corrige ce qui
-produisait des erreurs, des alertes répétées et des phrases trop sûres d'elles. Sur vos
-données, la file « À clarifier » passe de **13 à 6 suggestions**.
-
-## La bonne personne derrière chaque demande
-
-Le modèle confondait souvent la personne qui demande avec celle qui doit agir. Sur vos 15
-suggestions en attente, au moins 6 donnaient l'action à la mauvaise personne :
-
-- **à l'expéditeur lui-même**, alors que c'est lui qui vous demandait quelque chose ;
-- **à vous**, tout en proposant de ranger la tâche dans « Tâches des autres », alors que le
-  message vous nommait ;
-- **à une personne seulement citée** (« merci de se rapprocher de lui ») ;
-- **à votre organisation**, comme si elle était une personne.
-
-L'application corrige désormais ces cas avant de classer la suggestion. Le motif dit ce qui a
-été corrigé (« Attribution corrigée : … »), et le journal le note. Une suggestion corrigée
-n'est jamais activée d'elle-même : elle reste à valider.
-
-**Vos suggestions en attente sont réparées au lancement** : 10 des 13 motifs erronés sont
-corrigés. Les 4 qui restent « confiées à » quelqu'un d'autre le sont à juste titre (vous étiez
-en copie).
-
-## Votre nom, et pas celui de votre homonyme
-
-Un « Bonjour » suivi de votre prénom, adressé à un collègue qui porte le même prénom, ne vous
-concerne pas. Votre prénom seul ne vous désigne plus que si aucun autre participant du message
-ne le porte. Votre nom de famille, lui,
-vous désigne toujours.
-
-Nouveau réglage **« Vos noms »** (Réglages, avec la signature) : ajoutez un surnom que vos
-collègues emploient. Une demande qui le cite vous sera attribuée.
-
-## « Déjà fait » quand vous avez répondu dans Outlook
-
-Quand vous avez répondu dans le fil d'une suggestion encore « à valider », l'onglet « À
-valider » le signale : « Vous avez déjà répondu à 3 suggestions ». Un bouton **Déjà fait** la
-termine ; c'est annulable. Une simple promesse de revenir (« je vous reviens au plus vite ») ne
-compte pas comme une réponse.
-
-## Les vieilles tâches ne reviennent plus chaque matin
-
-Une tâche en retard **depuis plus de 21 jours** quitte la tuile « En retard » et les Priorités.
-Elle passe dans **« À réexaminer »**, sous les Priorités de la Vue du jour, avec trois gestes :
-garder sans échéance, déjà fait, abandonner. C'est le cas d'une tâche due le 22 août, encore en
-tête des Priorités le 19 octobre.
-
-## Le digest du matin se tait quand il n'a rien de neuf
-
-Le même digest (« 1 en retard, 15 à valider ») était parti cinq matins de suite. Désormais, si
-les tâches annoncées sont les mêmes que la veille et que les non-lus n'ont pas augmenté, aucune
-notification n'est envoyée ; le journal le note.
-
-## Des phrases qui disent ce qu'elles savent
-
-- « Vous ne devez de réponse à personne » devient **« Aucune réponse attendue détectée »**,
-  suivi du périmètre analysé : conversations des 30 derniers jours, boîte de réception, heure
-  de la dernière relève.
-- Le digest vide ne dit plus « Rien d'urgent » ; il dit qu'aucune tâche n'est en retard, due
-  aujourd'hui ou à valider.
-
-## Un interlocuteur commun à deux missions
-
-Une règle d'expéditeur par **adresse** l'emporte maintenant sur une règle par **domaine**.
-Quand deux projets réclament le même expéditeur avec la même précision, l'ordre de la barre
-latérale ne décide plus : ce sont les mots-clés du message qui tranchent.
-
-## Plus de pastille rouge pour un Wi-Fi coupé
-
-Sur les dix derniers jours, 143 relèves avaient échoué « hors ligne », surtout la nuit, et
-chacune allumait la pastille rouge des comptes. Désormais :
-
-- **la relève planifiée attend le retour du réseau** ;
-- **une coupure de réseau n'est plus comptée comme une panne du compte** ;
-- **le jeton d'accès est revalidé à chaque page** : les erreurs 401 en pleine relève, vues les 11
-  et 18 octobre, ne devraient plus se produire.
-
-Une relève demandée à la main essaie toujours.
-
----
-
-308 vérifications du cœur (302 auparavant).
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.104.0/Assistant-Mail-0.104.0.dmg" length="10755602" type="application/octet-stream" sparkle:edSignature="FXTj7nWosk4e78jL25oCe1qGdMMXmeGzS9/zh1yHb9k1YJoZVwsDSkbN6O9EXKrDYOa2CyBbnZExNCAvDA0/Ag=="/>
         </item>
     </channel>
 </rss>
