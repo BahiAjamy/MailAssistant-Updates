@@ -6,6 +6,39 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.108.0</title>
+            <pubDate>Tue, 03 Nov 2026 17:53:03 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>170</sparkle:version>
+            <sparkle:shortVersionString>0.108.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Version 0.108.0 — Siri et Raccourcis
+
+Version publiée par mise à jour automatique, build 170.
+
+- **Siri et Raccourcis** : dix raccourcis vocaux en français. Ils donnent le briefing du jour, cherchent les tâches, e-mails et documents, ouvrent un élément, terminent une tâche ou la mettent en veille, et préparent une réponse ou une réunion. Chaque action demande l’authentification du Mac et attend l’enregistrement réel avant d’annoncer sa réussite.
+- **Recherche Spotlight** des tâches, des mails professionnels conservés et des documents, par le sens quand macOS 27 le permet, sinon par mots-clés. Des filtres de correspondant, de compte, de projet et de période sont proposés, et des formulations comme « envoyé par Awa la semaine dernière » sont reconnues. Les homonymes restent proposés ; un résultat supprimé ou modifié depuis l’indexation est écarté.
+- **« Ce mail »** : le mail, le document ou la réunion affichés sont reconnus par Siri. Vos propres envois ne sont pas annoncés.
+- **Préparer une réponse** : le composeur s’ouvre sur le mail choisi, avec votre consigne dictée et les documents demandés. La rédaction assistée démarre si le brouillon est vide. Un brouillon existant est conservé. L’envoi passe toujours par le récapitulatif et la confirmation.
+- **Préparer une réunion** : horaire connu, sources, documents et tâches ouvertes liés. Une réunion sans horaire est annoncée « Horaire à confirmer », un fuseau supposé est signalé.
+- **Pages scannées dans le Chat** : les pages de PDF sans couche texte sont lues sur leur image, sur le Mac, vingt pages au plus. Elles sont signalées comme telles.
+
+« Préparer ma journée » et « Ouvrir un document » restent disponibles dans l’app Raccourcis, mais ne sont plus des commandes vocales : Apple limite une application à dix raccourcis.
+
+L’analyse des e-mails ne change pas. Le banc d’essai sur macOS 27.2 montre que les variantes plus larges manquent moins de demandes mais attribuent des tâches à tort ; les plafonds actuels sont conservés. Le mode approfondi par Private Cloud Compute n’est pas proposé : il exige un compte Apple Developer.
+
+## Vérification
+
+- Compilations Debug et Release réussies sur le SDK macOS 27.2.
+- 335 contrôles du cœur, tests Siri des trois lots (homonymes, périodes, révisions périmées, mauvais compte, document manquant, brouillon modifié, consigne attachée au mail choisi) et essai Spotlight natif sur des données fictives.
+- Métadonnées App Intents vérifiées dans le paquet signé : dix raccourcis, schémas Apple du mail et du document.
+- Banc d’extraction en mode ombre sur le jeu fictif, dans un état isolé.
+- Les commandes à la voix et la pertinence de la recherche sur le courrier réel restent à essayer après installation.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.108.0/Assistant-Mail-0.108.0.dmg" length="11463755" type="application/octet-stream" sparkle:edSignature="+APjPNnXeapYHYUWXL0D7+DUdlrIIqIPLypvpxAzPcUepu5Bjgy14O3nBU9ajXfmi5inPZXOnffOm+MmHTg6Cg=="/>
+        </item>
+        <item>
             <title>0.107.0</title>
             <pubDate>Wed, 21 Oct 2026 13:15:50 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -83,42 +116,6 @@ Quand la date écrite d’une suggestion est passée, un bandeau l’indique («
 Quand les suggestions du jour sont toutes tranchées, l’onglet n’annonce plus « Aucune suggestion à vérifier ». Il indique **« Votre sélection du jour est terminée »**, le nombre de suggestions qui restent dans la file, et un bouton **Examiner les suggestions restantes**. Aucune suggestion ne s’éteint à cause de la limite quotidienne.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.106.0/Assistant-Mail-0.106.0.dmg" length="10995594" type="application/octet-stream" sparkle:edSignature="kJIDItoIZmWlaNYF0sdN/aPeqzaTmdtNqvjotUjDOoQAv21Vcyrag08/9TzBsyf1S2YE7giz8slFSirou9hWAA=="/>
-        </item>
-        <item>
-            <title>0.105.0</title>
-            <pubDate>Tue, 20 Oct 2026 09:58:55 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>167</sparkle:version>
-            <sparkle:shortVersionString>0.105.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Une question claire pour chaque demande incertaine
-
-Dans **Tâches > À valider**, les demandes à clarifier présentent maintenant une question et le passage qui la justifie :
-
-- **Qui prend cette action ?** — Moi, Une personne… ou Personne.
-- **Prenez-vous ce point ?** — Oui, Non, c’est pour… ou Plus tard.
-- **Quelle échéance retenir ?** — choisissez une date ou gardez la demande sans échéance.
-- **Ces deux demandes sont-elles la même action ?** — comparez-les, puis fusionnez-les ou gardez les deux.
-
-Une délégation ouvre le formulaire de **Tâches des autres**. Elle est enregistrée comme une délégation. Une fusion conserve la tâche déjà suivie ; la seconde source reste consultable dans Ignorées.
-
-## Choisir la portée de sa réponse
-
-Avant de répondre, choisissez **Ce message**, **Cette conversation** ou, pour une attribution, **Une règle réutilisable**. Le nombre de suggestions en attente concernées est affiché. Les règles s’appliquent aussi à ces suggestions et se désactivent depuis À valider. La réponse et sa portée sont annulables ensemble.
-
-Les dates peuvent concerner le message ou la conversation. La comparaison d’un doublon concerne les deux demandes présentées.
-
-## Une revue quotidienne bornée
-
-L’application présente au plus **cinq validations ou questions dans la journée**, en commençant par les suggestions les plus sûres. Répondre ne fait pas apparaître une sixième question.
-
-Les autres attendent dans une **file consultable** : le bouton **Voir la file** les affiche à la suite, dans l’ordre où elles seraient présentées. Cette limite borne ce qui vous est présenté, pas ce qui existe : **aucune suggestion ne s’éteint ni ne disparaît** parce que le quota est atteint.
-
-Le journal conserve les réponses, leur acteur, leur portée et le changement d’état. Il horodate aussi l’ouverture et la fin des revues quotidiennes pour mesurer leur durée après usage.
-
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.105.0/Assistant-Mail-0.105.0.dmg" length="10932822" type="application/octet-stream" sparkle:edSignature="dAy32BYN8Nrflz9MUPsceeP6uw+LSmUNp74wWBYjIdruTfmhFdUbLs1tWfhnA+HjozOvTQEY5xkoMQ9b/ZN7CQ=="/>
         </item>
     </channel>
 </rss>
