@@ -6,6 +6,43 @@
         <description>Mises à jour stables d’Assistant Mail</description>
         <language>fr</language>
         <item>
+            <title>0.109.0</title>
+            <pubDate>Wed, 04 Nov 2026 16:20:04 +0000</pubDate>
+            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
+            <sparkle:version>172</sparkle:version>
+            <sparkle:shortVersionString>0.109.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Version 0.109.0 — Papier lumineux
+
+Version publiée par mise à jour automatique, build 172.
+
+Une refonte visuelle de toute l’application. Tous les onglets et toutes les fonctions restent à leur place ; certains gestes changent d’endroit, rien n’est retiré.
+
+- **Apparence et thèmes** : Réglages › Général › Apparence choisit l’apparence (automatique, clair ou sombre) et un thème de couleurs — Papier (le crème d’origine), Neutre ou Ardoise. Les couleurs qui portent un sens (retard, validation, projets) ne changent pas.
+- **Un cadre plus léger** : la barre latérale se range en « Aujourd’hui », « Boîte » et « Assistant », avec des compteurs neutres (seuls le retard et les réunions à traiter restent colorés). La barre d’outils porte « Rechercher partout » (⌘K) et « Nouveau message » sur tous les écrans. « Rechercher les mises à jour… » passe dans le menu de l’application.
+- **Barres d’actions flottantes** : le détail d’un e-mail, d’une tâche ou d’un document garde ses gestes dans une barre en verre au bas du panneau. Pour un e-mail : « Créer une tâche », « Répondre », « Transférer », et un menu « Plus » pour le reste — plus aucun bouton coupé.
+- **Vue du jour** : une carte « Prochain geste » dit en tête ce qui compte maintenant (le retard le plus ancien, puis l’échéance du jour, puis une priorité haute, puis la réponse attendue depuis le plus longtemps) et la réunion suivante. Les tuiles à zéro disent « Rien en retard » d’une coche. Le brief hebdomadaire devient une grille de projets avec leur avancement.
+- **Listes plus lisibles** : le texte ne descend plus sous 11 points. Mes tâches et les e-mails portent le projet en simple point de couleur ; une ligne d’e-mail n’affiche plus que trois repères. Au survol d’une tâche : mettre en veille jusqu’à demain, ou ignorer.
+- **Documents en grille** : une vue en vignettes, choisie dans la barre d’outils. L’aperçu réel ne s’affiche que pour un fichier déjà ouvert — afficher la grille ne télécharge rien.
+- **Réunions, Tâches des autres, Projets** : un seul bouton « Rejoindre » avec la plateforme ; les personnes attendues avec leur avatar et l’ancienneté du suivi ; des cartes de projet sans pastilles multicolores.
+- **Chat** : vos questions à droite, les réponses à pleine largeur, un champ de saisie flottant et des suggestions en pastilles.
+- **Réglages** en barre latérale, comme les Réglages Système.
+- **Fiabilité de la préparation des réponses** (version 0.108.1 de Codex, jamais publiée, reprise ici) : fermer le composeur annule la rédaction assistée et empêche l’enregistrement d’un résultat tardif ; une proposition ne remplace plus un brouillon dont la consigne, les destinataires ou la version ont changé pendant la rédaction ; une relève pendant le chargement des pièces jointes ne provoque plus un faux refus du compte expéditeur.
+
+Corrigé en chemin : les en-têtes E-mails et Documents n’affichaient qu’un menu sur quatre (Afficher, Trier, Filtrer…) ; la carte « Volume quotidien » des Statistiques débordait sous sa voisine.
+
+## Vérification
+
+- 338 contrôles du cœur, dont l’ordre du « Prochain geste » et les deux contrôles du composeur de la 0.108.1, plus les tests Siri et les tests asynchrones du composeur.
+- Contraste WCAG AA calculé pour les trois thèmes, en clair et en sombre : 482 rapports.
+- Nouveaux garde-fous : aucun arrondi ni texte sous 11 points écrits en dur ; boutons primaires (62) et marges écrites à la main (461) qui ne peuvent que baisser.
+- Batterie d’instantanés relue en clair et en sombre, et chaque lot regardé dans une fenêtre réelle sur une copie de l’état, sans relève.
+- Restent à essayer sur l’application installée : les actions au survol des tâches, et l’ensemble avec VoiceOver.
+]]></description>
+            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.109.0/Assistant-Mail-0.109.0.dmg" length="11703982" type="application/octet-stream" sparkle:edSignature="dZ2WFqCVNb5lPmzQuTs5ndsvDJuCCT8NyJl5+4wm3rikjsz0wx5EwiWWlb7BpWXUJebeiT/al+3iqlFeoCSYCA=="/>
+        </item>
+        <item>
             <title>0.108.0</title>
             <pubDate>Tue, 03 Nov 2026 17:53:03 +0000</pubDate>
             <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
@@ -70,52 +107,6 @@ Le Registre ne devient pas l’accueil dans cette version.
 - Les liens externes de réunion ont été vérifiés comme commandes présentes, sans rejoindre de réunion. L’installation et la publication restent à faire après accord.
 ]]></description>
             <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.107.0/Assistant-Mail-0.107.0.dmg" length="11071861" type="application/octet-stream" sparkle:edSignature="mC5YoJfeh3PkKmHWHdQHzrNVIMyzq0XyZ4IIw5QQDo524Fv8wKEDXafi0NbwXVes+Ipa6R/u0zakM9jAeQXBAw=="/>
-        </item>
-        <item>
-            <title>0.106.0</title>
-            <pubDate>Tue, 20 Oct 2026 18:06:15 +0000</pubDate>
-            <link>https://github.com/BahiAjamy/MailAssistant-Updates/releases/latest</link>
-            <sparkle:version>168</sparkle:version>
-            <sparkle:shortVersionString>0.106.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Une validation plus claire et plus rapide
-
-Cette version reprend l’écran **Tâches > À valider** pour qu’il dise toujours la même chose que la liste, et pour que chaque décision demande moins de clics.
-
-## Le motif d’une suggestion en trois lignes
-
-**Pourquoi cette suggestion** montre désormais :
-
-- **Demande** — la phrase du message qui formule la demande. Quand aucune phrase n’a été retrouvée dans le texte, l’écran le dit au lieu de montrer un extrait.
-- **Pour** — qui doit agir, et pourquoi : destinataire direct, nommé dans la demande, demande collective, ou à trancher.
-- **Échéance** — la date telle que le message l’écrit, quand il en donne une.
-
-Le raisonnement complet de l’analyse reste disponible sous **Détails de l’analyse**. Le motif suit l’état de la tâche : une tâche déjà dans vos tâches ne vous demande plus de la reclasser.
-
-## Un aperçu de l’e-mail lisible
-
-L’aperçu de l’e-mail d’origine ne montre plus les mentions « voir cet e-mail dans votre navigateur », les adresses web brutes ni les astérisques de mise en forme. Quand la phrase source est retrouvée, l’aperçu commence à cet endroit. Un lien ouvre directement le message chez son fournisseur.
-
-## Ignorer sans passer par « Plus »
-
-Sur une suggestion, **Ignorer** est désormais à côté de **Valider**. Après chaque décision, la suggestion suivante s’ouvre automatiquement, sans jamais dépasser la sélection du jour. Toutes les décisions restent annulables.
-
-## Une échéance dépassée se signale
-
-Quand la date écrite d’une suggestion est passée, un bandeau l’indique (« Échéance dépassée de 4 jours ») et propose trois choix : **Toujours à faire**, **Déjà fait** ou **Ignorer**. La suggestion garde sa place et sa priorité.
-
-## Des compteurs cohérents
-
-- Le badge de **Mes tâches** ne compte plus que les tâches à faire. Les suggestions et les tâches en veille ne s’y ajoutent plus.
-- L’en-tête des tâches indique, par exemple, « 2 à faire · 3 à valider aujourd’hui ».
-- L’onglet **À valider**, la tuile de la Vue du jour et le menu de la barre des menus comptent la sélection du jour. La tuile précise combien d’autres suggestions attendent dans la file.
-
-## La sélection du jour terminée
-
-Quand les suggestions du jour sont toutes tranchées, l’onglet n’annonce plus « Aucune suggestion à vérifier ». Il indique **« Votre sélection du jour est terminée »**, le nombre de suggestions qui restent dans la file, et un bouton **Examiner les suggestions restantes**. Aucune suggestion ne s’éteint à cause de la limite quotidienne.
-]]></description>
-            <enclosure url="https://github.com/BahiAjamy/MailAssistant-Updates/releases/download/v0.106.0/Assistant-Mail-0.106.0.dmg" length="10995594" type="application/octet-stream" sparkle:edSignature="kJIDItoIZmWlaNYF0sdN/aPeqzaTmdtNqvjotUjDOoQAv21Vcyrag08/9TzBsyf1S2YE7giz8slFSirou9hWAA=="/>
         </item>
     </channel>
 </rss>
